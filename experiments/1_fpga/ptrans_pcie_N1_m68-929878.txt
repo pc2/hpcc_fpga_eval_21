@@ -1,0 +1,59 @@
+
+The following have been reloaded with a version change:
+  1) bittware_520n/20.4.0 => bittware_520n/20.4.0_hpc
+  2) intelFPGA_pro/21.1.0 => intelFPGA_pro/21.2.0
+
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-pcie/transpose_PQ_PCIE.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the matrix transposition benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 1.5
+MPI Version:  3.1
+Config. Time: Thu Oct 07 13:22:14 UTC 2021
+Git Commit:   48e0386
+
+Summary:
+Block Size                    512
+Communication Type            PCIE
+Data Handler                  PQ
+Dist. Buffers                 No
+Kernel File                   ../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-pcie/transpose_PQ_PCIE.aocx
+Kernel Replications           4
+MPI Ranks                     1
+Matrix Size                   32768
+Repetitions                   10
+Test Mode                     No
+Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 4.59942e+01 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Execution Time: 9.70817e+01 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+Maximum error: 7.62939e-06 < 1.19209e-05
+Mach. Epsilon: 1.19209e-07
+Validation Time: 5.25742e+01 s
+       total [s]     transfer [s]  calc [s]      calc FLOPS    Mem [B/s]     PCIe [B/s]
+avg:   9.70748e+00   4.08546e+00   5.62202e+00   1.90989e+08   2.29186e+09   3.15384e+09
+best:  9.70517e+00   4.08416e+00   5.62101e+00   1.91023e+08   2.29228e+09   3.15485e+09
+Validation: SUCCESS!
