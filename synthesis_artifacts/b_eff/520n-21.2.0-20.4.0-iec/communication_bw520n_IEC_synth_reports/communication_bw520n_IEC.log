@@ -1,0 +1,384 @@
+Compiler Command: aoc /scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/b_eff/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC/src/device/communication_bw520n_IEC_replicated_intel.cl -DINTEL_FPGA -I/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/b_eff/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC/src/common/ -I/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/b_eff/tmp/HPCC_FPGA/b_eff/src/device -ffp-contract=fast -ffp-reassoc -g0 -seed=9 -board=p520_max_sg280l -o /scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/b_eff/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC/src/device/communication_bw520n_IEC.aocx
+warning: ignoring debug info with an invalid version (0) in communication_bw520n_IEC.kwgid.bc
+Compiler Warning: This OpenCL system is using both I/O channels and stallable global/local memory. Memory stalls may propagate to this I/O channel's accesses causing dropped data.
+Compiler Warning: This OpenCL system is using both I/O channels and stallable global/local memory. Memory stalls may propagate to this I/O channel's accesses causing dropped data.
+Compiler Warning: This OpenCL system is using both I/O channels and stallable global/local memory. Memory stalls may propagate to this I/O channel's accesses causing dropped data.
+Compiler Warning: This OpenCL system is using both I/O channels and stallable global/local memory. Memory stalls may propagate to this I/O channel's accesses causing dropped data.
+Compiler Warning: This OpenCL system is using both I/O channels and stallable global/local memory. Memory stalls may propagate to this I/O channel's accesses causing dropped data.
+Compiler Warning: This OpenCL system is using both I/O channels and stallable global/local memory. Memory stalls may propagate to this I/O channel's accesses causing dropped data.
+Compiler Warning: This OpenCL system is using both I/O channels and stallable global/local memory. Memory stalls may propagate to this I/O channel's accesses causing dropped data.
+Compiler Warning: This OpenCL system is using both I/O channels and stallable global/local memory. Memory stalls may propagate to this I/O channel's accesses causing dropped data.
+System name: communication_bw520n_IEC
+
+Info: *******************************************************************
+Info: Running Quartus Prime Compiler Database Interface
+    Info: Version 20.4.0 Build 72 12/14/2020 SC Pro Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Thu Oct  7 15:22:31 2021
+    Info: System process ID: 20539
+Info: Command: quartus_cdb -t scripts/create_acds_ver_hex.tcl top
+Info: Quartus(args): top
+Info: Using INI file /scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/b_eff/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC/src/device/communication_bw520n_IEC/quartus.ini
+Info (23030): Evaluation of Tcl script scripts/create_acds_ver_hex.tcl was successful
+Info: Quartus Prime Compiler Database Interface was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 979 megabytes
+    Info: Processing ended: Thu Oct  7 15:22:32 2021
+    Info: Elapsed time: 00:00:01
+    Info: System process ID: 20539
+2021.10.07.15:22:33 Info: Searching board.qsys for referenced ip or qsys files
+2021.10.07.15:22:33 Info: Starting library initialization
+2021.10.07.15:22:36 Info: Finished initializing library
+2021.10.07.15:22:39 Info: Searching board for referenced ip or qsys files
+2021.10.07.15:22:39 Info: Device: 1SG280LN2F43E2VG Device Family: Stratix 10
+2021.10.07.15:22:39 Info: 	Found board_onchip_memory2_0.ip
+2021.10.07.15:22:39 Info: 	Found board_s10_pr_0.ip
+2021.10.07.15:22:39 Info: 	Found board_cade_id_0.ip
+2021.10.07.15:22:39 Info: 	Found board_in_system_sources_probes_0.ip
+2021.10.07.15:22:39 Info: 	Found board_config_clk.ip
+2021.10.07.15:22:39 Info: 	Found board_constant_address_bridge.ip
+2021.10.07.15:22:39 Info: 	Found board_dma_pr_reordering_buffer.ip
+2021.10.07.15:22:39 Info: 	Found external_channels.qsys
+2021.10.07.15:22:39 Info: 	Found board_global_reset_in.ip
+2021.10.07.15:22:39 Info: 	Found board_kernel_clk_export.ip
+2021.10.07.15:22:39 Info: 	Found board_kernel_clk_gen.ip
+2021.10.07.15:22:39 Info: 	Found board_mm_clock_crossing_bridge_0.ip
+2021.10.07.15:22:39 Info: 	Found board_mm_bridge_s10_bank0.ip
+2021.10.07.15:22:39 Info: 	Found board_mm_bridge_s10_bank1.ip
+2021.10.07.15:22:39 Info: 	Found board_mm_bridge_s10_bank2.ip
+2021.10.07.15:22:39 Info: 	Found board_mm_bridge_s10_bank3.ip
+2021.10.07.15:22:39 Info: 	Found board_kernel_interface.ip
+2021.10.07.15:22:39 Info: 	Found mem_bank0.qsys
+2021.10.07.15:22:39 Info: 	Found mem_bank1.qsys
+2021.10.07.15:22:39 Info: 	Found mem_bank2.qsys
+2021.10.07.15:22:39 Info: 	Found mem_bank3.qsys
+2021.10.07.15:22:39 Info: 	Found board_memory_bank_divider.ip
+2021.10.07.15:22:39 Info: 	Found board_memwindow.ip
+2021.10.07.15:22:39 Info: 	Found board_npor_export.ip
+2021.10.07.15:22:39 Info: 	Found board_pcie.ip
+2021.10.07.15:22:39 Info: 	Found board_pcie_irq.ip
+2021.10.07.15:22:39 Info: 	Found board_pcie_refclk.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_dma_pr_256.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_dma_pr_32.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_dma_rd_master.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_dma_rdwr_master.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_dma_rdwr_master_2.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_dma_rdwr_master_512.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_host_ctrl.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_host_ctrl_alt_pr.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_host_ctrl_cade.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_host_ctrl_pr_ctrl.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_pcie_to_memwindow_ctrl.ip
+2021.10.07.15:22:39 Info: 	Found board_pipe_stage_pcie_to_memwindow_mem.ip
+2021.10.07.15:22:39 Info: 	Found board_por_reset_counter.ip
+2021.10.07.15:22:39 Info: 	Found board_pr_base_id.ip
+2021.10.07.15:22:39 Info: 	Found board_pr_region_controller_0.ip
+2021.10.07.15:22:39 Info: 	Found board_reset_controller_global.ip
+2021.10.07.15:22:39 Info: 	Found board_reset_controller_global.ip
+2021.10.07.15:22:39 Info: 	Found board_reset_controller_pcie.ip
+2021.10.07.15:22:39 Info: 	Found board_reset_controller_por.ip
+2021.10.07.15:22:39 Info: 	Found s10_reset_release.ip
+2021.10.07.15:22:39 Info: 	Found board_s10_reset_release_in.ip
+2021.10.07.15:22:39 Info: 	Found system_manager.qsys
+2021.10.07.15:22:39 Info: 	Found board_uniphy_status.ip
+2021.10.07.15:22:39 Info: 	Found board_version_id.ip
+2021.10.07.15:22:39 Info: Searching external_channels for referenced ip or qsys files
+2021.10.07.15:22:39 Info: 	Found clock_config.ip
+2021.10.07.15:22:39 Info: 	Found extern_io_ch0.ip
+2021.10.07.15:22:39 Info: 	Found extern_io_ch1.ip
+2021.10.07.15:22:39 Info: 	Found extern_io_ch2.ip
+2021.10.07.15:22:39 Info: 	Found extern_io_ch3.ip
+2021.10.07.15:22:39 Info: 	Found clock_kernel.ip
+2021.10.07.15:22:39 Info: 	Found reset_kernel.ip
+2021.10.07.15:22:39 Info: 	Found reset_controller_kernel.ip
+2021.10.07.15:22:39 Info: 	Found mm_bridge_0.ip
+2021.10.07.15:22:39 Info: 	Found mm_bridge_1.ip
+2021.10.07.15:22:39 Info: 	Found mm_cc_bridge_0.ip
+2021.10.07.15:22:39 Info: 	Found reset_config.ip
+2021.10.07.15:22:39 Info: 	Found stpipe_kernel_snk_ch0.ip
+2021.10.07.15:22:39 Info: 	Found stpipe_kernel_snk_ch1.ip
+2021.10.07.15:22:39 Info: 	Found stpipe_kernel_snk_ch2.ip
+2021.10.07.15:22:39 Info: 	Found stpipe_kernel_snk_ch3.ip
+2021.10.07.15:22:39 Info: 	Found stpipe_kernel_src_ch0.ip
+2021.10.07.15:22:39 Info: 	Found stpipe_kernel_src_ch1.ip
+2021.10.07.15:22:39 Info: 	Found stpipe_kernel_src_ch2.ip
+2021.10.07.15:22:39 Info: 	Found stpipe_kernel_src_ch3.ip
+2021.10.07.15:22:39 Info: 	Found clock_user.ip
+2021.10.07.15:22:39 Info: 	Found reset_user.ip
+2021.10.07.15:22:39 Info: Searching board_pcie_refclk for referenced ip or qsys files
+2021.10.07.15:22:39 Info: Searching board_pipe_stage_dma_pr_32 for referenced ip or qsys files
+2021.10.07.15:22:39 Info: Searching mem_bank0 for referenced ip or qsys files
+2021.10.07.15:22:39 Info: 	Found mem_acl_hyper_optimized_ccb.ip
+2021.10.07.15:22:39 Info: 	Found mem_clock_cross_pcie_to_ddr4.ip
+2021.10.07.15:22:39 Info: 	Found mem_ddr4_calibrate.ip
+2021.10.07.15:22:39 Info: 	Found mem_global_reset_in.ip
+2021.10.07.15:22:39 Info: 	Found mem_kernel_clk_in.ip
+2021.10.07.15:22:39 Info: 	Found mem_kernel_reset_bridge.ip
+2021.10.07.15:22:39 Info: 	Found mem_local_reset_combiner.ip
+2021.10.07.15:22:39 Info: 	Found mem_emif_bank0.ip
+2021.10.07.15:22:39 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:39 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:39 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:39 Info: 	Found mem_pcie_clk_in.ip
+2021.10.07.15:22:39 Info: 	Found mem_pcie_reset_bridge.ip
+2021.10.07.15:22:39 Info: 	Found mem_reset_controller_ddr4.ip
+2021.10.07.15:22:40 Info: Searching board_memory_bank_divider for referenced ip or qsys files
+2021.10.07.15:22:40 Info: Searching board_memwindow for referenced ip or qsys files
+2021.10.07.15:22:40 Info: Searching board_npor_export for referenced ip or qsys files
+2021.10.07.15:22:40 Info: Searching board_constant_address_bridge for referenced ip or qsys files
+2021.10.07.15:22:40 Info: Searching board_mm_bridge_s10_bank3 for referenced ip or qsys files
+2021.10.07.15:22:40 Info: Searching board_cade_id_0 for referenced ip or qsys files
+2021.10.07.15:22:40 Info: Searching board_pipe_stage_dma_pr_256 for referenced ip or qsys files
+2021.10.07.15:22:40 Info: Searching board_pipe_stage_host_ctrl_cade for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_kernel_clk_gen for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_pipe_stage_pcie_to_memwindow_ctrl for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_por_reset_counter for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_kernel_clk_export for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_version_id for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_pr_base_id for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_mm_bridge_s10_bank0 for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_pipe_stage_dma_rdwr_master for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_pipe_stage_dma_rdwr_master_512 for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_pipe_stage_dma_rd_master for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching s10_reset_release for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching mem_bank2 for referenced ip or qsys files
+2021.10.07.15:22:41 Info: 	Found mem_acl_hyper_optimized_ccb.ip
+2021.10.07.15:22:41 Info: 	Found mem_clock_cross_pcie_to_ddr4.ip
+2021.10.07.15:22:41 Info: 	Found mem_ddr4_calibrate.ip
+2021.10.07.15:22:41 Info: 	Found mem_global_reset_in.ip
+2021.10.07.15:22:41 Info: 	Found mem_kernel_clk_in.ip
+2021.10.07.15:22:41 Info: 	Found mem_kernel_reset_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_local_reset_combiner.ip
+2021.10.07.15:22:41 Info: 	Found mem_emif_bank2.ip
+2021.10.07.15:22:41 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_pcie_clk_in.ip
+2021.10.07.15:22:41 Info: 	Found mem_pcie_reset_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_reset_controller_ddr4.ip
+2021.10.07.15:22:41 Info: Searching board_reset_controller_por for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_pipe_stage_host_ctrl_pr_ctrl for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching mem_bank3 for referenced ip or qsys files
+2021.10.07.15:22:41 Info: 	Found mem_acl_hyper_optimized_ccb.ip
+2021.10.07.15:22:41 Info: 	Found mem_clock_cross_pcie_to_ddr4.ip
+2021.10.07.15:22:41 Info: 	Found mem_ddr4_calibrate.ip
+2021.10.07.15:22:41 Info: 	Found mem_global_reset_in.ip
+2021.10.07.15:22:41 Info: 	Found mem_kernel_clk_in.ip
+2021.10.07.15:22:41 Info: 	Found mem_kernel_reset_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_local_reset_combiner.ip
+2021.10.07.15:22:41 Info: 	Found mem_emif_bank3.ip
+2021.10.07.15:22:41 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_pcie_clk_in.ip
+2021.10.07.15:22:41 Info: 	Found mem_pcie_reset_bridge.ip
+2021.10.07.15:22:41 Info: 	Found mem_reset_controller_ddr4.ip
+2021.10.07.15:22:41 Info: Searching board_pipe_stage_host_ctrl_alt_pr for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_uniphy_status for referenced ip or qsys files
+2021.10.07.15:22:41 Info: Searching board_mm_bridge_s10_bank1 for referenced ip or qsys files
+2021.10.07.15:22:42 Info: Searching board_pipe_stage_host_ctrl for referenced ip or qsys files
+Parameter wrala_integer_hwtcl was mapped to NOVAL from wrala_hwtcl as Gen3x8, Interface - 256 bit, 250 MHz, blocked!
+Parameter wrala_integer_hwtcl was mapped to NOVAL from wrala_hwtcl as Gen3x8, Interface - 256 bit, 250 MHz, blocked!
+Parameter wrala_integer_hwtcl was mapped to NOVAL from wrala_hwtcl as Gen3x8, Interface - 256 bit, 250 MHz, blocked!
+Parameter wrala_integer_hwtcl was mapped to NOVAL from wrala_hwtcl as Gen3x8, Interface - 256 bit, 250 MHz, blocked!
+Parameter wrala_integer_hwtcl was mapped to NOVAL from wrala_hwtcl as Gen3x8, Interface - 256 bit, 250 MHz, blocked!
+Parameter wrala_integer_hwtcl was mapped to NOVAL from wrala_hwtcl as Gen3x8, Interface - 256 bit, 250 MHz, blocked!
+Parameter wrala_integer_hwtcl was mapped to NOVAL from wrala_hwtcl as Gen3x8, Interface - 256 bit, 250 MHz, blocked!
+Parameter wrala_integer_hwtcl was mapped to NOVAL from wrala_hwtcl as Gen3x8, Interface - 256 bit, 250 MHz, blocked!
+2021.10.07.15:23:04 Info: Searching board_pcie for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_pipe_stage_dma_rdwr_master_2 for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_reset_controller_pcie for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_mm_clock_crossing_bridge_0 for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_pipe_stage_pcie_to_memwindow_mem for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_s10_pr_0 for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_pr_region_controller_0 for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_pcie_irq for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_dma_pr_reordering_buffer for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching mem_bank1 for referenced ip or qsys files
+2021.10.07.15:23:04 Info: 	Found mem_acl_hyper_optimized_ccb.ip
+2021.10.07.15:23:04 Info: 	Found mem_clock_cross_pcie_to_ddr4.ip
+2021.10.07.15:23:04 Info: 	Found mem_ddr4_calibrate.ip
+2021.10.07.15:23:04 Info: 	Found mem_global_reset_in.ip
+2021.10.07.15:23:04 Info: 	Found mem_kernel_clk_in.ip
+2021.10.07.15:23:04 Info: 	Found mem_kernel_reset_bridge.ip
+2021.10.07.15:23:04 Info: 	Found mem_local_reset_combiner.ip
+2021.10.07.15:23:04 Info: 	Found mem_emif_bank1.ip
+2021.10.07.15:23:04 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:23:04 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:23:04 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:23:04 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:23:04 Info: 	Found mem_mm_bridge.ip
+2021.10.07.15:23:04 Info: 	Found mem_pcie_clk_in.ip
+2021.10.07.15:23:04 Info: 	Found mem_pcie_reset_bridge.ip
+2021.10.07.15:23:04 Info: 	Found mem_reset_controller_ddr4.ip
+2021.10.07.15:23:04 Info: Searching board_config_clk for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_in_system_sources_probes_0 for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_reset_controller_global for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_onchip_memory2_0 for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_s10_reset_release_in for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_kernel_interface for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_mm_bridge_s10_bank2 for referenced ip or qsys files
+2021.10.07.15:23:04 Info: Searching board_global_reset_in for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching system_manager for referenced ip or qsys files
+2021.10.07.15:23:05 Info: 	Found system_manager_clock_config.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_reset_config.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_flash_memory_buffer.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_iopll_0.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_mm_bridge_0.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_mm_bridge_1.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_mm_bridge_clock_crossing_0.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_mm_bridge_sys_man_if.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_reset_controller_0.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_reset_controller_config_reset.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_reset_controller_sys_man_if.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_reset_controller_user_reset.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_if.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_clock_user.ip
+2021.10.07.15:23:05 Info: 	Found system_manager_reset_user.ip
+2021.10.07.15:23:05 Info: Searching clock_user for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching reset_user for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching clock_kernel for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching clock_config for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching reset_controller_kernel for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching mm_bridge_0 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching mm_bridge_1 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching stpipe_kernel_snk_ch0 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching mm_cc_bridge_0 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching stpipe_kernel_src_ch0 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching stpipe_kernel_src_ch1 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching stpipe_kernel_src_ch2 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching stpipe_kernel_src_ch3 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching reset_config for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching stpipe_kernel_snk_ch2 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching stpipe_kernel_snk_ch3 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching reset_kernel for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching extern_io_ch1 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching extern_io_ch2 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching extern_io_ch0 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching extern_io_ch3 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching stpipe_kernel_snk_ch1 for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching mem_local_reset_combiner for referenced ip or qsys files
+2021.10.07.15:23:05 Info: Searching mem_kernel_reset_bridge for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_emif_bank0 for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_kernel_clk_in for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_acl_hyper_optimized_ccb for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_pcie_clk_in for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_reset_controller_ddr4 for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_mm_bridge for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_ddr4_calibrate for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_clock_cross_pcie_to_ddr4 for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_global_reset_in for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_pcie_reset_bridge for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_local_reset_combiner for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_kernel_reset_bridge for referenced ip or qsys files
+2021.10.07.15:23:08 Info: Searching mem_kernel_clk_in for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_emif_bank2 for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_acl_hyper_optimized_ccb for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_pcie_clk_in for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_reset_controller_ddr4 for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_mm_bridge for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_ddr4_calibrate for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_clock_cross_pcie_to_ddr4 for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_global_reset_in for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_pcie_reset_bridge for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_local_reset_combiner for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_kernel_reset_bridge for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_kernel_clk_in for referenced ip or qsys files
+2021.10.07.15:23:10 Info: Searching mem_acl_hyper_optimized_ccb for referenced ip or qsys files
+2021.10.07.15:23:11 Info: Searching mem_emif_bank3 for referenced ip or qsys files
+2021.10.07.15:23:11 Info: Searching mem_pcie_clk_in for referenced ip or qsys files
+2021.10.07.15:23:11 Info: Searching mem_reset_controller_ddr4 for referenced ip or qsys files
+2021.10.07.15:23:11 Info: Searching mem_mm_bridge for referenced ip or qsys files
+2021.10.07.15:23:11 Info: Searching mem_ddr4_calibrate for referenced ip or qsys files
+2021.10.07.15:23:11 Info: Searching mem_clock_cross_pcie_to_ddr4 for referenced ip or qsys files
+2021.10.07.15:23:11 Info: Searching mem_global_reset_in for referenced ip or qsys files
+2021.10.07.15:23:11 Info: Searching mem_pcie_reset_bridge for referenced ip or qsys files
+2021.10.07.15:23:11 Info: Searching mem_local_reset_combiner for referenced ip or qsys files
+2021.10.07.15:23:11 Info: Searching mem_kernel_reset_bridge for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching mem_emif_bank1 for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching mem_kernel_clk_in for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching mem_acl_hyper_optimized_ccb for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching mem_pcie_clk_in for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching mem_reset_controller_ddr4 for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching mem_mm_bridge for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching mem_ddr4_calibrate for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching mem_clock_cross_pcie_to_ddr4 for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching mem_global_reset_in for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching mem_pcie_reset_bridge for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_mm_bridge_1 for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_reset_controller_user_reset for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_clock_config for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_reset_user for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_mm_bridge_0 for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_reset_config for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_flash_memory_buffer for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_mm_bridge_sys_man_if for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_if for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_reset_controller_config_reset for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_clock_user for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_iopll_0 for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_reset_controller_sys_man_if for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_reset_controller_0 for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Searching system_manager_mm_bridge_clock_crossing_0 for referenced ip or qsys files
+2021.10.07.15:23:12 Info: Search complete
+2021.10.07.15:23:12 Info: Adding all files to /scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/b_eff/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC/src/device/communication_bw520n_IEC/top revision opencl_bsp_ip.
+2021.10.07.15:23:22 Info: Done adding files.
+***************************************************************
+Quartus is a registered trademark of Intel Corporation in the
+US and other countries.  Portions of the Quartus Prime software
+code, and other portions of the code included in this download
+or on this DVD, are licensed to Intel Corporation and are the
+copyrighted property of third parties. For license details,
+refer to the End User License Agreement at
+http://fpgasoftware.intel.com/eula.
+***************************************************************
+
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 20.4.0 Build 72 12/14/2020 SC Pro Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Thu Oct  7 15:22:30 2021
+    Info: System process ID: 20504
+Info: Command: quartus_sh -t scripts/pre_flow_pr.tcl
+Info: Using INI file /scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/b_eff/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC/src/device/communication_bw520n_IEC/quartus.ini
+Info: Running pre-flow script
+Info: Checking for OpenCL SDK installation, environment should have INTELFPGAOCLSDKROOT defined
+Info: INTELFPGAOCLSDKROOT=/cm/shared/opt/intelFPGA_pro/21.2.0/hld
+Info: Project name: top
+Info: Revision name: top
+Info: Device part name: 1SG280LN2F43E2VG
+Info: Compiling top revision: unpacking base revision compile outputs from base.qar
+Info:     qsys-archive --quartus-project=top --rev=opencl_bsp_ip --add-to-project board.qsys
+Info (23030): Evaluation of Tcl script scripts/pre_flow_pr.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 1107 megabytes
+    Info: Processing ended: Thu Oct  7 15:23:23 2021
+    Info: Elapsed time: 00:00:53
+    Info: System process ID: 20504
