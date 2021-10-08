@@ -10,7 +10,7 @@
 INTEL_SDK=21.2.0
 INTEL_BSP=20.4.0
 
-HPCC_FPGA_VERSION=v0.5
+HPCC_FPGA_VERSION=v0.5.1
 
 module load intelFPGA_pro/${INTEL_SDK}
 module load nalla_pcie/${INTEL_BSP}
