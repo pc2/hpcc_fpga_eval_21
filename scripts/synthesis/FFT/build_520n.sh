@@ -10,7 +10,7 @@
 INTEL_SDK=21.2.0
 INTEL_BSP=20.4.0
 
-HPCC_FPGA_VERSION=v0.5
+HPCC_FPGA_VERSION=v0.5.1
 
 BENCHMARK_NAME=FFT
 BM_MAKE_TARGETS=(fft1d_float_8_intel FFT_intel)
@@ -42,7 +42,7 @@ for r in "${CONFIG_NAMES[@]}"; do
 
     cmake ${BENCHMARK_DIR} -DCMAKE_BUILD_TYPE=Release -DHPCC_FPGA_CONFIG=${SCRIPT_PATH}/${r}
 
-    make ${BM_MAKE_TARGETS}
+    make "${BM_MAKE_TARGETS[@]}"
 
 done
 
