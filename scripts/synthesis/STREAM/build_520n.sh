@@ -10,10 +10,10 @@
 INTEL_SDK=21.2.0
 INTEL_BSP=20.4.0
 
-HPCC_FPGA_VERSION=v0.5
+HPCC_FPGA_VERSION=v0.5.1
 
 BENCHMARK_NAME=STREAM
-BM_MAKE_TARGETS=(stream_kernels_single_intel STREAM_intel)
+BM_MAKE_TARGETS=(stream_kernels_single_intel STREAM_FPGA_intel)
 
 CONFIG_NAMES=($(ls *.cmake))
 
@@ -43,7 +43,7 @@ for r in "${CONFIG_NAMES[@]}"; do
 
     cmake ${BENCHMARK_DIR} -DCMAKE_BUILD_TYPE=Release -DHPCC_FPGA_CONFIG=${SCRIPT_PATH}/${r}
 
-    make ${BM_MAKE_TARGETS}
+    make "${BM_MAKE_TARGETS[@]}"
 
 done
 
