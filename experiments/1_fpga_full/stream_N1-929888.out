@@ -1,0 +1,75 @@
+
+The following have been reloaded with a version change:
+  1) bittware_520n/20.4.0 => bittware_520n/20.4.0_hpc
+  2) intelFPGA_pro/21.1.0 => intelFPGA_pro/21.2.0
+
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/STREAM/520n-21.2.0-20.4.0/stream_kernels_single.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the STREAM benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.6
+MPI Version:  3.1
+Config. Time: Fri Oct 08 10:59:48 UTC 2021
+Git Commit:   b678d6d
+
+Summary:
+Array Size                    1073741824 (4.29497e+09 Byte )
+Communication Type            UNSUPPORTED
+Data Type                     cl_float
+Kernel File                   ../../synthesis_artifacts/STREAM/520n-21.2.0-20.4.0/stream_kernels_single.aocx
+Kernel Replications           4
+Kernel Type                   Single
+MPI Ranks                     2
+Repetitions                   10
+Test Mode                     No
+Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 3.38810e+00 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Each test below will take on the order of 1.30467e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.31120e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Execution Time: 4.98868e+01 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.192093e-07 on all three arrays
+Validation Time: 2.04893e+00 s
+       Function Best Rate MB/s     Avg time s       Min time       Max time
+            Add    1.35694e+05    1.89916e-01    1.89911e-01    1.89921e-01
+           Copy    1.31399e+05    1.30750e-01    1.30746e-01    1.30759e-01
+       PCI read    1.25001e+04    2.07089e+00    2.06157e+00    2.07639e+00
+      PCI write    1.22454e+04    2.12298e+00    2.10444e+00    2.14882e+00
+          Scale    1.31399e+05    1.30752e-01    1.30745e-01    1.30762e-01
+          Triad    1.35698e+05    1.89911e-01    1.89905e-01    1.89921e-01
+Validation: SUCCESS!

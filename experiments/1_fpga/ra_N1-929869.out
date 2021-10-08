@@ -1,0 +1,55 @@
+
+The following have been reloaded with a version change:
+  1) bittware_520n/20.4.0 => bittware_520n/20.4.0_hpc
+  2) intelFPGA_pro/21.1.0 => intelFPGA_pro/21.2.0
+
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/RandomAccess/520n-21.2.0-20.4.0/random_access_kernels_single.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the random access benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.5
+MPI Version:  3.1
+Config. Time: Fri Oct 08 09:53:39 UTC 2021
+Git Commit:   b678d6d
+
+Summary:
+#RNGs                         32
+Array Size                    1073741824 (8.58993e+09 Byte )
+Communication Type            UNSUPPORTED
+Kernel File                   ../../synthesis_artifacts/RandomAccess/520n-21.2.0-20.4.0/random_access_kernels_single.aocx
+Kernel Replications           4
+MPI Ranks                     1
+Repetitions                   10
+Test Mode                     No
+Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 2.30944e+00 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Execution Time: 2.62129e+02 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+Error: 6.82659e-04%
+Validation Time: 6.42543e+01 s
+           best           mean          GUOPS
+    2.31369e+01    2.31370e+01    1.85632e-01
+Validation: SUCCESS!
