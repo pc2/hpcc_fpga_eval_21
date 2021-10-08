@@ -1,0 +1,3903 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "MLABs", "Details"]
+  , "debug_enabled":"false"
+  , "type":"module"
+  , "total_percent":
+  [65.3714, 34.3448, 33.1392, 34.2036, 45.2604]
+  , "total":
+  [631756, 1236914, 4009, 2607, 460]
+  , "name":"Kernel System"
+  , "max_resources":
+  [1866240, 3732480, 11721, 5760, 93312]
+  , "children":
+  [
+    {
+      "name":"Static Partition"
+      , "type":"partition"
+      , "children":
+      [
+        {
+          "name":"Board interface"
+          , "type":"resource"
+          , "data":
+          [455240, 910480, 2627, 1047, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Platform interface logic."
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [19004, 21208, 0, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 5 global loads and 5 global stores. Reduce number of global loads and stores to simplify global interconnect."
+        }
+        , {
+          "type":"brief"
+          , "text":"For 5 global loads and 5 global stores."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"file:////cm/shared/opt/intelFPGA_pro/21.2.0/hld/aoc_help_pages/hnj1476724450050.html"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"System description ROM"
+      , "type":"resource"
+      , "data":
+      [2, 71, 2, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"This read-only memory contains information for the host about the system and about each kernel in the system, including kernel names, arguments, and attributes. The system description ROM ensures that the binary image on the FPGA is compatible with the host program."
+        }
+        , {
+          "type":"brief"
+          , "text":"Contains information for the host."
+        }
+      ]
+    }
+    , {
+      "name":"Pipe and channel resources"
+      , "type":"group"
+      , "children":
+      [
+        {
+          "name":"Channel (chanin0)"
+          , "type":"resource"
+          , "data":
+          [88, 1584, 0, 0, 32]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel array with 8 elements. Each channel is implemented 64 bits wide by 8 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"8 elements, each is 64b wide by 8 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"file:////cm/shared/opt/intelFPGA_pro/21.2.0/hld/aoc_help_pages/qah1476410829821.html"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Channel (chanin1)"
+          , "type":"resource"
+          , "data":
+          [88, 1584, 0, 0, 32]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel array with 8 elements. Each channel is implemented 64 bits wide by 8 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"8 elements, each is 64b wide by 8 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"file:////cm/shared/opt/intelFPGA_pro/21.2.0/hld/aoc_help_pages/qah1476410829821.html"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Channel (chanin2)"
+          , "type":"resource"
+          , "data":
+          [88, 1584, 0, 0, 32]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel array with 8 elements. Each channel is implemented 64 bits wide by 8 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"8 elements, each is 64b wide by 8 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"file:////cm/shared/opt/intelFPGA_pro/21.2.0/hld/aoc_help_pages/qah1476410829821.html"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Channel (chanin3)"
+          , "type":"resource"
+          , "data":
+          [88, 1584, 0, 0, 32]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel array with 8 elements. Each channel is implemented 64 bits wide by 8 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"8 elements, each is 64b wide by 8 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"file:////cm/shared/opt/intelFPGA_pro/21.2.0/hld/aoc_help_pages/qah1476410829821.html"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Channel (chanin4)"
+          , "type":"resource"
+          , "data":
+          [88, 1584, 0, 0, 32]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Channel array with 8 elements. Each channel is implemented 64 bits wide by 8 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"8 elements, each is 64b wide by 8 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"file:////cm/shared/opt/intelFPGA_pro/21.2.0/hld/aoc_help_pages/qah1476410829821.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"fetch0"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.392048, 0.270169, 0.149606, 1.2115, 0]
+      , "total_kernel_resources":
+      [4522, 5584, 142, 0, 26]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Local/Private Memory Systems"
+          , "type":"resource"
+          , "data":
+          [0, 0, 104, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Recompile with -g for details on each local and private memory system implemented in on-chip block RAM."
+            }
+          ]
+        }
+        , {
+          "name":"fetch0.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1, 164, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 164, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [13, 12, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [46, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [34, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [12, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"fetch0.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [211, 1475, 5, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [211, 1475, 5, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [65, 139, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [65, 139, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [359, 672, 17, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3827, 3121, 15, 0, 26]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":58
+                      , "data":
+                      [126, 34, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":112
+                      , "data":
+                      [3104, 1024, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [24, 16, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":9
+                      , "data":
+                      [497, 2021, 15, 0, 26]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [34, 24, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"fetch1"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.392048, 0.270169, 0.149606, 1.2115, 0]
+      , "total_kernel_resources":
+      [4522, 5584, 142, 0, 26]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Local/Private Memory Systems"
+          , "type":"resource"
+          , "data":
+          [0, 0, 104, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Recompile with -g for details on each local and private memory system implemented in on-chip block RAM."
+            }
+          ]
+        }
+        , {
+          "name":"fetch1.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1, 164, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 164, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [13, 12, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [46, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [34, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [12, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"fetch1.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [211, 1475, 5, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [211, 1475, 5, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [65, 139, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [65, 139, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [359, 672, 17, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3827, 3121, 15, 0, 26]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":58
+                      , "data":
+                      [126, 34, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":112
+                      , "data":
+                      [3104, 1024, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [24, 16, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":9
+                      , "data":
+                      [497, 2021, 15, 0, 26]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [34, 24, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"fetch2"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.392048, 0.270169, 0.149606, 1.2115, 0]
+      , "total_kernel_resources":
+      [4522, 5584, 142, 0, 26]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Local/Private Memory Systems"
+          , "type":"resource"
+          , "data":
+          [0, 0, 104, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Recompile with -g for details on each local and private memory system implemented in on-chip block RAM."
+            }
+          ]
+        }
+        , {
+          "name":"fetch2.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1, 164, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 164, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [13, 12, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [46, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [34, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [12, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"fetch2.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [211, 1475, 5, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [211, 1475, 5, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [65, 139, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [65, 139, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [359, 672, 17, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3827, 3121, 15, 0, 26]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":58
+                      , "data":
+                      [126, 34, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":112
+                      , "data":
+                      [3104, 1024, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [24, 16, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":9
+                      , "data":
+                      [497, 2021, 15, 0, 26]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [34, 24, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"fetch3"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.392048, 0.270169, 0.149606, 1.2115, 0]
+      , "total_kernel_resources":
+      [4522, 5584, 142, 0, 26]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Local/Private Memory Systems"
+          , "type":"resource"
+          , "data":
+          [0, 0, 104, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Recompile with -g for details on each local and private memory system implemented in on-chip block RAM."
+            }
+          ]
+        }
+        , {
+          "name":"fetch3.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1, 164, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 164, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [13, 12, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [46, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [34, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [12, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"fetch3.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [211, 1475, 5, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [211, 1475, 5, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [65, 139, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [65, 139, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [359, 672, 17, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3827, 3121, 15, 0, 26]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":58
+                      , "data":
+                      [126, 34, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":112
+                      , "data":
+                      [3104, 1024, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [24, 16, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":9
+                      , "data":
+                      [497, 2021, 15, 0, 26]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [34, 24, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"fetch4"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.392048, 0.270169, 0.149606, 1.2115, 0]
+      , "total_kernel_resources":
+      [4522, 5584, 142, 0, 26]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Local/Private Memory Systems"
+          , "type":"resource"
+          , "data":
+          [0, 0, 104, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Recompile with -g for details on each local and private memory system implemented in on-chip block RAM."
+            }
+          ]
+        }
+        , {
+          "name":"fetch4.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1, 164, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 164, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [13, 12, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [46, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [34, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [12, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"fetch4.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [211, 1475, 5, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [211, 1475, 5, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [65, 139, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [65, 139, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [359, 672, 17, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3827, 3121, 15, 0, 26]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":58
+                      , "data":
+                      [126, 34, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":112
+                      , "data":
+                      [3104, 1024, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [24, 16, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":9
+                      , "data":
+                      [497, 2021, 15, 0, 26]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [34, 24, 0, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Pipelined never-stall LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Pipelined never-stall LSU"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"fft1d0"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [2.83138, 1.47741, 1.44309, 1.14325, 5.41667]
+      , "total_kernel_resources":
+      [26892, 53863, 134, 312, 34]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"fft1d0.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 81, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 81, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [13, 12, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [34, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [23, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"fft1d0.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [783, 9212, 5, 0, 34]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [783, 9212, 5, 0, 34]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5738, 10757, 58, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [5738, 10757, 58, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [359, 675, 17, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [19965, 33126, 53, 312, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Add"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [4608, 9216, 0, 96, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Dot Product of Size 2"
+                      , "type":"resource"
+                      , "count":60
+                      , "data":
+                      [4800, 9600, 0, 120, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Sub"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [4608, 9216, 0, 96, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":11
+                      , "data":
+                      [70, 2, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":192
+                      , "data":
+                      [5424, 2304, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":7
+                      , "data":
+                      [63, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [8, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"On-chip Read-Only Memory Lookup"
+                      , "type":"resource"
+                      , "count":36
+                      , "data":
+                      [0, 0, 36, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Read from 16384 bit ROM. "
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Read from 16384 bit ROM. A copy of the ROM is created for each access."
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [345, 2788, 17, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"fft1d1"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [2.83138, 1.47741, 1.44309, 1.14325, 5.41667]
+      , "total_kernel_resources":
+      [26892, 53863, 134, 312, 34]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"fft1d1.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 81, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 81, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [13, 12, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [34, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [23, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"fft1d1.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [783, 9212, 5, 0, 34]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [783, 9212, 5, 0, 34]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5738, 10757, 58, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [5738, 10757, 58, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [359, 675, 17, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [19965, 33126, 53, 312, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Add"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [4608, 9216, 0, 96, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Dot Product of Size 2"
+                      , "type":"resource"
+                      , "count":60
+                      , "data":
+                      [4800, 9600, 0, 120, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Sub"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [4608, 9216, 0, 96, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":11
+                      , "data":
+                      [70, 2, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":192
+                      , "data":
+                      [5424, 2304, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":7
+                      , "data":
+                      [63, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [8, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"On-chip Read-Only Memory Lookup"
+                      , "type":"resource"
+                      , "count":36
+                      , "data":
+                      [0, 0, 36, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Read from 16384 bit ROM. "
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Read from 16384 bit ROM. A copy of the ROM is created for each access."
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [345, 2788, 17, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"fft1d2"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [2.83138, 1.47741, 1.44309, 1.14325, 5.41667]
+      , "total_kernel_resources":
+      [26892, 53863, 134, 312, 34]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"fft1d2.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 81, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 81, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [13, 12, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [34, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [23, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"fft1d2.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [783, 9212, 5, 0, 34]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [783, 9212, 5, 0, 34]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5738, 10757, 58, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [5738, 10757, 58, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [359, 675, 17, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [19965, 33126, 53, 312, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Add"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [4608, 9216, 0, 96, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Dot Product of Size 2"
+                      , "type":"resource"
+                      , "count":60
+                      , "data":
+                      [4800, 9600, 0, 120, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Sub"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [4608, 9216, 0, 96, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":11
+                      , "data":
+                      [70, 2, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":192
+                      , "data":
+                      [5424, 2304, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":7
+                      , "data":
+                      [63, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [8, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"On-chip Read-Only Memory Lookup"
+                      , "type":"resource"
+                      , "count":36
+                      , "data":
+                      [0, 0, 36, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Read from 16384 bit ROM. "
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Read from 16384 bit ROM. A copy of the ROM is created for each access."
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [345, 2788, 17, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"fft1d3"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [2.83138, 1.47741, 1.44309, 1.14325, 5.41667]
+      , "total_kernel_resources":
+      [26892, 53863, 134, 312, 34]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"fft1d3.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 81, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 81, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [13, 12, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [34, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [23, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"fft1d3.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [783, 9212, 5, 0, 34]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [783, 9212, 5, 0, 34]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5738, 10757, 58, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [5738, 10757, 58, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [359, 675, 17, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [19965, 33126, 53, 312, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Add"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [4608, 9216, 0, 96, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Dot Product of Size 2"
+                      , "type":"resource"
+                      , "count":60
+                      , "data":
+                      [4800, 9600, 0, 120, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Sub"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [4608, 9216, 0, 96, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":11
+                      , "data":
+                      [70, 2, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":192
+                      , "data":
+                      [5424, 2304, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":7
+                      , "data":
+                      [63, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [8, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"On-chip Read-Only Memory Lookup"
+                      , "type":"resource"
+                      , "count":36
+                      , "data":
+                      [0, 0, 36, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Read from 16384 bit ROM. "
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Read from 16384 bit ROM. A copy of the ROM is created for each access."
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [345, 2788, 17, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"fft1d4"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [2.83138, 1.47741, 1.44309, 1.14325, 5.41667]
+      , "total_kernel_resources":
+      [26892, 53863, 134, 312, 34]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Max global work dimension: 0"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nMax global work dimension: 0\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"fft1d4.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 81, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 81, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [13, 12, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [34, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [23, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"fft1d4.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [783, 9212, 5, 0, 34]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [783, 9212, 5, 0, 34]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5738, 10757, 58, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [5738, 10757, 58, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [359, 675, 17, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [19965, 33126, 53, 312, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Add"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [4608, 9216, 0, 96, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Dot Product of Size 2"
+                      , "type":"resource"
+                      , "count":60
+                      , "data":
+                      [4800, 9600, 0, 120, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Sub"
+                      , "type":"resource"
+                      , "count":96
+                      , "data":
+                      [4608, 9216, 0, 96, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":11
+                      , "data":
+                      [70, 2, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":192
+                      , "data":
+                      [5424, 2304, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"9-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":7
+                      , "data":
+                      [63, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [8, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"On-chip Read-Only Memory Lookup"
+                      , "type":"resource"
+                      , "count":36
+                      , "data":
+                      [0, 0, 36, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Read from 16384 bit ROM. "
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Read from 16384 bit ROM. A copy of the ROM is created for each access."
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [345, 2788, 17, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
