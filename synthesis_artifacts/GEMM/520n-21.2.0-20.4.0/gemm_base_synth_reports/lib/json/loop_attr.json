@@ -1,0 +1,1457 @@
+{
+  "name":"loop_attributes"
+  , "id":4294967295
+  , "nodes":
+  [
+    {
+      "name":"gemm0"
+      , "id":1459218592
+      , "clk":"No"
+      , "fmax":"480.00"
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"gemm0.B0"
+          , "id":1435822352
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"7.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"gemm0.B1"
+          , "id":1435716128
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"n/a"
+          , "ll":"1"
+          , "lt":"15.000000"
+          , "mi":"n/a"
+          , "pl":"No"
+          , "tc":"0"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: disabled."
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure is disabled due to loop not pipelined"
+                }
+              ]
+            }
+          ]
+          , "type":"loop"
+          , "children":
+          [
+            {
+              "name":"gemm0.B4"
+              , "id":1435053376
+              , "af":"480.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"n/a"
+              , "ll":"2"
+              , "lt":"6.000000"
+              , "mi":"n/a"
+              , "pl":"No"
+              , "tc":"0"
+              , "tn":"1"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: disabled."
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure is disabled due to loop not pipelined"
+                    }
+                  ]
+                }
+              ]
+              , "type":"loop"
+              , "children":
+              [
+                {
+                  "name":"gemm0.B5"
+                  , "id":1435053456
+                  , "af":"480.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Enabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"231.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"512"
+                  , "tn":"1"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: enabled."
+                    }
+                  ]
+                  , "type":"loop"
+                }
+                , {
+                  "name":"gemm0.B6"
+                  , "id":1435053536
+                  , "af":"480.00"
+                  , "br":"0"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"0.000000"
+                  , "mi":"n/a"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"1"
+                  , "type":"bb"
+                }
+                , {
+                  "name":"gemm0.B7"
+                  , "id":1435693616
+                  , "af":"480.00"
+                  , "br":"0"
+                  , "ci":"0"
+                  , "fo":"Enabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"8.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"1"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: enabled."
+                    }
+                  ]
+                  , "type":"loop"
+                  , "children":
+                  [
+                    {
+                      "name":"gemm0.B9"
+                      , "id":1435693776
+                      , "af":"432.00"
+                      , "br":"1"
+                      , "ci":"0"
+                      , "fo":"Disabled"
+                      , "ii":"1"
+                      , "ll":"4"
+                      , "lt":"32.000000"
+                      , "mi":"1"
+                      , "pl":"Yes"
+                      , "tc":"64"
+                      , "tn":"1"
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Hyper-Optimized loop structure: disabled."
+                          , "details":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"Hyper-Optimized loop structure is disabled due to hardened fp accumulator"
+                            }
+                          ]
+                        }
+                      ]
+                      , "type":"loop"
+                    }
+                  ]
+                }
+                , {
+                  "name":"gemm0.B8"
+                  , "id":1435693696
+                  , "af":"480.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"18.000000"
+                  , "mi":"n/a"
+                  , "pl":"Yes"
+                  , "tc":"64"
+                  , "tn":"1"
+                  , "type":"bb"
+                }
+              ]
+            }
+            , {
+              "name":"gemm0.B10"
+              , "id":1435693856
+              , "af":"480.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"7.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+            , {
+              "name":"gemm0.B3"
+              , "id":1435053296
+              , "af":"480.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"5.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+            , {
+              "name":"gemm0.B11"
+              , "id":1435693936
+              , "af":"480.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Enabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"243.000000"
+              , "mi":"1"
+              , "pl":"Yes"
+              , "tc":"512"
+              , "tn":"1"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: enabled."
+                }
+              ]
+              , "type":"loop"
+            }
+          ]
+        }
+        , {
+          "name":"gemm0.B12"
+          , "id":1435694016
+          , "af":"480.00"
+          , "br":"1"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"8.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"gemm0.B2"
+          , "id":1435053216
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"1.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"gemm1"
+      , "id":1579728048
+      , "clk":"No"
+      , "fmax":"480.00"
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"gemm1.B0"
+          , "id":1435889200
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"7.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"gemm1.B1"
+          , "id":1436851536
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"n/a"
+          , "ll":"1"
+          , "lt":"15.000000"
+          , "mi":"n/a"
+          , "pl":"No"
+          , "tc":"0"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: disabled."
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure is disabled due to loop not pipelined"
+                }
+              ]
+            }
+          ]
+          , "type":"loop"
+          , "children":
+          [
+            {
+              "name":"gemm1.B4"
+              , "id":1436851776
+              , "af":"480.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"n/a"
+              , "ll":"2"
+              , "lt":"6.000000"
+              , "mi":"n/a"
+              , "pl":"No"
+              , "tc":"0"
+              , "tn":"1"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: disabled."
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure is disabled due to loop not pipelined"
+                    }
+                  ]
+                }
+              ]
+              , "type":"loop"
+              , "children":
+              [
+                {
+                  "name":"gemm1.B5"
+                  , "id":1436851856
+                  , "af":"480.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Enabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"231.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"512"
+                  , "tn":"1"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: enabled."
+                    }
+                  ]
+                  , "type":"loop"
+                }
+                , {
+                  "name":"gemm1.B6"
+                  , "id":1436851936
+                  , "af":"480.00"
+                  , "br":"0"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"0.000000"
+                  , "mi":"n/a"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"1"
+                  , "type":"bb"
+                }
+                , {
+                  "name":"gemm1.B7"
+                  , "id":1436852016
+                  , "af":"480.00"
+                  , "br":"0"
+                  , "ci":"0"
+                  , "fo":"Enabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"8.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"1"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: enabled."
+                    }
+                  ]
+                  , "type":"loop"
+                  , "children":
+                  [
+                    {
+                      "name":"gemm1.B9"
+                      , "id":1436852176
+                      , "af":"432.00"
+                      , "br":"1"
+                      , "ci":"0"
+                      , "fo":"Disabled"
+                      , "ii":"1"
+                      , "ll":"4"
+                      , "lt":"32.000000"
+                      , "mi":"1"
+                      , "pl":"Yes"
+                      , "tc":"64"
+                      , "tn":"1"
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Hyper-Optimized loop structure: disabled."
+                          , "details":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"Hyper-Optimized loop structure is disabled due to hardened fp accumulator"
+                            }
+                          ]
+                        }
+                      ]
+                      , "type":"loop"
+                    }
+                  ]
+                }
+                , {
+                  "name":"gemm1.B8"
+                  , "id":1436852096
+                  , "af":"480.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"18.000000"
+                  , "mi":"n/a"
+                  , "pl":"Yes"
+                  , "tc":"64"
+                  , "tn":"1"
+                  , "type":"bb"
+                }
+              ]
+            }
+            , {
+              "name":"gemm1.B10"
+              , "id":1436852256
+              , "af":"480.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"7.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+            , {
+              "name":"gemm1.B3"
+              , "id":1436851696
+              , "af":"480.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"5.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+            , {
+              "name":"gemm1.B11"
+              , "id":1436852336
+              , "af":"480.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Enabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"243.000000"
+              , "mi":"1"
+              , "pl":"Yes"
+              , "tc":"512"
+              , "tn":"1"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: enabled."
+                }
+              ]
+              , "type":"loop"
+            }
+          ]
+        }
+        , {
+          "name":"gemm1.B12"
+          , "id":1436852416
+          , "af":"480.00"
+          , "br":"1"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"8.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"gemm1.B2"
+          , "id":1436851616
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"1.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"gemm2"
+      , "id":1811192320
+      , "clk":"No"
+      , "fmax":"480.00"
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"gemm2.B0"
+          , "id":1437538320
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"7.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"gemm2.B1"
+          , "id":1437680096
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"n/a"
+          , "ll":"1"
+          , "lt":"15.000000"
+          , "mi":"n/a"
+          , "pl":"No"
+          , "tc":"0"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: disabled."
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure is disabled due to loop not pipelined"
+                }
+              ]
+            }
+          ]
+          , "type":"loop"
+          , "children":
+          [
+            {
+              "name":"gemm2.B4"
+              , "id":1436854688
+              , "af":"480.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"n/a"
+              , "ll":"2"
+              , "lt":"6.000000"
+              , "mi":"n/a"
+              , "pl":"No"
+              , "tc":"0"
+              , "tn":"1"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: disabled."
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure is disabled due to loop not pipelined"
+                    }
+                  ]
+                }
+              ]
+              , "type":"loop"
+              , "children":
+              [
+                {
+                  "name":"gemm2.B5"
+                  , "id":1436854768
+                  , "af":"480.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Enabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"231.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"512"
+                  , "tn":"1"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: enabled."
+                    }
+                  ]
+                  , "type":"loop"
+                }
+                , {
+                  "name":"gemm2.B6"
+                  , "id":1436854848
+                  , "af":"480.00"
+                  , "br":"0"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"0.000000"
+                  , "mi":"n/a"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"1"
+                  , "type":"bb"
+                }
+                , {
+                  "name":"gemm2.B7"
+                  , "id":1436854928
+                  , "af":"480.00"
+                  , "br":"0"
+                  , "ci":"0"
+                  , "fo":"Enabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"8.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"1"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: enabled."
+                    }
+                  ]
+                  , "type":"loop"
+                  , "children":
+                  [
+                    {
+                      "name":"gemm2.B9"
+                      , "id":1436855088
+                      , "af":"432.00"
+                      , "br":"1"
+                      , "ci":"0"
+                      , "fo":"Disabled"
+                      , "ii":"1"
+                      , "ll":"4"
+                      , "lt":"32.000000"
+                      , "mi":"1"
+                      , "pl":"Yes"
+                      , "tc":"64"
+                      , "tn":"1"
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Hyper-Optimized loop structure: disabled."
+                          , "details":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"Hyper-Optimized loop structure is disabled due to hardened fp accumulator"
+                            }
+                          ]
+                        }
+                      ]
+                      , "type":"loop"
+                    }
+                  ]
+                }
+                , {
+                  "name":"gemm2.B8"
+                  , "id":1436855008
+                  , "af":"480.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"18.000000"
+                  , "mi":"n/a"
+                  , "pl":"Yes"
+                  , "tc":"64"
+                  , "tn":"1"
+                  , "type":"bb"
+                }
+              ]
+            }
+            , {
+              "name":"gemm2.B10"
+              , "id":1436855168
+              , "af":"480.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"7.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+            , {
+              "name":"gemm2.B3"
+              , "id":1436854608
+              , "af":"480.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"5.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+            , {
+              "name":"gemm2.B11"
+              , "id":1436855248
+              , "af":"480.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Enabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"243.000000"
+              , "mi":"1"
+              , "pl":"Yes"
+              , "tc":"512"
+              , "tn":"1"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: enabled."
+                }
+              ]
+              , "type":"loop"
+            }
+          ]
+        }
+        , {
+          "name":"gemm2.B12"
+          , "id":1436855328
+          , "af":"480.00"
+          , "br":"1"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"8.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"gemm2.B2"
+          , "id":1436854528
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"1.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"gemm3"
+      , "id":2067593312
+      , "clk":"No"
+      , "fmax":"480.00"
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"gemm3.B0"
+          , "id":1438369200
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"7.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"gemm3.B1"
+          , "id":1438576464
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"n/a"
+          , "ll":"1"
+          , "lt":"15.000000"
+          , "mi":"n/a"
+          , "pl":"No"
+          , "tc":"0"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: disabled."
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure is disabled due to loop not pipelined"
+                }
+              ]
+            }
+          ]
+          , "type":"loop"
+          , "children":
+          [
+            {
+              "name":"gemm3.B4"
+              , "id":1438577568
+              , "af":"480.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"n/a"
+              , "ll":"2"
+              , "lt":"6.000000"
+              , "mi":"n/a"
+              , "pl":"No"
+              , "tc":"0"
+              , "tn":"1"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: disabled."
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure is disabled due to loop not pipelined"
+                    }
+                  ]
+                }
+              ]
+              , "type":"loop"
+              , "children":
+              [
+                {
+                  "name":"gemm3.B5"
+                  , "id":1438577648
+                  , "af":"480.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Enabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"231.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"512"
+                  , "tn":"1"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: enabled."
+                    }
+                  ]
+                  , "type":"loop"
+                }
+                , {
+                  "name":"gemm3.B6"
+                  , "id":1438577728
+                  , "af":"480.00"
+                  , "br":"0"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"0.000000"
+                  , "mi":"n/a"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"1"
+                  , "type":"bb"
+                }
+                , {
+                  "name":"gemm3.B7"
+                  , "id":1438577808
+                  , "af":"480.00"
+                  , "br":"0"
+                  , "ci":"0"
+                  , "fo":"Enabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"8.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"1"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: enabled."
+                    }
+                  ]
+                  , "type":"loop"
+                  , "children":
+                  [
+                    {
+                      "name":"gemm3.B9"
+                      , "id":1438577968
+                      , "af":"432.00"
+                      , "br":"1"
+                      , "ci":"0"
+                      , "fo":"Disabled"
+                      , "ii":"1"
+                      , "ll":"4"
+                      , "lt":"32.000000"
+                      , "mi":"1"
+                      , "pl":"Yes"
+                      , "tc":"64"
+                      , "tn":"1"
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Hyper-Optimized loop structure: disabled."
+                          , "details":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"Hyper-Optimized loop structure is disabled due to hardened fp accumulator"
+                            }
+                          ]
+                        }
+                      ]
+                      , "type":"loop"
+                    }
+                  ]
+                }
+                , {
+                  "name":"gemm3.B8"
+                  , "id":1438577888
+                  , "af":"480.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"18.000000"
+                  , "mi":"n/a"
+                  , "pl":"Yes"
+                  , "tc":"64"
+                  , "tn":"1"
+                  , "type":"bb"
+                }
+              ]
+            }
+            , {
+              "name":"gemm3.B10"
+              , "id":1438578048
+              , "af":"480.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"7.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+            , {
+              "name":"gemm3.B3"
+              , "id":1438577488
+              , "af":"480.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"5.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+            , {
+              "name":"gemm3.B11"
+              , "id":1438578128
+              , "af":"480.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Enabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"243.000000"
+              , "mi":"1"
+              , "pl":"Yes"
+              , "tc":"512"
+              , "tn":"1"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: enabled."
+                }
+              ]
+              , "type":"loop"
+            }
+          ]
+        }
+        , {
+          "name":"gemm3.B12"
+          , "id":1438578208
+          , "af":"480.00"
+          , "br":"1"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"8.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"gemm3.B2"
+          , "id":1438577408
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"1.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"gemm4"
+      , "id":2310027840
+      , "clk":"No"
+      , "fmax":"480.00"
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"gemm4.B0"
+          , "id":1438621152
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"7.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"gemm4.B1"
+          , "id":1439463856
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"n/a"
+          , "ll":"1"
+          , "lt":"15.000000"
+          , "mi":"n/a"
+          , "pl":"No"
+          , "tc":"0"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: disabled."
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure is disabled due to loop not pipelined"
+                }
+              ]
+            }
+          ]
+          , "type":"loop"
+          , "children":
+          [
+            {
+              "name":"gemm4.B4"
+              , "id":1437681344
+              , "af":"480.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"n/a"
+              , "ll":"2"
+              , "lt":"6.000000"
+              , "mi":"n/a"
+              , "pl":"No"
+              , "tc":"0"
+              , "tn":"1"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: disabled."
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure is disabled due to loop not pipelined"
+                    }
+                  ]
+                }
+              ]
+              , "type":"loop"
+              , "children":
+              [
+                {
+                  "name":"gemm4.B5"
+                  , "id":1437681424
+                  , "af":"480.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Enabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"231.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"512"
+                  , "tn":"1"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: enabled."
+                    }
+                  ]
+                  , "type":"loop"
+                }
+                , {
+                  "name":"gemm4.B6"
+                  , "id":1437681504
+                  , "af":"480.00"
+                  , "br":"0"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"0.000000"
+                  , "mi":"n/a"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"1"
+                  , "type":"bb"
+                }
+                , {
+                  "name":"gemm4.B7"
+                  , "id":1437681584
+                  , "af":"480.00"
+                  , "br":"0"
+                  , "ci":"0"
+                  , "fo":"Enabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"8.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"1"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: enabled."
+                    }
+                  ]
+                  , "type":"loop"
+                  , "children":
+                  [
+                    {
+                      "name":"gemm4.B9"
+                      , "id":1437681744
+                      , "af":"432.00"
+                      , "br":"1"
+                      , "ci":"0"
+                      , "fo":"Disabled"
+                      , "ii":"1"
+                      , "ll":"4"
+                      , "lt":"32.000000"
+                      , "mi":"1"
+                      , "pl":"Yes"
+                      , "tc":"64"
+                      , "tn":"1"
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Hyper-Optimized loop structure: disabled."
+                          , "details":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"Hyper-Optimized loop structure is disabled due to hardened fp accumulator"
+                            }
+                          ]
+                        }
+                      ]
+                      , "type":"loop"
+                    }
+                  ]
+                }
+                , {
+                  "name":"gemm4.B8"
+                  , "id":1437681664
+                  , "af":"480.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"18.000000"
+                  , "mi":"n/a"
+                  , "pl":"Yes"
+                  , "tc":"64"
+                  , "tn":"1"
+                  , "type":"bb"
+                }
+              ]
+            }
+            , {
+              "name":"gemm4.B10"
+              , "id":1437681824
+              , "af":"480.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"7.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+            , {
+              "name":"gemm4.B3"
+              , "id":1437681264
+              , "af":"480.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"5.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+            , {
+              "name":"gemm4.B11"
+              , "id":1437681904
+              , "af":"480.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Enabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"243.000000"
+              , "mi":"1"
+              , "pl":"Yes"
+              , "tc":"512"
+              , "tn":"1"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: enabled."
+                }
+              ]
+              , "type":"loop"
+            }
+          ]
+        }
+        , {
+          "name":"gemm4.B12"
+          , "id":1437681984
+          , "af":"480.00"
+          , "br":"1"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"8.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"gemm4.B2"
+          , "id":1437681184
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"1.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+}
