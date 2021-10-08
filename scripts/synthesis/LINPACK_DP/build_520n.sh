@@ -6,11 +6,12 @@
 #
 #SBATCH -p fpgasyn
 #SBATCH -J LINPACK_DP
+#SBATCH --exclusive
 
 INTEL_SDK=21.2.0
 INTEL_BSP=20.4.0
 
-HPCC_FPGA_VERSION=v0.5
+HPCC_FPGA_VERSION=v0.5.1
 
 module load intelFPGA_pro/${INTEL_SDK}
 module load nalla_pcie/${INTEL_BSP}
@@ -40,11 +41,11 @@ for r in "${CONFIG_NAMES[@]}"; do
 
     cmake ${BENCHMARK_DIR} -DCMAKE_BUILD_TYPE=Release -DHPCC_FPGA_CONFIG=${SCRIPT_PATH}/${r}.cmake
 
-    make hpl_torus_PCIE_intel LINPACK_intel
+    make hpl_torus_PCIE_intel Linpack_intel
 
 done
 
-CONFIG_NAMES=("Nallatech_520N_PCIE_DP_B8_SB2_R5" "Nallatech_520N_PCIE_DP_B8_SB2_R5_noring")
+CONFIG_NAMES=("Nallatech_520N_IEC_DP_B8_SB2_R5" "Nallatech_520N_IEC_DP_B8_SB2_R5_noring")
 
 for r in "${CONFIG_NAMES[@]}"; do
     SYNTH_NAME=${INTEL_SDK}-${INTEL_BSP}-${r}
@@ -55,5 +56,5 @@ for r in "${CONFIG_NAMES[@]}"; do
 
     cmake ${BENCHMARK_DIR} -DCMAKE_BUILD_TYPE=Release -DHPCC_FPGA_CONFIG=${SCRIPT_PATH}/${r}.cmake
 
-    make hpl_torus_IEC_intel LINPACK_intel
+    make hpl_torus_IEC_intel Linpack_intel
 done
