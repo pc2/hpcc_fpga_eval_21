@@ -43,17 +43,3 @@ for r in "${CONFIG_NAMES[@]}"; do
     make hpl_torus_PCIE_intel Linpack_intel
 
 done
-
-CONFIG_NAMES=("Nallatech_520N_IEC_B9_SB3_R5" "Nallatech_520N_IEC_B9_SB3_R5_noring")
-
-for r in "${CONFIG_NAMES[@]}"; do
-    SYNTH_NAME=${INTEL_SDK}-${INTEL_BSP}-${r}
-    BUILD_DIR=${SYNTH_DIR}/${SYNTH_NAME}
-
-    mkdir -p ${BUILD_DIR}
-    cd ${BUILD_DIR}
-
-    cmake ${BENCHMARK_DIR} -DCMAKE_BUILD_TYPE=Release -DHPCC_FPGA_CONFIG=${SCRIPT_PATH}/${r}.cmake
-
-    make hpl_torus_IEC_intel Linpack_intel
-done
