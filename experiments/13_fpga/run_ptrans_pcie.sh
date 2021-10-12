@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH -p fpga 
 #SBATCH --constraint=20.4.0_hpc
-#SBATCH -N 5
-#SBATCH -n 9
+#SBATCH -N 13
+#SBATCH -n 25
 #SBATCH -t 2:00:00 
-#SBATCH -w fpga-0009,fpga-0010,fpga-0004,fpga-0005,fpga-0006
+#SBATCH -w fpga-0001,fpga-0002,fpga-0004,fpga-0005,fpga-0006,fpga-0007,fpga-0008,fpga-0009,fpga-0010,fpga-0011,fpga-0012,fpga-0013,fpga-0014
 #SBATCH -o ptrans_pcie_N2_m68-%j.txt
 #SBATCH -e ptrans_pcie_N2_m68-%j.txt
 #SBATCH -J PTRANS-pcie
