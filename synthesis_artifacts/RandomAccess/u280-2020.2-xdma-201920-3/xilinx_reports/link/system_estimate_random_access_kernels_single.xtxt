@@ -1,0 +1,42 @@
+===============================================================================
+Version:    v++ v2020.2 (64-bit)
+Build:      SW Build (by xbuild) on 2020-11-18-05:13:29
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Mon Oct 11 13:30:13 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             random_access_kernels_single
+Target Device:           xilinx:u280:xdma:201920.3
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name     Type  Target              OpenCL Library                Compute Units
+--------------  ----  ------------------  ----------------------------  -------------
+accessMemory_0  clc   fpga0:OCL_REGION_0  random_access_kernels_single  2
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     random_access_kernels_single
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit      Kernel Name     Module Name     Target Frequency  Estimated Frequency
+----------------  --------------  --------------  ----------------  -------------------
+accessMemory_0_1  accessMemory_0  accessMemory_0  300.300293        411.015198
+accessMemory_0_2  accessMemory_0  accessMemory_0  300.300293        411.015198
+
+Latency Information
+Compute Unit      Kernel Name     Module Name     Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+----------------  --------------  --------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+accessMemory_0_1  accessMemory_0  accessMemory_0  undef           undef          undef         undef           undef            undef           undef
+accessMemory_0_2  accessMemory_0  accessMemory_0  undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit      Kernel Name     Module Name     FF    LUT    DSP  BRAM  URAM
+----------------  --------------  --------------  ----  -----  ---  ----  ----
+accessMemory_0_1  accessMemory_0  accessMemory_0  8611  13343  0    38    0
+accessMemory_0_2  accessMemory_0  accessMemory_0  8611  13343  0    38    0
+-------------------------------------------------------------------------------

@@ -1,0 +1,125 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2020.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'meyermar' on host 'alveo0.ethz.ch' (Linux_x86_64 version 4.14.156-U) on Mon Oct 11 11:17:17 CEST 2021
+INFO: [HLS 200-10] On os Ubuntu 18.04.3 LTS
+INFO: [HLS 200-10] In directory '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/random_access_kernels_single/accessMemory_0'
+Sourcing Tcl script 'accessMemory_0.tcl'
+INFO: [HLS 200-1510] Running: open_project accessMemory_0 
+INFO: [HLS 200-10] Creating and opening project '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/random_access_kernels_single/accessMemory_0/accessMemory_0'.
+INFO: [HLS 200-1510] Running: set_top accessMemory_0 
+INFO: [HLS 200-1510] Running: add_files /mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl -cflags  -D XILINX_FPGA -I /mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/common -I /mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/HPCC_FPGA/RandomAccess/src/device  
+INFO: [HLS 200-10] Adding design file '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/random_access_kernels_single/accessMemory_0/accessMemory_0/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_offset=slave
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-10] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 300.000000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_export -disable_deadlock_detection=true 
+INFO: [HLS 200-1510] Running: config_rtl -m_axi_conservative_mode=1 
+WARNING: [HLS 200-483] The 'config_rtl -m_axi_conservative_mode' command is deprecated and will be removed in a future release. Use 'config_interface -m_axi_conservative_mode' as its replacement.
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -ipname accessMemory_0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 189.874 MB.
+INFO: [HLS 200-10] Analyzing design file '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl' ... 
+WARNING: [HLS 207-5270] unknown attribute 'uses_global_work_offset' ignored: /mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:51:39
+WARNING: [HLS 207-5270] unknown attribute 'max_global_work_dim' ignored: /mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:51:16
+WARNING: [HLS 207-5301] unused parameter 'num_cache_operations': /mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:57:36
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.67 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.39 seconds; current allocated memory: 190.637 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:127:17)
+INFO: [HLS 214-129] Unrolled all 9 iterations of the loop 'anonymous' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:168:17)
+INFO: [HLS 214-129] Unrolled all 10 iterations of the loop 'anonymous' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:92:5)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:77:5)
+INFO: [HLS 214-129] Unrolled all 2 iterations of the loop 'anonymous' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:66:9)
+INFO: [HLS 214-129] Unrolled all 2 iterations of the loop 'anonymous' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:70:9)
+INFO: [HLS 214-129] Unrolled all 4 iterations of the loop 'anonymous' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:63:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.83 seconds. CPU system time: 0.56 seconds. Elapsed time: 4.37 seconds; current allocated memory: 193.195 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 193.196 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1.95 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.01 seconds; current allocated memory: 195.587 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 194.651 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:122) in function 'accessMemory_0' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:128:47) to (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:162:21) in function 'accessMemory_0'... converting 17 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 216.244 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'Loop-1' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:112:5) in function 'accessMemory_0' the outer loop is not a perfect loop because either the parent loop or the sub loop has no computeable trip count.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-472] Inferring partial write operation for 'local_address_buffer' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:160:41)
+INFO: [HLS 200-472] Inferring partial write operation for 'loaded_data_buffer' (/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/RandomAccess/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/random_access_kernels_single_replicated_xilinx.cl:163:43)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 211.078 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'accessMemory_0' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'accessMemory_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 157, loop 'Loop 1.1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.48 seconds; current allocated memory: 213.393 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.08 seconds; current allocated memory: 216.108 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'accessMemory_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'accessMemory_0/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'accessMemory_0/data' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'accessMemory_0/random_init' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'accessMemory_0/m' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'accessMemory_0/data_chunk' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'accessMemory_0/num_cache_operations' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'accessMemory_0/kernel_number' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'accessMemory_0' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'data', 'random_init', 'm', 'data_chunk', 'num_cache_operations', 'kernel_number' to AXI-Lite port control.
+INFO: [RTGEN 206-104] Estimated max fanout for 'accessMemory_0' is 11308 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_64s_64_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'accessMemory_0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.89 seconds. CPU system time: 0 seconds. Elapsed time: 0.9 seconds; current allocated memory: 222.560 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'accessMemory_0_mul_32ns_64s_64_5_1_Multiplier_0'
+INFO: [RTMG 210-278] Implementing memory 'accessMemory_0_local_address_buffer_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 4.29 seconds. CPU system time: 0.11 seconds. Elapsed time: 4.41 seconds; current allocated memory: 238.739 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for accessMemory_0.
+INFO: [VLOG 209-307] Generating Verilog RTL for accessMemory_0.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 411.00 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 14 seconds. CPU system time: 0.82 seconds. Elapsed time: 14.48 seconds; current allocated memory: 239.249 MB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 11 11:17:52 2021...
+INFO: [HLS 200-802] Generated output file accessMemory_0/solution/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 19.61 seconds. CPU system time: 1.75 seconds. Elapsed time: 25.15 seconds; current allocated memory: 243.465 MB.
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 36.38 seconds. Total CPU system time: 3.09 seconds. Total elapsed time: 41.7 seconds; peak allocated memory: 238.739 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Oct 11 11:17:59 2021...
