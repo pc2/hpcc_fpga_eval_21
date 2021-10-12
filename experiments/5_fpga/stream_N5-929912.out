@@ -1,0 +1,139 @@
+
+The following have been reloaded with a version change:
+  1) bittware_520n/20.4.0 => bittware_520n/20.4.0_hpc
+  2) intelFPGA_pro/21.1.0 => intelFPGA_pro/21.2.0
+
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/STREAM/520n-21.2.0-20.4.0/stream_kernels_single.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the STREAM benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.6
+MPI Version:  3.1
+Config. Time: Fri Oct 08 10:59:48 UTC 2021
+Git Commit:   b678d6d
+
+Summary:
+Array Size                    1073741824 (4.29497e+09 Byte )
+Communication Type            UNSUPPORTED
+Data Type                     cl_float
+Kernel File                   ../../synthesis_artifacts/STREAM/520n-21.2.0-20.4.0/stream_kernels_single.aocx
+Kernel Replications           4
+Kernel Type                   Single
+MPI Ranks                     10
+Repetitions                   10
+Test Mode                     No
+Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 3.34815e+00 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Each test below will take on the order of 1.31064e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.31239e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.30622e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.30965e+05 microseconds.
+Each test below will take on the order of 1.30833e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.30952e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.30465e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.31101e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.30847e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.30814e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Execution Time: 4.99580e+01 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.192093e-07 on all three arrays
+Validation Time: 2.04930e+00 s
+       Function Best Rate MB/s     Avg time s       Min time       Max time
+            Add    6.78164e+05    1.90001e-01    1.89997e-01    1.90003e-01
+           Copy    6.56524e+05    1.30841e-01    1.30840e-01    1.30844e-01
+       PCI read    6.25442e+04    2.06576e+00    2.06013e+00    2.07139e+00
+      PCI write    6.12309e+04    2.12100e+00    2.10431e+00    2.12825e+00
+          Scale    6.56531e+05    1.30842e-01    1.30838e-01    1.30844e-01
+          Triad    6.78173e+05    1.89999e-01    1.89994e-01    1.90002e-01
+Validation: SUCCESS!

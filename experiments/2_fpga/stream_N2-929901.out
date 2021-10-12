@@ -1,0 +1,91 @@
+
+The following have been reloaded with a version change:
+  1) bittware_520n/20.4.0 => bittware_520n/20.4.0_hpc
+  2) intelFPGA_pro/21.1.0 => intelFPGA_pro/21.2.0
+
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/STREAM/520n-21.2.0-20.4.0/stream_kernels_single.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the STREAM benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.6
+MPI Version:  3.1
+Config. Time: Fri Oct 08 10:59:48 UTC 2021
+Git Commit:   b678d6d
+
+Summary:
+Array Size                    1073741824 (4.29497e+09 Byte )
+Communication Type            UNSUPPORTED
+Data Type                     cl_float
+Kernel File                   ../../synthesis_artifacts/STREAM/520n-21.2.0-20.4.0/stream_kernels_single.aocx
+Kernel Replications           4
+Kernel Type                   Single
+MPI Ranks                     4
+Repetitions                   10
+Test Mode                     No
+Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Generation Time: 3.40159e+00 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Each test below will take on the order of 1.30484e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.31085e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.30794e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Each test below will take on the order of 1.30855e+05 microseconds.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Execution Time: 4.99417e+01 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.192093e-07 on all three arrays
+Validation Time: 2.04890e+00 s
+       Function Best Rate MB/s     Avg time s       Min time       Max time
+            Add    2.71387e+05    1.89918e-01    1.89912e-01    1.89925e-01
+           Copy    2.62786e+05    1.30756e-01    1.30752e-01    1.30762e-01
+       PCI read    2.51126e+04    2.06562e+00    2.05234e+00    2.07115e+00
+      PCI write    2.43827e+04    2.12492e+00    2.11378e+00    2.13554e+00
+          Scale    2.62790e+05    1.30759e-01    1.30750e-01    1.30766e-01
+          Triad    2.71400e+05    1.89915e-01    1.89903e-01    1.89925e-01
+Validation: SUCCESS!
