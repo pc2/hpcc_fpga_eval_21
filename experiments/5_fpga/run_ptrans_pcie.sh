@@ -4,7 +4,7 @@
 #SBATCH -N 5
 #SBATCH -n 9
 #SBATCH -t 2:00:00 
-#SBATCH -w fpga-0009,fpga-0010,fpga-0004,fpga-0005,fpga-0006
+#SBATCH -w fpga-0007,fpga-0010,fpga-0004,fpga-0005,fpga-0006
 #SBATCH -o ptrans_pcie_N2_m68-%j.txt
 #SBATCH -e ptrans_pcie_N2_m68-%j.txt
 #SBATCH -J PTRANS-pcie
