@@ -1,0 +1,1029 @@
+{
+  "nodes":
+  [
+    {
+      "name":"DDR"
+      , "id":1
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Interleaving":"Yes"
+          , "Interleave Size":"1024 bytes"
+          , "Channels":"4 channels"
+          , "Maximum bandwidth the BSP can deliver":"76800.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+          , "Channel DDR_Width (bits)":"512, 512, 512, 512"
+        }
+      ]
+      , "type":"memsys"
+      , "children":
+      [
+        {
+          "name":"channel 0"
+          , "id":3
+          , "type":"bb"
+        }
+        , {
+          "name":"channel 1"
+          , "id":4
+          , "type":"bb"
+        }
+        , {
+          "name":"channel 2"
+          , "id":5
+          , "type":"bb"
+        }
+        , {
+          "name":"channel 3"
+          , "id":6
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"Memory Controller"
+      , "id":2
+      , "parent":"1"
+      , "bw":"76800.00"
+      , "num_channels":"4"
+      , "interleave":"1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Maximum bandwidth the BSP can deliver":"76800.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+        }
+      ]
+      , "type":"bb"
+    }
+    , {
+      "name":"Global Memory Interconnect"
+      , "id":7
+      , "parent":"1"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"SHARE"
+          , "id":8
+          , "type":"arb"
+        }
+        , {
+          "name":"Write Interconnect"
+          , "id":11
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"ring"
+              , "Writes":"12"
+              , "User specified force-single-store-ring flag":"True"
+              , "Store Rings":"1"
+            }
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Read Interconnect"
+          , "id":9
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"ring"
+              , "Reads":"20"
+            }
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Read Interconnect Router"
+          , "id":10
+          , "details":
+          [
+            {
+              "type":"table"
+              , "User specified num-reorder flag":"1"
+            }
+          ]
+          , "type":"memsys"
+          , "children":
+          [
+            {
+              "name":"Bus 0"
+              , "id":46
+              , "type":"memsys"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Loads"
+      , "id":12
+      , "parent":"1"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"LD"
+          , "id":13
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":18
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":19
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"10"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":22
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":23
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"10"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":26
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":27
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":28
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":30
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":31
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":32
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":34
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":35
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":36
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":38
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":39
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":40
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":42
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":43
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":44
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"203 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Stores"
+      , "id":14
+      , "parent":"1"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"ST"
+          , "id":15
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":16
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":17
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":20
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":21
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":24
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":25
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":29
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":33
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":37
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":41
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":45
+          , "kwidth":"256"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"20"
+              , "Latency":"2 cycles"
+              , "Width":"256 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":3
+      , "to":2
+    }
+    , {
+      "from":2
+      , "to":3
+    }
+    , {
+      "from":4
+      , "to":2
+    }
+    , {
+      "from":2
+      , "to":4
+    }
+    , {
+      "from":5
+      , "to":2
+    }
+    , {
+      "from":2
+      , "to":5
+    }
+    , {
+      "from":6
+      , "to":2
+    }
+    , {
+      "from":2
+      , "to":6
+    }
+    , {
+      "from":9
+      , "to":8
+    }
+    , {
+      "from":11
+      , "to":8
+    }
+    , {
+      "from":8
+      , "to":2
+    }
+    , {
+      "from":13
+      , "to":9
+    }
+    , {
+      "from":15
+      , "to":11
+    }
+    , {
+      "from":16
+      , "to":11
+    }
+    , {
+      "from":17
+      , "to":11
+    }
+    , {
+      "from":18
+      , "to":9
+    }
+    , {
+      "from":19
+      , "to":9
+    }
+    , {
+      "from":20
+      , "to":11
+    }
+    , {
+      "from":21
+      , "to":11
+    }
+    , {
+      "from":22
+      , "to":9
+    }
+    , {
+      "from":23
+      , "to":9
+    }
+    , {
+      "from":24
+      , "to":11
+    }
+    , {
+      "from":25
+      , "to":11
+    }
+    , {
+      "from":26
+      , "to":9
+    }
+    , {
+      "from":27
+      , "to":9
+    }
+    , {
+      "from":28
+      , "to":9
+    }
+    , {
+      "from":29
+      , "to":11
+    }
+    , {
+      "from":30
+      , "to":9
+    }
+    , {
+      "from":31
+      , "to":9
+    }
+    , {
+      "from":32
+      , "to":9
+    }
+    , {
+      "from":33
+      , "to":11
+    }
+    , {
+      "from":34
+      , "to":9
+    }
+    , {
+      "from":35
+      , "to":9
+    }
+    , {
+      "from":36
+      , "to":9
+    }
+    , {
+      "from":37
+      , "to":11
+    }
+    , {
+      "from":38
+      , "to":9
+    }
+    , {
+      "from":39
+      , "to":9
+    }
+    , {
+      "from":40
+      , "to":9
+    }
+    , {
+      "from":41
+      , "to":11
+    }
+    , {
+      "from":42
+      , "to":9
+    }
+    , {
+      "from":43
+      , "to":9
+    }
+    , {
+      "from":44
+      , "to":9
+    }
+    , {
+      "from":45
+      , "to":11
+    }
+    , {
+      "from":2
+      , "to":46
+    }
+    , {
+      "from":46
+      , "to":13
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":18
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":19
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":22
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":23
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":26
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":27
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":28
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":30
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":31
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":32
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":34
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":35
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":36
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":38
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":39
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":40
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":42
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":43
+      , "reverse":1
+    }
+    , {
+      "from":46
+      , "to":44
+      , "reverse":1
+    }
+  ]
+}
