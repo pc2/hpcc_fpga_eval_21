@@ -5,7 +5,7 @@
 # Submit this script to sbatch in this folder!
 #
 #SBATCH -p fpgasyn
-#SBATCH -J LINPACK_SP
+#SBATCH -J HPL_SP_iec_ni
 
 INTEL_SDK=21.2.0
 INTEL_BSP=20.4.0
@@ -29,7 +29,7 @@ git clone --branch ${HPCC_FPGA_VERSION} git@github.com:pc2/HPCC_FPGA.git ${TMP_P
 
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/LINPACK
 
-CONFIG_NAMES=("Nallatech_520N_IEC_B9_SB3_R5" "Nallatech_520N_IEC_B9_SB3_R5_noring")
+CONFIG_NAMES=("Nallatech_520N_IEC_B9_SB3_R5_s10_ni")
 
 for r in "${CONFIG_NAMES[@]}"; do
     SYNTH_NAME=${INTEL_SDK}-${INTEL_BSP}-${r}

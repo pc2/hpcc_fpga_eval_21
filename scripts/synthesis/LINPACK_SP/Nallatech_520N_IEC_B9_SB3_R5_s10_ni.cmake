@@ -10,7 +10,7 @@ set(USE_MPI Yes CACHE BOOL "" FORCE)
 set(USE_SVM No CACHE BOOL "" FORCE)
 set(USE_HBM No CACHE BOOL "" FORCE)
 set(FPGA_BOARD_NAME "p520_max_sg280l" CACHE STRING "" FORCE)
-set(AOC_FLAGS "-ffp-contract=fast -ffp-reassoc -g0 -seed=9" CACHE STRING "" FORCE)
+set(AOC_FLAGS "-ffp-contract=fast -ffp-reassoc -global-ring -force-single-store-ring -no-interleaving=default -seed=10" CACHE STRING "" FORCE)
 
 # LINPACK specific options
 set(DEFAULT_MATRIX_SIZE 1024 CACHE STRING "Default matrix size" FORCE)
@@ -19,3 +19,4 @@ set(REGISTER_BLOCK_LOG 3 CACHE STRING "Size of the block that will be manipulate
 set(NUM_REPLICATIONS 5 CACHE STRING "Number of times the matrix multiplication kernel will be replicated" FORCE)
 
 set(DATA_TYPE "float" CACHE STRING "The ued data type for calculation" FORCE)
+
