@@ -4,7 +4,7 @@
 #SBATCH -N 13
 #SBATCH -n 25 
 #SBATCH -t 2:00:00 
-#SBATCH -w fpga-0001,fpga-0002,fpga-0003,fpga-0004,fpga-0005,fpga-0006,fpga-0007,fpga-0008,fpga-0011,fpga-0012,fpga-0013,fpga-0014,fpga-0015
+#SBATCH -w fpga-0001,fpga-0002,fpga-0003,fpga-0004,fpga-0005,fpga-0006,fpga-0007,fpga-0008,fpga-0009,fpga-0012,fpga-0013,fpga-0014,fpga-0015
 #SBATCH -o hpl_pcie_N13_m48-%j.txt
 #SBATCH -e hpl_pcie_N13_m48-%j.txt
 #SBATCH -J HPL
