@@ -1,7 +1,6 @@
 #!/bin/bash
 #
 #SBATCH -p fpga
-#SBATCH -w fpga-0001,fpga-0002,fpga-0004,fpga-0005,fpga-0006,fpga-0007,fpga-0008,fpga-0003,fpga-0010,fpga-0011,fpga-0012,fpga-0013,fpga-0014
 #SBATCH -J stream
 #SBATCH --constraint=20.4.0_hpc
 #SBATCH -N 13
