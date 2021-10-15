@@ -7,10 +7,8 @@
 #SBATCH -w {{ fpgas|join(',') }}
 {% for y in range(width) -%}
 {% for x in range(width) -%}
-{% if x <= y -%}
 #SBATCH --fpgalink="n{{("%02d" % ((y * width + x)/2))}}:acl{{("%d" % ((y * width + x) % 2))}}:ch0-n{{("%02d" % ((x * width + y)/2))}}:acl{{("%d" % ((x * width + y) % 2))}}:ch1"
 #SBATCH --fpgalink="n{{("%02d" % ((y * width + x)/2))}}:acl{{("%d" % ((y * width + x) % 2))}}:ch2-n{{("%02d" % ((x * width + y)/2))}}:acl{{("%d" % ((x * width + y) % 2))}}:ch3"
-{% endif -%}
 {% endfor %}
 {%- endfor %}
 #SBATCH -J PTRANS
