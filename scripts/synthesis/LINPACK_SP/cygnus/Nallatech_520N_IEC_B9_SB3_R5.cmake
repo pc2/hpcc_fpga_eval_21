@@ -16,6 +16,7 @@ set(AOC_FLAGS "-fpc -fp-relaxed -seed=5" CACHE STRING "" FORCE)
 set(DEFAULT_MATRIX_SIZE 1024 CACHE STRING "Default matrix size" FORCE)
 set(LOCAL_MEM_BLOCK_LOG 9 CACHE STRING "Used to define the width and height of the block stored in local memory" FORCE)
 set(REGISTER_BLOCK_LOG 3 CACHE STRING "Size of the block that will be manipulated in registers" FORCE)
+set(REGISTER_BLOCK_MM_LOG 3 CACHE STRING "Size of the block that will be manipulated in registers" FORCE)
 set(NUM_REPLICATIONS 5 CACHE STRING "Number of times the matrix multiplication kernel will be replicated" FORCE)
 
 set(DATA_TYPE "float" CACHE STRING "The ued data type for calculation" FORCE)
