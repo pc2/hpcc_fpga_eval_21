@@ -11,7 +11,7 @@
 #PBS -A CCUSC
 #PBS -M marius.meyer@uni-paderborn.de
 #PBS -m e
-#PBS -o synth_cygnus_dp.log
+#PBS -o synth_cygnus_dp_2.log
 #PBS -j o
 
 INTEL_SDK=19.4
@@ -33,9 +33,14 @@ SYNTH_DIR=${TMP_DIR}/build
 
 # git clone --branch ${HPCC_FPGA_VERSION} https://github.com/pc2/HPCC_FPGA.git ${TMP_PROJECT_DIR}
 
+# Apply channel reordering patch
+# cd ${TMP_PROJECT_DIR}; git apply ${SCRIPT_PATH}/../../../patches/cygnus_hpl_channel_ordering.patch
+# Apply configuration improvement patch
+# cd ${TMP_PROJECT_DIR}; git apply ${SCRIPT_PATH}/../../../patches/separate_register_block_sizes.patch
+
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/LINPACK
 
-CONFIG_NAMES=("Nallatech_520N_IEC_B8_SB2_R5_s1")
+CONFIG_NAMES=("Nallatech_520N_IEC_B8_SB2_SBMM2_R4_s1")
 
 for r in "${CONFIG_NAMES[@]}"; do
     SYNTH_NAME=${INTEL_SDK}-${r}
@@ -50,7 +55,7 @@ for r in "${CONFIG_NAMES[@]}"; do
 
 done
 
-CONFIG_NAMES=("Nallatech_520N_PCIE_B8_SB2_R5_s1")
+CONFIG_NAMES=("Nallatech_520N_PCIE_B8_SB2_SBMM2_R4_s1")
 
 for r in "${CONFIG_NAMES[@]}"; do
     SYNTH_NAME=${INTEL_SDK}-${r}
