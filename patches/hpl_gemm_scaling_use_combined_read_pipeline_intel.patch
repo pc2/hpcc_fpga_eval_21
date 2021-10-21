@@ -25,19 +25,18 @@ index f489643..8206799 100644
  
  #cmakedefine USE_SVM
 diff --git a/LINPACK/src/device/hpl_torus_IEC.cl b/LINPACK/src/device/hpl_torus_IEC.cl
-index 37b79ae..af33013 100644
+index 37b79ae..fc3d025 100644
 --- a/LINPACK/src/device/hpl_torus_IEC.cl
 +++ b/LINPACK/src/device/hpl_torus_IEC.cl
-@@ -854,87 +854,106 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
- 				const uint blocks_per_row) {
+@@ -23,6 +23,7 @@ SOFTWARE.
  
- 	// Store current block in local memory
--	local DEVICE_DATA_TYPE a_buffer[BLOCK_SIZE/GEMM_BLOCK][BLOCK_SIZE/GEMM_BLOCK][GEMM_BLOCK][GEMM_BLOCK];
--	local DEVICE_DATA_TYPE top_buffer[BLOCK_SIZE/GEMM_BLOCK][BLOCK_SIZE/GEMM_BLOCK][GEMM_BLOCK][GEMM_BLOCK];
--	local DEVICE_DATA_TYPE left_buffer[BLOCK_SIZE/GEMM_BLOCK][BLOCK_SIZE/GEMM_BLOCK][GEMM_BLOCK][GEMM_BLOCK];
-+	local DEVICE_DATA_TYPE a_buffer[BLOCK_SIZE/GEMM_BLOCK_MM][BLOCK_SIZE/GEMM_BLOCK_MM][GEMM_BLOCK_MM][GEMM_BLOCK_MM] __attribute((xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
-+	local DEVICE_DATA_TYPE top_buffer[BLOCK_SIZE/GEMM_BLOCK_MM][BLOCK_SIZE/GEMM_BLOCK_MM][GEMM_BLOCK_MM][GEMM_BLOCK_MM] __attribute((xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
-+	local DEVICE_DATA_TYPE left_buffer[BLOCK_SIZE/GEMM_BLOCK_MM][BLOCK_SIZE/GEMM_BLOCK_MM][GEMM_BLOCK_MM][GEMM_BLOCK_MM] __attribute((xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
+ #define BLOCK_SIZE (1 << LOCAL_MEM_BLOCK_LOG)
+ #define GEMM_BLOCK (1 << REGISTER_BLOCK_LOG)
++#define GEMM_BLOCK_MM (1 << REGISTER_BLOCK_MM_LOG)
+ 
+ #pragma OPENCL EXTENSION cl_intel_channels : enable
+ 
+@@ -860,81 +861,84 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
  
  	// Load blocks to local memory
  	#pragma loop_coalesce
@@ -57,14 +56,6 @@ index 37b79ae..af33013 100644
 -				__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
 -				for (int jj =0; jj < GEMM_BLOCK; jj++) {
 -					top_buffer[i][j][ii][jj] = top_global_buffer[(i * GEMM_BLOCK + ii) * BLOCK_SIZE + j * GEMM_BLOCK + jj];
-+			}
-+		}
-+	}
-+
-+	#pragma loop_coalesce
-+	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK_MM; i++) {
-+		for (int ii =0; ii < GEMM_BLOCK_MM; ii++) {
-+			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK_MM; j++) {
 +				__attribute__((opencl_unroll_hint(GEMM_BLOCK_MM)))
 +				for (int jj =0; jj < GEMM_BLOCK_MM; jj++) {
 +					top_buffer[i][j][ii][jj] = top_global_buffer[(i * GEMM_BLOCK_MM + ii) * BLOCK_SIZE + j * GEMM_BLOCK_MM + jj];
@@ -72,14 +63,6 @@ index 37b79ae..af33013 100644
 -				__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
 -				for (int jj =0; jj < GEMM_BLOCK; jj++) {
 -					left_buffer[i][j][ii][jj] = left_global_buffer[(i * GEMM_BLOCK + ii) * BLOCK_SIZE + j * GEMM_BLOCK + jj];
-+			}
-+		}
-+	}
-+
-+	#pragma loop_coalesce
-+	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK_MM; i++) {
-+		for (int ii =0; ii < GEMM_BLOCK_MM; ii++) {
-+			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK_MM; j++) {
 +				__attribute__((opencl_unroll_hint(GEMM_BLOCK_MM)))
 +				for (int jj =0; jj < GEMM_BLOCK_MM; jj++) {
 +					left_buffer[i][j][ii][jj] = left_global_buffer[(i * GEMM_BLOCK_MM + ii) * BLOCK_SIZE + j * GEMM_BLOCK_MM + jj];
@@ -185,7 +168,7 @@ index 37b79ae..af33013 100644
  			}
  		}
 diff --git a/LINPACK/src/device/hpl_torus_PCIE.cl b/LINPACK/src/device/hpl_torus_PCIE.cl
-index bea5b70..f42ef1b 100644
+index bea5b70..292dec7 100644
 --- a/LINPACK/src/device/hpl_torus_PCIE.cl
 +++ b/LINPACK/src/device/hpl_torus_PCIE.cl
 @@ -28,6 +28,7 @@ SOFTWARE.
@@ -196,7 +179,7 @@ index bea5b70..f42ef1b 100644
  
  #ifdef INTEL_FPGA
  #pragma OPENCL EXTENSION cl_intel_channels : enable
-@@ -722,93 +723,93 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
+@@ -722,93 +723,120 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
  				const uint blocks_per_row) {
  
  	// Store current block in local memory
@@ -206,6 +189,32 @@ index bea5b70..f42ef1b 100644
 +	local DEVICE_DATA_TYPE a_buffer[BLOCK_SIZE/GEMM_BLOCK_MM][BLOCK_SIZE/GEMM_BLOCK_MM][GEMM_BLOCK_MM][GEMM_BLOCK_MM] __attribute((xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
 +	local DEVICE_DATA_TYPE top_buffer[BLOCK_SIZE/GEMM_BLOCK_MM][BLOCK_SIZE/GEMM_BLOCK_MM][GEMM_BLOCK_MM][GEMM_BLOCK_MM] __attribute((xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
 +	local DEVICE_DATA_TYPE left_buffer[BLOCK_SIZE/GEMM_BLOCK_MM][BLOCK_SIZE/GEMM_BLOCK_MM][GEMM_BLOCK_MM][GEMM_BLOCK_MM] __attribute((xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
++
++
++#ifdef INTEL_FPGA
++	// If Intel FPGA, read all buffers in a single pipeline to reduce resource utilization
++	#pragma loop_coalesce
++	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK_MM; i++) {
++		for (int ii =0; ii < GEMM_BLOCK_MM; ii++) {
++			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK_MM; j++) {
++				__attribute__((opencl_unroll_hint(GEMM_BLOCK_MM)))
++				for (int jj =0; jj < GEMM_BLOCK_MM; jj++) {
++					a_buffer[i][j][ii][jj] = a[block_col * BLOCK_SIZE  + (block_row * BLOCK_SIZE + i * GEMM_BLOCK_MM + ii) * BLOCK_SIZE * blocks_per_row + j * GEMM_BLOCK_MM + jj];
++				}
++				__attribute__((opencl_unroll_hint(GEMM_BLOCK_MM)))
++				for (int jj =0; jj < GEMM_BLOCK_MM; jj++) {
++					top_buffer[i][j][ii][jj] = top_global_buffer[(i * GEMM_BLOCK_MM + ii) * BLOCK_SIZE + j * GEMM_BLOCK_MM + jj];
++				}
++				__attribute__((opencl_unroll_hint(GEMM_BLOCK_MM)))
++				for (int jj =0; jj < GEMM_BLOCK_MM; jj++) {
++					left_buffer[i][j][ii][jj] = left_global_buffer[(i * GEMM_BLOCK_MM + ii) * BLOCK_SIZE + j * GEMM_BLOCK_MM + jj];
++				}
++			}
++		}
++	}
++#endif
++#ifdef XILINX_FPGA
++	// If Xilinx FPGA, load blocks in separate pipelines to achieve memory bursts!
  
  	// Load blocks to local memory
  	#pragma loop_coalesce
@@ -261,6 +270,7 @@ index bea5b70..f42ef1b 100644
  			}
  		}
  	}
++	#endif
  
  	// Update whole block
 -	#pragma ivdep array(a_buffer) safelen((BLOCK_SIZE/GEMM_BLOCK)*(BLOCK_SIZE/GEMM_BLOCK))
@@ -337,7 +347,7 @@ index bea5b70..f42ef1b 100644
  				a_buffer[row][curr_col][i][j] += __fpga_reg(result_sub[i][j]);
  			}
  		}
-@@ -816,12 +817,12 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
+@@ -816,12 +844,12 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
  
  	// Store block to global memory
  	#pragma loop_coalesce
