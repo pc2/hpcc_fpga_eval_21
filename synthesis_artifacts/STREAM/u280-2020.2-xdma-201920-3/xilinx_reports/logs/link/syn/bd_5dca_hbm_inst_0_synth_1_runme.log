@@ -1,0 +1,1167 @@
+
+*** Running vivado
+    with args -log bd_5dca_hbm_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_5dca_hbm_inst_0.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source bd_5dca_hbm_inst_0.tcl -notrace
+INFO: Dispatch client connection id - 36361
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_calc_0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top bd_5dca_hbm_inst_0 -part xcu280-fsvh2892-2L-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12077
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3345.797 ; gain = 175.719 ; free physical = 53749 ; free virtual = 318203
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_inst_0' [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/synth/bd_5dca_hbm_inst_0.v:63]
+INFO: [Synth 8-6157] synthesizing module 'hbm_v1_0_9' [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_9.sv:66]
+	Parameter HBM_STACK bound to: 2 - type: integer 
+	Parameter SWITCH_ENABLE_00 bound to: TRUE - type: string 
+	Parameter SWITCH_ENABLE_01 bound to: TRUE - type: string 
+	Parameter INIT_BYPASS bound to: FALSE - type: string 
+	Parameter INIT_SEQ_TIMEOUT bound to: 0 - type: integer 
+	Parameter AXI_RST_ASSERT_WIDTH bound to: 16 - type: integer 
+	Parameter AXI_RST_DEASSERT_WIDTH bound to: 2 - type: integer 
+	Parameter TEMP_WAIT_PERIOD_0 bound to: 100000 - type: integer 
+	Parameter TEMP_WAIT_PERIOD_1 bound to: 100000 - type: integer 
+	Parameter SWITCH_EN_0 bound to: 16'b0000000000000001 
+	Parameter SWITCH_EN_1 bound to: 16'b0000000000000001 
+	Parameter AXI_CLK_FREQ bound to: 16'b0000000111000010 
+	Parameter AXI_CLK1_FREQ bound to: 16'b0000000111000010 
+	Parameter HBM_REF_CLK_FREQ_0 bound to: 16'b0000000001100100 
+	Parameter HBM_REF_CLK_FREQ_1 bound to: 16'b0000000001100100 
+	Parameter HBM_CLK_FREQ_0 bound to: 16'b0000001110000100 
+	Parameter HBM_CLK_FREQ_1 bound to: 16'b0000001110000100 
+	Parameter HBM_STACK_NUM bound to: 16'b0000000000000000 
+	Parameter CLK_SEL_00 bound to: FALSE - type: string 
+	Parameter CLK_SEL_01 bound to: FALSE - type: string 
+	Parameter CLK_SEL_02 bound to: FALSE - type: string 
+	Parameter CLK_SEL_03 bound to: FALSE - type: string 
+	Parameter CLK_SEL_04 bound to: FALSE - type: string 
+	Parameter CLK_SEL_05 bound to: FALSE - type: string 
+	Parameter CLK_SEL_06 bound to: FALSE - type: string 
+	Parameter CLK_SEL_07 bound to: FALSE - type: string 
+	Parameter CLK_SEL_08 bound to: FALSE - type: string 
+	Parameter CLK_SEL_09 bound to: FALSE - type: string 
+	Parameter CLK_SEL_10 bound to: FALSE - type: string 
+	Parameter CLK_SEL_11 bound to: FALSE - type: string 
+	Parameter CLK_SEL_12 bound to: TRUE - type: string 
+	Parameter CLK_SEL_13 bound to: FALSE - type: string 
+	Parameter CLK_SEL_14 bound to: FALSE - type: string 
+	Parameter CLK_SEL_15 bound to: FALSE - type: string 
+	Parameter CLK_SEL_16 bound to: TRUE - type: string 
+	Parameter CLK_SEL_17 bound to: FALSE - type: string 
+	Parameter CLK_SEL_18 bound to: FALSE - type: string 
+	Parameter CLK_SEL_19 bound to: FALSE - type: string 
+	Parameter CLK_SEL_20 bound to: FALSE - type: string 
+	Parameter CLK_SEL_21 bound to: FALSE - type: string 
+	Parameter CLK_SEL_22 bound to: FALSE - type: string 
+	Parameter CLK_SEL_23 bound to: FALSE - type: string 
+	Parameter CLK_SEL_24 bound to: FALSE - type: string 
+	Parameter CLK_SEL_25 bound to: FALSE - type: string 
+	Parameter CLK_SEL_26 bound to: FALSE - type: string 
+	Parameter CLK_SEL_27 bound to: FALSE - type: string 
+	Parameter CLK_SEL_28 bound to: FALSE - type: string 
+	Parameter CLK_SEL_29 bound to: FALSE - type: string 
+	Parameter CLK_SEL_30 bound to: FALSE - type: string 
+	Parameter CLK_SEL_31 bound to: FALSE - type: string 
+	Parameter DATARATE_STACK_0 bound to: 1800 - type: integer 
+	Parameter DATARATE_STACK_1 bound to: 1800 - type: integer 
+	Parameter READ_PERCENT_00 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_01 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_02 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_03 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_04 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_05 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_06 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_07 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_08 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_09 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_10 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_11 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_12 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_13 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_14 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_15 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_16 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_17 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_18 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_19 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_20 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_21 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_22 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_23 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_24 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_25 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_26 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_27 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_28 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_29 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_30 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_31 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_00 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_01 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_02 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_03 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_04 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_05 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_06 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_07 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_08 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_09 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_10 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_11 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_12 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_13 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_14 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_15 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_16 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_17 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_18 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_19 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_20 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_21 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_22 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_23 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_24 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_25 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_26 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_27 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_28 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_29 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_30 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_31 bound to: 40 - type: integer 
+	Parameter PAGEHIT_PERCENT_00 bound to: 75 - type: integer 
+	Parameter PAGEHIT_PERCENT_01 bound to: 75 - type: integer 
+	Parameter MC_ENABLE_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_01 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_02 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_03 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_04 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_05 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_06 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_07 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_08 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_09 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_10 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_11 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_12 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_13 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_14 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_15 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_01 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_01 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_02 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_03 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_04 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_05 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_06 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_07 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_08 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_09 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_10 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_11 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_12 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_13 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_14 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_15 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_16 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_17 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_18 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_19 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_20 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_21 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_22 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_23 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_24 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_25 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_26 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_27 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_28 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_29 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_30 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_31 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_01 bound to: TRUE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'hbm_top' [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:81]
+	Parameter HBM_STACK bound to: 2 - type: integer 
+	Parameter SWITCH_ENABLE_00 bound to: TRUE - type: string 
+	Parameter SWITCH_ENABLE_01 bound to: TRUE - type: string 
+	Parameter INIT_BYPASS bound to: FALSE - type: string 
+	Parameter INIT_SEQ_TIMEOUT bound to: 0 - type: integer 
+	Parameter AXI_RST_ASSERT_WIDTH bound to: 16 - type: integer 
+	Parameter AXI_RST_DEASSERT_WIDTH bound to: 2 - type: integer 
+	Parameter TEMP_WAIT_PERIOD_0 bound to: 100000 - type: integer 
+	Parameter TEMP_WAIT_PERIOD_1 bound to: 100000 - type: integer 
+	Parameter SWITCH_EN_0 bound to: 16'b0000000000000001 
+	Parameter SWITCH_EN_1 bound to: 16'b0000000000000001 
+	Parameter AXI_CLK_FREQ bound to: 16'b0000000111000010 
+	Parameter AXI_CLK1_FREQ bound to: 16'b0000000111000010 
+	Parameter HBM_REF_CLK_FREQ_0 bound to: 16'b0000000001100100 
+	Parameter HBM_REF_CLK_FREQ_1 bound to: 16'b0000000001100100 
+	Parameter HBM_CLK_FREQ_0 bound to: 16'b0000001110000100 
+	Parameter HBM_CLK_FREQ_1 bound to: 16'b0000001110000100 
+	Parameter HBM_STACK_NUM bound to: 16'b0000000000000000 
+	Parameter CLK_SEL_00 bound to: FALSE - type: string 
+	Parameter CLK_SEL_01 bound to: FALSE - type: string 
+	Parameter CLK_SEL_02 bound to: FALSE - type: string 
+	Parameter CLK_SEL_03 bound to: FALSE - type: string 
+	Parameter CLK_SEL_04 bound to: FALSE - type: string 
+	Parameter CLK_SEL_05 bound to: FALSE - type: string 
+	Parameter CLK_SEL_06 bound to: FALSE - type: string 
+	Parameter CLK_SEL_07 bound to: FALSE - type: string 
+	Parameter CLK_SEL_08 bound to: FALSE - type: string 
+	Parameter CLK_SEL_09 bound to: FALSE - type: string 
+	Parameter CLK_SEL_10 bound to: FALSE - type: string 
+	Parameter CLK_SEL_11 bound to: FALSE - type: string 
+	Parameter CLK_SEL_12 bound to: TRUE - type: string 
+	Parameter CLK_SEL_13 bound to: FALSE - type: string 
+	Parameter CLK_SEL_14 bound to: FALSE - type: string 
+	Parameter CLK_SEL_15 bound to: FALSE - type: string 
+	Parameter CLK_SEL_16 bound to: TRUE - type: string 
+	Parameter CLK_SEL_17 bound to: FALSE - type: string 
+	Parameter CLK_SEL_18 bound to: FALSE - type: string 
+	Parameter CLK_SEL_19 bound to: FALSE - type: string 
+	Parameter CLK_SEL_20 bound to: FALSE - type: string 
+	Parameter CLK_SEL_21 bound to: FALSE - type: string 
+	Parameter CLK_SEL_22 bound to: FALSE - type: string 
+	Parameter CLK_SEL_23 bound to: FALSE - type: string 
+	Parameter CLK_SEL_24 bound to: FALSE - type: string 
+	Parameter CLK_SEL_25 bound to: FALSE - type: string 
+	Parameter CLK_SEL_26 bound to: FALSE - type: string 
+	Parameter CLK_SEL_27 bound to: FALSE - type: string 
+	Parameter CLK_SEL_28 bound to: FALSE - type: string 
+	Parameter CLK_SEL_29 bound to: FALSE - type: string 
+	Parameter CLK_SEL_30 bound to: FALSE - type: string 
+	Parameter CLK_SEL_31 bound to: FALSE - type: string 
+	Parameter DATARATE_STACK_0 bound to: 1800 - type: integer 
+	Parameter DATARATE_STACK_1 bound to: 1800 - type: integer 
+	Parameter READ_PERCENT_00 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_01 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_02 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_03 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_04 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_05 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_06 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_07 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_08 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_09 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_10 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_11 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_12 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_13 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_14 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_15 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_16 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_17 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_18 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_19 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_20 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_21 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_22 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_23 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_24 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_25 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_26 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_27 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_28 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_29 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_30 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_31 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_00 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_01 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_02 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_03 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_04 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_05 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_06 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_07 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_08 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_09 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_10 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_11 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_12 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_13 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_14 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_15 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_16 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_17 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_18 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_19 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_20 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_21 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_22 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_23 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_24 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_25 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_26 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_27 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_28 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_29 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_30 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_31 bound to: 40 - type: integer 
+	Parameter PAGEHIT_PERCENT_00 bound to: 75 - type: integer 
+	Parameter PAGEHIT_PERCENT_01 bound to: 75 - type: integer 
+	Parameter MC_ENABLE_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_01 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_02 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_03 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_04 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_05 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_06 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_07 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_08 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_09 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_10 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_11 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_12 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_13 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_14 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_15 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_01 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_01 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_02 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_03 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_04 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_05 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_06 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_07 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_08 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_09 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_10 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_11 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_12 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_13 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_14 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_15 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_16 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_17 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_18 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_19 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_20 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_21 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_22 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_23 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_24 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_25 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_26 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_27 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_28 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_29 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_30 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_31 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_01 bound to: TRUE - type: string 
+	Parameter AXI_SW_CLK_SEL_0 bound to: 16'b0000000000001100 
+	Parameter AXI_SW_CLK_SEL_1 bound to: 16'b0000000000010000 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram' [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: xpm_internal_config_file_0.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: read_first - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter P_CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter P_WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter P_MEMORY_OPTIMIZATION bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 0 - type: integer 
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: xpm_internal_config_file_0.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 32 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 2048 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 32 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 32 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 32 - type: integer 
+	Parameter rstb_loop_iter bound to: 32 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:488]
+INFO: [Synth 8-3876] $readmem data file 'xpm_internal_config_file_0.mem' is read successfully [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1104]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (1#1) [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram' (2#1) [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
+INFO: [Synth 8-6157] synthesizing module 'hbm_data_fetch' [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:8111]
+	Parameter XPM_ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter XPM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
+	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'hbm_data_fetch' (3#1) [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:8111]
+INFO: [Synth 8-6157] synthesizing module 'hbm_apb_mst' [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:6746]
+	Parameter INIT_BYPASS bound to: FALSE - type: string 
+	Parameter INIT_SEQ_TIMEOUT bound to: 0 - type: integer 
+	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
+	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IDLE bound to: 3'b001 
+	Parameter C_SETUP bound to: 3'b010 
+	Parameter C_ACCESS bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'hbm_apb_mst' (4#1) [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:6746]
+INFO: [Synth 8-6157] synthesizing module 'hbm_temp_rd' [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7262]
+	Parameter TEMP_WAIT_PERIOD bound to: 100000 - type: integer 
+	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
+	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IDLE bound to: 6'b000001 
+	Parameter C_WAIT_INTRVL bound to: 6'b000010 
+	Parameter C_APB_ACC_REQ bound to: 6'b000100 
+	Parameter C_SEND_TEMP_ACC_CMD bound to: 6'b001000 
+	Parameter C_POLL_TEMP_ACC_CMD_ST bound to: 6'b010000 
+	Parameter C_READ_TEMP bound to: 6'b100000 
+	Parameter C_APB_IDLE bound to: 3'b001 
+	Parameter C_APB_SETUP bound to: 3'b010 
+	Parameter C_APB_ACCESS bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'hbm_temp_rd' (5#1) [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7262]
+INFO: [Synth 8-6157] synthesizing module 'hbm_apb_arbiter' [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7755]
+	Parameter INIT_BYPASS bound to: FALSE - type: string 
+	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
+	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IDLE bound to: 3'b001 
+	Parameter C_SETUP bound to: 3'b010 
+	Parameter C_ACCESS bound to: 3'b100 
+INFO: [Synth 8-226] default block is never used [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7907]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_apb_arbiter' (6#1) [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7755]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram__parameterized0' [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: xpm_internal_config_file_1.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: read_first - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter P_CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter P_WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter P_MEMORY_OPTIMIZATION bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 0 - type: integer 
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: xpm_internal_config_file_1.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 32 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 2048 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 32 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 32 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 32 - type: integer 
+	Parameter rstb_loop_iter bound to: 32 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:488]
+INFO: [Synth 8-3876] $readmem data file 'xpm_internal_config_file_1.mem' is read successfully [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1104]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (6#1) [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized0' (6#1) [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
+INFO: [Synth 8-6157] synthesizing module 'HBM_TWO_STACK_INTF' [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:29543]
+	Parameter CLK_SEL_00 bound to: FALSE - type: string 
+	Parameter CLK_SEL_01 bound to: FALSE - type: string 
+	Parameter CLK_SEL_02 bound to: FALSE - type: string 
+	Parameter CLK_SEL_03 bound to: FALSE - type: string 
+	Parameter CLK_SEL_04 bound to: FALSE - type: string 
+	Parameter CLK_SEL_05 bound to: FALSE - type: string 
+	Parameter CLK_SEL_06 bound to: FALSE - type: string 
+	Parameter CLK_SEL_07 bound to: FALSE - type: string 
+	Parameter CLK_SEL_08 bound to: FALSE - type: string 
+	Parameter CLK_SEL_09 bound to: FALSE - type: string 
+	Parameter CLK_SEL_10 bound to: FALSE - type: string 
+	Parameter CLK_SEL_11 bound to: FALSE - type: string 
+	Parameter CLK_SEL_12 bound to: TRUE - type: string 
+	Parameter CLK_SEL_13 bound to: FALSE - type: string 
+	Parameter CLK_SEL_14 bound to: FALSE - type: string 
+	Parameter CLK_SEL_15 bound to: FALSE - type: string 
+	Parameter CLK_SEL_16 bound to: TRUE - type: string 
+	Parameter CLK_SEL_17 bound to: FALSE - type: string 
+	Parameter CLK_SEL_18 bound to: FALSE - type: string 
+	Parameter CLK_SEL_19 bound to: FALSE - type: string 
+	Parameter CLK_SEL_20 bound to: FALSE - type: string 
+	Parameter CLK_SEL_21 bound to: FALSE - type: string 
+	Parameter CLK_SEL_22 bound to: FALSE - type: string 
+	Parameter CLK_SEL_23 bound to: FALSE - type: string 
+	Parameter CLK_SEL_24 bound to: FALSE - type: string 
+	Parameter CLK_SEL_25 bound to: FALSE - type: string 
+	Parameter CLK_SEL_26 bound to: FALSE - type: string 
+	Parameter CLK_SEL_27 bound to: FALSE - type: string 
+	Parameter CLK_SEL_28 bound to: FALSE - type: string 
+	Parameter CLK_SEL_29 bound to: FALSE - type: string 
+	Parameter CLK_SEL_30 bound to: FALSE - type: string 
+	Parameter CLK_SEL_31 bound to: FALSE - type: string 
+	Parameter DATARATE_00 bound to: 1800 - type: integer 
+	Parameter DATARATE_01 bound to: 1800 - type: integer 
+	Parameter DATARATE_02 bound to: 1800 - type: integer 
+	Parameter DATARATE_03 bound to: 1800 - type: integer 
+	Parameter DATARATE_04 bound to: 1800 - type: integer 
+	Parameter DATARATE_05 bound to: 1800 - type: integer 
+	Parameter DATARATE_06 bound to: 1800 - type: integer 
+	Parameter DATARATE_07 bound to: 1800 - type: integer 
+	Parameter DATARATE_08 bound to: 1800 - type: integer 
+	Parameter DATARATE_09 bound to: 1800 - type: integer 
+	Parameter DATARATE_10 bound to: 1800 - type: integer 
+	Parameter DATARATE_11 bound to: 1800 - type: integer 
+	Parameter DATARATE_12 bound to: 1800 - type: integer 
+	Parameter DATARATE_13 bound to: 1800 - type: integer 
+	Parameter DATARATE_14 bound to: 1800 - type: integer 
+	Parameter DATARATE_15 bound to: 1800 - type: integer 
+	Parameter DA_LOCKOUT_0 bound to: FALSE - type: string 
+	Parameter DA_LOCKOUT_1 bound to: FALSE - type: string 
+	Parameter IS_APB_0_PCLK_INVERTED bound to: 1'b0 
+	Parameter IS_APB_0_PRESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_APB_1_PCLK_INVERTED bound to: 1'b0 
+	Parameter IS_APB_1_PRESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_00_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_00_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_01_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_01_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_02_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_02_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_03_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_03_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_04_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_04_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_05_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_05_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_06_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_06_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_07_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_07_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_08_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_08_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_09_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_09_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_10_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_10_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_11_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_11_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_12_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_12_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_13_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_13_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_14_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_14_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_15_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_15_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_16_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_16_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_17_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_17_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_18_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_18_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_19_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_19_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_20_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_20_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_21_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_21_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_22_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_22_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_23_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_23_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_24_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_24_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_25_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_25_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_26_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_26_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_27_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_27_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_28_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_28_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_29_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_29_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_30_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_30_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_31_ACLK_INVERTED bound to: 1'b0 
+	Parameter IS_AXI_31_ARESET_N_INVERTED bound to: 1'b0 
+	Parameter MC_ENABLE_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_01 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_02 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_03 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_04 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_05 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_06 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_07 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_08 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_09 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_10 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_11 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_12 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_13 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_14 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_15 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter MC_ENABLE_APB_01 bound to: TRUE - type: string 
+	Parameter PAGEHIT_PERCENT_00 bound to: 75 - type: integer 
+	Parameter PAGEHIT_PERCENT_01 bound to: 75 - type: integer 
+	Parameter PHY_ENABLE_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_01 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_02 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_03 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_04 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_05 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_06 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_07 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_08 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_09 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_10 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_11 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_12 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_13 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_14 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_15 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_16 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_17 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_18 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_19 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_20 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_21 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_22 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_23 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_24 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_25 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_26 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_27 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_28 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_29 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_30 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_31 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_00 bound to: TRUE - type: string 
+	Parameter PHY_ENABLE_APB_01 bound to: TRUE - type: string 
+	Parameter PHY_PCLK_INVERT_01 bound to: FALSE - type: string 
+	Parameter PHY_PCLK_INVERT_02 bound to: FALSE - type: string 
+	Parameter READ_PERCENT_00 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_01 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_02 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_03 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_04 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_05 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_06 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_07 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_08 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_09 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_10 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_11 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_12 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_13 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_14 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_15 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_16 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_17 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_18 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_19 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_20 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_21 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_22 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_23 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_24 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_25 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_26 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_27 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_28 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_29 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_30 bound to: 40 - type: integer 
+	Parameter READ_PERCENT_31 bound to: 40 - type: integer 
+	Parameter SIM_DEVICE bound to: ULTRASCALE_PLUS - type: string 
+	Parameter SWITCH_ENABLE_00 bound to: TRUE - type: string 
+	Parameter SWITCH_ENABLE_01 bound to: TRUE - type: string 
+	Parameter WRITE_PERCENT_00 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_01 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_02 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_03 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_04 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_05 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_06 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_07 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_08 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_09 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_10 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_11 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_12 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_13 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_14 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_15 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_16 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_17 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_18 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_19 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_20 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_21 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_22 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_23 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_24 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_25 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_26 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_27 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_28 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_29 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_30 bound to: 40 - type: integer 
+	Parameter WRITE_PERCENT_31 bound to: 40 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'HBM_TWO_STACK_INTF' (7#1) [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:29543]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_top' (8#1) [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:81]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_v1_0_9' (9#1) [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_9.sv:66]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_inst_0' (10#1) [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/synth/bd_5dca_hbm_inst_0.v:63]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 3423.297 ; gain = 253.219 ; free physical = 56687 ; free virtual = 321141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3438.141 ; gain = 268.062 ; free physical = 53757 ; free virtual = 318237
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3438.141 ; gain = 268.062 ; free physical = 53753 ; free virtual = 318232
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.27 . Memory (MB): peak = 3449.047 ; gain = 0.000 ; free physical = 57958 ; free virtual = 322445
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/bd_5dca_hbm_inst_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/bd_5dca_hbm_inst_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/hbm_ip.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3620.297 ; gain = 21.781 ; free physical = 56479 ; free virtual = 321068
+Finished Parsing XDC File [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/hbm_ip.xdc] for cell 'inst'
+Parsing XDC File [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3620.297 ; gain = 0.000 ; free physical = 56457 ; free virtual = 321046
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  HBM_TWO_STACK_INTF => HBM_TWO_STACK_INTF (HBM_REF_CLK(x2), HBM_SNGLBLI_INTF_APB(x2), HBM_SNGLBLI_INTF_AXI(x32)): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3620.297 ; gain = 0.000 ; free physical = 56374 ; free virtual = 320964
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 3620.297 ; gain = 450.219 ; free physical = 52229 ; free virtual = 316812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 3620.297 ; gain = 450.219 ; free physical = 52217 ; free virtual = 316801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc, line 6).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 3620.297 ; gain = 450.219 ; free physical = 52187 ; free virtual = 316771
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'hbm_apb_mst'
+INFO: [Synth 8-802] inferred FSM for state register 'main_fsm_curr_state_reg' in module 'hbm_temp_rd'
+INFO: [Synth 8-802] inferred FSM for state register 'apb_fsm_curr_state_reg' in module 'hbm_temp_rd'
+INFO: [Synth 8-5779] Default cascade height of 1 will be used for BRAM '"xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg"'.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 14 for RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg"
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  C_IDLE |                              001 |                              001
+                 C_SETUP |                              010 |                              010
+                C_ACCESS |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'curr_state_reg' in module 'hbm_apb_mst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              C_APB_IDLE |                              001 |                              001
+             C_APB_SETUP |                              010 |                              010
+            C_APB_ACCESS |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'apb_fsm_curr_state_reg' in module 'hbm_temp_rd'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  C_IDLE |                           000001 |                           000001
+           C_WAIT_INTRVL |                           000010 |                           000010
+           C_APB_ACC_REQ |                           000100 |                           000100
+     C_SEND_TEMP_ACC_CMD |                           001000 |                           001000
+  C_POLL_TEMP_ACC_CMD_ST |                           010000 |                           010000
+             C_READ_TEMP |                           100000 |                           100000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'main_fsm_curr_state_reg' in module 'hbm_temp_rd'
+INFO: [Synth 8-5779] Default cascade height of 1 will be used for BRAM '"xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"'.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 14 for RAM "xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 3620.297 ; gain = 450.219 ; free physical = 50322 ; free virtual = 314908
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 4     
++---Registers : 
+	               32 Bit    Registers := 20    
+	               22 Bit    Registers := 18    
+	               11 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 76    
++---RAMs : 
+	              64K Bit	(2048 X 32 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 30    
+	   4 Input   32 Bit        Muxes := 2     
+	   5 Input   24 Bit        Muxes := 2     
+	   2 Input   22 Bit        Muxes := 22    
+	   5 Input   22 Bit        Muxes := 2     
+	   4 Input   22 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 3     
+	   2 Input    6 Bit        Muxes := 8     
+	   7 Input    6 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 4     
+	   5 Input    3 Bit        Muxes := 4     
+	   4 Input    3 Bit        Muxes := 8     
+	   2 Input    3 Bit        Muxes := 18    
+	   2 Input    2 Bit        Muxes := 16    
+	   5 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 152   
+	   5 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 3620.297 ; gain = 450.219 ; free physical = 44488 ; free virtual = 309092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|xpm_memory_base:                 | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 1,1             | 
+|xpm_memory_base__parameterized0: | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 1,1             | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:12 . Memory (MB): peak = 3894.969 ; gain = 724.891 ; free physical = 54941 ; free virtual = 319662
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:14 . Memory (MB): peak = 3935.977 ; gain = 765.898 ; free physical = 57446 ; free virtual = 322180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|xpm_memory_base:                 | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 1,1             | 
+|xpm_memory_base__parameterized0: | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 1,1             | 
++---------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.xpm_memory_spram_inst_0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.xpm_memory_spram_inst_0/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.xpm_memory_spram_inst_1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.xpm_memory_spram_inst_1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:33 ; elapsed = 00:02:50 . Memory (MB): peak = 3968.008 ; gain = 797.930 ; free physical = 47571 ; free virtual = 314460
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:57 ; elapsed = 00:03:14 . Memory (MB): peak = 3973.945 ; gain = 803.867 ; free physical = 74934 ; free virtual = 341759
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:57 ; elapsed = 00:03:14 . Memory (MB): peak = 3973.945 ; gain = 803.867 ; free physical = 74913 ; free virtual = 341738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:58 ; elapsed = 00:03:15 . Memory (MB): peak = 3973.945 ; gain = 803.867 ; free physical = 75001 ; free virtual = 341827
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:58 ; elapsed = 00:03:15 . Memory (MB): peak = 3973.945 ; gain = 803.867 ; free physical = 75007 ; free virtual = 341833
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:58 ; elapsed = 00:03:15 . Memory (MB): peak = 3973.945 ; gain = 803.867 ; free physical = 74933 ; free virtual = 341759
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:58 ; elapsed = 00:03:15 . Memory (MB): peak = 3973.945 ; gain = 803.867 ; free physical = 74874 ; free virtual = 341699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |CARRY8             |    16|
+|2     |HBM_TWO_STACK_INTF |     1|
+|3     |LUT1               |    38|
+|4     |LUT2               |   220|
+|5     |LUT3               |   140|
+|6     |LUT4               |   374|
+|7     |LUT5               |   216|
+|8     |LUT6               |   265|
+|9     |RAMB36E2           |     4|
+|11    |FDCE               |   818|
+|12    |FDPE               |     6|
++------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:58 ; elapsed = 00:03:15 . Memory (MB): peak = 3973.945 ; gain = 803.867 ; free physical = 74867 ; free virtual = 341693
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:44 ; elapsed = 00:03:00 . Memory (MB): peak = 3973.945 ; gain = 621.711 ; free physical = 74993 ; free virtual = 341819
+Synthesis Optimization Complete : Time (s): cpu = 00:02:58 ; elapsed = 00:03:15 . Memory (MB): peak = 3973.953 ; gain = 803.867 ; free physical = 74991 ; free virtual = 341816
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 3973.953 ; gain = 0.000 ; free physical = 73957 ; free virtual = 340783
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4075.047 ; gain = 0.000 ; free physical = 76098 ; free virtual = 342918
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  HBM_TWO_STACK_INTF => HBM_TWO_STACK_INTF (HBM_REF_CLK(x2), HBM_SNGLBLI_INTF_APB(x2), HBM_SNGLBLI_INTF_AXI(x32)): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+69 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:20 ; elapsed = 00:03:40 . Memory (MB): peak = 4075.047 ; gain = 1648.328 ; free physical = 76210 ; free virtual = 343048
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Common 17-1381] The checkpoint '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_5dca_hbm_inst_0, cache-ID = e11a7e39cb43962c
+INFO: [Coretcl 2-1174] Renamed 14 cell refs.
+INFO: [Common 17-1381] The checkpoint '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_5dca_hbm_inst_0_utilization_synth.rpt -pb bd_5dca_hbm_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 11 11:21:13 2021...

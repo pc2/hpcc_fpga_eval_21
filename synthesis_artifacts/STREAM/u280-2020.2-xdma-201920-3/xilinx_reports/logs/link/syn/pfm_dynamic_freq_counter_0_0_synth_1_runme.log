@@ -1,0 +1,285 @@
+
+*** Running vivado
+    with args -log pfm_dynamic_freq_counter_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pfm_dynamic_freq_counter_0_0.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source pfm_dynamic_freq_counter_0_0.tcl -notrace
+INFO: Dispatch client connection id - 36361
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_calc_0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2434.652 ; gain = 0.000 ; free physical = 66971 ; free virtual = 333969
+Command: synth_design -top pfm_dynamic_freq_counter_0_0 -part xcu280-fsvh2892-2L-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20868
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3327.730 ; gain = 175.719 ; free physical = 40111 ; free virtual = 307456
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_freq_counter_0_0' [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_freq_counter_0_0/synth/pfm_dynamic_freq_counter_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'freq_counter' [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/5634/src/freq_counter.v:52]
+	Parameter REF_CLK_FREQ_HZ bound to: 50000 - type: integer 
+	Parameter IDLE_WRITE bound to: 3'b001 
+	Parameter WAIT_FOR_WVALID_WRITE bound to: 3'b010 
+	Parameter WAIT_FOR_BREADY_WRITE bound to: 3'b100 
+	Parameter IDLE_READ bound to: 2'b01 
+	Parameter WAIT_FOR_RVALID_READ bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (1#1) [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized0' [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized0' (1#1) [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-155] case statement is not full and has no default [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/5634/src/freq_counter.v:256]
+INFO: [Synth 8-155] case statement is not full and has no default [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/5634/src/freq_counter.v:303]
+INFO: [Synth 8-6155] done synthesizing module 'freq_counter' (2#1) [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/5634/src/freq_counter.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_freq_counter_0_0' (3#1) [/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_freq_counter_0_0/synth/pfm_dynamic_freq_counter_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3373.637 ; gain = 221.625 ; free physical = 40702 ; free virtual = 307664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3391.480 ; gain = 239.469 ; free physical = 39685 ; free virtual = 306599
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3391.480 ; gain = 239.469 ; free physical = 39694 ; free virtual = 306608
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3391.480 ; gain = 0.000 ; free physical = 39601 ; free virtual = 306516
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pfm_dynamic_freq_counter_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pfm_dynamic_freq_counter_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1715] 1 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3516.043 ; gain = 0.000 ; free physical = 40282 ; free virtual = 307171
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3516.043 ; gain = 0.000 ; free physical = 40304 ; free virtual = 307193
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3516.043 ; gain = 364.031 ; free physical = 41646 ; free virtual = 308500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3516.043 ; gain = 364.031 ; free physical = 41640 ; free virtual = 308495
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst/xpm_cdc_array_single_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/xpm_cdc_array_single_inst1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/xpm_cdc_array_single_inst2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/xpm_cdc_array_single_inst5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/xpm_cdc_array_single_inst6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/xpm_cdc_array_single_inst7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/xpm_cdc_array_single_inst3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/xpm_cdc_array_single_inst4. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3516.043 ; gain = 364.031 ; free physical = 41583 ; free virtual = 308439
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'freq_counter'
+INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'freq_counter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              IDLE_WRITE |                              001 |                              001
+   WAIT_FOR_WVALID_WRITE |                              010 |                              010
+   WAIT_FOR_BREADY_WRITE |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_write_reg' in module 'freq_counter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               IDLE_READ |                               01 |                               01
+    WAIT_FOR_RVALID_READ |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_read_reg' in module 'freq_counter'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3516.043 ; gain = 364.031 ; free physical = 41529 ; free virtual = 308400
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3516.043 ; gain = 364.031 ; free physical = 42696 ; free virtual = 309549
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 3840.113 ; gain = 688.102 ; free physical = 73373 ; free virtual = 340198
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 3840.113 ; gain = 688.102 ; free physical = 73300 ; free virtual = 340126
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 3868.160 ; gain = 716.148 ; free physical = 73379 ; free virtual = 340205
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3868.160 ; gain = 716.148 ; free physical = 73597 ; free virtual = 340423
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3868.160 ; gain = 716.148 ; free physical = 73587 ; free virtual = 340413
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3868.160 ; gain = 716.148 ; free physical = 73543 ; free virtual = 340368
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3868.160 ; gain = 716.148 ; free physical = 73536 ; free virtual = 340362
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3868.160 ; gain = 716.148 ; free physical = 73585 ; free virtual = 340411
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3868.160 ; gain = 716.148 ; free physical = 73612 ; free virtual = 340438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |    12|
+|2     |LUT1   |     7|
+|3     |LUT2   |     4|
+|4     |LUT3   |     2|
+|5     |LUT4   |    10|
+|6     |LUT5   |     8|
+|7     |LUT6   |    69|
+|8     |FDRE   |   279|
+|9     |FDSE   |     2|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3868.160 ; gain = 716.148 ; free physical = 73613 ; free virtual = 340439
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 3868.160 ; gain = 591.586 ; free physical = 73705 ; free virtual = 340531
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3868.168 ; gain = 716.148 ; free physical = 73704 ; free virtual = 340529
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3879.129 ; gain = 0.000 ; free physical = 74009 ; free virtual = 340835
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3931.449 ; gain = 0.000 ; free physical = 76732 ; free virtual = 343560
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:09 . Memory (MB): peak = 3931.449 ; gain = 1496.797 ; free physical = 76747 ; free virtual = 343574
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Common 17-1381] The checkpoint '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_freq_counter_0_0_synth_1/pfm_dynamic_freq_counter_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pfm_dynamic_freq_counter_0_0, cache-ID = 013966aee61c211c
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+INFO: [Common 17-1381] The checkpoint '/mnt/local/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/STREAM/tmp/build/u280/Xilinx_Alveo_U280_SP.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_freq_counter_0_0_synth_1/pfm_dynamic_freq_counter_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pfm_dynamic_freq_counter_0_0_utilization_synth.rpt -pb pfm_dynamic_freq_counter_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 11 11:20:59 2021...
