@@ -130,9 +130,9 @@ index 37b79ae..fc3d025 100644
 +				DEVICE_DATA_TYPE sum = 0.0;
 +				__attribute__((opencl_unroll_hint(GEMM_BLOCK_MM)))
 +				for (int k=0; k < GEMM_BLOCK_MM; k++) {
-+					sum = __fpga_reg(sum) + left_sub[k][i] * top_sub[k][j];
++					sum += left_sub[k][i] * top_sub[k][j];
  				}
-+				result_sub[i][j] = __fpga_reg(sum);
++				result_sub[i][j] = sum;
  			}
  		}
  
