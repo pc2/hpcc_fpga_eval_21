@@ -7,7 +7,7 @@
 # Schedule with qsub 
 #
 #PBS -q fsyn-b
-#PBS -N HPL_SP_COMB
+#PBS -N HPL_SP_PCIE
 #PBS -A CCUSC
 #PBS -M marius.meyer@uni-paderborn.de
 #PBS -m e
@@ -31,17 +31,25 @@ fi
 TMP_DIR=${SCRIPT_PATH}/tmp
 TMP_PROJECT_DIR=${TMP_DIR}/HPCC_FPGA
 SYNTH_DIR=${TMP_DIR}/build
-BENCHMARK_DIR=${TMP_PROJECT_DIR}/LINPACK
 
 # Project already created and configured because no access on compute nodes!
 mkdir -p ${TMP_DIR}
 
-git clone --branch ${HPCC_FPGA_VERSION} https://github.com/pc2/HPCC_FPGA.git ${TMP_PROJECT_DIR}
-
-# Apply channel reordering patch
-cd ${TMP_PROJECT_DIR}; git apply ${SCRIPT_PATH}/../../../patches/cygnus_hpl_channel_ordering.patch
-# Apply configuration improvement patch
-cd ${TMP_PROJECT_DIR}; git apply ${SCRIPT_PATH}/../../../patches/hpl_gemm_scaling_separate_read_pipelines_intel.patch
+if [ ! -d ${TMP_PROJECT_DIR} ]; then
+    git clone --branch ${HPCC_FPGA_VERSION} https://github.com/pc2/HPCC_FPGA.git ${TMP_PROJECT_DIR}
+    
+    # Apply patches
+    cd ${TMP_PROJECT_DIR};
+    # Apply channel reordering patch
+    if ! git apply ${SCRIPT_PATH}/../../../patches/cygnus_hpl_channel_ordering.patch; then
+        echo "ERROR: Apply channel reordering patch failed!"
+    fi
+    # Apply configuration improvement patch
+    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_gemm_scaling_separate_read_pipelines_intel.patch; then
+        echo "ERROR: Apply separate read pipelines patch failed!"
+    fi
+fi
+BENCHMARK_DIR=${TMP_PROJECT_DIR}/LINPACK
 
 CONFIG_NAMES=("Nallatech_520N_PCIE_B9_SB3_R5_s1" "Nallatech_520N_PCIE_B9_SB3_R5_s2")
 
@@ -52,9 +60,13 @@ for r in "${CONFIG_NAMES[@]}"; do
     mkdir -p ${BUILD_DIR}
     cd ${BUILD_DIR}
 
-    # cmake ${BENCHMARK_DIR} -DCMAKE_BUILD_TYPE=Release -DHPCC_FPGA_CONFIG=${SCRIPT_PATH}/cygnus/${r}.cmake
-
-    make hpl_torus_PCIE_intel Linpack_intel&
+    if [ "${PBS_O_WORKDIR}" == "" ]; then
+        # only configure since it is executed on the frontend
+        cmake ${BENCHMARK_DIR} -DCMAKE_BUILD_TYPE=Release -DHPCC_FPGA_CONFIG=${SCRIPT_PATH}/cygnus/${r}.cmake
+    else
+        # start synthesis because this is executed on a compute node
+        make hpl_torus_PCIE_intel Linpack_intel&
+    fi
 
 done
 
