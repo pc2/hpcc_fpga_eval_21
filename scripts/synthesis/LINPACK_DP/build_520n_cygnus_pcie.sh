@@ -11,7 +11,7 @@
 #PBS -A CCUSC
 #PBS -M marius.meyer@uni-paderborn.de
 #PBS -m e
-#PBS -o synth_cygnus_dp_iec.log
+#PBS -o synth_cygnus_dp_pcie.log
 #PBS -j o
 
 INTEL_SDK=19.4
@@ -31,6 +31,7 @@ fi
 TMP_DIR=${SCRIPT_PATH}/tmp
 TMP_PROJECT_DIR=${TMP_DIR}/HPCC_FPGA
 SYNTH_DIR=${TMP_DIR}/build
+BENCHMARK_DIR=${TMP_PROJECT_DIR}/LINPACK
 
 # Project already created and configured because no access on compute nodes!
 mkdir -p ${TMP_DIR}
@@ -44,7 +45,7 @@ mkdir -p ${TMP_DIR}
 
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/LINPACK
 
-CONFIG_NAMES=("Nallatech_520N_IEC_B8_SB2_R4_s1" "Nallatech_520N_IEC_B8_SB2_R4_s2")
+CONFIG_NAMES=("Nallatech_520N_PCIE_B8_SB2_R4_s2" "Nallatech_520N_PCIE_B8_SB2_R4_s1")
 
 for r in "${CONFIG_NAMES[@]}"; do
     SYNTH_NAME=${INTEL_SDK}-${r}
@@ -53,9 +54,9 @@ for r in "${CONFIG_NAMES[@]}"; do
     mkdir -p ${BUILD_DIR}
     cd ${BUILD_DIR}
 
-    # cmake ${BENCHMARK_DIR} -DCMAKE_BUILD_TYPE=Release -DHPCC_FPGA_CONFIG=${SCRIPT_PATH}/cygnus/${r}.cmake
+    cmake ${BENCHMARK_DIR} -DCMAKE_BUILD_TYPE=Release -DHPCC_FPGA_CONFIG=${SCRIPT_PATH}/cygnus/${r}.cmake
 
-    make hpl_torus_IEC_intel Linpack_intel&
+    # make hpl_torus_PCIE_intel Linpack_intel&
 
 done
 
