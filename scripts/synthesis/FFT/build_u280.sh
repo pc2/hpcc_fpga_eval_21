@@ -21,6 +21,7 @@ SYNTH_DIR=${TMP_DIR}/build
 mkdir -p ${TMP_DIR}
 
 git clone --branch ${HPCC_FPGA_VERSION} git@github.com:pc2/HPCC_FPGA.git ${TMP_PROJECT_DIR}
+cd ${TMP_PROJECT_DIR}; git apply ../../../../../patches/fft_inlines_and_enable_bursts_xilinx.patch
 
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/${BENCHMARK_NAME}
 
