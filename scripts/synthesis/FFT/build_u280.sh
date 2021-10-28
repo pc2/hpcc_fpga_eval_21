@@ -33,7 +33,7 @@ for r in "${CONFIG_NAMES[@]}"; do
     STORE_DIR=${STORE_DIR_ROOT}/${SYNTH_NAME}
 
     mkdir -p ${BUILD_DIR}
-    mkdir -p ${STORE_DIR_ROOT}
+    mkdir -p $(dirname ${STORE_DIR})
     cd ${BUILD_DIR}
 
     cmake ${BENCHMARK_DIR} -DCMAKE_BUILD_TYPE=Release -DHPCC_FPGA_CONFIG=${SCRIPT_PATH}/${r} | tee ${STORE_DIR}_configure.log
