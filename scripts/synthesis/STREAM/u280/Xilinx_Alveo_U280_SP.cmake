@@ -21,6 +21,8 @@ set(DEVICE_BUFFER_SIZE 16384 CACHE STRING "" FORCE)
 set(XILINX_LINK_SETTINGS_FILE ${CMAKE_CURRENT_LIST_DIR}/settings.link.xilinx.stream_kernels_single.ddr.generator.ini CACHE FILEPATH "" FORCE)
 set(XILINX_COMPILE_SETTINGS_FILE ${CMAKE_CURRENT_LIST_DIR}/settings.compile.xilinx.u280.tcl CACHE FILEPATH "" FORCE)
 
+set(USE_DEPRECATED_HPP_HEADER Yes CACHE BOOL "Command queue creation fails with cl2.hpp" FORCE)
+
 # Set the data type since optional vector types are used
 set(DATA_TYPE float CACHE STRING "" FORCE)
 set(HOST_DATA_TYPE cl_${DATA_TYPE} CACHE STRING "" FORCE)
