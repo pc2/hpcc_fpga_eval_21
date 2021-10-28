@@ -7,5 +7,5 @@
 # Results are stored in separate files for each benchmark
 #
 
-../../../synthesis_artifacts/RandomAccess/u280-2020.2-xdma-201920-3/RandomAccess_xilinx -f ../../../synthesis_artifacts/RandomAccess/u280-2020.2-xdma-201920-3/random_access_kernels_single.xclbin -r 4 -d 30 --device 0 \
+mpirun -n 1 ../../../synthesis_artifacts/RandomAccess/u280-2020.2-xdma-201920-3/RandomAccess_xilinx -f ../../../synthesis_artifacts/RandomAccess/u280-2020.2-xdma-201920-3/random_access_kernels_single.xclbin -r 2 -g 3 -d 29 -n 10 --device 0 \
 | tee ra_N1.out
