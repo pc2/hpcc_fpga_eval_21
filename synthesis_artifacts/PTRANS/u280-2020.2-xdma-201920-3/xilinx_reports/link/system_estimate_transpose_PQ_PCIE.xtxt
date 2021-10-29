@@ -1,0 +1,42 @@
+===============================================================================
+Version:    v++ v2020.2 (64-bit)
+Build:      SW Build (by xbuild) on 2020-11-18-05:13:29
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Oct 29 13:00:28 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             transpose_PQ_PCIE
+Target Device:           xilinx:u280:xdma:201920.3
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library     Compute Units
+-----------  ----  ------------------  -----------------  -------------
+transpose0   clc   fpga0:OCL_REGION_0  transpose_PQ_PCIE  2
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     transpose_PQ_PCIE
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name  Target Frequency  Estimated Frequency
+------------  -----------  -----------  ----------------  -------------------
+transpose0_1  transpose0   transpose0   300.300293        411.015198
+transpose0_2  transpose0   transpose0   300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name  Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  -----------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+transpose0_1  transpose0   transpose0   undef           undef          undef         undef           undef            undef           undef
+transpose0_2  transpose0   transpose0   undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name  FF     LUT    DSP  BRAM  URAM
+------------  -----------  -----------  -----  -----  ---  ----  ----
+transpose0_1  transpose0   transpose0   14159  88246  0    542   0
+transpose0_2  transpose0   transpose0   14159  88246  0    542   0
+-------------------------------------------------------------------------------
