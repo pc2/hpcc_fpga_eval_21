@@ -1,0 +1,216 @@
+diff --git a/b_eff/CMakeLists.txt b/b_eff/CMakeLists.txt
+index 0793aa9..f48f197 100755
+--- a/b_eff/CMakeLists.txt
++++ b/b_eff/CMakeLists.txt
+@@ -21,6 +21,3 @@ include(${CMAKE_SOURCE_DIR}/../cmake/general_benchmark_build_setup.cmake)
+ unset(DATA_TYPE CACHE)
+ find_package(MPI REQUIRED)
+ 
+-if (NOT INTELFPGAOPENCL_FOUND)
+-    message(ERROR "Benchmark does only support the Intel OpenCL SDK")
+-endif()
+diff --git a/b_eff/src/host/CMakeLists.txt b/b_eff/src/host/CMakeLists.txt
+index fb08281..9809208 100755
+--- a/b_eff/src/host/CMakeLists.txt
++++ b/b_eff/src/host/CMakeLists.txt
+@@ -17,3 +17,15 @@ if (INTELFPGAOPENCL_FOUND)
+     target_compile_options(${LIB_NAME}_intel PRIVATE "${OpenMP_CXX_FLAGS}")
+     add_test(NAME test_intel_host_executable COMMAND $<TARGET_FILE:${HOST_EXE_NAME}_intel> -h)
+ endif()
++if (Vitis_FOUND)
++    add_library(${LIB_NAME}_xilinx STATIC ${HOST_SOURCE})
++    target_include_directories(${LIB_NAME}_xilinx PRIVATE ${HPCCBaseLibrary_INCLUDE_DIRS} ${CMAKE_BINARY_DIR}/src/common ${Vitis_INCLUDE_DIRS})
++    target_include_directories(${LIB_NAME}_xilinx PUBLIC ${CMAKE_SOURCE_DIR}/src/host)
++    add_executable(${HOST_EXE_NAME}_xilinx main.cpp)
++    target_link_libraries(${LIB_NAME}_xilinx ${Vitis_LIBRARIES} "${OpenMP_CXX_FLAGS}")
++    target_link_libraries(${LIB_NAME}_xilinx hpcc_fpga_base)
++    target_link_libraries(${HOST_EXE_NAME}_xilinx ${LIB_NAME}_xilinx)
++    target_compile_definitions(${LIB_NAME}_xilinx PRIVATE -DXILINX_FPGA)
++    target_compile_options(${LIB_NAME}_xilinx PRIVATE "${OpenMP_CXX_FLAGS}")
++    add_test(NAME test_xilinx_host_executable COMMAND $<TARGET_FILE:${HOST_EXE_NAME}_xilinx> -h)
++endif()
+diff --git a/b_eff/src/host/execution_types/execution.hpp b/b_eff/src/host/execution_types/execution.hpp
+index df63083..22a8a12 100644
+--- a/b_eff/src/host/execution_types/execution.hpp
++++ b/b_eff/src/host/execution_types/execution.hpp
+@@ -22,4 +22,6 @@ SOFTWARE.
+ 
+ #include "execution_types/execution_cpu.hpp"
+ #include "execution_types/execution_pcie.hpp"
+-#include "execution_types/execution_iec.hpp"
+\ No newline at end of file
++#ifdef INTEL_FPGA
++#include "execution_types/execution_iec.hpp"
++#endif
+diff --git a/b_eff/src/host/execution_types/execution_cpu.hpp b/b_eff/src/host/execution_types/execution_cpu.hpp
+index 778dc2f..de6fd8f 100644
+--- a/b_eff/src/host/execution_types/execution_cpu.hpp
++++ b/b_eff/src/host/execution_types/execution_cpu.hpp
+@@ -45,6 +45,7 @@ namespace network::execution_types::cpu {
+         int err;
+         std::vector<cl::CommandQueue> sendQueues;
+         std::vector<cl::Buffer> dummyBuffers;
++	std::vector<cl::Kernel> accesskernel;
+         std::vector<cl::vector<HOST_DATA_TYPE>> dummyBufferContents;
+ 
+         cl_uint size_in_bytes = std::max(static_cast<int>(validationData.size()), (1 << messageSize));
+@@ -59,6 +60,7 @@ namespace network::execution_types::cpu {
+         for (uint r =0; r < config.programSettings->numRepetitions; r++) {
+             sendQueues.clear();
+             dummyBuffers.clear();
++	    accesskernel.clear();
+             dummyBufferContents.clear();
+             // Create all kernels and buffers. The kernel pairs are generated twice to utilize all channels
+             for (int r = 0; r < config.programSettings->kernelReplications; r++) {
+@@ -66,13 +68,29 @@ namespace network::execution_types::cpu {
+                 dummyBuffers.push_back(cl::Buffer(*config.context, CL_MEM_READ_WRITE, sizeof(HOST_DATA_TYPE) * size_in_bytes,0,&err));
+                 ASSERT_CL(err)
+ 
++		accesskernel.push_back(cl::Kernel(*config.program,
++			("accessMemory_0:{accessMemory_0_" + std::to_string(r + 1) + "}").c_str(), &err));
++
++		err = accesskernel[r].setArg(0, dummyBuffers[r]);
++                ASSERT_CL(err);
++		err = accesskernel[r].setArg(1, dummyBuffers[r]);
++		ASSERT_CL(err);
++		err = accesskernel[r].setArg(2, static_cast<cl_long>(0));
++		ASSERT_CL(err);
++		err = accesskernel[r].setArg(3, static_cast<cl_long>(0));
++		ASSERT_CL(err);
++		err = accesskernel[r].setArg(4,(1));
++		ASSERT_CL(err);
++		err = accesskernel[r].setArg(5, cl_uint(0));
++		ASSERT_CL(err);
++
+                 dummyBufferContents.emplace_back(size_in_bytes, static_cast<HOST_DATA_TYPE>(messageSize & (255)));
+ 
+                 cl::CommandQueue sendQueue(*config.context, *config.device, 0, &err);
+                 ASSERT_CL(err)
+ 
+-                sendQueue.enqueueWriteBuffer(dummyBuffers.back(), CL_TRUE, 0, sizeof(HOST_DATA_TYPE) * size_in_bytes, dummyBufferContents.back().data());
+-
++                err = sendQueue.enqueueWriteBuffer(dummyBuffers.back(), CL_TRUE, 0, sizeof(HOST_DATA_TYPE) * size_in_bytes, dummyBufferContents.back().data());
++                ASSERT_CL(err)
+                 sendQueues.push_back(sendQueue);
+ 
+             }
+diff --git a/b_eff/src/host/execution_types/execution_pcie.hpp b/b_eff/src/host/execution_types/execution_pcie.hpp
+index 73156b7..e89d587 100644
+--- a/b_eff/src/host/execution_types/execution_pcie.hpp
++++ b/b_eff/src/host/execution_types/execution_pcie.hpp
+@@ -45,6 +45,7 @@ namespace network::execution_types::pcie {
+         int err;
+         std::vector<cl::CommandQueue> sendQueues;
+         std::vector<cl::Buffer> dummyBuffers;
++        std::vector<cl::Kernel> accesskernel;
+         std::vector<cl::vector<HOST_DATA_TYPE>> dummyBufferContents;
+ 
+         cl_uint size_in_bytes = std::max(static_cast<int>(validationData.size()), (1 << messageSize));
+@@ -59,6 +60,7 @@ namespace network::execution_types::pcie {
+         for (uint r =0; r < config.programSettings->numRepetitions; r++) {
+             sendQueues.clear();
+             dummyBuffers.clear();
++            accesskernel.clear();
+             dummyBufferContents.clear();
+             // Create all kernels and buffers. The kernel pairs are generated twice to utilize all channels
+             for (int r = 0; r < config.programSettings->kernelReplications; r++) {
+@@ -66,6 +68,22 @@ namespace network::execution_types::pcie {
+                 dummyBuffers.push_back(cl::Buffer(*config.context, CL_MEM_READ_WRITE, sizeof(HOST_DATA_TYPE) * size_in_bytes,0,&err));
+                 ASSERT_CL(err)
+ 
++                accesskernel.push_back(cl::Kernel(*config.program,
++                    ("accessMemory_0:{accessMemory_0_" + std::to_string(r + 1) + "}").c_str(), &err));
++
++                err = accesskernel[r].setArg(0, dummyBuffers[r]);
++                        ASSERT_CL(err);
++                err = accesskernel[r].setArg(1, dummyBuffers[r]);
++                ASSERT_CL(err);
++                err = accesskernel[r].setArg(2, static_cast<cl_long>(0));
++                ASSERT_CL(err);
++                err = accesskernel[r].setArg(3, static_cast<cl_long>(0));
++                ASSERT_CL(err);
++                err = accesskernel[r].setArg(4,(1));
++                ASSERT_CL(err);
++                err = accesskernel[r].setArg(5, cl_uint(0));
++                ASSERT_CL(err);
++
+                 dummyBufferContents.emplace_back(size_in_bytes, static_cast<HOST_DATA_TYPE>(messageSize & (255)));
+ 
+                 cl::CommandQueue sendQueue(*config.context, *config.device, 0, &err);
+diff --git a/b_eff/src/host/network_benchmark.cpp b/b_eff/src/host/network_benchmark.cpp
+index 9d1512e..2e33623 100644
+--- a/b_eff/src/host/network_benchmark.cpp
++++ b/b_eff/src/host/network_benchmark.cpp
+@@ -109,8 +109,10 @@ network::NetworkBenchmark::executeKernel(NetworkData &data) {
+         switch (executionSettings->programSettings->communicationType) {
+             case hpcc_base::CommunicationType::cpu_only: timing = execution_types::cpu::calculate(*executionSettings, run.messageSize, run.loopLength, run.validationBuffer); break;
+             case hpcc_base::CommunicationType::pcie_mpi: timing = execution_types::pcie::calculate(*executionSettings, run.messageSize, run.loopLength, run.validationBuffer); break;
+-            case hpcc_base::CommunicationType::intel_external_channels: timing = execution_types::iec::calculate(*executionSettings, run.messageSize, run.loopLength, run.validationBuffer); break;
+-            default: throw std::runtime_error("Selected Communication type not supported: " + hpcc_base::commToString(executionSettings->programSettings->communicationType));
++#ifdef INTEL_FPGA
++	    case hpcc_base::CommunicationType::intel_external_channels: timing = execution_types::iec::calculate(*executionSettings, run.messageSize, run.loopLength, run.validationBuffer); break;
++#endif
++	    default: throw std::runtime_error("Selected Communication type not supported: " + hpcc_base::commToString(executionSettings->programSettings->communicationType));
+         }
+         timing_results.push_back(timing);
+     }
+diff --git a/b_eff/src/host/network_benchmark.hpp b/b_eff/src/host/network_benchmark.hpp
+index 0fdf806..e0d5287 100644
+--- a/b_eff/src/host/network_benchmark.hpp
++++ b/b_eff/src/host/network_benchmark.hpp
+@@ -31,6 +31,31 @@ SOFTWARE.
+ #include "hpcc_benchmark.hpp"
+ #include "parameters.h"
+ 
++template <typename T>
++struct aligned_allocator {
++
++   //    typedefs
++          typedef T value_type;
++          typedef value_type* pointer;
++          typedef const value_type* const_pointer;
++
++	   pointer allocate(size_t pCount, const_pointer = 0){ 
++	    	T* mem = 0;
++	    	if (posix_memalign(reinterpret_cast<void**>(&mem), 1024 , sizeof(T) * pCount) != 0) {
++	    		throw std::bad_alloc();
++	        }
++		return mem; 
++	   }
++
++	   void deallocate(pointer pPtr, size_t pCount) { 
++	       free(pPtr);
++	   }
++};
++	   
++namespace cl {
++    template <class T> using vector = std::vector<T,aligned_allocator<T>>; 
++}
++
+ /**
+  * @brief Contains all classes and methods needed by the Network benchmark
+  * 
+diff --git a/b_eff/tests/CMakeLists.txt b/b_eff/tests/CMakeLists.txt
+index 2a00ea8..c8c4c5f 100755
+--- a/b_eff/tests/CMakeLists.txt
++++ b/b_eff/tests/CMakeLists.txt
+@@ -6,4 +6,3 @@ set(TEST_SOURCES test_kernel_functionality_and_host_integration.cpp)
+ 
+ include(${CMAKE_SOURCE_DIR}/../cmake/unitTestTargets.cmake)
+ 
+-target_link_libraries(${LIB_NAME}_intel ${MPI_LIBRARIES})
+diff --git a/cmake/unitTestTargets.cmake b/cmake/unitTestTargets.cmake
+index 2597017..e5dd07b 100644
+--- a/cmake/unitTestTargets.cmake
++++ b/cmake/unitTestTargets.cmake
+@@ -24,7 +24,9 @@ if (Vitis_FOUND)
+     add_executable(${HOST_EXE_NAME}_test_xilinx ${TEST_SOURCES} ${PROJECT_SOURCES})
+     target_link_libraries(${HOST_EXE_NAME}_test_xilinx gtest gmock ${LIB_NAME}_xilinx ${Vitis_LIBRARIES} "${OpenMP_CXX_FLAGS}")
+     target_link_libraries(${HOST_EXE_NAME}_test_xilinx hpcc_fpga_base_test)
+-    add_dependencies(${HOST_EXE_NAME}_test_xilinx ${kernel_emulation_targets_xilinx})
++    if (NOT "${kernel_emulation_targets_xilinx}" STREQUAL "")
++    	add_dependencies(${HOST_EXE_NAME}_test_xilinx ${kernel_emulation_targets_xilinx})
++    endif()
+     target_compile_definitions(${HOST_EXE_NAME}_test_xilinx PRIVATE -DXILINX_FPGA)
+     target_compile_options(${HOST_EXE_NAME}_test_xilinx PRIVATE "${OpenMP_CXX_FLAGS}")
+     foreach (kernel_target ${kernel_emulation_targets_xilinx})
