@@ -29,7 +29,7 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
     # Apply patches
     cd ${TMP_PROJECT_DIR};
     # Apply configuration improvement patch
-    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_gemm_scaling_separate_read_pipelines_intel.patch; then
+    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_gemm_scaling_use_combined_read_pipeline_intel.patch; then
         echo "ERROR: Apply separate read pipelines patch failed!"
     fi
 fi
