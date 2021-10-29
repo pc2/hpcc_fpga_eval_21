@@ -1,0 +1,54 @@
+===============================================================================
+Version:    v++ v2020.2 (64-bit)
+Build:      SW Build (by xbuild) on 2020-11-18-05:13:29
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Oct 29 16:26:07 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             gemm_base
+Target Device:           xilinx:u280:xdma:201920.3
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+gemm0        clc   fpga0:OCL_REGION_0  gemm_base       3
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     gemm_base
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name    Target Frequency  Estimated Frequency
+------------  -----------  -------------  ----------------  -------------------
+gemm0_1       gemm0        register_gemm  300.300293        344.23407
+gemm0_1       gemm0        gemm0          300.300293        344.23407
+gemm0_2       gemm0        register_gemm  300.300293        344.23407
+gemm0_2       gemm0        gemm0          300.300293        344.23407
+gemm0_3       gemm0        register_gemm  300.300293        344.23407
+gemm0_3       gemm0        gemm0          300.300293        344.23407
+
+Latency Information
+Compute Unit  Kernel Name  Module Name    Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  -------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+gemm0_1       gemm0        register_gemm  24              50             50            50              0.167 us         0.167 us        0.167 us
+gemm0_1       gemm0        gemm0          undef           undef          undef         undef           undef            undef           undef
+gemm0_2       gemm0        register_gemm  24              50             50            50              0.167 us         0.167 us        0.167 us
+gemm0_2       gemm0        gemm0          undef           undef          undef         undef           undef            undef           undef
+gemm0_3       gemm0        register_gemm  24              50             50            50              0.167 us         0.167 us        0.167 us
+gemm0_3       gemm0        gemm0          undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name    FF     LUT     DSP  BRAM  URAM
+------------  -----------  -------------  -----  ------  ---  ----  ----
+gemm0_1       gemm0        register_gemm  32523  21036   0    0     0
+gemm0_1       gemm0        gemm0          84929  105632  0    504   0
+gemm0_2       gemm0        register_gemm  32523  21036   0    0     0
+gemm0_2       gemm0        gemm0          84929  105632  0    504   0
+gemm0_3       gemm0        register_gemm  32523  21036   0    0     0
+gemm0_3       gemm0        gemm0          84929  105632  0    504   0
+-------------------------------------------------------------------------------

@@ -1,0 +1,2321 @@
+<ENTRY>
+{
+ "thisFile": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Oct 29 10:38:51 2021",
+ "timestampMillis": "1635496731107",
+ "buildStep": {
+  "cmdId": "ec2596d4-432d-4788-afc1-76f3bdda8381",
+  "name": "v++",
+  "logFile": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --xp vivado_prop:run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --xp vivado_prop:run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --xp vivado_param:project.writeIntermediateCheckpoints=1 --xp \"misc:report=type report_utilization name synth_report_utilization_summary steps {synth_design} runs {__KERNEL__} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_init_design_summary steps {init_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_init_design_summary steps {init_design} runs {impl_1} options {-max_paths 10}\" --xp \"param:compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__} post_route_design {__SLR__}\" --xp \"misc:report=type report_io name impl_report_io_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_control_sets name impl_report_control_sets_place_design_summary steps {place_design} runs {impl_1} options {-verbose}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_place_design_summary steps {place_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_drc name impl_report_drc_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_methodology name impl_report_methodology_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_power name impl_report_power_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_route_status name impl_report_route_status_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_clock_utilization name impl_report_clock_utilization_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_bus_skew name impl_report_bus_skew_route_design_summary steps {route_design} runs {impl_1} options {-warn_on_violation}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -DXILINX_FPGA --report_dir=/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports --log_dir=/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs -O3 -t hw -I/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/common/ -I/dev/shm/meyermar_synth/gemm/HPCC_FPGA/GEMM/src/device --platform xilinx_u280_xdma_201920_3 -R2 -l --config /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/settings/settings.link.xilinx.gemm_base.ini -j 40 --hls.pre_tcl /mnt/scratch/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/GEMM/u280/settings.compile.xilinx.u280.tcl -o /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin xilinx_tmp_compile/gemm_base.xo ",
+  "args": [
+   "-DXILINX_FPGA",
+   "--report_dir=/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports",
+   "--log_dir=/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs",
+   "-O3",
+   "-t",
+   "hw",
+   "-I/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/common/",
+   "-I/dev/shm/meyermar_synth/gemm/HPCC_FPGA/GEMM/src/device",
+   "--platform",
+   "xilinx_u280_xdma_201920_3",
+   "-R2",
+   "-l",
+   "--config",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/settings/settings.link.xilinx.gemm_base.ini",
+   "-j",
+   "40",
+   "--hls.pre_tcl",
+   "/mnt/scratch/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/GEMM/u280/settings.compile.xilinx.u280.tcl",
+   "-o",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin",
+   "xilinx_tmp_compile/gemm_base.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/settings/settings.link.xilinx.gemm_base.ini",
+    "content": "\n# Set number of available SLRs\n\n[connectivity]\nnk=gemm0:3\n\n# Assign kernels to the SLRs\nslr=gemm0_1:SLR0\nslr=gemm0_2:SLR1\nslr=gemm0_3:SLR2\n# Assign the kernels to the memory ports\nsp=gemm0_1.m_axi_gmem0:DDR[0]\nsp=gemm0_1.m_axi_gmem1:DDR[1]\nsp=gemm0_1.m_axi_gmem2:DDR[0]\nsp=gemm0_1.m_axi_gmem3:DDR[1]\nsp=gemm0_2.m_axi_gmem0:DDR[0]\nsp=gemm0_2.m_axi_gmem1:DDR[1]\nsp=gemm0_2.m_axi_gmem2:DDR[0]\nsp=gemm0_2.m_axi_gmem3:DDR[1]\nsp=gemm0_3.m_axi_gmem0:DDR[0]\nsp=gemm0_3.m_axi_gmem1:DDR[1]\nsp=gemm0_3.m_axi_gmem2:DDR[0]\nsp=gemm0_3.m_axi_gmem3:DDR[1]\n"
+   }
+  ],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 10:38:51 2021",
+ "timestampMillis": "1635496731107",
+ "status": {
+  "cmdId": "ec2596d4-432d-4788-afc1-76f3bdda8381",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Oct 29 10:39:00 2021",
+ "timestampMillis": "1635496740612",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_xdma_201920_3.xpfm",
+  "hardwareDsa": "xilinx_u280_xdma_201920_3.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "gemm_base",
+    "file": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "gemm0",
+     "file": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/gemm_base.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/gemm0/gemm0/cpu_sources/gemm_base_replicated_xilinx.cl"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "gemm0_1",
+     "gemm0_2",
+     "gemm0_3"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2020.2. SW Build (by xbuild) on 2020-11-18-05:13:29"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 10:39:00 2021",
+ "timestampMillis": "1635496740970",
+ "buildStep": {
+  "cmdId": "4840ea93-f6cc-4c6d-b0ef-bc90ee630c3f",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/gemm_base.xo --config /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --temp_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/gemm_base.xo",
+   "--config",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int",
+   "--temp_dir",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/syslinkConfig.ini",
+    "content": "nk=gemm0:3\nsp=gemm0_1.m_axi_gmem0:DDR[0]\nsp=gemm0_1.m_axi_gmem1:DDR[1]\nsp=gemm0_1.m_axi_gmem2:DDR[0]\nsp=gemm0_1.m_axi_gmem3:DDR[1]\nsp=gemm0_2.m_axi_gmem0:DDR[0]\nsp=gemm0_2.m_axi_gmem1:DDR[1]\nsp=gemm0_2.m_axi_gmem2:DDR[0]\nsp=gemm0_2.m_axi_gmem3:DDR[1]\nsp=gemm0_3.m_axi_gmem0:DDR[0]\nsp=gemm0_3.m_axi_gmem1:DDR[1]\nsp=gemm0_3.m_axi_gmem2:DDR[0]\nsp=gemm0_3.m_axi_gmem3:DDR[1]\nslr=gemm0_1:SLR0\nslr=gemm0_2:SLR1\nslr=gemm0_3:SLR2\n\n"
+   }
+  ],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 10:39:00 2021",
+ "timestampMillis": "1635496740971",
+ "status": {
+  "cmdId": "4840ea93-f6cc-4c6d-b0ef-bc90ee630c3f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 10:39:22 2021",
+ "timestampMillis": "1635496762705",
+ "status": {
+  "cmdId": "4840ea93-f6cc-4c6d-b0ef-bc90ee630c3f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 10:39:22 2021",
+ "timestampMillis": "1635496762707",
+ "buildStep": {
+  "cmdId": "a6569a07-357e-4db2-8813-3ba8c692492f",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/sdsl.dat -rtd /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/cf2sw.rtd -nofilter /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/cf2sw_full.rtd -xclbin /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.xml -o /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 10:39:22 2021",
+ "timestampMillis": "1635496762708",
+ "status": {
+  "cmdId": "a6569a07-357e-4db2-8813-3ba8c692492f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 10:39:27 2021",
+ "timestampMillis": "1635496767598",
+ "status": {
+  "cmdId": "a6569a07-357e-4db2-8813-3ba8c692492f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 10:39:27 2021",
+ "timestampMillis": "1635496767600",
+ "buildStep": {
+  "cmdId": "98b6e0e5-b2bb-467f-8294-c1c196a5abe4",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 10:39:27 2021",
+ "timestampMillis": "1635496767601",
+ "status": {
+  "cmdId": "98b6e0e5-b2bb-467f-8294-c1c196a5abe4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 10:39:29 2021",
+ "timestampMillis": "1635496769467",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 10:39:29 2021",
+ "timestampMillis": "1635496769468",
+ "status": {
+  "cmdId": "98b6e0e5-b2bb-467f-8294-c1c196a5abe4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 10:39:29 2021",
+ "timestampMillis": "1635496769470",
+ "buildStep": {
+  "cmdId": "cdb8762c-caad-4e57-9046-e5d9854a4d00",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u280_xdma_201920_3 --remote_ip_cache /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/.ipcache --output_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --log_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link --report_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link --config /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/vplConfig.ini -k /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link --no-info --iprepo /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_gemm0_1_0 --messageDb /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link/vpl.pb /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u280_xdma_201920_3",
+   "--remote_ip_cache",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/.ipcache",
+   "--output_dir",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int",
+   "--log_dir",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link",
+   "--report_dir",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link",
+   "--config",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/vplConfig.ini",
+   "-k",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link",
+   "--no-info",
+   "--iprepo",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_gemm0_1_0",
+   "--messageDb",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link/vpl.pb",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_utilization name synth_report_utilization_summary steps {synth_design} runs {__KERNEL__} options {}\nmisc=report=type report_utilization name impl_report_utilization_init_design_summary steps {init_design} runs {impl_1} options {}\nmisc=report=type report_timing_summary name impl_report_timing_summary_init_design_summary steps {init_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__} post_route_design {__SLR__}\nmisc=report=type report_io name impl_report_io_place_design_summary steps {place_design} runs {impl_1} options {}\nmisc=report=type report_utilization name impl_report_utilization_place_design_summary steps {place_design} runs {impl_1} options {}\nmisc=report=type report_control_sets name impl_report_control_sets_place_design_summary steps {place_design} runs {impl_1} options {-verbose}\nmisc=report=type report_timing_summary name impl_report_timing_summary_place_design_summary steps {place_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_drc name impl_report_drc_route_design_summary steps {route_design} runs {impl_1} options {}\nmisc=report=type report_methodology name impl_report_methodology_route_design_summary steps {route_design} runs {impl_1} options {}\nmisc=report=type report_power name impl_report_power_route_design_summary steps {route_design} runs {impl_1} options {}\nmisc=report=type report_route_status name impl_report_route_status_route_design_summary steps {route_design} runs {impl_1} options {}\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_clock_utilization name impl_report_clock_utilization_route_design_summary steps {route_design} runs {impl_1} options {}\nmisc=report=type report_bus_skew name impl_report_bus_skew_route_design_summary steps {route_design} runs {impl_1} options {-warn_on_violation}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device\nmisc=BinaryName=gemm_base\n\n[connectivity]\nnk=gemm0:3:gemm0_1.gemm0_2.gemm0_3\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\nparam=project.writeIntermediateCheckpoints=1\nsynth.jobs=40\n\n"
+   }
+  ],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 10:39:29 2021",
+ "timestampMillis": "1635496769471",
+ "status": {
+  "cmdId": "cdb8762c-caad-4e57-9046-e5d9854a4d00",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Oct 29 10:39:31 2021",
+ "timestampMillis": "1635496771283",
+ "buildStep": {
+  "cmdId": "25a33d6f-93bb-4be5-8c6e-a95a7fd71bcc",
+  "name": "vpl",
+  "logFile": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u280_xdma_201920_3 --remote_ip_cache /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/.ipcache --output_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --log_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link --report_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link --config /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/vplConfig.ini -k /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link --no-info --iprepo /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_gemm0_1_0 --messageDb /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link/vpl.pb /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 10:39:31 2021",
+ "timestampMillis": "1635496771284",
+ "status": {
+  "cmdId": "25a33d6f-93bb-4be5-8c6e-a95a7fd71bcc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Fri Oct 29 10:39:43 2021",
+ "timestampMillis": "1635496783784",
+ "vivadoProject": {
+  "openDir": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 10:39:43 2021",
+ "timestampMillis": "1635496783785",
+ "buildStep": {
+  "cmdId": "06283215-b846-409d-83ce-e5f40639e38a",
+  "name": "vivado",
+  "logFile": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 10:39:43 2021",
+ "timestampMillis": "1635496783786",
+ "status": {
+  "cmdId": "06283215-b846-409d-83ce-e5f40639e38a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 10:40:44 2021",
+ "timestampMillis": "1635496844174",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561624",
+ "status": {
+  "cmdId": "06283215-b846-409d-83ce-e5f40639e38a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561646",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561646",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561647",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561647",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561647",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561648",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561648",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561649",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561649",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561649",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561650",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561650",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561650",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561651",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561706",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_logic_reset_op_0_synth_1_pfm_dynamic_logic_reset_op_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561707",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_control_0_synth_1_pfm_dynamic_psreset_gate_pr_control_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561708",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_data_0_synth_1_pfm_dynamic_psreset_gate_pr_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561708",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_dataclk_0_synth_1_pfm_dynamic_psreset_gate_pr_dataclk_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561708",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_0_synth_1_pfm_dynamic_psreset_gate_pr_kernel_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561709",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_0_synth_1_pfm_dynamic_psreset_gate_pr_kernel2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561709",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_util_and2_hbm_0_synth_1_pfm_dynamic_util_and2_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561710",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_axi_cdc_xdma_0_synth_1_pfm_dynamic_axi_cdc_xdma_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561711",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_axi_gpio_null_slr1_0_synth_1_pfm_dynamic_axi_gpio_null_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561711",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_control_1_synth_1_pfm_dynamic_psreset_gate_pr_control_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561711",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_data_1_synth_1_pfm_dynamic_psreset_gate_pr_data_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561712",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_dataclk_1_synth_1_pfm_dynamic_psreset_gate_pr_dataclk_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561712",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_1_synth_1_pfm_dynamic_psreset_gate_pr_kernel_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561712",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_1_synth_1_pfm_dynamic_psreset_gate_pr_kernel2_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561713",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_sdx_mss_regslice_0_synth_1_pfm_dynamic_sdx_mss_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561713",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_logic_reset_op_1_synth_1_pfm_dynamic_logic_reset_op_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561713",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_control_2_synth_1_pfm_dynamic_psreset_gate_pr_control_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561714",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_data_2_synth_1_pfm_dynamic_psreset_gate_pr_data_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561714",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_dataclk_2_synth_1_pfm_dynamic_psreset_gate_pr_dataclk_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561714",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_2_synth_1_pfm_dynamic_psreset_gate_pr_kernel_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561714",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_2_synth_1_pfm_dynamic_psreset_gate_pr_kernel2_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561715",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_freq_counter_0_0_synth_1_pfm_dynamic_freq_counter_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561715",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_xdma_smartconnect_0_synth_1_pfm_dynamic_xdma_smartconnect_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561716",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0_synth_1_pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561716",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_axi_vip_ctrl_mgntpf_0_synth_1_pfm_dynamic_axi_vip_ctrl_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561716",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_axi_vip_data_0_synth_1_pfm_dynamic_axi_vip_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561717",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_axilite_user_input_reg_0_synth_1_pfm_dynamic_axilite_user_input_reg_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561717",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_debug_bridge_xsdbm_0_synth_1_pfm_dynamic_debug_bridge_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561717",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_hmss_0_0_synth_1_pfm_dynamic_hmss_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561717",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_memory_subsystem_0_synth_1_pfm_dynamic_memory_subsystem_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561718",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_init_combine_mss_0_synth_1_pfm_dynamic_init_combine_mss_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561718",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0_synth_1_pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561718",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1_pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561719",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_xbar_3_synth_1_pfm_dynamic_xbar_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561719",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_xbar_2_synth_1_pfm_dynamic_xbar_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561719",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_xbar_4_synth_1_pfm_dynamic_xbar_4_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561719",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_xbar_5_synth_1_pfm_dynamic_xbar_5_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561720",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_gemm0_1_0_synth_1_pfm_dynamic_gemm0_1_0_utilization_synth.rpt",
+  "name": "gemm0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561720",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_gemm0_2_0_synth_1_pfm_dynamic_gemm0_2_0_utilization_synth.rpt",
+  "name": "gemm0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561720",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_gemm0_3_0_synth_1_pfm_dynamic_gemm0_3_0_utilization_synth.rpt",
+  "name": "gemm0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561720",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_ebbe_lut_buffer_0_synth_1_bd_ebbe_lut_buffer_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561721",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_ebbe_xsdbm_0_synth_1_bd_ebbe_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561721",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_s00_regslice_15_synth_1_pfm_dynamic_s00_regslice_15_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561721",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_m00_regslice_4_synth_1_pfm_dynamic_m00_regslice_4_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561721",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_m01_regslice_11_synth_1_pfm_dynamic_m01_regslice_11_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561721",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_auto_cc_0_synth_1_pfm_dynamic_auto_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561722",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_interconnect_SLR2_DDR4_MEM01_0_synth_1_bd_d216_interconnect_SLR2_DDR4_MEM01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561722",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_vip_S01_AXI_0_synth_1_bd_d216_vip_S01_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561722",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_vip_S02_AXI_0_synth_1_bd_d216_vip_S02_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561723",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_ddr4_mem00_0_synth_1_bd_d216_ddr4_mem00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561723",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_psr_ddr4_mem01_0_synth_1_bd_d216_psr_ddr4_mem01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561724",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_ddr4_mem01_ctrl_cc_0_synth_1_bd_d216_ddr4_mem01_ctrl_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561724",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_psr_ctrl_interconnect_0_synth_1_bd_d216_psr_ctrl_interconnect_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561724",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_interconnect_SLR2_DDR4_MEM00_0_synth_1_bd_d216_interconnect_SLR2_DDR4_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561724",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_ddr4_mem01_memory_init_0_synth_1_bd_d216_ddr4_mem01_memory_init_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561725",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_interconnect_ddrmem_ctrl_0_synth_1_bd_d216_interconnect_ddrmem_ctrl_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561725",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_vip_DDR4_MEM00_0_synth_1_bd_d216_vip_DDR4_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561725",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_vip_ui_clk_DDR4_MEM00_0_synth_1_bd_d216_vip_ui_clk_DDR4_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561725",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_vip_ui_rst_DDR4_MEM00_0_synth_1_bd_d216_vip_ui_rst_DDR4_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561725",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_vip_ctrl_DDR4_MEM00_0_synth_1_bd_d216_vip_ctrl_DDR4_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561726",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_interconnect_SLR0_DDR4_MEM01_0_synth_1_bd_d216_interconnect_SLR0_DDR4_MEM01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561726",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_interconnect_DDR4_MEM01_0_synth_1_bd_d216_interconnect_DDR4_MEM01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561727",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_m01_regslice_13_synth_1_pfm_dynamic_m01_regslice_13_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561727",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/pfm_dynamic_auto_cc_2_synth_1_pfm_dynamic_auto_cc_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561727",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_5dca_interconnect0_12_0_synth_1_bd_5dca_interconnect0_12_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561727",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_5dca_util_vector_logic_0_synth_1_bd_5dca_util_vector_logic_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561728",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_5dca_axi_apb_bridge_inst_0_synth_1_bd_5dca_axi_apb_bridge_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561728",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_5dca_hbm_inst_0_synth_1_bd_5dca_hbm_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561728",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_5dca_hbm_reset_sync_SLR0_0_synth_1_bd_5dca_hbm_reset_sync_SLR0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561728",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_5dca_vip_S00_0_synth_1_bd_5dca_vip_S00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561729",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_interconnect_DDR4_MEM00_0_synth_1_bd_d216_interconnect_DDR4_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561729",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_vip_S00_AXI_0_synth_1_bd_d216_vip_S00_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561729",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_ddr4_mem01_0_synth_1_bd_d216_ddr4_mem01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561729",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_interconnect_SLR1_DDR4_MEM00_0_synth_1_bd_d216_interconnect_SLR1_DDR4_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561729",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_5dca_slice0_12_0_synth_1_bd_5dca_slice0_12_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561730",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_5dca_init_reduce_0_synth_1_bd_5dca_init_reduce_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561730",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_psr_aclk_SLR0_0_synth_1_bd_d216_psr_aclk_SLR0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561730",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_psr_aclk_SLR1_0_synth_1_bd_d216_psr_aclk_SLR1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561730",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_psr_aclk_SLR2_0_synth_1_bd_d216_psr_aclk_SLR2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561730",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/syn/bd_d216_interconnect_S00_AXI_0_synth_1_bd_d216_interconnect_S00_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561731",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_init_report_utilization_0.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561740",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_timing_summary_init.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561749",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_timing_summary_init.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561750",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_io_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_IO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561750",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_utilization_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561758",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_control_sets_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_CONTROL_SETS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561767",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_timing_summary_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561777",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_timing_summary_placed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561779",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_drc_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_DRC"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561782",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_drc_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_DRC"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561782",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_methodology_drc_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_METHODOLOGY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561783",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_methodology_drc_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_METHODOLOGY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561783",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_power_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_POWER"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561801",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_power_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_POWER"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561802",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_route_status.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_ROUTE_STATUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561811",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561820",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561821",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_clock_utilization_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_CLOCK_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561826",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_bus_skew_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_BUS_SKEW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561833",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_bus_skew_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_BUS_SKEW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561842",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:01 2021",
+ "timestampMillis": "1635517561851",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:02 2021",
+ "timestampMillis": "1635517562115",
+ "status": {
+  "cmdId": "25a33d6f-93bb-4be5-8c6e-a95a7fd71bcc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:02 2021",
+ "timestampMillis": "1635517562168",
+ "status": {
+  "cmdId": "cdb8762c-caad-4e57-9046-e5d9854a4d00",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 16:26:02 2021",
+ "timestampMillis": "1635517562171",
+ "buildStep": {
+  "cmdId": "07430a6e-ac1e-408d-b46a-d93fdfd0e51d",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:02 2021",
+ "timestampMillis": "1635517562172",
+ "status": {
+  "cmdId": "07430a6e-ac1e-408d-b46a-d93fdfd0e51d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:02 2021",
+ "timestampMillis": "1635517562179",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 16:26:02 2021",
+ "timestampMillis": "1635517562180",
+ "buildStep": {
+  "cmdId": "9e8f41f4-17af-4694-b4d1-018207e5a116",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/address_map.xml -sdsl /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/sdsl.dat -xclbin /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.xml -rtd /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base.rtd -o /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base.xml",
+  "args": [
+   "-a",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base.rtd",
+   "-o",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:02 2021",
+ "timestampMillis": "1635517562181",
+ "status": {
+  "cmdId": "9e8f41f4-17af-4694-b4d1-018207e5a116",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566046",
+ "status": {
+  "cmdId": "9e8f41f4-17af-4694-b4d1-018207e5a116",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566051",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566052",
+ "buildStep": {
+  "cmdId": "809ef40d-1511-41b5-9909-d77e44512cad",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base.rtd",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566053",
+ "status": {
+  "cmdId": "809ef40d-1511-41b5-9909-d77e44512cad",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566053",
+ "status": {
+  "cmdId": "809ef40d-1511-41b5-9909-d77e44512cad",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566054",
+ "status": {
+  "cmdId": "07430a6e-ac1e-408d-b46a-d93fdfd0e51d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566056",
+ "buildStep": {
+  "cmdId": "f6038e1e-a554-42ad-958d-572e7485a55f",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base.rtd --append-section :JSON:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base_xml.rtd --add-section BUILD_METADATA:JSON:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base_build.rtd --add-section EMBEDDED_METADATA:RAW:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base.xml --add-section SYSTEM_METADATA:RAW:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json --output /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM:RAW:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base.rtd",
+   "--append-section",
+   ":JSON:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/gemm_base.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--output",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566057",
+ "status": {
+  "cmdId": "f6038e1e-a554-42ad-958d-572e7485a55f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566294",
+ "status": {
+  "cmdId": "f6038e1e-a554-42ad-958d-572e7485a55f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566296",
+ "buildStep": {
+  "cmdId": "8e4d7916-7e25-4578-b9d8-fb84128dbf64",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin.info --input /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin.info",
+   "--input",
+   "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:06 2021",
+ "timestampMillis": "1635517566297",
+ "status": {
+  "cmdId": "8e4d7916-7e25-4578-b9d8-fb84128dbf64",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:07 2021",
+ "timestampMillis": "1635517567000",
+ "status": {
+  "cmdId": "8e4d7916-7e25-4578-b9d8-fb84128dbf64",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Oct 29 16:26:07 2021",
+ "timestampMillis": "1635517567002",
+ "buildStep": {
+  "cmdId": "73f813a6-124d-4d23-b629-791aed116892",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:07 2021",
+ "timestampMillis": "1635517567003",
+ "status": {
+  "cmdId": "73f813a6-124d-4d23-b629-791aed116892",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:07 2021",
+ "timestampMillis": "1635517567003",
+ "status": {
+  "cmdId": "73f813a6-124d-4d23-b629-791aed116892",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:07 2021",
+ "timestampMillis": "1635517567039",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/system_estimate_gemm_base.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:07 2021",
+ "timestampMillis": "1635517567673",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/v++_link_gemm_base_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:07 2021",
+ "timestampMillis": "1635517567674",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/v++_link_gemm_base_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Oct 29 16:26:07 2021",
+ "timestampMillis": "1635517567684",
+ "report": {
+  "path": "/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Oct 29 16:26:07 2021",
+ "timestampMillis": "1635517567685",
+ "status": {
+  "cmdId": "ec2596d4-432d-4788-afc1-76f3bdda8381",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
