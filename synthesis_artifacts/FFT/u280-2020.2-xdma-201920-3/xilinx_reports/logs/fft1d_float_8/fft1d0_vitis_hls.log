@@ -1,0 +1,249 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2020.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'meyermar' on host 'alveo0.ethz.ch' (Linux_x86_64 version 4.14.156-U) on Fri Oct 29 10:27:37 CEST 2021
+INFO: [HLS 200-10] On os Ubuntu 18.04.6 LTS
+INFO: [HLS 200-10] In directory '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/fft1d_float_8/fft1d0'
+Sourcing Tcl script 'fft1d0.tcl'
+INFO: [HLS 200-1510] Running: open_project fft1d0 
+INFO: [HLS 200-10] Creating and opening project '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/fft1d_float_8/fft1d0/fft1d0'.
+INFO: [HLS 200-1510] Running: set_top fft1d0 
+INFO: [HLS 200-1510] Running: add_files /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl -cflags  -D XILINX_FPGA -I /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/common -I /dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device  
+INFO: [HLS 200-10] Adding design file '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/fft1d_float_8/fft1d0/fft1d0/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_offset=slave
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-10] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 300.000000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_export -disable_deadlock_detection=true 
+INFO: [HLS 200-1510] Running: config_rtl -m_axi_conservative_mode=1 
+WARNING: [HLS 200-483] The 'config_rtl -m_axi_conservative_mode' command is deprecated and will be removed in a future release. Use 'config_interface -m_axi_conservative_mode' as its replacement.
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -ipname fft1d0 
+INFO: [HLS 200-1510] Running: config_compile -unsafe_math_optimizations 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 189.905 MB.
+INFO: [HLS 200-10] Analyzing design file '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl' ... 
+WARNING: [HLS 207-5270] unknown attribute 'max_global_work_dim' ignored: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:92:17
+WARNING: [HLS 207-5270] unknown attribute 'numbanks' ignored: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:98:49
+WARNING: [HLS 207-5270] unknown attribute 'max_global_work_dim' ignored: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:178:17
+WARNING: [HLS 207-5270] unknown attribute 'max_global_work_dim' ignored: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:273:17
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.7 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.38 seconds; current allocated memory: 190.689 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-131] Inlining function 'hls_sincos' into 'hls_cos'
+INFO: [HLS 214-131] Inlining function 'hls_cos' into 'native_cos(float)'
+INFO: [HLS 214-131] Inlining function 'hls_sincos' into 'hls_sin'
+INFO: [HLS 214-131] Inlining function 'hls_sin' into 'native_sin(float)'
+INFO: [HLS 214-131] Inlining function 'native_cos(float)' into 'twiddle' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:235:16)
+INFO: [HLS 214-131] Inlining function 'native_sin(float)' into 'twiddle' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:236:16)
+INFO: [HLS 214-131] Inlining function 'twiddle' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:244:33)
+INFO: [HLS 214-131] Inlining function 'comp_mult' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:244:14)
+INFO: [HLS 214-131] Inlining function 'twiddle' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:245:33)
+INFO: [HLS 214-131] Inlining function 'comp_mult' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:245:14)
+INFO: [HLS 214-131] Inlining function 'twiddle' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:246:33)
+INFO: [HLS 214-131] Inlining function 'comp_mult' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:246:14)
+INFO: [HLS 214-131] Inlining function 'twiddle' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:247:33)
+INFO: [HLS 214-131] Inlining function 'comp_mult' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:247:14)
+INFO: [HLS 214-131] Inlining function 'twiddle' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:248:33)
+INFO: [HLS 214-131] Inlining function 'comp_mult' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:248:14)
+INFO: [HLS 214-131] Inlining function 'twiddle' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:249:33)
+INFO: [HLS 214-131] Inlining function 'comp_mult' into 'complex_rotate' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:249:14)
+INFO: [HLS 214-131] Inlining function 'delay' into 'reorder_data' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:158:14)
+INFO: [HLS 214-131] Inlining function 'delay' into 'reorder_data' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:181:14)
+INFO: [HLS 214-131] Inlining function 'delay' into 'reorder_data' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:180:14)
+INFO: [HLS 214-131] Inlining function 'delay' into 'reorder_data' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:179:14)
+INFO: [HLS 214-131] Inlining function 'delay' into 'reorder_data' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:178:14)
+INFO: [HLS 214-131] Inlining function 'delay' into 'reorder_data' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:161:14)
+INFO: [HLS 214-131] Inlining function 'delay' into 'reorder_data' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:160:14)
+INFO: [HLS 214-131] Inlining function 'delay' into 'reorder_data' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:159:14)
+INFO: [HLS 214-131] Inlining function 'swap_complex' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:273:15)
+INFO: [HLS 214-131] Inlining function 'swap_complex' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:336:15)
+INFO: [HLS 214-131] Inlining function 'butterfly' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:324:12)
+INFO: [HLS 214-131] Inlining function 'trivial_rotate' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:319:20)
+INFO: [HLS 214-131] Inlining function 'reorder_data' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:316:16)
+INFO: [HLS 214-131] Inlining function 'swap' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:306:16)
+INFO: [HLS 214-131] Inlining function 'complex_rotate' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:303:20)
+INFO: [HLS 214-131] Inlining function 'butterfly' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:277:12)
+INFO: [HLS 214-131] Inlining function 'trivial_rotate' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:278:12)
+INFO: [HLS 214-131] Inlining function 'trivial_swap' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:279:12)
+INFO: [HLS 214-131] Inlining function 'butterfly' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:282:12)
+INFO: [HLS 214-131] Inlining function 'complex_rotate' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:283:12)
+INFO: [HLS 214-131] Inlining function 'swap' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:284:12)
+INFO: [HLS 214-131] Inlining function 'butterfly' into 'fft_step' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:300:16)
+INFO: [HLS 214-129] Unrolled all 6 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:292:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 9.23 seconds. CPU system time: 0.37 seconds. Elapsed time: 9.51 seconds; current allocated memory: 195.180 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 195.181 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 3.68 seconds. CPU system time: 0.12 seconds. Elapsed time: 3.8 seconds; current allocated memory: 252.492 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.63 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.64 seconds; current allocated memory: 266.908 MB.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'fft_step.1' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:64:1).
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:331) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:331) in function 'fft_step.1' completely with a factor of 567.
+INFO: [XFORM 203-102] Partitioning array 'twiddles_sin' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'twiddles_sin.0' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'twiddles_sin.1' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'twiddles_sin.2' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'twiddles_sin.3' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'twiddles_cos' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'twiddles_cos.0' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'twiddles_cos.1' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'twiddles_cos.2' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'twiddles_cos.3' in dimension 1 automatically.
+INFO: [XFORM 203-101] Partitioning array 'fft_delay_elements' in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'fft_step.1'... converting 5 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'fft_step.1' (/dev/shm/meyermar_synth/fft/HPCC_FPGA/FFT/src/device/fft_8.cl:64:38)...159 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'fft1d0' (/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:185)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 10.83 seconds. CPU system time: 0.08 seconds. Elapsed time: 10.91 seconds; current allocated memory: 320.380 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 6.18 seconds. CPU system time: 0.03 seconds. Elapsed time: 6.22 seconds; current allocated memory: 417.832 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fft1d0' ...
+WARNING: [SYN 201-103] Legalizing function name 'fft_step.1' to 'fft_step_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_step_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fft_step.1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 84, function 'fft_step.1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.17 seconds; current allocated memory: 438.082 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.42 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.43 seconds; current allocated memory: 449.620 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft1d0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [HLS 200-880] The II Violation in module 'fft1d0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('fft_delay_elements_0_0666_write_ln245', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:245) of variable 'newret511', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240 on local variable 'fft_delay_elements_0_0666' and 'load' operation ('fft_delay_elements_0_0666_load', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240) on local variable 'fft_delay_elements_0_0666'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft1d0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('fft_delay_elements_0_0666_write_ln245', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:245) of variable 'newret511', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240 on local variable 'fft_delay_elements_0_0666' and 'load' operation ('fft_delay_elements_0_0666_load', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240) on local variable 'fft_delay_elements_0_0666'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft1d0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('fft_delay_elements_0_0666_write_ln245', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:245) of variable 'newret511', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240 on local variable 'fft_delay_elements_0_0666' and 'load' operation ('fft_delay_elements_0_0666_load', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240) on local variable 'fft_delay_elements_0_0666'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft1d0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('fft_delay_elements_0_0666_write_ln245', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:245) of variable 'newret511', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240 on local variable 'fft_delay_elements_0_0666' and 'load' operation ('fft_delay_elements_0_0666_load', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240) on local variable 'fft_delay_elements_0_0666'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft1d0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 0) between 'store' operation ('fft_delay_elements_0_0666_write_ln245', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:245) of variable 'newret511', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240 on local variable 'fft_delay_elements_0_0666' and 'load' operation ('fft_delay_elements_0_0666_load', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240) on local variable 'fft_delay_elements_0_0666'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft1d0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 82, distance = 1, offset = 0) between 'store' operation ('fft_delay_elements_0_0666_write_ln245', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:245) of variable 'newret511', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240 on local variable 'fft_delay_elements_0_0666' and 'load' operation ('fft_delay_elements_0_0666_load', /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/fft1d_float_8_replicated_xilinx.cl:240) on local variable 'fft_delay_elements_0_0666'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 83, Depth = 86, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.89 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.9 seconds; current allocated memory: 454.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3.33 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.35 seconds; current allocated memory: 474.099 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_step_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'fft_step_1' is 2645118 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_ce))
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 96 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 96 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_7_full_dsp_1': 96 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_step_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 25.56 seconds. CPU system time: 0.39 seconds. Elapsed time: 25.95 seconds; current allocated memory: 1.115 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft1d0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft1d0/chanout0_pipe' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft1d0/chanin0_pipe' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft1d0/count' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft1d0/inverse' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft1d0/chanout0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft1d0/chanin0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft1d0' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'count', 'inverse', 'return', 'chanout0' and 'chanin0' to AXI-Lite port control.
+INFO: [RTGEN 206-104] Estimated max fanout for 'fft1d0' is 2744300 from HDL expression: (((1'b1 == ap_CS_fsm_pp0_stage82) & (1'b0 == ap_block_pp0_stage82_11001_ignoreCallOp1225)) | ((1'b1 == ap_CS_fsm_pp0_stage81) & (1'b0 == ap_block_pp0_stage81_11001_ignoreCallOp1224)) | ((1'b1 == ap_CS_fsm_pp0_stage80) & (1'b0 == ap_block_pp0_stage80_11001_ignoreCallOp1223)) | ((1'b1 == ap_CS_fsm_pp0_stage79) & (1'b0 == ap_block_pp0_stage79_11001_ignoreCallOp1222)) | ((1'b1 == ap_CS_fsm_pp0_stage78) & (1'b0 == ap_block_pp0_stage78_11001_ignoreCallOp1221)) | ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp1226)) | ((1'b1 == ap_CS_fsm_pp0_stage77) & (1'b0 == ap_block_pp0_stage77_11001_ignoreCallOp1220)) | ((1'b1 == ap_CS_fsm_pp0_stage76) & (1'b0 == ap_block_pp0_stage76_11001_ignoreCallOp1219)) | ((1'b1 == ap_CS_fsm_pp0_stage75) & (1'b0 == ap_block_pp0_stage75_11001_ignoreCallOp1218)) | ((1'b1 == ap_CS_fsm_pp0_stage74) & (1'b0 == ap_block_pp0_stage74_11001_ignoreCallOp1217)) | ((1'b1 == ap_CS_fsm_pp0_stage73) & (1'b0 == ap_block_pp0_stage73_11001_ignoreCallOp1216)) | ((1'b1 == ap_CS_fsm_pp0_stage72) & (1'b0 == ap_block_pp0_stage72_11001_ignoreCallOp1215)) | ((1'b1 == ap_CS_fsm_pp0_stage71) & (1'b0 == ap_block_pp0_stage71_11001_ignoreCallOp1214)) | ((1'b1 == ap_CS_fsm_pp0_stage70) & (1'b0 == ap_block_pp0_stage70_11001_ignoreCallOp1213)) | ((1'b1 == ap_CS_fsm_pp0_stage69) & (1'b0 == ap_block_pp0_stage69_11001_ignoreCallOp1212)) | ((1'b1 == ap_CS_fsm_pp0_stage68) & (1'b0 == ap_block_pp0_stage68_11001_ignoreCallOp1211)) | ((1'b1 == ap_CS_fsm_pp0_stage67) & (1'b0 == ap_block_pp0_stage67_11001_ignoreCallOp1210)) | ((1'b1 == ap_CS_fsm_pp0_stage66) & (1'b0 == ap_block_pp0_stage66_11001_ignoreCallOp1209)) | ((1'b1 == ap_CS_fsm_pp0_stage65) & (1'b0 == ap_block_pp0_stage65_11001_ignoreCallOp1208)) | ((1'b1 == ap_CS_fsm_pp0_stage64) & (1'b0 == ap_block_pp0_stage64_11001_ignoreCallOp1207)) | ((1'b1 == ap_CS_fsm_pp0_stage63) & (1'b0 == ap_block_pp0_stage63_11001_ignoreCallOp1206)) | ((1'b1 == ap_CS_fsm_pp0_stage62) & (1'b0 == ap_block_pp0_stage62_11001_ignoreCallOp1205)) | ((1'b1 == ap_CS_fsm_pp0_stage61) & (1'b0 == ap_block_pp0_stage61_11001_ignoreCallOp1204)) | ((1'b1 == ap_CS_fsm_pp0_stage60) & (1'b0 == ap_block_pp0_stage60_11001_ignoreCallOp1203)) | ((1'b1 == ap_CS_fsm_pp0_stage59) & (1'b0 == ap_block_pp0_stage59_11001_ignoreCallOp1202)) | ((1'b1 == ap_CS_fsm_pp0_stage58) & (1'b0 == ap_block_pp0_stage58_11001_ignoreCallOp1201)) | ((1'b1 == ap_CS_fsm_pp0_stage57) & (1'b0 == ap_block_pp0_stage57_11001_ignoreCallOp1200)) | ((1'b1 == ap_CS_fsm_pp0_stage56) & (1'b0 == ap_block_pp0_stage56_11001_ignoreCallOp1199)) | ((1'b1 == ap_CS_fsm_pp0_stage55) & (1'b0 == ap_block_pp0_stage55_11001_ignoreCallOp1198)) | ((1'b1 == ap_CS_fsm_pp0_stage54) & (1'b0 == ap_block_pp0_stage54_11001_ignoreCallOp1197)) | ((1'b1 == ap_CS_fsm_pp0_stage53) & (1'b0 == ap_block_pp0_stage53_11001_ignoreCallOp1196)) | ((1'b1 == ap_CS_fsm_pp0_stage52) & (1'b0 == ap_block_pp0_stage52_11001_ignoreCallOp1195)) | ((1'b1 == ap_CS_fsm_pp0_stage51) & (1'b0 == ap_block_pp0_stage51_11001_ignoreCallOp1194)) | ((1'b1 == ap_CS_fsm_pp0_stage50) & (1'b0 == ap_block_pp0_stage50_11001_ignoreCallOp1193)) | ((1'b1 == ap_CS_fsm_pp0_stage49) & (1'b0 == ap_block_pp0_stage49_11001_ignoreCallOp1192)) | ((1'b1 == ap_CS_fsm_pp0_stage48) & (1'b0 == ap_block_pp0_stage48_11001_ignoreCallOp1191)) | ((1'b1 == ap_CS_fsm_pp0_stage47) & (1'b0 == ap_block_pp0_stage47_11001_ignoreCallOp1190)) | ((1'b1 == ap_CS_fsm_pp0_stage46) & (1'b0 == ap_block_pp0_stage46_11001_ignoreCallOp1189)) | ((1'b1 == ap_CS_fsm_pp0_stage45) & (1'b0 == ap_block_pp0_stage45_11001_ignoreCallOp1188)) | ((1'b1 == ap_CS_fsm_pp0_stage44) & (1'b0 == ap_block_pp0_stage44_11001_ignoreCallOp1187)) | ((1'b1 == ap_CS_fsm_pp0_stage43) & (1'b0 == ap_block_pp0_stage43_11001_ignoreCallOp1186)) | ((1'b1 == ap_CS_fsm_pp0_stage42) & (1'b0 == ap_block_pp0_stage42_11001_ignoreCallOp1185)) | ((1'b1 == ap_CS_fsm_pp0_stage41) & (1'b0 == ap_block_pp0_stage41_11001_ignoreCallOp1184)) | ((1'b1 == ap_CS_fsm_pp0_stage40) & (1'b0 == ap_block_pp0_stage40_11001_ignoreCallOp1183)) | ((1'b1 == ap_CS_fsm_pp0_stage39) & (1'b0 == ap_block_pp0_stage39_11001_ignoreCallOp1182)) | ((1'b1 == ap_CS_fsm_pp0_stage38) & (1'b0 == ap_block_pp0_stage38_11001_ignoreCallOp1181)) | ((1'b1 == ap_CS_fsm_pp0_stage37) & (1'b0 == ap_block_pp0_stage37_11001_ignoreCallOp1180)) | ((1'b1 == ap_CS_fsm_pp0_stage36) & (1'b0 == ap_block_pp0_stage36_11001_ignoreCallOp1179)) | ((1'b1 == ap_CS_fsm_pp0_stage35) & (1'b0 == ap_block_pp0_stage35_11001_ignoreCallOp1178)) | ((1'b1 == ap_CS_fsm_pp0_stage34) & (1'b0 == ap_block_pp0_stage34_11001_ignoreCallOp1177)) | ((1'b1 == ap_CS_fsm_pp0_stage33) & (1'b0 == ap_block_pp0_stage33_11001_ignoreCallOp1176)) | ((1'b1 == ap_CS_fsm_pp0_stage32) & (1'b0 == ap_block_pp0_stage32_11001_ignoreCallOp1175)) | ((1'b1 == ap_CS_fsm_pp0_stage31) & (1'b0 == ap_block_pp0_stage31_11001_ignoreCallOp1174)) | ((1'b1 == ap_CS_fsm_pp0_stage30) & (1'b0 == ap_block_pp0_stage30_11001_ignoreCallOp1173)) | ((1'b1 == ap_CS_fsm_pp0_stage29) & (1'b0 == ap_block_pp0_stage29_11001_ignoreCallOp1172)) | ((1'b1 == ap_CS_fsm_pp0_stage28) & (1'b0 == ap_block_pp0_stage28_11001_ignoreCallOp1171)) | ((1'b1 == ap_CS_fsm_pp0_stage27) & (1'b0 == ap_block_pp0_stage27_11001_ignoreCallOp1170)) | ((1'b1 == ap_CS_fsm_pp0_stage26) & (1'b0 == ap_block_pp0_stage26_11001_ignoreCallOp1169)) | ((1'b1 == ap_CS_fsm_pp0_stage25) & (1'b0 == ap_block_pp0_stage25_11001_ignoreCallOp1168)) | ((1'b1 == ap_CS_fsm_pp0_stage24) & (1'b0 == ap_block_pp0_stage24_11001_ignoreCallOp1167)) | ((1'b1 == ap_CS_fsm_pp0_stage23) & (1'b0 == ap_block_pp0_stage23_11001_ignoreCallOp1166)) | ((1'b1 == ap_CS_fsm_pp0_stage22) & (1'b0 == ap_block_pp0_stage22_11001_ignoreCallOp1165)) | ((1'b1 == ap_CS_fsm_pp0_stage21) & (1'b0 == ap_block_pp0_stage21_11001_ignoreCallOp1164)) | ((1'b1 == ap_CS_fsm_pp0_stage20) & (1'b0 == ap_block_pp0_stage20_11001_ignoreCallOp1163)) | ((1'b1 == ap_CS_fsm_pp0_stage19) & (1'b0 == ap_block_pp0_stage19_11001_ignoreCallOp1162)) | ((1'b1 == ap_CS_fsm_pp0_stage18) & (1'b0 == ap_block_pp0_stage18_11001_ignoreCallOp1161)) | ((1'b1 == ap_CS_fsm_pp0_stage17) & (1'b0 == ap_block_pp0_stage17_11001_ignoreCallOp1160)) | ((1'b1 == ap_CS_fsm_pp0_stage16) & (1'b0 == ap_block_pp0_stage16_11001_ignoreCallOp1159)) | ((1'b1 == ap_CS_fsm_pp0_stage15) & (1'b0 == ap_block_pp0_stage15_11001_ignoreCallOp1158)) | ((1'b1 == ap_CS_fsm_pp0_stage14) & (1'b0 == ap_block_pp0_stage14_11001_ignoreCallOp1157)) | ((1'b1 == ap_CS_fsm_pp0_stage13) & (1'b0 == ap_block_pp0_stage13_11001_ignoreCallOp1156)) | ((1'b1 == ap_CS_fsm_pp0_stage2) & (1'b0 == ap_block_pp0_stage2_11001_ignoreCallOp1145)) | ((1'b1 == ap_CS_fsm_pp0_stage12) & (1'b0 == ap_block_pp0_stage12_11001_ignoreCallOp1155)) | ((1'b1 == ap_CS_fsm_pp0_stage11) & (1'b0 == ap_block_pp0_stage11_11001_ignoreCallOp1154)) | ((1'b1 == ap_CS_fsm_pp0_stage10) & (1'b0 == ap_block_pp0_stage10_11001_ignoreCallOp1153)) | ((1'b1 == ap_CS_fsm_pp0_stage9) & (1'b0 == ap_block_pp0_stage9_11001_ignoreCallOp1152)) | ((1'b1 == ap_CS_fsm_pp0_stage8) & (1'b0 == ap_block_pp0_stage8_11001_ignoreCallOp1151)) | ((1'b1 == ap_CS_fsm_pp0_stage7) & (1'b0 == ap_block_pp0_stage7_11001_ignoreCallOp1150)) | ((1'b1 == ap_CS_fsm_pp0_stage6) & (1'b0 == ap_block_pp0_stage6_11001_ignoreCallOp1149)) | ((1'b1 == ap_CS_fsm_pp0_stage5) & (1'b0 == ap_block_pp0_stage5_11001_ignoreCallOp1148)) | ((1'b1 == ap_CS_fsm_pp0_stage4) & (1'b0 == ap_block_pp0_stage4_11001_ignoreCallOp1147)) | ((1'b1 == ap_CS_fsm_pp0_stage3) & (1'b0 == ap_block_pp0_stage3_11001_ignoreCallOp1146)) | ((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b0 == ap_block_pp0_stage1_11001_ignoreCallOp1144)))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft1d0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 22.55 seconds. CPU system time: 0.18 seconds. Elapsed time: 22.73 seconds; current allocated memory: 1.453 GB.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_0_0_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_0_0_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_0_1_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_0_1_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_0_2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_0_2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_0_3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_0_3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_0_4_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_0_4_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_0_5_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_0_5_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_1_0_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_1_0_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_1_1_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_1_1_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_1_2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_1_2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_2_0_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_2_0_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_2_1_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_2_1_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_2_2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_2_2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_3_0_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_3_0_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_3_1_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_3_1_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_cos_3_2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft1d0_fft_step_1_twiddles_sin_3_2_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 9.42 seconds. CPU system time: 0.18 seconds. Elapsed time: 9.59 seconds; current allocated memory: 1.487 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fft1d0.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft1d0.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 426.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 101.73 seconds. CPU system time: 1.48 seconds. Elapsed time: 102.74 seconds; current allocated memory: 1.490 GB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'fft1d0_ap_fadd_5_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fft1d0_ap_fadd_5_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fft1d0_ap_fadd_5_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'fft1d0_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fft1d0_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fft1d0_ap_fmul_2_max_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'fft1d0_ap_fsub_5_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fft1d0_ap_fsub_5_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fft1d0_ap_fsub_5_full_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 29 10:29:39 2021...
+INFO: [HLS 200-802] Generated output file fft1d0/solution/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 16.95 seconds. CPU system time: 1.85 seconds. Elapsed time: 23.48 seconds; current allocated memory: 1.498 GB.
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 121.5 seconds. Total CPU system time: 3.84 seconds. Total elapsed time: 128.63 seconds; peak allocated memory: 1.487 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Fri Oct 29 10:29:46 2021...

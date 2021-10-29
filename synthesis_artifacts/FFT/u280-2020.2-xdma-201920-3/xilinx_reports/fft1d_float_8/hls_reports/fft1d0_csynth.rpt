@@ -1,0 +1,1220 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft1d0'
+================================================================
+* Date:           Fri Oct 29 10:29:12 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        fft1d0
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.342 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------+------------+---------+---------+----------+----------+-----+-----+---------+
+        |                        |            |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |        Instance        |   Module   |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +------------------------+------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_fft_step_1_fu_2247  |fft_step_1  |       83|       83|  0.277 us|  0.277 us|    1|    1|      yes|
+        +------------------------+------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|        86|         83|          1|     ?|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      167|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |       48|   672|   163638|    71271|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|     5069|    -|
+|Register             |        -|     -|    32859|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |       48|   672|   196497|    76507|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        3|    22|       22|       17|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        1|     7|        7|        5|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------+---------------+---------+-----+--------+-------+-----+
+    |        Instance        |     Module    | BRAM_18K| DSP |   FF   |  LUT  | URAM|
+    +------------------------+---------------+---------+-----+--------+-------+-----+
+    |control_s_axi_U         |control_s_axi  |        0|    0|     252|    424|    0|
+    |grp_fft_step_1_fu_2247  |fft_step_1     |       48|  672|  163386|  70847|    0|
+    +------------------------+---------------+---------+-----+--------+-------+-----+
+    |Total                   |               |       48|  672|  163638|  71271|    0|
+    +------------------------+---------------+---------+-----+--------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |i_1_fu_2881_p2                    |         +|   0|  0|  39|          32|           1|
+    |ap_block_pp0_stage2_11001         |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage1_iter0  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state86_io               |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op631_read_state3    |       and|   0|  0|   2|           1|           1|
+    |icmp_ln206_fu_2887_p2             |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln220_fu_2896_p2             |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln245_fu_2901_p2             |      icmp|   0|  0|  20|          32|           6|
+    |tobool_fu_2875_p2                 |      icmp|   0|  0|  20|          32|           1|
+    |ap_block_pp0_stage1_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage1_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1                   |        or|   0|  0|   2|           1|           1|
+    |sub_fu_2869_p2                    |        or|   0|  0|  32|          32|           6|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 167|         200|          87|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------+-----+-----------+-----+-----------+
+    |                        Name                        | LUT | Input Size| Bits| Total Bits|
+    +----------------------------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                                           |  416|         86|    1|         86|
+    |ap_done                                             |    9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                             |    9|          2|    1|          2|
+    |ap_phi_mux_data_1_phi_fu_2238_p4                    |    9|          2|  512|       1024|
+    |ap_phi_mux_i_phi_fu_2227_p4                         |    9|          2|   32|         64|
+    |ap_sig_allocacmp_fft_delay_elements_0_0666_load     |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_100_0766_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_101_0767_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_102_0768_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_103_0769_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_104_0770_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_105_0771_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_106_0772_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_107_0773_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_108_0774_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_109_0775_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_10_0676_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_110_0776_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_111_0777_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_112_0778_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_113_0779_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_114_0780_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_115_0781_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_116_0782_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_117_0783_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_118_0784_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_119_0785_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_11_0677_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_120_0786_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_121_0787_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_122_0788_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_123_0789_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_124_0790_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_125_0791_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_126_0792_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_127_0793_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_128_0794_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_129_0795_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_12_0678_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_130_0796_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_132_0798_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_133_0799_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_134_0800_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_135_0801_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_136_0802_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_137_0803_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_138_0804_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_139_0805_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_13_0679_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_140_0806_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_141_0807_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_142_0808_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_143_0809_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_144_0810_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_145_0811_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_146_0812_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_147_0813_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_148_0814_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_149_0815_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_14_0680_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_150_0816_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_151_0817_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_152_0818_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_153_0819_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_154_0820_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_155_0821_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_156_0822_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_157_0823_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_158_0824_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_159_0825_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_15_0681_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_160_0826_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_161_0827_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_162_0828_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_163_0829_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_165_0831_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_166_0832_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_167_0833_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_168_0834_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_169_0835_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_16_0682_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_170_0836_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_171_0837_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_172_0838_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_173_0839_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_174_0840_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_175_0841_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_176_0842_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_177_0843_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_178_0844_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_179_0845_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_17_0683_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_180_0846_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_181_0847_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_182_0848_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_183_0849_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_184_0850_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_185_0851_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_186_0852_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_187_0853_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_188_0854_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_189_0855_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_18_0684_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_190_0856_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_191_0857_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_192_0858_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_193_0859_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_194_0860_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_195_0861_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_196_0862_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_198_0864_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_199_0865_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_19_0685_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_1_0667_load     |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_200_0866_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_201_0867_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_202_0868_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_203_0869_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_204_0870_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_205_0871_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_206_0872_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_207_0873_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_208_0874_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_209_0875_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_20_0686_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_210_0876_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_211_0877_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_212_0878_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_213_0879_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_214_0880_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_215_0881_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_216_0882_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_217_0883_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_218_0884_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_219_0885_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_21_0687_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_220_0886_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_221_0887_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_222_0888_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_223_0889_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_224_0890_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_225_0891_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_226_0892_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_227_0893_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_228_0894_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_229_0895_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_22_0688_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_231_0897_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_232_0898_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_233_0899_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_234_0900_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_235_0901_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_236_0902_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_237_0903_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_238_0904_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_239_0905_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_23_0689_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_240_0906_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_241_0907_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_242_0908_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_243_0909_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_244_0910_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_245_0911_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_246_0912_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_247_0913_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_248_0914_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_249_0915_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_24_0690_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_250_0916_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_251_0917_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_252_0918_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_253_0919_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_254_0920_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_255_0921_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_256_0922_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_257_0923_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_258_0924_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_259_0925_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_25_0691_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_260_0926_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_261_0927_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_262_0928_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_264_0930_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_265_0931_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_266_0932_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_267_0933_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_268_0934_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_269_0935_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_26_0692_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_270_0936_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_271_0937_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_272_0938_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_273_0939_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_274_0940_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_275_0941_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_276_0942_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_277_0943_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_278_0944_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_279_0945_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_27_0693_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_281_0947_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_282_0948_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_283_0949_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_284_0950_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_285_0951_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_286_0952_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_287_0953_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_288_0954_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_289_0955_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_28_0694_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_290_0956_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_291_0957_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_292_0958_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_293_0959_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_294_0960_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_295_0961_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_296_0962_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_298_0964_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_299_0965_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_29_0695_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_2_0668_load     |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_300_0966_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_301_0967_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_302_0968_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_303_0969_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_304_0970_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_305_0971_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_306_0972_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_307_0973_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_308_0974_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_309_0975_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_30_0696_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_310_0976_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_311_0977_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_312_0978_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_313_0979_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_315_0981_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_316_0982_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_317_0983_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_318_0984_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_319_0985_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_31_0697_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_320_0986_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_321_0987_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_322_0988_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_323_0989_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_324_0990_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_325_0991_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_326_0992_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_327_0993_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_328_0994_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_329_0995_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_330_0996_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_332_0998_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_333_0999_load   |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_334_01000_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_335_01001_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_336_01002_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_337_01003_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_338_01004_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_339_01005_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_33_0699_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_340_01006_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_341_01007_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_342_01008_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_343_01009_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_344_01010_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_345_01011_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_346_01012_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_347_01013_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_349_01015_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_34_0700_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_350_01016_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_351_01017_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_352_01018_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_353_01019_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_354_01020_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_355_01021_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_356_01022_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_357_01023_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_358_01024_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_359_01025_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_35_0701_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_360_01026_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_361_01027_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_362_01028_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_363_01029_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_364_01030_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_366_01032_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_367_01033_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_368_01034_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_369_01035_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_36_0702_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_370_01036_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_371_01037_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_372_01038_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_373_01039_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_374_01040_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_375_01041_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_376_01042_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_377_01043_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_378_01044_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_379_01045_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_37_0703_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_380_01046_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_381_01047_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_383_01049_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_384_01050_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_385_01051_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_386_01052_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_387_01053_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_388_01054_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_389_01055_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_38_0704_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_390_01056_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_391_01057_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_392_01058_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_393_01059_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_394_01060_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_395_01061_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_396_01062_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_397_01063_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_398_01064_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_39_0705_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_3_0669_load     |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_400_01066_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_401_01067_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_402_01068_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_403_01069_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_404_01070_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_405_01071_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_406_01072_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_407_01073_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_409_01075_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_40_0706_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_410_01076_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_411_01077_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_412_01078_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_413_01079_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_414_01080_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_415_01081_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_416_01082_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_418_01084_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_419_01085_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_41_0707_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_420_01086_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_421_01087_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_422_01088_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_423_01089_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_424_01090_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_425_01091_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_427_01093_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_428_01094_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_429_01095_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_42_0708_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_430_01096_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_431_01097_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_432_01098_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_433_01099_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_434_01100_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_436_01102_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_437_01103_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_438_01104_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_439_01105_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_43_0709_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_440_01106_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_441_01107_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_442_01108_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_443_01109_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_445_01111_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_446_01112_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_447_01113_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_448_01114_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_449_01115_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_44_0710_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_450_01116_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_451_01117_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_452_01118_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_454_01120_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_455_01121_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_456_01122_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_457_01123_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_458_01124_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_459_01125_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_45_0711_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_460_01126_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_461_01127_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_463_01129_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_464_01130_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_465_01131_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_466_01132_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_467_01133_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_468_01134_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_469_01135_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_46_0712_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_470_01136_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_472_01138_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_473_01139_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_474_01140_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_475_01141_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_477_01143_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_478_01144_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_479_01145_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_47_0713_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_480_01146_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_482_01148_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_483_01149_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_484_01150_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_485_01151_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_487_01153_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_488_01154_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_489_01155_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_48_0714_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_490_01156_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_492_01158_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_493_01159_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_494_01160_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_495_01161_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_497_01163_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_498_01164_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_499_01165_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_49_0715_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_4_0670_load     |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_500_01166_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_502_01168_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_503_01169_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_504_01170_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_505_01171_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_507_01173_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_508_01174_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_509_01175_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_50_0716_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_510_01176_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_512_01178_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_513_01179_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_515_01181_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_516_01182_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_518_01184_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_519_01185_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_51_0717_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_521_01187_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_522_01188_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_524_01190_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_525_01191_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_527_01193_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_528_01194_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_52_0718_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_530_01196_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_531_01197_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_533_01199_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_534_01200_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_536_01202_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_538_01204_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_53_0719_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_540_01206_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_542_01208_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_544_01210_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_546_01212_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_548_01214_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_54_0720_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_550_01216_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_558_01224_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_559_01225_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_55_0721_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_560_01226_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_561_01227_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_562_01228_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_563_01229_load  |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_56_0722_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_57_0723_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_58_0724_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_59_0725_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_5_0671_load     |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_60_0726_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_61_0727_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_62_0728_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_63_0729_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_64_0730_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_66_0732_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_67_0733_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_68_0734_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_69_0735_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_6_0672_load     |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_70_0736_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_71_0737_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_72_0738_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_73_0739_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_74_0740_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_75_0741_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_76_0742_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_77_0743_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_78_0744_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_79_0745_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_7_0673_load     |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_80_0746_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_81_0747_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_82_0748_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_83_0749_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_84_0750_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_85_0751_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_86_0752_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_87_0753_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_88_0754_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_89_0755_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_8_0674_load     |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_90_0756_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_91_0757_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_92_0758_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_93_0759_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_94_0760_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_95_0761_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_96_0762_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_97_0763_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_99_0765_load    |    9|          2|   64|        128|
+    |ap_sig_allocacmp_fft_delay_elements_9_0675_load     |    9|          2|   64|        128|
+    |chanin0_pipe_TDATA_blk_n                            |    9|          2|    1|          2|
+    |chanout0_pipe_TDATA_blk_n                           |    9|          2|    1|          2|
+    |i_reg_2223                                          |    9|          2|   32|         64|
+    +----------------------------------------------------+-----+-----------+-----+-----------+
+    |Total                                               | 5069|       1120|33221|      66526|
+    +----------------------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+-----+----+-----+-----------+
+    |                 Name                 |  FF | LUT| Bits| Const Bits|
+    +--------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                             |   85|   0|   85|          0|
+    |ap_done_reg                           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0               |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1               |    1|   0|    1|          0|
+    |ap_rst_n_inv                          |    1|   0|    1|          0|
+    |ap_rst_reg_1                          |    1|   0|    1|          0|
+    |ap_rst_reg_2                          |    1|   0|    1|          0|
+    |empty_reg_12602                       |   26|   0|   32|          6|
+    |fft_delay_elements_0_0666_fu_158      |   64|   0|   64|          0|
+    |fft_delay_elements_100_0766_fu_546    |   64|   0|   64|          0|
+    |fft_delay_elements_101_0767_fu_550    |   64|   0|   64|          0|
+    |fft_delay_elements_102_0768_fu_554    |   64|   0|   64|          0|
+    |fft_delay_elements_103_0769_fu_558    |   64|   0|   64|          0|
+    |fft_delay_elements_104_0770_fu_562    |   64|   0|   64|          0|
+    |fft_delay_elements_105_0771_fu_566    |   64|   0|   64|          0|
+    |fft_delay_elements_106_0772_fu_570    |   64|   0|   64|          0|
+    |fft_delay_elements_107_0773_fu_574    |   64|   0|   64|          0|
+    |fft_delay_elements_108_0774_fu_578    |   64|   0|   64|          0|
+    |fft_delay_elements_109_0775_fu_582    |   64|   0|   64|          0|
+    |fft_delay_elements_10_0676_fu_198     |   64|   0|   64|          0|
+    |fft_delay_elements_110_0776_fu_586    |   64|   0|   64|          0|
+    |fft_delay_elements_111_0777_fu_590    |   64|   0|   64|          0|
+    |fft_delay_elements_112_0778_fu_594    |   64|   0|   64|          0|
+    |fft_delay_elements_113_0779_fu_598    |   64|   0|   64|          0|
+    |fft_delay_elements_114_0780_fu_602    |   64|   0|   64|          0|
+    |fft_delay_elements_115_0781_fu_606    |   64|   0|   64|          0|
+    |fft_delay_elements_116_0782_fu_610    |   64|   0|   64|          0|
+    |fft_delay_elements_117_0783_fu_614    |   64|   0|   64|          0|
+    |fft_delay_elements_118_0784_fu_618    |   64|   0|   64|          0|
+    |fft_delay_elements_119_0785_fu_622    |   64|   0|   64|          0|
+    |fft_delay_elements_11_0677_fu_202     |   64|   0|   64|          0|
+    |fft_delay_elements_120_0786_fu_626    |   64|   0|   64|          0|
+    |fft_delay_elements_121_0787_fu_630    |   64|   0|   64|          0|
+    |fft_delay_elements_122_0788_fu_634    |   64|   0|   64|          0|
+    |fft_delay_elements_123_0789_fu_638    |   64|   0|   64|          0|
+    |fft_delay_elements_124_0790_fu_642    |   64|   0|   64|          0|
+    |fft_delay_elements_125_0791_fu_646    |   64|   0|   64|          0|
+    |fft_delay_elements_126_0792_fu_650    |   64|   0|   64|          0|
+    |fft_delay_elements_127_0793_fu_654    |   64|   0|   64|          0|
+    |fft_delay_elements_128_0794_fu_658    |   64|   0|   64|          0|
+    |fft_delay_elements_129_0795_fu_662    |   64|   0|   64|          0|
+    |fft_delay_elements_12_0678_fu_206     |   64|   0|   64|          0|
+    |fft_delay_elements_130_0796_fu_666    |   64|   0|   64|          0|
+    |fft_delay_elements_132_0798_fu_670    |   64|   0|   64|          0|
+    |fft_delay_elements_133_0799_fu_674    |   64|   0|   64|          0|
+    |fft_delay_elements_134_0800_fu_678    |   64|   0|   64|          0|
+    |fft_delay_elements_135_0801_fu_682    |   64|   0|   64|          0|
+    |fft_delay_elements_136_0802_fu_686    |   64|   0|   64|          0|
+    |fft_delay_elements_137_0803_fu_690    |   64|   0|   64|          0|
+    |fft_delay_elements_138_0804_fu_694    |   64|   0|   64|          0|
+    |fft_delay_elements_139_0805_fu_698    |   64|   0|   64|          0|
+    |fft_delay_elements_13_0679_fu_210     |   64|   0|   64|          0|
+    |fft_delay_elements_140_0806_fu_702    |   64|   0|   64|          0|
+    |fft_delay_elements_141_0807_fu_706    |   64|   0|   64|          0|
+    |fft_delay_elements_142_0808_fu_710    |   64|   0|   64|          0|
+    |fft_delay_elements_143_0809_fu_714    |   64|   0|   64|          0|
+    |fft_delay_elements_144_0810_fu_718    |   64|   0|   64|          0|
+    |fft_delay_elements_145_0811_fu_722    |   64|   0|   64|          0|
+    |fft_delay_elements_146_0812_fu_726    |   64|   0|   64|          0|
+    |fft_delay_elements_147_0813_fu_730    |   64|   0|   64|          0|
+    |fft_delay_elements_148_0814_fu_734    |   64|   0|   64|          0|
+    |fft_delay_elements_149_0815_fu_738    |   64|   0|   64|          0|
+    |fft_delay_elements_14_0680_fu_214     |   64|   0|   64|          0|
+    |fft_delay_elements_150_0816_fu_742    |   64|   0|   64|          0|
+    |fft_delay_elements_151_0817_fu_746    |   64|   0|   64|          0|
+    |fft_delay_elements_152_0818_fu_750    |   64|   0|   64|          0|
+    |fft_delay_elements_153_0819_fu_754    |   64|   0|   64|          0|
+    |fft_delay_elements_154_0820_fu_758    |   64|   0|   64|          0|
+    |fft_delay_elements_155_0821_fu_762    |   64|   0|   64|          0|
+    |fft_delay_elements_156_0822_fu_766    |   64|   0|   64|          0|
+    |fft_delay_elements_157_0823_fu_770    |   64|   0|   64|          0|
+    |fft_delay_elements_158_0824_fu_774    |   64|   0|   64|          0|
+    |fft_delay_elements_159_0825_fu_778    |   64|   0|   64|          0|
+    |fft_delay_elements_15_0681_fu_218     |   64|   0|   64|          0|
+    |fft_delay_elements_160_0826_fu_782    |   64|   0|   64|          0|
+    |fft_delay_elements_161_0827_fu_786    |   64|   0|   64|          0|
+    |fft_delay_elements_162_0828_fu_790    |   64|   0|   64|          0|
+    |fft_delay_elements_163_0829_fu_794    |   64|   0|   64|          0|
+    |fft_delay_elements_165_0831_fu_798    |   64|   0|   64|          0|
+    |fft_delay_elements_166_0832_fu_802    |   64|   0|   64|          0|
+    |fft_delay_elements_167_0833_fu_806    |   64|   0|   64|          0|
+    |fft_delay_elements_168_0834_fu_810    |   64|   0|   64|          0|
+    |fft_delay_elements_169_0835_fu_814    |   64|   0|   64|          0|
+    |fft_delay_elements_16_0682_fu_222     |   64|   0|   64|          0|
+    |fft_delay_elements_170_0836_fu_818    |   64|   0|   64|          0|
+    |fft_delay_elements_171_0837_fu_822    |   64|   0|   64|          0|
+    |fft_delay_elements_172_0838_fu_826    |   64|   0|   64|          0|
+    |fft_delay_elements_173_0839_fu_830    |   64|   0|   64|          0|
+    |fft_delay_elements_174_0840_fu_834    |   64|   0|   64|          0|
+    |fft_delay_elements_175_0841_fu_838    |   64|   0|   64|          0|
+    |fft_delay_elements_176_0842_fu_842    |   64|   0|   64|          0|
+    |fft_delay_elements_177_0843_fu_846    |   64|   0|   64|          0|
+    |fft_delay_elements_178_0844_fu_850    |   64|   0|   64|          0|
+    |fft_delay_elements_179_0845_fu_854    |   64|   0|   64|          0|
+    |fft_delay_elements_17_0683_fu_226     |   64|   0|   64|          0|
+    |fft_delay_elements_180_0846_fu_858    |   64|   0|   64|          0|
+    |fft_delay_elements_181_0847_fu_862    |   64|   0|   64|          0|
+    |fft_delay_elements_182_0848_fu_866    |   64|   0|   64|          0|
+    |fft_delay_elements_183_0849_fu_870    |   64|   0|   64|          0|
+    |fft_delay_elements_184_0850_fu_874    |   64|   0|   64|          0|
+    |fft_delay_elements_185_0851_fu_878    |   64|   0|   64|          0|
+    |fft_delay_elements_186_0852_fu_882    |   64|   0|   64|          0|
+    |fft_delay_elements_187_0853_fu_886    |   64|   0|   64|          0|
+    |fft_delay_elements_188_0854_fu_890    |   64|   0|   64|          0|
+    |fft_delay_elements_189_0855_fu_894    |   64|   0|   64|          0|
+    |fft_delay_elements_18_0684_fu_230     |   64|   0|   64|          0|
+    |fft_delay_elements_190_0856_fu_898    |   64|   0|   64|          0|
+    |fft_delay_elements_191_0857_fu_902    |   64|   0|   64|          0|
+    |fft_delay_elements_192_0858_fu_906    |   64|   0|   64|          0|
+    |fft_delay_elements_193_0859_fu_910    |   64|   0|   64|          0|
+    |fft_delay_elements_194_0860_fu_914    |   64|   0|   64|          0|
+    |fft_delay_elements_195_0861_fu_918    |   64|   0|   64|          0|
+    |fft_delay_elements_196_0862_fu_922    |   64|   0|   64|          0|
+    |fft_delay_elements_198_0864_fu_926    |   64|   0|   64|          0|
+    |fft_delay_elements_199_0865_fu_930    |   64|   0|   64|          0|
+    |fft_delay_elements_19_0685_fu_234     |   64|   0|   64|          0|
+    |fft_delay_elements_1_0667_fu_162      |   64|   0|   64|          0|
+    |fft_delay_elements_200_0866_fu_934    |   64|   0|   64|          0|
+    |fft_delay_elements_201_0867_fu_938    |   64|   0|   64|          0|
+    |fft_delay_elements_202_0868_fu_942    |   64|   0|   64|          0|
+    |fft_delay_elements_203_0869_fu_946    |   64|   0|   64|          0|
+    |fft_delay_elements_204_0870_fu_950    |   64|   0|   64|          0|
+    |fft_delay_elements_205_0871_fu_954    |   64|   0|   64|          0|
+    |fft_delay_elements_206_0872_fu_958    |   64|   0|   64|          0|
+    |fft_delay_elements_207_0873_fu_962    |   64|   0|   64|          0|
+    |fft_delay_elements_208_0874_fu_966    |   64|   0|   64|          0|
+    |fft_delay_elements_209_0875_fu_970    |   64|   0|   64|          0|
+    |fft_delay_elements_20_0686_fu_238     |   64|   0|   64|          0|
+    |fft_delay_elements_210_0876_fu_974    |   64|   0|   64|          0|
+    |fft_delay_elements_211_0877_fu_978    |   64|   0|   64|          0|
+    |fft_delay_elements_212_0878_fu_982    |   64|   0|   64|          0|
+    |fft_delay_elements_213_0879_fu_986    |   64|   0|   64|          0|
+    |fft_delay_elements_214_0880_fu_990    |   64|   0|   64|          0|
+    |fft_delay_elements_215_0881_fu_994    |   64|   0|   64|          0|
+    |fft_delay_elements_216_0882_fu_998    |   64|   0|   64|          0|
+    |fft_delay_elements_217_0883_fu_1002   |   64|   0|   64|          0|
+    |fft_delay_elements_218_0884_fu_1006   |   64|   0|   64|          0|
+    |fft_delay_elements_219_0885_fu_1010   |   64|   0|   64|          0|
+    |fft_delay_elements_21_0687_fu_242     |   64|   0|   64|          0|
+    |fft_delay_elements_220_0886_fu_1014   |   64|   0|   64|          0|
+    |fft_delay_elements_221_0887_fu_1018   |   64|   0|   64|          0|
+    |fft_delay_elements_222_0888_fu_1022   |   64|   0|   64|          0|
+    |fft_delay_elements_223_0889_fu_1026   |   64|   0|   64|          0|
+    |fft_delay_elements_224_0890_fu_1030   |   64|   0|   64|          0|
+    |fft_delay_elements_225_0891_fu_1034   |   64|   0|   64|          0|
+    |fft_delay_elements_226_0892_fu_1038   |   64|   0|   64|          0|
+    |fft_delay_elements_227_0893_fu_1042   |   64|   0|   64|          0|
+    |fft_delay_elements_228_0894_fu_1046   |   64|   0|   64|          0|
+    |fft_delay_elements_229_0895_fu_1050   |   64|   0|   64|          0|
+    |fft_delay_elements_22_0688_fu_246     |   64|   0|   64|          0|
+    |fft_delay_elements_231_0897_fu_1054   |   64|   0|   64|          0|
+    |fft_delay_elements_232_0898_fu_1058   |   64|   0|   64|          0|
+    |fft_delay_elements_233_0899_fu_1062   |   64|   0|   64|          0|
+    |fft_delay_elements_234_0900_fu_1066   |   64|   0|   64|          0|
+    |fft_delay_elements_235_0901_fu_1070   |   64|   0|   64|          0|
+    |fft_delay_elements_236_0902_fu_1074   |   64|   0|   64|          0|
+    |fft_delay_elements_237_0903_fu_1078   |   64|   0|   64|          0|
+    |fft_delay_elements_238_0904_fu_1082   |   64|   0|   64|          0|
+    |fft_delay_elements_239_0905_fu_1086   |   64|   0|   64|          0|
+    |fft_delay_elements_23_0689_fu_250     |   64|   0|   64|          0|
+    |fft_delay_elements_240_0906_fu_1090   |   64|   0|   64|          0|
+    |fft_delay_elements_241_0907_fu_1094   |   64|   0|   64|          0|
+    |fft_delay_elements_242_0908_fu_1098   |   64|   0|   64|          0|
+    |fft_delay_elements_243_0909_fu_1102   |   64|   0|   64|          0|
+    |fft_delay_elements_244_0910_fu_1106   |   64|   0|   64|          0|
+    |fft_delay_elements_245_0911_fu_1110   |   64|   0|   64|          0|
+    |fft_delay_elements_246_0912_fu_1114   |   64|   0|   64|          0|
+    |fft_delay_elements_247_0913_fu_1118   |   64|   0|   64|          0|
+    |fft_delay_elements_248_0914_fu_1122   |   64|   0|   64|          0|
+    |fft_delay_elements_249_0915_fu_1126   |   64|   0|   64|          0|
+    |fft_delay_elements_24_0690_fu_254     |   64|   0|   64|          0|
+    |fft_delay_elements_250_0916_fu_1130   |   64|   0|   64|          0|
+    |fft_delay_elements_251_0917_fu_1134   |   64|   0|   64|          0|
+    |fft_delay_elements_252_0918_fu_1138   |   64|   0|   64|          0|
+    |fft_delay_elements_253_0919_fu_1142   |   64|   0|   64|          0|
+    |fft_delay_elements_254_0920_fu_1146   |   64|   0|   64|          0|
+    |fft_delay_elements_255_0921_fu_1150   |   64|   0|   64|          0|
+    |fft_delay_elements_256_0922_fu_1154   |   64|   0|   64|          0|
+    |fft_delay_elements_257_0923_fu_1158   |   64|   0|   64|          0|
+    |fft_delay_elements_258_0924_fu_1162   |   64|   0|   64|          0|
+    |fft_delay_elements_259_0925_fu_1166   |   64|   0|   64|          0|
+    |fft_delay_elements_25_0691_fu_258     |   64|   0|   64|          0|
+    |fft_delay_elements_260_0926_fu_1170   |   64|   0|   64|          0|
+    |fft_delay_elements_261_0927_fu_1174   |   64|   0|   64|          0|
+    |fft_delay_elements_262_0928_fu_1178   |   64|   0|   64|          0|
+    |fft_delay_elements_264_0930_fu_1182   |   64|   0|   64|          0|
+    |fft_delay_elements_265_0931_fu_1186   |   64|   0|   64|          0|
+    |fft_delay_elements_266_0932_fu_1190   |   64|   0|   64|          0|
+    |fft_delay_elements_267_0933_fu_1194   |   64|   0|   64|          0|
+    |fft_delay_elements_268_0934_fu_1198   |   64|   0|   64|          0|
+    |fft_delay_elements_269_0935_fu_1202   |   64|   0|   64|          0|
+    |fft_delay_elements_26_0692_fu_262     |   64|   0|   64|          0|
+    |fft_delay_elements_270_0936_fu_1206   |   64|   0|   64|          0|
+    |fft_delay_elements_271_0937_fu_1210   |   64|   0|   64|          0|
+    |fft_delay_elements_272_0938_fu_1214   |   64|   0|   64|          0|
+    |fft_delay_elements_273_0939_fu_1218   |   64|   0|   64|          0|
+    |fft_delay_elements_274_0940_fu_1222   |   64|   0|   64|          0|
+    |fft_delay_elements_275_0941_fu_1226   |   64|   0|   64|          0|
+    |fft_delay_elements_276_0942_fu_1230   |   64|   0|   64|          0|
+    |fft_delay_elements_277_0943_fu_1234   |   64|   0|   64|          0|
+    |fft_delay_elements_278_0944_fu_1238   |   64|   0|   64|          0|
+    |fft_delay_elements_279_0945_fu_1242   |   64|   0|   64|          0|
+    |fft_delay_elements_27_0693_fu_266     |   64|   0|   64|          0|
+    |fft_delay_elements_281_0947_fu_1246   |   64|   0|   64|          0|
+    |fft_delay_elements_282_0948_fu_1250   |   64|   0|   64|          0|
+    |fft_delay_elements_283_0949_fu_1254   |   64|   0|   64|          0|
+    |fft_delay_elements_284_0950_fu_1258   |   64|   0|   64|          0|
+    |fft_delay_elements_285_0951_fu_1262   |   64|   0|   64|          0|
+    |fft_delay_elements_286_0952_fu_1266   |   64|   0|   64|          0|
+    |fft_delay_elements_287_0953_fu_1270   |   64|   0|   64|          0|
+    |fft_delay_elements_288_0954_fu_1274   |   64|   0|   64|          0|
+    |fft_delay_elements_289_0955_fu_1278   |   64|   0|   64|          0|
+    |fft_delay_elements_28_0694_fu_270     |   64|   0|   64|          0|
+    |fft_delay_elements_290_0956_fu_1282   |   64|   0|   64|          0|
+    |fft_delay_elements_291_0957_fu_1286   |   64|   0|   64|          0|
+    |fft_delay_elements_292_0958_fu_1290   |   64|   0|   64|          0|
+    |fft_delay_elements_293_0959_fu_1294   |   64|   0|   64|          0|
+    |fft_delay_elements_294_0960_fu_1298   |   64|   0|   64|          0|
+    |fft_delay_elements_295_0961_fu_1302   |   64|   0|   64|          0|
+    |fft_delay_elements_296_0962_fu_1306   |   64|   0|   64|          0|
+    |fft_delay_elements_298_0964_fu_1310   |   64|   0|   64|          0|
+    |fft_delay_elements_299_0965_fu_1314   |   64|   0|   64|          0|
+    |fft_delay_elements_29_0695_fu_274     |   64|   0|   64|          0|
+    |fft_delay_elements_2_0668_fu_166      |   64|   0|   64|          0|
+    |fft_delay_elements_300_0966_fu_1318   |   64|   0|   64|          0|
+    |fft_delay_elements_301_0967_fu_1322   |   64|   0|   64|          0|
+    |fft_delay_elements_302_0968_fu_1326   |   64|   0|   64|          0|
+    |fft_delay_elements_303_0969_fu_1330   |   64|   0|   64|          0|
+    |fft_delay_elements_304_0970_fu_1334   |   64|   0|   64|          0|
+    |fft_delay_elements_305_0971_fu_1338   |   64|   0|   64|          0|
+    |fft_delay_elements_306_0972_fu_1342   |   64|   0|   64|          0|
+    |fft_delay_elements_307_0973_fu_1346   |   64|   0|   64|          0|
+    |fft_delay_elements_308_0974_fu_1350   |   64|   0|   64|          0|
+    |fft_delay_elements_309_0975_fu_1354   |   64|   0|   64|          0|
+    |fft_delay_elements_30_0696_fu_278     |   64|   0|   64|          0|
+    |fft_delay_elements_310_0976_fu_1358   |   64|   0|   64|          0|
+    |fft_delay_elements_311_0977_fu_1362   |   64|   0|   64|          0|
+    |fft_delay_elements_312_0978_fu_1366   |   64|   0|   64|          0|
+    |fft_delay_elements_313_0979_fu_1370   |   64|   0|   64|          0|
+    |fft_delay_elements_315_0981_fu_1374   |   64|   0|   64|          0|
+    |fft_delay_elements_316_0982_fu_1378   |   64|   0|   64|          0|
+    |fft_delay_elements_317_0983_fu_1382   |   64|   0|   64|          0|
+    |fft_delay_elements_318_0984_fu_1386   |   64|   0|   64|          0|
+    |fft_delay_elements_319_0985_fu_1390   |   64|   0|   64|          0|
+    |fft_delay_elements_31_0697_fu_282     |   64|   0|   64|          0|
+    |fft_delay_elements_320_0986_fu_1394   |   64|   0|   64|          0|
+    |fft_delay_elements_321_0987_fu_1398   |   64|   0|   64|          0|
+    |fft_delay_elements_322_0988_fu_1402   |   64|   0|   64|          0|
+    |fft_delay_elements_323_0989_fu_1406   |   64|   0|   64|          0|
+    |fft_delay_elements_324_0990_fu_1410   |   64|   0|   64|          0|
+    |fft_delay_elements_325_0991_fu_1414   |   64|   0|   64|          0|
+    |fft_delay_elements_326_0992_fu_1418   |   64|   0|   64|          0|
+    |fft_delay_elements_327_0993_fu_1422   |   64|   0|   64|          0|
+    |fft_delay_elements_328_0994_fu_1426   |   64|   0|   64|          0|
+    |fft_delay_elements_329_0995_fu_1430   |   64|   0|   64|          0|
+    |fft_delay_elements_330_0996_fu_1434   |   64|   0|   64|          0|
+    |fft_delay_elements_332_0998_fu_1438   |   64|   0|   64|          0|
+    |fft_delay_elements_333_0999_fu_1442   |   64|   0|   64|          0|
+    |fft_delay_elements_334_01000_fu_1446  |   64|   0|   64|          0|
+    |fft_delay_elements_335_01001_fu_1450  |   64|   0|   64|          0|
+    |fft_delay_elements_336_01002_fu_1454  |   64|   0|   64|          0|
+    |fft_delay_elements_337_01003_fu_1458  |   64|   0|   64|          0|
+    |fft_delay_elements_338_01004_fu_1462  |   64|   0|   64|          0|
+    |fft_delay_elements_339_01005_fu_1466  |   64|   0|   64|          0|
+    |fft_delay_elements_33_0699_fu_286     |   64|   0|   64|          0|
+    |fft_delay_elements_340_01006_fu_1470  |   64|   0|   64|          0|
+    |fft_delay_elements_341_01007_fu_1474  |   64|   0|   64|          0|
+    |fft_delay_elements_342_01008_fu_1478  |   64|   0|   64|          0|
+    |fft_delay_elements_343_01009_fu_1482  |   64|   0|   64|          0|
+    |fft_delay_elements_344_01010_fu_1486  |   64|   0|   64|          0|
+    |fft_delay_elements_345_01011_fu_1490  |   64|   0|   64|          0|
+    |fft_delay_elements_346_01012_fu_1494  |   64|   0|   64|          0|
+    |fft_delay_elements_347_01013_fu_1498  |   64|   0|   64|          0|
+    |fft_delay_elements_349_01015_fu_1502  |   64|   0|   64|          0|
+    |fft_delay_elements_34_0700_fu_290     |   64|   0|   64|          0|
+    |fft_delay_elements_350_01016_fu_1506  |   64|   0|   64|          0|
+    |fft_delay_elements_351_01017_fu_1510  |   64|   0|   64|          0|
+    |fft_delay_elements_352_01018_fu_1514  |   64|   0|   64|          0|
+    |fft_delay_elements_353_01019_fu_1518  |   64|   0|   64|          0|
+    |fft_delay_elements_354_01020_fu_1522  |   64|   0|   64|          0|
+    |fft_delay_elements_355_01021_fu_1526  |   64|   0|   64|          0|
+    |fft_delay_elements_356_01022_fu_1530  |   64|   0|   64|          0|
+    |fft_delay_elements_357_01023_fu_1534  |   64|   0|   64|          0|
+    |fft_delay_elements_358_01024_fu_1538  |   64|   0|   64|          0|
+    |fft_delay_elements_359_01025_fu_1542  |   64|   0|   64|          0|
+    |fft_delay_elements_35_0701_fu_294     |   64|   0|   64|          0|
+    |fft_delay_elements_360_01026_fu_1546  |   64|   0|   64|          0|
+    |fft_delay_elements_361_01027_fu_1550  |   64|   0|   64|          0|
+    |fft_delay_elements_362_01028_fu_1554  |   64|   0|   64|          0|
+    |fft_delay_elements_363_01029_fu_1558  |   64|   0|   64|          0|
+    |fft_delay_elements_364_01030_fu_1562  |   64|   0|   64|          0|
+    |fft_delay_elements_366_01032_fu_1566  |   64|   0|   64|          0|
+    |fft_delay_elements_367_01033_fu_1570  |   64|   0|   64|          0|
+    |fft_delay_elements_368_01034_fu_1574  |   64|   0|   64|          0|
+    |fft_delay_elements_369_01035_fu_1578  |   64|   0|   64|          0|
+    |fft_delay_elements_36_0702_fu_298     |   64|   0|   64|          0|
+    |fft_delay_elements_370_01036_fu_1582  |   64|   0|   64|          0|
+    |fft_delay_elements_371_01037_fu_1586  |   64|   0|   64|          0|
+    |fft_delay_elements_372_01038_fu_1590  |   64|   0|   64|          0|
+    |fft_delay_elements_373_01039_fu_1594  |   64|   0|   64|          0|
+    |fft_delay_elements_374_01040_fu_1598  |   64|   0|   64|          0|
+    |fft_delay_elements_375_01041_fu_1602  |   64|   0|   64|          0|
+    |fft_delay_elements_376_01042_fu_1606  |   64|   0|   64|          0|
+    |fft_delay_elements_377_01043_fu_1610  |   64|   0|   64|          0|
+    |fft_delay_elements_378_01044_fu_1614  |   64|   0|   64|          0|
+    |fft_delay_elements_379_01045_fu_1618  |   64|   0|   64|          0|
+    |fft_delay_elements_37_0703_fu_302     |   64|   0|   64|          0|
+    |fft_delay_elements_380_01046_fu_1622  |   64|   0|   64|          0|
+    |fft_delay_elements_381_01047_fu_1626  |   64|   0|   64|          0|
+    |fft_delay_elements_383_01049_fu_1630  |   64|   0|   64|          0|
+    |fft_delay_elements_384_01050_fu_1634  |   64|   0|   64|          0|
+    |fft_delay_elements_385_01051_fu_1638  |   64|   0|   64|          0|
+    |fft_delay_elements_386_01052_fu_1642  |   64|   0|   64|          0|
+    |fft_delay_elements_387_01053_fu_1646  |   64|   0|   64|          0|
+    |fft_delay_elements_388_01054_fu_1650  |   64|   0|   64|          0|
+    |fft_delay_elements_389_01055_fu_1654  |   64|   0|   64|          0|
+    |fft_delay_elements_38_0704_fu_306     |   64|   0|   64|          0|
+    |fft_delay_elements_390_01056_fu_1658  |   64|   0|   64|          0|
+    |fft_delay_elements_391_01057_fu_1662  |   64|   0|   64|          0|
+    |fft_delay_elements_392_01058_fu_1666  |   64|   0|   64|          0|
+    |fft_delay_elements_393_01059_fu_1670  |   64|   0|   64|          0|
+    |fft_delay_elements_394_01060_fu_1674  |   64|   0|   64|          0|
+    |fft_delay_elements_395_01061_fu_1678  |   64|   0|   64|          0|
+    |fft_delay_elements_396_01062_fu_1682  |   64|   0|   64|          0|
+    |fft_delay_elements_397_01063_fu_1686  |   64|   0|   64|          0|
+    |fft_delay_elements_398_01064_fu_1690  |   64|   0|   64|          0|
+    |fft_delay_elements_39_0705_fu_310     |   64|   0|   64|          0|
+    |fft_delay_elements_3_0669_fu_170      |   64|   0|   64|          0|
+    |fft_delay_elements_400_01066_fu_1694  |   64|   0|   64|          0|
+    |fft_delay_elements_401_01067_fu_1698  |   64|   0|   64|          0|
+    |fft_delay_elements_402_01068_fu_1702  |   64|   0|   64|          0|
+    |fft_delay_elements_403_01069_fu_1706  |   64|   0|   64|          0|
+    |fft_delay_elements_404_01070_fu_1710  |   64|   0|   64|          0|
+    |fft_delay_elements_405_01071_fu_1714  |   64|   0|   64|          0|
+    |fft_delay_elements_406_01072_fu_1718  |   64|   0|   64|          0|
+    |fft_delay_elements_407_01073_fu_1722  |   64|   0|   64|          0|
+    |fft_delay_elements_409_01075_fu_1726  |   64|   0|   64|          0|
+    |fft_delay_elements_40_0706_fu_314     |   64|   0|   64|          0|
+    |fft_delay_elements_410_01076_fu_1730  |   64|   0|   64|          0|
+    |fft_delay_elements_411_01077_fu_1734  |   64|   0|   64|          0|
+    |fft_delay_elements_412_01078_fu_1738  |   64|   0|   64|          0|
+    |fft_delay_elements_413_01079_fu_1742  |   64|   0|   64|          0|
+    |fft_delay_elements_414_01080_fu_1746  |   64|   0|   64|          0|
+    |fft_delay_elements_415_01081_fu_1750  |   64|   0|   64|          0|
+    |fft_delay_elements_416_01082_fu_1754  |   64|   0|   64|          0|
+    |fft_delay_elements_418_01084_fu_1758  |   64|   0|   64|          0|
+    |fft_delay_elements_419_01085_fu_1762  |   64|   0|   64|          0|
+    |fft_delay_elements_41_0707_fu_318     |   64|   0|   64|          0|
+    |fft_delay_elements_420_01086_fu_1766  |   64|   0|   64|          0|
+    |fft_delay_elements_421_01087_fu_1770  |   64|   0|   64|          0|
+    |fft_delay_elements_422_01088_fu_1774  |   64|   0|   64|          0|
+    |fft_delay_elements_423_01089_fu_1778  |   64|   0|   64|          0|
+    |fft_delay_elements_424_01090_fu_1782  |   64|   0|   64|          0|
+    |fft_delay_elements_425_01091_fu_1786  |   64|   0|   64|          0|
+    |fft_delay_elements_427_01093_fu_1790  |   64|   0|   64|          0|
+    |fft_delay_elements_428_01094_fu_1794  |   64|   0|   64|          0|
+    |fft_delay_elements_429_01095_fu_1798  |   64|   0|   64|          0|
+    |fft_delay_elements_42_0708_fu_322     |   64|   0|   64|          0|
+    |fft_delay_elements_430_01096_fu_1802  |   64|   0|   64|          0|
+    |fft_delay_elements_431_01097_fu_1806  |   64|   0|   64|          0|
+    |fft_delay_elements_432_01098_fu_1810  |   64|   0|   64|          0|
+    |fft_delay_elements_433_01099_fu_1814  |   64|   0|   64|          0|
+    |fft_delay_elements_434_01100_fu_1818  |   64|   0|   64|          0|
+    |fft_delay_elements_436_01102_fu_1822  |   64|   0|   64|          0|
+    |fft_delay_elements_437_01103_fu_1826  |   64|   0|   64|          0|
+    |fft_delay_elements_438_01104_fu_1830  |   64|   0|   64|          0|
+    |fft_delay_elements_439_01105_fu_1834  |   64|   0|   64|          0|
+    |fft_delay_elements_43_0709_fu_326     |   64|   0|   64|          0|
+    |fft_delay_elements_440_01106_fu_1838  |   64|   0|   64|          0|
+    |fft_delay_elements_441_01107_fu_1842  |   64|   0|   64|          0|
+    |fft_delay_elements_442_01108_fu_1846  |   64|   0|   64|          0|
+    |fft_delay_elements_443_01109_fu_1850  |   64|   0|   64|          0|
+    |fft_delay_elements_445_01111_fu_1854  |   64|   0|   64|          0|
+    |fft_delay_elements_446_01112_fu_1858  |   64|   0|   64|          0|
+    |fft_delay_elements_447_01113_fu_1862  |   64|   0|   64|          0|
+    |fft_delay_elements_448_01114_fu_1866  |   64|   0|   64|          0|
+    |fft_delay_elements_449_01115_fu_1870  |   64|   0|   64|          0|
+    |fft_delay_elements_44_0710_fu_330     |   64|   0|   64|          0|
+    |fft_delay_elements_450_01116_fu_1874  |   64|   0|   64|          0|
+    |fft_delay_elements_451_01117_fu_1878  |   64|   0|   64|          0|
+    |fft_delay_elements_452_01118_fu_1882  |   64|   0|   64|          0|
+    |fft_delay_elements_454_01120_fu_1886  |   64|   0|   64|          0|
+    |fft_delay_elements_455_01121_fu_1890  |   64|   0|   64|          0|
+    |fft_delay_elements_456_01122_fu_1894  |   64|   0|   64|          0|
+    |fft_delay_elements_457_01123_fu_1898  |   64|   0|   64|          0|
+    |fft_delay_elements_458_01124_fu_1902  |   64|   0|   64|          0|
+    |fft_delay_elements_459_01125_fu_1906  |   64|   0|   64|          0|
+    |fft_delay_elements_45_0711_fu_334     |   64|   0|   64|          0|
+    |fft_delay_elements_460_01126_fu_1910  |   64|   0|   64|          0|
+    |fft_delay_elements_461_01127_fu_1914  |   64|   0|   64|          0|
+    |fft_delay_elements_463_01129_fu_1918  |   64|   0|   64|          0|
+    |fft_delay_elements_464_01130_fu_1922  |   64|   0|   64|          0|
+    |fft_delay_elements_465_01131_fu_1926  |   64|   0|   64|          0|
+    |fft_delay_elements_466_01132_fu_1930  |   64|   0|   64|          0|
+    |fft_delay_elements_467_01133_fu_1934  |   64|   0|   64|          0|
+    |fft_delay_elements_468_01134_fu_1938  |   64|   0|   64|          0|
+    |fft_delay_elements_469_01135_fu_1942  |   64|   0|   64|          0|
+    |fft_delay_elements_46_0712_fu_338     |   64|   0|   64|          0|
+    |fft_delay_elements_470_01136_fu_1946  |   64|   0|   64|          0|
+    |fft_delay_elements_472_01138_fu_1950  |   64|   0|   64|          0|
+    |fft_delay_elements_473_01139_fu_1954  |   64|   0|   64|          0|
+    |fft_delay_elements_474_01140_fu_1958  |   64|   0|   64|          0|
+    |fft_delay_elements_475_01141_fu_1962  |   64|   0|   64|          0|
+    |fft_delay_elements_477_01143_fu_1966  |   64|   0|   64|          0|
+    |fft_delay_elements_478_01144_fu_1970  |   64|   0|   64|          0|
+    |fft_delay_elements_479_01145_fu_1974  |   64|   0|   64|          0|
+    |fft_delay_elements_47_0713_fu_342     |   64|   0|   64|          0|
+    |fft_delay_elements_480_01146_fu_1978  |   64|   0|   64|          0|
+    |fft_delay_elements_482_01148_fu_1982  |   64|   0|   64|          0|
+    |fft_delay_elements_483_01149_fu_1986  |   64|   0|   64|          0|
+    |fft_delay_elements_484_01150_fu_1990  |   64|   0|   64|          0|
+    |fft_delay_elements_485_01151_fu_1994  |   64|   0|   64|          0|
+    |fft_delay_elements_487_01153_fu_1998  |   64|   0|   64|          0|
+    |fft_delay_elements_488_01154_fu_2002  |   64|   0|   64|          0|
+    |fft_delay_elements_489_01155_fu_2006  |   64|   0|   64|          0|
+    |fft_delay_elements_48_0714_fu_346     |   64|   0|   64|          0|
+    |fft_delay_elements_490_01156_fu_2010  |   64|   0|   64|          0|
+    |fft_delay_elements_492_01158_fu_2014  |   64|   0|   64|          0|
+    |fft_delay_elements_493_01159_fu_2018  |   64|   0|   64|          0|
+    |fft_delay_elements_494_01160_fu_2022  |   64|   0|   64|          0|
+    |fft_delay_elements_495_01161_fu_2026  |   64|   0|   64|          0|
+    |fft_delay_elements_497_01163_fu_2030  |   64|   0|   64|          0|
+    |fft_delay_elements_498_01164_fu_2034  |   64|   0|   64|          0|
+    |fft_delay_elements_499_01165_fu_2038  |   64|   0|   64|          0|
+    |fft_delay_elements_49_0715_fu_350     |   64|   0|   64|          0|
+    |fft_delay_elements_4_0670_fu_174      |   64|   0|   64|          0|
+    |fft_delay_elements_500_01166_fu_2042  |   64|   0|   64|          0|
+    |fft_delay_elements_502_01168_fu_2046  |   64|   0|   64|          0|
+    |fft_delay_elements_503_01169_fu_2050  |   64|   0|   64|          0|
+    |fft_delay_elements_504_01170_fu_2054  |   64|   0|   64|          0|
+    |fft_delay_elements_505_01171_fu_2058  |   64|   0|   64|          0|
+    |fft_delay_elements_507_01173_fu_2062  |   64|   0|   64|          0|
+    |fft_delay_elements_508_01174_fu_2066  |   64|   0|   64|          0|
+    |fft_delay_elements_509_01175_fu_2070  |   64|   0|   64|          0|
+    |fft_delay_elements_50_0716_fu_354     |   64|   0|   64|          0|
+    |fft_delay_elements_510_01176_fu_2074  |   64|   0|   64|          0|
+    |fft_delay_elements_512_01178_fu_2078  |   64|   0|   64|          0|
+    |fft_delay_elements_513_01179_fu_2082  |   64|   0|   64|          0|
+    |fft_delay_elements_515_01181_fu_2086  |   64|   0|   64|          0|
+    |fft_delay_elements_516_01182_fu_2090  |   64|   0|   64|          0|
+    |fft_delay_elements_518_01184_fu_2094  |   64|   0|   64|          0|
+    |fft_delay_elements_519_01185_fu_2098  |   64|   0|   64|          0|
+    |fft_delay_elements_51_0717_fu_358     |   64|   0|   64|          0|
+    |fft_delay_elements_521_01187_fu_2102  |   64|   0|   64|          0|
+    |fft_delay_elements_522_01188_fu_2106  |   64|   0|   64|          0|
+    |fft_delay_elements_524_01190_fu_2110  |   64|   0|   64|          0|
+    |fft_delay_elements_525_01191_fu_2114  |   64|   0|   64|          0|
+    |fft_delay_elements_527_01193_fu_2118  |   64|   0|   64|          0|
+    |fft_delay_elements_528_01194_fu_2122  |   64|   0|   64|          0|
+    |fft_delay_elements_52_0718_fu_362     |   64|   0|   64|          0|
+    |fft_delay_elements_530_01196_fu_2126  |   64|   0|   64|          0|
+    |fft_delay_elements_531_01197_fu_2130  |   64|   0|   64|          0|
+    |fft_delay_elements_533_01199_fu_2134  |   64|   0|   64|          0|
+    |fft_delay_elements_534_01200_fu_2138  |   64|   0|   64|          0|
+    |fft_delay_elements_536_01202_fu_2142  |   64|   0|   64|          0|
+    |fft_delay_elements_538_01204_fu_2146  |   64|   0|   64|          0|
+    |fft_delay_elements_53_0719_fu_366     |   64|   0|   64|          0|
+    |fft_delay_elements_540_01206_fu_2150  |   64|   0|   64|          0|
+    |fft_delay_elements_542_01208_fu_2154  |   64|   0|   64|          0|
+    |fft_delay_elements_544_01210_fu_2158  |   64|   0|   64|          0|
+    |fft_delay_elements_546_01212_fu_2162  |   64|   0|   64|          0|
+    |fft_delay_elements_548_01214_fu_2166  |   64|   0|   64|          0|
+    |fft_delay_elements_54_0720_fu_370     |   64|   0|   64|          0|
+    |fft_delay_elements_550_01216_fu_2170  |   64|   0|   64|          0|
+    |fft_delay_elements_558_01224_fu_2174  |   64|   0|   64|          0|
+    |fft_delay_elements_559_01225_fu_2178  |   64|   0|   64|          0|
+    |fft_delay_elements_55_0721_fu_374     |   64|   0|   64|          0|
+    |fft_delay_elements_560_01226_fu_2182  |   64|   0|   64|          0|
+    |fft_delay_elements_561_01227_fu_2186  |   64|   0|   64|          0|
+    |fft_delay_elements_562_01228_fu_2190  |   64|   0|   64|          0|
+    |fft_delay_elements_563_01229_fu_2194  |   64|   0|   64|          0|
+    |fft_delay_elements_56_0722_fu_378     |   64|   0|   64|          0|
+    |fft_delay_elements_57_0723_fu_382     |   64|   0|   64|          0|
+    |fft_delay_elements_58_0724_fu_386     |   64|   0|   64|          0|
+    |fft_delay_elements_59_0725_fu_390     |   64|   0|   64|          0|
+    |fft_delay_elements_5_0671_fu_178      |   64|   0|   64|          0|
+    |fft_delay_elements_60_0726_fu_394     |   64|   0|   64|          0|
+    |fft_delay_elements_61_0727_fu_398     |   64|   0|   64|          0|
+    |fft_delay_elements_62_0728_fu_402     |   64|   0|   64|          0|
+    |fft_delay_elements_63_0729_fu_406     |   64|   0|   64|          0|
+    |fft_delay_elements_64_0730_fu_410     |   64|   0|   64|          0|
+    |fft_delay_elements_66_0732_fu_414     |   64|   0|   64|          0|
+    |fft_delay_elements_67_0733_fu_418     |   64|   0|   64|          0|
+    |fft_delay_elements_68_0734_fu_422     |   64|   0|   64|          0|
+    |fft_delay_elements_69_0735_fu_426     |   64|   0|   64|          0|
+    |fft_delay_elements_6_0672_fu_182      |   64|   0|   64|          0|
+    |fft_delay_elements_70_0736_fu_430     |   64|   0|   64|          0|
+    |fft_delay_elements_71_0737_fu_434     |   64|   0|   64|          0|
+    |fft_delay_elements_72_0738_fu_438     |   64|   0|   64|          0|
+    |fft_delay_elements_73_0739_fu_442     |   64|   0|   64|          0|
+    |fft_delay_elements_74_0740_fu_446     |   64|   0|   64|          0|
+    |fft_delay_elements_75_0741_fu_450     |   64|   0|   64|          0|
+    |fft_delay_elements_76_0742_fu_454     |   64|   0|   64|          0|
+    |fft_delay_elements_77_0743_fu_458     |   64|   0|   64|          0|
+    |fft_delay_elements_78_0744_fu_462     |   64|   0|   64|          0|
+    |fft_delay_elements_79_0745_fu_466     |   64|   0|   64|          0|
+    |fft_delay_elements_7_0673_fu_186      |   64|   0|   64|          0|
+    |fft_delay_elements_80_0746_fu_470     |   64|   0|   64|          0|
+    |fft_delay_elements_81_0747_fu_474     |   64|   0|   64|          0|
+    |fft_delay_elements_82_0748_fu_478     |   64|   0|   64|          0|
+    |fft_delay_elements_83_0749_fu_482     |   64|   0|   64|          0|
+    |fft_delay_elements_84_0750_fu_486     |   64|   0|   64|          0|
+    |fft_delay_elements_85_0751_fu_490     |   64|   0|   64|          0|
+    |fft_delay_elements_86_0752_fu_494     |   64|   0|   64|          0|
+    |fft_delay_elements_87_0753_fu_498     |   64|   0|   64|          0|
+    |fft_delay_elements_88_0754_fu_502     |   64|   0|   64|          0|
+    |fft_delay_elements_89_0755_fu_506     |   64|   0|   64|          0|
+    |fft_delay_elements_8_0674_fu_190      |   64|   0|   64|          0|
+    |fft_delay_elements_90_0756_fu_510     |   64|   0|   64|          0|
+    |fft_delay_elements_91_0757_fu_514     |   64|   0|   64|          0|
+    |fft_delay_elements_92_0758_fu_518     |   64|   0|   64|          0|
+    |fft_delay_elements_93_0759_fu_522     |   64|   0|   64|          0|
+    |fft_delay_elements_94_0760_fu_526     |   64|   0|   64|          0|
+    |fft_delay_elements_95_0761_fu_530     |   64|   0|   64|          0|
+    |fft_delay_elements_96_0762_fu_534     |   64|   0|   64|          0|
+    |fft_delay_elements_97_0763_fu_538     |   64|   0|   64|          0|
+    |fft_delay_elements_99_0765_fu_542     |   64|   0|   64|          0|
+    |fft_delay_elements_9_0675_fu_194      |   64|   0|   64|          0|
+    |grp_fft_step_1_fu_2247_ap_start_reg   |    1|   0|    1|          0|
+    |i_1_reg_12617                         |   32|   0|   32|          0|
+    |i_reg_2223                            |   32|   0|   32|          0|
+    |icmp_ln206_reg_12622                  |    1|   0|    1|          0|
+    |icmp_ln220_reg_12631                  |    1|   0|    1|          0|
+    |icmp_ln245_reg_12635                  |    1|   0|    1|          0|
+    |icmp_ln245_reg_12635_pp0_iter1_reg    |    1|   0|    1|          0|
+    |sub_reg_12607                         |   26|   0|   32|          6|
+    |tobool_reg_12612                      |    1|   0|    1|          0|
+    |trunc_ln206_reg_12626                 |    6|   0|    6|          0|
+    +--------------------------------------+-----+----+-----+-----------+
+    |Total                                 |32859|   0|32871|         12|
+    +--------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+---------------+---------------+--------------+
+|       RTL Ports       | Dir | Bits|    Protocol   | Source Object |    C Type    |
++-----------------------+-----+-----+---------------+---------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|          s_axi|        control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|          s_axi|        control|        scalar|
+|s_axi_control_AWADDR   |   in|    6|          s_axi|        control|        scalar|
+|s_axi_control_WVALID   |   in|    1|          s_axi|        control|        scalar|
+|s_axi_control_WREADY   |  out|    1|          s_axi|        control|        scalar|
+|s_axi_control_WDATA    |   in|   32|          s_axi|        control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|          s_axi|        control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|          s_axi|        control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|          s_axi|        control|        scalar|
+|s_axi_control_ARADDR   |   in|    6|          s_axi|        control|        scalar|
+|s_axi_control_RVALID   |  out|    1|          s_axi|        control|        scalar|
+|s_axi_control_RREADY   |   in|    1|          s_axi|        control|        scalar|
+|s_axi_control_RDATA    |  out|   32|          s_axi|        control|        scalar|
+|s_axi_control_RRESP    |  out|    2|          s_axi|        control|        scalar|
+|s_axi_control_BVALID   |  out|    1|          s_axi|        control|        scalar|
+|s_axi_control_BREADY   |   in|    1|          s_axi|        control|        scalar|
+|s_axi_control_BRESP    |  out|    2|          s_axi|        control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_chain|         fft1d0|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_chain|         fft1d0|  return value|
+|interrupt              |  out|    1|  ap_ctrl_chain|         fft1d0|  return value|
+|chanout0_pipe_TDATA    |  out|  512|           axis|  chanout0_pipe|       pointer|
+|chanout0_pipe_TVALID   |  out|    1|           axis|  chanout0_pipe|       pointer|
+|chanout0_pipe_TREADY   |   in|    1|           axis|  chanout0_pipe|       pointer|
+|chanin0_pipe_TDATA     |   in|  512|           axis|   chanin0_pipe|       pointer|
+|chanin0_pipe_TVALID    |   in|    1|           axis|   chanin0_pipe|       pointer|
+|chanin0_pipe_TREADY    |  out|    1|           axis|   chanin0_pipe|       pointer|
++-----------------------+-----+-----+---------------+---------------+--------------+
+

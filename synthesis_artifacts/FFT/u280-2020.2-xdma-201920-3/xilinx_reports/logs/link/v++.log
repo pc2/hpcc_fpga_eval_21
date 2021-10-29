@@ -1,0 +1,555 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link
+	Log files: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/fft1d_float_8.xclbin.link_summary, at Fri Oct 29 10:30:33 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Fri Oct 29 10:30:33 2021
+INFO: [v++ 60-1315] Creating rulecheck session with output '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/v++_link_fft1d_float_8_guidance.html', at Fri Oct 29 10:30:34 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 74-74] Compiler Version string: 2020.2
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [10:30:44] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/fft1d_float_8.xo --config /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --temp_dir /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Fri Oct 29 10:30:46 2021
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/fft1d_float_8.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [10:30:47] build_xd_ip_db started: /opt/Xilinx/Vitis/2020.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/xilinx_u280_xdma_201920_3.hpfm -clkid 0 -ip /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/iprepo/xilinx_com_hls_store0_1_0,store0 -ip /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/iprepo/xilinx_com_hls_fft1d0_1_0,fft1d0 -ip /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/iprepo/xilinx_com_hls_fetch0_1_0,fetch0 -o /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [10:30:56] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1695.129 ; gain = 0.000 ; free physical = 79153 ; free virtual = 342921
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [10:30:56] cfgen started: /opt/Xilinx/Vitis/2020.2/bin/cfgen  -nk fetch0:1 -nk fft1d0:1 -nk store0:1 -slr fetch0_1:SLR1 -slr store0_1:SLR0 -slr fft1d0_1:SLR2 -sp fetch0_1.m_axi_gmem:DDR[1] -sp store0_1.m_axi_gmem:DDR[0] -dmclkid 0 -r /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: fetch0, num: 1  {fetch0_1}
+INFO: [CFGEN 83-0]   kernel: fft1d0, num: 1  {fft1d0_1}
+INFO: [CFGEN 83-0]   kernel: store0, num: 1  {store0_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: fetch0_1, k_port: m_axi_gmem, sptag: DDR[1]
+INFO: [CFGEN 83-0]   kernel: store0_1, k_port: m_axi_gmem, sptag: DDR[0]
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: fetch0_1, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: fft1d0_1, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: store0_1, SLR: SLR0
+INFO: [CFGEN 83-2228] Creating mapping for argument fetch0_1.src to DDR[1] for directive fetch0_1.m_axi_gmem:DDR[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument store0_1.dest to DDR[0] for directive store0_1.m_axi_gmem:DDR[0]
+INFO: [SYSTEM_LINK 82-37] [10:31:03] cfgen finished successfully
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1695.129 ; gain = 0.000 ; free physical = 74560 ; free virtual = 338437
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [10:31:03] cf2bd started: /opt/Xilinx/Vitis/2020.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.xsd --temp_dir /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link --output_dir /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --target_bd pfm_dynamic.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd pfm_dynamic.bd -dn dr -dp /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [10:31:08] cf2bd finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1695.129 ; gain = 0.000 ; free physical = 73437 ; free virtual = 337400
+INFO: [v++ 60-1441] [10:31:08] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1564.039 ; gain = 0.000 ; free physical = 73472 ; free virtual = 337430
+INFO: [v++ 60-1443] [10:31:08] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/sdsl.dat -rtd /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/cf2sw.rtd -nofilter /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/cf2sw_full.rtd -xclbin /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.xml -o /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [10:31:15] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1564.039 ; gain = 0.000 ; free physical = 70365 ; free virtual = 334390
+INFO: [v++ 60-1443] [10:31:15] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [10:31:17] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1564.039 ; gain = 0.000 ; free physical = 68545 ; free virtual = 332598
+INFO: [v++ 60-1443] [10:31:17] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u280_xdma_201920_3 --remote_ip_cache /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/.ipcache --output_dir /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --log_dir /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link --report_dir /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link --config /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/vplConfig.ini -k /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link --no-info --iprepo /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_fft1d0_1_0 --iprepo /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_store0_1_0 --iprepo /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_fetch0_1_0 --messageDb /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link/vpl.pb /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+
+****** vpl v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/kernel_info.dat'.
+INFO: [VPL 74-74] Compiler Version string: 2020.2
+INFO: [VPL 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform
+WARNING: /opt/Xilinx/Vitis/2020.2/tps/lnx64/jre9.0.4 does not exist.
+[10:31:42] Run vpl: Step create_project: Started
+Creating Vivado project.
+[10:31:45] Run vpl: Step create_project: Completed
+[10:31:45] Run vpl: Step create_bd: Started
+[10:32:37] Run vpl: Step create_bd: Completed
+[10:32:37] Run vpl: Step update_bd: Started
+[10:32:37] Run vpl: Step update_bd: Completed
+[10:32:37] Run vpl: Step generate_target: Started
+[10:33:53] Run vpl: Step generate_target: RUNNING...
+[10:34:37] Run vpl: Step generate_target: Completed
+[10:34:37] Run vpl: Step config_hw_runs: Started
+[10:34:53] Run vpl: Step config_hw_runs: Completed
+[10:34:53] Run vpl: Step synth: Started
+[10:35:23] Block-level synthesis in progress, 0 of 106 jobs complete, 40 jobs running.
+[10:35:54] Block-level synthesis in progress, 0 of 106 jobs complete, 40 jobs running.
+[10:36:24] Block-level synthesis in progress, 0 of 106 jobs complete, 40 jobs running.
+[10:36:55] Block-level synthesis in progress, 12 of 106 jobs complete, 29 jobs running.
+[10:37:25] Block-level synthesis in progress, 32 of 106 jobs complete, 27 jobs running.
+[10:37:56] Block-level synthesis in progress, 49 of 106 jobs complete, 33 jobs running.
+[10:38:27] Block-level synthesis in progress, 51 of 106 jobs complete, 39 jobs running.
+[10:38:57] Block-level synthesis in progress, 63 of 106 jobs complete, 28 jobs running.
+[10:39:27] Block-level synthesis in progress, 77 of 106 jobs complete, 15 jobs running.
+[10:39:58] Block-level synthesis in progress, 92 of 106 jobs complete, 11 jobs running.
+[10:40:28] Block-level synthesis in progress, 97 of 106 jobs complete, 8 jobs running.
+[10:40:59] Block-level synthesis in progress, 99 of 106 jobs complete, 6 jobs running.
+[10:41:29] Block-level synthesis in progress, 100 of 106 jobs complete, 5 jobs running.
+[10:42:00] Block-level synthesis in progress, 100 of 106 jobs complete, 5 jobs running.
+[10:42:30] Block-level synthesis in progress, 100 of 106 jobs complete, 5 jobs running.
+[10:43:00] Block-level synthesis in progress, 101 of 106 jobs complete, 4 jobs running.
+[10:43:31] Block-level synthesis in progress, 101 of 106 jobs complete, 4 jobs running.
+[10:44:01] Block-level synthesis in progress, 101 of 106 jobs complete, 4 jobs running.
+[10:44:32] Block-level synthesis in progress, 102 of 106 jobs complete, 3 jobs running.
+[10:45:03] Block-level synthesis in progress, 103 of 106 jobs complete, 2 jobs running.
+[10:45:33] Block-level synthesis in progress, 103 of 106 jobs complete, 3 jobs running.
+[10:46:03] Block-level synthesis in progress, 103 of 106 jobs complete, 3 jobs running.
+[10:46:34] Block-level synthesis in progress, 103 of 106 jobs complete, 3 jobs running.
+[10:47:05] Block-level synthesis in progress, 104 of 106 jobs complete, 2 jobs running.
+[10:47:36] Block-level synthesis in progress, 104 of 106 jobs complete, 2 jobs running.
+[10:48:06] Block-level synthesis in progress, 104 of 106 jobs complete, 2 jobs running.
+[10:48:37] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:49:08] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:49:38] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:50:09] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:50:39] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:51:10] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:51:40] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:52:11] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:52:41] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:53:12] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:53:42] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:54:12] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:54:43] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:55:13] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:55:44] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:56:14] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:56:44] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:57:15] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:57:45] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:58:16] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:58:46] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:59:16] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[10:59:47] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:00:17] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:00:48] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:01:18] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:01:48] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:02:19] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:02:49] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:03:19] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:03:50] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:04:20] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:04:51] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:05:21] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:05:51] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:06:22] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:06:52] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:07:23] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:07:53] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:08:24] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:08:54] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:09:24] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:09:55] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:10:25] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:10:56] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:11:26] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:11:57] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:12:27] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:12:58] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:13:28] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:13:59] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:14:29] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:14:59] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:15:30] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:16:00] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:16:31] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:17:01] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:17:31] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:18:02] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:18:32] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:19:02] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:19:33] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:20:03] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:20:34] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:21:04] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:21:35] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:22:05] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:22:35] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:23:06] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:23:36] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:24:07] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:24:38] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:25:08] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:25:39] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:26:09] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:26:40] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:27:10] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:27:41] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:28:12] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:28:42] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:29:12] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:29:43] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:30:13] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:30:44] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:31:14] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:31:45] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:32:15] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:32:45] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:33:16] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:33:46] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:34:17] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:34:47] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:35:18] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:35:48] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:36:18] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:36:49] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:37:19] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:37:49] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:38:20] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:38:50] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:39:21] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:39:51] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:40:21] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:40:52] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:41:23] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:41:53] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:42:24] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:42:54] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:43:25] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:43:56] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:44:26] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:44:57] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:45:27] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:45:58] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:46:28] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:46:59] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:47:29] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:47:59] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:48:30] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:49:00] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:49:31] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:50:01] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:50:32] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:51:02] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:51:32] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:52:03] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:52:33] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:53:04] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:53:34] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:54:05] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:54:35] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:55:06] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:55:36] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:56:07] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:56:37] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:57:08] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:57:38] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:58:09] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:58:39] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:59:10] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[11:59:40] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:00:10] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:00:41] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:01:11] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:01:42] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:02:12] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:02:43] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:03:13] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:03:43] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:04:14] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:04:44] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:05:15] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:05:45] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:06:16] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:06:46] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:07:17] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:07:47] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:08:18] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:08:48] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:09:19] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:09:49] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:10:20] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:10:50] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:11:20] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:11:51] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:12:21] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:12:52] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:13:22] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:13:52] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:14:23] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:14:53] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:15:24] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:15:54] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:16:25] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:16:55] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:17:25] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:17:56] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:18:26] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:18:57] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:19:27] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:19:58] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:20:28] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:20:59] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:21:29] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:22:00] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:22:30] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:23:01] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:23:32] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:24:03] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:24:33] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:25:04] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:25:35] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:26:05] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:26:36] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:27:07] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:27:37] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:28:08] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:28:38] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:29:08] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:29:39] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:30:09] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:30:40] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:31:12] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:31:42] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:32:13] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:32:43] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:33:14] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:33:44] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:34:15] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:34:45] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:35:16] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:35:46] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:36:17] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:36:47] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:37:18] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:37:48] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:38:19] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:38:49] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:39:19] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:39:50] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:40:20] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:40:51] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:41:21] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:41:51] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:42:22] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:42:52] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:43:23] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:43:53] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:44:24] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:44:54] Block-level synthesis in progress, 105 of 106 jobs complete, 1 job running.
+[12:45:24] Block-level synthesis in progress, 106 of 106 jobs complete, 0 jobs running.
+[12:45:55] Top-level synthesis in progress.
+[12:46:25] Top-level synthesis in progress.
+[12:46:53] Run vpl: Step synth: Completed
+[12:46:53] Run vpl: Step impl: Started
+[13:07:53] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 02h 36m 32s 
+
+[13:07:53] Starting logic optimization..
+[13:08:24] Phase 1 Generate And Synthesize MIG Cores
+[13:18:51] Phase 2 Generate And Synthesize Debug Cores
+[13:23:00] Phase 3 Retarget
+[13:23:31] Phase 4 Constant propagation
+[13:24:02] Phase 5 Sweep
+[13:25:05] Phase 6 BUFG optimization
+[13:25:36] Phase 7 Shift Register Optimization
+[13:25:36] Phase 8 Post Processing Netlist
+[13:37:33] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 29m 40s 
+
+[13:37:33] Starting logic placement..
+[13:38:35] Phase 1 Placer Initialization
+[13:38:35] Phase 1.1 Placer Initialization Netlist Sorting
+[13:42:13] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[13:43:15] Phase 1.3 Build Placer Netlist Model
+[13:46:22] Phase 1.4 Constrain Clocks/Macros
+[13:46:53] Phase 2 Global Placement
+[13:46:53] Phase 2.1 Floorplanning
+[13:47:56] Phase 2.1.1 Partition Driven Placement
+[13:47:56] Phase 2.1.1.1 PBP: Partition Driven Placement
+[13:49:29] Phase 2.1.1.2 PBP: Clock Region Placement
+[13:51:35] Phase 2.1.1.3 PBP: Compute Congestion
+[13:51:35] Phase 2.1.1.4 PBP: UpdateTiming
+[13:52:06] Phase 2.1.1.5 PBP: Add part constraints
+[13:52:06] Phase 2.2 Update Timing before SLR Path Opt
+[13:52:06] Phase 2.3 Global Placement Core
+[14:04:38] Phase 2.3.1 Physical Synthesis In Placer
+[14:11:25] Phase 3 Detail Placement
+[14:11:25] Phase 3.1 Commit Multi Column Macros
+[14:11:25] Phase 3.2 Commit Most Macros & LUTRAMs
+[14:14:33] Phase 3.3 Small Shape DP
+[14:14:33] Phase 3.3.1 Small Shape Clustering
+[14:15:04] Phase 3.3.2 Flow Legalize Slice Clusters
+[14:15:36] Phase 3.3.3 Slice Area Swap
+[14:16:38] Phase 3.4 Place Remaining
+[14:17:10] Phase 3.5 Re-assign LUT pins
+[14:17:10] Phase 3.6 Pipeline Register Optimization
+[14:17:41] Phase 3.7 Fast Optimization
+[14:19:15] Phase 4 Post Placement Optimization and Clean-Up
+[14:19:15] Phase 4.1 Post Commit Optimization
+[14:21:52] Phase 4.1.1 Post Placement Optimization
+[14:21:52] Phase 4.1.1.1 BUFG Insertion
+[14:21:52] Phase 1 Physical Synthesis Initialization
+[14:22:23] Phase 4.1.1.2 BUFG Replication
+[14:25:31] Phase 4.1.1.3 Replication
+[14:27:05] Phase 4.2 Post Placement Cleanup
+[14:27:05] Phase 4.3 Placer Reporting
+[14:27:05] Phase 4.3.1 Print Estimated Congestion
+[14:27:37] Phase 4.4 Final Placement Cleanup
+[14:50:05] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 12m 32s 
+
+[14:50:05] Starting logic routing..
+[14:51:40] Phase 1 Build RT Design
+[14:54:48] Phase 2 Router Initialization
+[14:54:48] Phase 2.1 Fix Topology Constraints
+[14:55:19] Phase 2.2 Pre Route Cleanup
+[14:55:19] Phase 2.3 Global Clock Net Routing
+[14:56:54] Phase 2.4 Update Timing
+[15:00:33] Phase 2.5 Update Timing for Bus Skew
+[15:00:33] Phase 2.5.1 Update Timing
+[15:02:39] Phase 3 Initial Routing
+[15:02:39] Phase 3.1 Global Routing
+[15:05:16] Phase 4 Rip-up And Reroute
+[15:05:16] Phase 4.1 Global Iteration 0
+[15:21:30] Phase 4.2 Global Iteration 1
+[15:25:10] Phase 4.3 Global Iteration 2
+[15:28:49] Phase 4.4 Global Iteration 3
+[15:33:00] Phase 4.5 Global Iteration 4
+[15:36:39] Phase 4.6 Global Iteration 5
+[15:40:19] Phase 4.7 Global Iteration 6
+[15:43:59] Phase 4.8 Global Iteration 7
+[15:46:35] Phase 5 Delay and Skew Optimization
+[15:46:35] Phase 5.1 Delay CleanUp
+[15:47:07] Phase 5.1.1 Update Timing
+[15:48:10] Phase 5.1.2 Update Timing
+[15:49:44] Phase 5.2 Clock Skew Optimization
+[15:50:47] Phase 6 Post Hold Fix
+[15:50:47] Phase 6.1 Hold Fix Iter
+[15:50:47] Phase 6.1.1 Update Timing
+[15:52:52] Phase 6.1.2 Lut RouteThru Assignment for hold
+[15:53:24] Phase 6.2 Additional Hold Fix
+[15:56:01] Phase 7 Leaf Clock Prog Delay Opt
+[16:04:54] Phase 7.1 Delay CleanUp
+[16:04:54] Phase 7.1.1 Update Timing
+[16:06:28] Phase 7.1.2 Update Timing
+[16:08:03] Phase 7.2 Hold Fix Iter
+[16:08:03] Phase 7.2.1 Update Timing
+[16:13:16] Phase 7.2.2 Lut RouteThru Assignment for hold
+[16:13:48] Phase 7.3 Additional Hold Fix
+[16:18:30] Phase 7.4 Global Iteration for Hold
+[16:18:30] Phase 7.4.1 Update Timing
+[16:21:38] Phase 8 Route finalize
+[16:22:10] Phase 9 Verifying routed nets
+[16:22:41] Phase 10 Depositing Routes
+[16:23:44] Phase 11 Post Router Timing
+[16:24:47] Phase 12 Physical Synthesis in Router
+[16:24:47] Phase 12.1 Physical Synthesis Initialization
+[16:26:52] Phase 12.2 Critical Path Optimization
+[16:27:55] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 01h 37m 49s 
+
+[16:27:55] Starting bitstream generation..
+Starting optional post-route physical design optimization.
+[16:52:31] Phase 1 Physical Synthesis Initialization
+[16:57:14] Phase 2 Critical Path Optimization
+Finished optional post-route physical design optimization.
+[17:18:41] Creating bitmap...
+[17:27:04] Writing bitstream ./pfm_top_i_dynamic_region_my_rm_partial.bit...
+[17:27:04] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 59m 07s 
+[17:27:09] Run vpl: Step impl: Completed
+[17:27:11] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [17:27:11] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:13:07 ; elapsed = 06:55:52 . Memory (MB): peak = 1564.039 ; gain = 0.000 ; free physical = 123029 ; free virtual = 375557
+INFO: [v++ 60-1443] [17:27:11] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [v++ 60-991] clock name 'clkwiz_kernel_clk_out1' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'clkwiz_kernel2_clk_out1' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'clk_out1_pfm_top_clkwiz_hbm_aclk_0' (clock ID '') is being mapped to clock name 'clk_out1_pfm_top_clkwiz_hbm_aclk_0' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: clk_out1_pfm_top_clkwiz_hbm_aclk_0 = 450, Kernel (DATA) clock: clkwiz_kernel_clk_out1 = 286, Kernel (KERNEL) clock: clkwiz_kernel2_clk_out1 = 500
+INFO: [v++ 60-1453] Command Line: cf2sw -a /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/address_map.xml -sdsl /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/sdsl.dat -xclbin /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.xml -rtd /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/fft1d_float_8.rtd -o /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/fft1d_float_8.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-2311] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, rtdInputFilePath: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/fft1d_float_8.rtd
+INFO: [v++ 60-2312] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, systemDiagramOutputFilePath: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json
+INFO: [v++ 60-1618] Launching 
+INFO: [v++ 60-1441] [17:27:16] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1564.039 ; gain = 0.000 ; free physical = 125938 ; free virtual = 378466
+INFO: [v++ 60-1443] [17:27:16] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/fft1d_float_8.rtd --append-section :JSON:/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/fft1d_float_8_xml.rtd --add-section BUILD_METADATA:JSON:/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/fft1d_float_8_build.rtd --add-section EMBEDDED_METADATA:RAW:/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/fft1d_float_8.xml --add-section SYSTEM_METADATA:RAW:/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json --output /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/fft1d_float_8.xclbin
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+XRT Build Version: 2.9.317 (2020.2_PU1)
+       Build Date: 2021-03-13 05:10:45
+          Hash ID: b0230e59e22351fb957dc46a6e68d7560e5f630c
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 296 bytes
+Format : JSON
+File   : '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 67538283 bytes
+Format : RAW
+File   : '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/fft1d_float_8_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 5604 bytes
+Format : JSON
+File   : '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/fft1d_float_8_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 48324 bytes
+Format : RAW
+File   : '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/fft1d_float_8.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 19495 bytes
+Format : RAW
+File   : '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (67640851 bytes) to the output file: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/fft1d_float_8.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [17:27:16] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1564.039 ; gain = 0.000 ; free physical = 125869 ; free virtual = 378461
+INFO: [v++ 60-1443] [17:27:16] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/fft1d_float_8.xclbin.info --input /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/fft1d_float_8.xclbin
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [17:27:17] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.54 ; elapsed = 00:00:00.65 . Memory (MB): peak = 1564.039 ; gain = 0.000 ; free physical = 125861 ; free virtual = 378453
+INFO: [v++ 60-1443] [17:27:17] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [17:27:17] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1564.039 ; gain = 0.000 ; free physical = 125861 ; free virtual = 378453
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/system_estimate_fft1d_float_8.xtxt
+INFO: [v++ 60-586] Created /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/fft1d_float_8.ltx
+INFO: [v++ 60-586] Created /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/fft1d_float_8.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/v++_link_fft1d_float_8_guidance.html
+	Timing Report: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/imp/impl_1_xilinx_u280_xdma_201920_3_bb_locked_timing_summary_routed.rpt
+	Vivado Log: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link/vivado.log
+	Steps Log File: /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/bin/fft1d_float_8.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 6h 56m 55s
