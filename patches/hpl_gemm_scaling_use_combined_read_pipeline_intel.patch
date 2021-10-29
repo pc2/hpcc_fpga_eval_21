@@ -168,7 +168,7 @@ index 37b79ae..fc3d025 100644
  			}
  		}
 diff --git a/LINPACK/src/device/hpl_torus_PCIE.cl b/LINPACK/src/device/hpl_torus_PCIE.cl
-index bea5b70..292dec7 100644
+index bea5b70..a253a66 100644
 --- a/LINPACK/src/device/hpl_torus_PCIE.cl
 +++ b/LINPACK/src/device/hpl_torus_PCIE.cl
 @@ -28,6 +28,7 @@ SOFTWARE.
@@ -179,7 +179,24 @@ index bea5b70..292dec7 100644
  
  #ifdef INTEL_FPGA
  #pragma OPENCL EXTENSION cl_intel_channels : enable
-@@ -722,93 +723,120 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
+@@ -46,6 +47,7 @@ to pipeline multiple executions.
+ A is the input block that might be partially computed
+ step is the current step and must be a value between 0 to GEMM_BLOCK-2. After step GEMM_BLOCK-2, the block is factorized
+  */
++__attribute__((always_inline))
+ void
+ lu_block(const DEVICE_DATA_TYPE A[GEMM_BLOCK][GEMM_BLOCK], const int step, DEVICE_DATA_TYPE A_out[GEMM_BLOCK][GEMM_BLOCK]) {
+ 
+@@ -255,7 +250,7 @@ lu(__global DEVICE_DATA_TYPE* restrict a,
+ 			}
+ 		}
+ 
+-		DEVICE_DATA_TYPE lu_a_buffer_out[GEMM_BLOCK][GEMM_BLOCK];
++		DEVICE_DATA_TYPE lu_a_buffer_out[GEMM_BLOCK][GEMM_BLOCK] __attribute__((xcl_array_partition(complete, 1), xcl_array_partition(complete, 2)));
+ 		DEVICE_DATA_TYPE lu_a_buffer_out_row[GEMM_BLOCK];
+ 		DEVICE_DATA_TYPE lu_a_buffer_out_col[GEMM_BLOCK];
+ 		// Calculate next row and column of LU factorization and store in local memory buffer
+@@ -722,93 +717,120 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
  				const uint blocks_per_row) {
  
  	// Store current block in local memory
@@ -347,7 +364,7 @@ index bea5b70..292dec7 100644
  				a_buffer[row][curr_col][i][j] += __fpga_reg(result_sub[i][j]);
  			}
  		}
-@@ -816,12 +844,12 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
+@@ -816,12 +838,12 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
  
  	// Store block to global memory
  	#pragma loop_coalesce
