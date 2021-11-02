@@ -51,7 +51,7 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
 fi
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/LINPACK
 
-CONFIG_NAMES=("Nallatech_520N_PCIE_B9_SB3_R5_s1" "Nallatech_520N_PCIE_B9_SB3_R5_s2")
+CONFIG_NAMES=("Nallatech_520N_PCIE_B9_SB2_SBMM3_R5_s1" "Nallatech_520N_PCIE_B9_SB2_SBMM3_R5_s2")
 
 for r in "${CONFIG_NAMES[@]}"; do
     SYNTH_NAME=${INTEL_SDK}-${r}
