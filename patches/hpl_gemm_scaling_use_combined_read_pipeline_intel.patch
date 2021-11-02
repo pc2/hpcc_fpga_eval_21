@@ -168,7 +168,7 @@ index 37b79ae..fc3d025 100644
  			}
  		}
 diff --git a/LINPACK/src/device/hpl_torus_PCIE.cl b/LINPACK/src/device/hpl_torus_PCIE.cl
-index bea5b70..a253a66 100644
+index bea5b70..2b3d312 100644
 --- a/LINPACK/src/device/hpl_torus_PCIE.cl
 +++ b/LINPACK/src/device/hpl_torus_PCIE.cl
 @@ -28,6 +28,7 @@ SOFTWARE.
@@ -183,11 +183,11 @@ index bea5b70..a253a66 100644
  A is the input block that might be partially computed
  step is the current step and must be a value between 0 to GEMM_BLOCK-2. After step GEMM_BLOCK-2, the block is factorized
   */
-+__attribute__((always_inline))
++  __attribute__((always_inline))
  void
  lu_block(const DEVICE_DATA_TYPE A[GEMM_BLOCK][GEMM_BLOCK], const int step, DEVICE_DATA_TYPE A_out[GEMM_BLOCK][GEMM_BLOCK]) {
  
-@@ -255,7 +250,7 @@ lu(__global DEVICE_DATA_TYPE* restrict a,
+@@ -255,7 +257,7 @@ lu(__global DEVICE_DATA_TYPE* restrict a,
  			}
  		}
  
@@ -196,7 +196,7 @@ index bea5b70..a253a66 100644
  		DEVICE_DATA_TYPE lu_a_buffer_out_row[GEMM_BLOCK];
  		DEVICE_DATA_TYPE lu_a_buffer_out_col[GEMM_BLOCK];
  		// Calculate next row and column of LU factorization and store in local memory buffer
-@@ -722,93 +717,120 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
+@@ -722,106 +724,138 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
  				const uint blocks_per_row) {
  
  	// Store current block in local memory
@@ -206,11 +206,18 @@ index bea5b70..a253a66 100644
 +	local DEVICE_DATA_TYPE a_buffer[BLOCK_SIZE/GEMM_BLOCK_MM][BLOCK_SIZE/GEMM_BLOCK_MM][GEMM_BLOCK_MM][GEMM_BLOCK_MM] __attribute((xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
 +	local DEVICE_DATA_TYPE top_buffer[BLOCK_SIZE/GEMM_BLOCK_MM][BLOCK_SIZE/GEMM_BLOCK_MM][GEMM_BLOCK_MM][GEMM_BLOCK_MM] __attribute((xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
 +	local DEVICE_DATA_TYPE left_buffer[BLOCK_SIZE/GEMM_BLOCK_MM][BLOCK_SIZE/GEMM_BLOCK_MM][GEMM_BLOCK_MM][GEMM_BLOCK_MM] __attribute((xcl_array_partition(complete, 3),xcl_array_partition(complete, 4)));
-+
+ 
+-	// Load blocks to local memory
 +
 +#ifdef INTEL_FPGA
 +	// If Intel FPGA, read all buffers in a single pipeline to reduce resource utilization
-+	#pragma loop_coalesce
+ 	#pragma loop_coalesce
+-	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK; i++) {
+-		for (int ii =0; ii < GEMM_BLOCK; ii++) {
+-			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK; j++) {
+-				__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
+-				for (int jj =0; jj < GEMM_BLOCK; jj++) {
+-					a_buffer[i][j][ii][jj] = a[block_col * BLOCK_SIZE  + (block_row * BLOCK_SIZE + i * GEMM_BLOCK + ii) * BLOCK_SIZE * blocks_per_row + j * GEMM_BLOCK + jj];
 +	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK_MM; i++) {
 +		for (int ii =0; ii < GEMM_BLOCK_MM; ii++) {
 +			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK_MM; j++) {
@@ -225,22 +232,23 @@ index bea5b70..a253a66 100644
 +				__attribute__((opencl_unroll_hint(GEMM_BLOCK_MM)))
 +				for (int jj =0; jj < GEMM_BLOCK_MM; jj++) {
 +					left_buffer[i][j][ii][jj] = left_global_buffer[(i * GEMM_BLOCK_MM + ii) * BLOCK_SIZE + j * GEMM_BLOCK_MM + jj];
-+				}
-+			}
-+		}
-+	}
+ 				}
+ 			}
+ 		}
+ 	}
 +#endif
 +#ifdef XILINX_FPGA
 +	// If Xilinx FPGA, load blocks in separate pipelines to achieve memory bursts!
  
- 	// Load blocks to local memory
- 	#pragma loop_coalesce
+-	#pragma loop_coalesce
 -	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK; i++) {
 -		for (int ii =0; ii < GEMM_BLOCK; ii++) {
 -			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK; j++) {
 -				__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
 -				for (int jj =0; jj < GEMM_BLOCK; jj++) {
--					a_buffer[i][j][ii][jj] = a[block_col * BLOCK_SIZE  + (block_row * BLOCK_SIZE + i * GEMM_BLOCK + ii) * BLOCK_SIZE * blocks_per_row + j * GEMM_BLOCK + jj];
+-					top_buffer[i][j][ii][jj] = top_global_buffer[(i * GEMM_BLOCK + ii) * BLOCK_SIZE + j * GEMM_BLOCK + jj];
++	// Load blocks to local memory
++	__attribute__((xcl_pipeline_loop(1)))
 +	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK_MM; i++) {
 +		for (int ii =0; ii < GEMM_BLOCK_MM; ii++) {
 +			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK_MM; j++) {
@@ -252,31 +260,26 @@ index bea5b70..a253a66 100644
  		}
  	}
  
- 	#pragma loop_coalesce
--	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK; i++) {
--		for (int ii =0; ii < GEMM_BLOCK; ii++) {
--			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK; j++) {
--				__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
--				for (int jj =0; jj < GEMM_BLOCK; jj++) {
--					top_buffer[i][j][ii][jj] = top_global_buffer[(i * GEMM_BLOCK + ii) * BLOCK_SIZE + j * GEMM_BLOCK + jj];
-+	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK_MM; i++) {
-+		for (int ii =0; ii < GEMM_BLOCK_MM; ii++) {
-+			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK_MM; j++) {
-+				__attribute__((opencl_unroll_hint(GEMM_BLOCK_MM)))
-+				for (int jj =0; jj < GEMM_BLOCK_MM; jj++) {
-+					top_buffer[i][j][ii][jj] = top_global_buffer[(i * GEMM_BLOCK_MM + ii) * BLOCK_SIZE + j * GEMM_BLOCK_MM + jj];
- 				}
- 			}
- 		}
- 	}
- 
- 	#pragma loop_coalesce
+-	#pragma loop_coalesce
 -	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK; i++) {
 -		for (int ii =0; ii < GEMM_BLOCK; ii++) {
 -			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK; j++) {
 -				__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
 -				for (int jj =0; jj < GEMM_BLOCK; jj++) {
 -					left_buffer[i][j][ii][jj] = left_global_buffer[(i * GEMM_BLOCK + ii) * BLOCK_SIZE + j * GEMM_BLOCK + jj];
++	__attribute__((xcl_pipeline_loop(1)))
++	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK_MM; i++) {
++		for (int ii =0; ii < GEMM_BLOCK_MM; ii++) {
++			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK_MM; j++) {
++				__attribute__((opencl_unroll_hint(GEMM_BLOCK_MM)))
++				for (int jj =0; jj < GEMM_BLOCK_MM; jj++) {
++					top_buffer[i][j][ii][jj] = top_global_buffer[(i * GEMM_BLOCK_MM + ii) * BLOCK_SIZE + j * GEMM_BLOCK_MM + jj];
++				}
++			}
++		}
++	}
++
++	__attribute__((xcl_pipeline_loop(1)))
 +	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK_MM; i++) {
 +		for (int ii =0; ii < GEMM_BLOCK_MM; ii++) {
 +			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK_MM; j++) {
@@ -364,9 +367,10 @@ index bea5b70..a253a66 100644
  				a_buffer[row][curr_col][i][j] += __fpga_reg(result_sub[i][j]);
  			}
  		}
-@@ -816,12 +838,12 @@ void inner_update_mm/*PY_CODE_GEN i*/(__global DEVICE_DATA_TYPE* restrict a,
+ 	}
  
  	// Store block to global memory
++#ifdef INTELFPGA
  	#pragma loop_coalesce
 -	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK; i++) {
 -		for (int ii =0; ii < GEMM_BLOCK; ii++) {
@@ -374,6 +378,10 @@ index bea5b70..a253a66 100644
 -				__attribute__((opencl_unroll_hint(GEMM_BLOCK)))
 -				for (int jj =0; jj < GEMM_BLOCK; jj++) {
 -					a[block_col * BLOCK_SIZE  + (block_row * BLOCK_SIZE + i * GEMM_BLOCK + ii) * BLOCK_SIZE * blocks_per_row + j * GEMM_BLOCK + jj] = a_buffer[i][j][ii][jj];
++#endif
++#ifdef XILINX_FPGA
++	__attribute__((xcl_pipeline_loop(1)))
++#endif
 +	for (int i =0; i < BLOCK_SIZE/GEMM_BLOCK_MM; i++) {
 +		for (int ii =0; ii < GEMM_BLOCK_MM; ii++) {
 +			for (int j =0; j < BLOCK_SIZE/GEMM_BLOCK_MM; j++) {
