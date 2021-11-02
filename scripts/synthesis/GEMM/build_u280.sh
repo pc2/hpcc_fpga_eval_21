@@ -22,7 +22,17 @@ SYNTH_DIR=${TMP_DIR}/build
 
 mkdir -p ${TMP_DIR}
 
-git clone --branch ${HPCC_FPGA_VERSION} git@github.com:pc2/HPCC_FPGA.git ${TMP_PROJECT_DIR}
+if [ ! -d ${TMP_PROJECT_DIR} ]; then
+    git clone --branch ${HPCC_FPGA_VERSION} https://github.com/pc2/HPCC_FPGA.git ${TMP_PROJECT_DIR}
+    
+    # Apply patches
+    cd ${TMP_PROJECT_DIR};
+
+    # Inline function patch
+    if ! git apply ${SCRIPT_PATH}/../../../patches/gemm_inline_register_mm_xilinx.patch; then
+        echo "ERROR: Xilinx patch failed!"
+    fi
+fi
 
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/${BENCHMARK_NAME}
 
