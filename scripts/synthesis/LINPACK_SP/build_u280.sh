@@ -31,6 +31,12 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
     # Apply configuration improvement patch
     if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_gemm_scaling_use_combined_read_pipeline_intel.patch; then
         echo "ERROR: Apply separate read pipelines patch failed!"
+        
+    fi
+
+    # Apply patch to use correct kernel names for Xilinx 
+    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_gemm_fix_kernel_names_xilinx.patch; then
+        echo "ERROR: Xilinx patch failed!"
     fi
 fi
 
