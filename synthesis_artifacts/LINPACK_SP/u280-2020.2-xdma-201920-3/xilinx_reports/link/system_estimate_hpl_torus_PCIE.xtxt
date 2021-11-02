@@ -1,0 +1,57 @@
+===============================================================================
+Version:    v++ v2020.2 (64-bit)
+Build:      SW Build (by xbuild) on 2020-11-18-05:13:29
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Oct 29 22:53:42 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             hpl_torus_PCIE
+Target Device:           xilinx:u280:xdma:201920.3
+Target Clock:            300.000000MHz
+Total number of kernels: 4
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name       Type  Target              OpenCL Library  Compute Units
+----------------  ----  ------------------  --------------  -------------
+inner_update_mm0  clc   fpga0:OCL_REGION_0  hpl_torus_PCIE  2
+left_update       clc   fpga0:OCL_REGION_0  hpl_torus_PCIE  1
+top_update        clc   fpga0:OCL_REGION_0  hpl_torus_PCIE  1
+lu                clc   fpga0:OCL_REGION_0  hpl_torus_PCIE  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     hpl_torus_PCIE
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit        Kernel Name       Module Name       Target Frequency  Estimated Frequency
+------------------  ----------------  ----------------  ----------------  -------------------
+lu_1                lu                update_block_1    300.300293        426.985474
+lu_1                lu                lu                300.300293        411.015198
+top_update_1        top_update        top_update        300.300293        411.015198
+left_update_1       left_update       left_update       300.300293        411.015198
+inner_update_mm0_1  inner_update_mm0  inner_update_mm0  300.300293        411.015198
+inner_update_mm0_2  inner_update_mm0  inner_update_mm0  300.300293        411.015198
+
+Latency Information
+Compute Unit        Kernel Name       Module Name       Start Interval   Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------------  ----------------  ----------------  ---------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+lu_1                lu                update_block_1    1                17             17            17              56.661 ns        56.661 ns       56.661 ns
+lu_1                lu                lu                96918 ~ 370070   96917          undef         370069          0.323 ms         undef           1.233 ms
+top_update_1        top_update        top_update        100687 ~ 354639  100686         undef         354638          0.336 ms         undef           1.182 ms
+left_update_1       left_update       left_update       99151 ~ 353103   99150          undef         353102          0.330 ms         undef           1.177 ms
+inner_update_mm0_1  inner_update_mm0  inner_update_mm0  94391            94390          94390         94390           0.315 ms         0.315 ms        0.315 ms
+inner_update_mm0_2  inner_update_mm0  inner_update_mm0  94391            94390          94390         94390           0.315 ms         0.315 ms        0.315 ms
+
+Area Information
+Compute Unit        Kernel Name       Module Name       FF      LUT     DSP  BRAM  URAM
+------------------  ----------------  ----------------  ------  ------  ---  ----  ----
+lu_1                lu                update_block_1    49066   36516   0    0     0
+lu_1                lu                lu                85744   70035   0    158   0
+top_update_1        top_update        top_update        53264   37579   0    158   0
+left_update_1       left_update       left_update       47912   33500   0    158   0
+inner_update_mm0_1  inner_update_mm0  inner_update_mm0  285340  153634  0    414   0
+inner_update_mm0_2  inner_update_mm0  inner_update_mm0  285340  153634  0    414   0
+-------------------------------------------------------------------------------
