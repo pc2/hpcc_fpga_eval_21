@@ -45,13 +45,13 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
         echo "ERROR: Apply channel reordering patch failed!"
     fi
     # Apply configuration improvement patch
-    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_gemm_scaling_separate_read_pipelines_intel.patch; then
+    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_gemm_scaling_use_combined_read_pipeline_intel.patch; then
         echo "ERROR: Apply separate read pipelines patch failed!"
     fi
 fi
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/LINPACK
 
-CONFIG_NAMES=("Nallatech_520N_IEC_B9_SB3_R5_s1" "Nallatech_520N_IEC_B9_SB3_R5_s2")
+CONFIG_NAMES=("Nallatech_520N_IEC_B9_SB3_R5_s1" "Nallatech_520N_IEC_B9_SB3_R5_s1_ni")
 
 for r in "${CONFIG_NAMES[@]}"; do
     SYNTH_NAME=${INTEL_SDK}-${r}
