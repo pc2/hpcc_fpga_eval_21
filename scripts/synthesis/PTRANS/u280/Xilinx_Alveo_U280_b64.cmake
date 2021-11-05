@@ -16,9 +16,10 @@ set(XILINX_COMPILE_SETTINGS_FILE ${CMAKE_CURRENT_LIST_DIR}/settings.compile.xili
 set(XILINX_COMPILE_FLAGS "-j 40 --hls.pre_tcl ${CMAKE_CURRENT_LIST_DIR}/settings.compile.xilinx.u280.tcl" CACHE STRING "" FORCE)
 
 set(DEFAULT_MATRIX_SIZE 8 CACHE STRING "Default size of the used matrices" FORCE)
-set(BLOCK_SIZE 256 CACHE STRING "Block size used in the FPGA kernel" FORCE)
+set(BLOCK_SIZE 64 CACHE STRING "Block size used in the FPGA kernel" FORCE)
 set(CHANNEL_WIDTH 16 CACHE STRING "Width of a single channel in number of values. Also specifies the width of memory" FORCE)
 set(NUM_REPLICATIONS 2 CACHE STRING "Number of kernel replications (should match number of external channels here)" FORCE)
+set(XILINX_UNROLL_INNER_LOOPS Yes CACHE BOOL "Unroll inner loops in sub-block processing to reduce the number the pipelines need to be emptied" FORCE)
 
 set(USE_DEPRECATED_HPP_HEADER Yes CACHE BOOL "Use cl.hpp intead of cl2.hpp" FORCE)
 

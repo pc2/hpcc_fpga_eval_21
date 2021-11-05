@@ -24,6 +24,13 @@ mkdir -p ${TMP_DIR}
 
 if [ ! -d ${TMP_PROJECT_DIR} ]; then
     git clone --branch ${HPCC_FPGA_VERSION} https://github.com/pc2/HPCC_FPGA.git ${TMP_PROJECT_DIR}
+
+    # Apply patches
+    cd ${TMP_PROJECT_DIR};
+    # Apply configuration improvement patch
+    if ! git apply ${SCRIPT_PATH}/../../../patches/ptrans_simplify_memory_layout_xilinx.patch; then
+        echo "ERROR: Apply patch failed!"
+    fi
 fi
 
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/${BENCHMARK_NAME}
