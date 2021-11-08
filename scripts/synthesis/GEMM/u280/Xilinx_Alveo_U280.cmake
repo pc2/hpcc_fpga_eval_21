@@ -14,7 +14,7 @@ set(FPGA_BOARD_NAME "xilinx_u280_xdma_201920_3" CACHE STRING "" FORCE)
 set(XILINX_LINK_SETTINGS_FILE ${CMAKE_CURRENT_LIST_DIR}/settings.link.xilinx.gemm_base.ddr.generator.ini CACHE FILEPATH "" FORCE)
 set(XILINX_COMPILE_SETTINGS_FILE ${CMAKE_CURRENT_LIST_DIR}/settings.compile.xilinx.u280.tcl CACHE FILEPATH "" FORCE)
 
-set(XILINX_COMPILE_FLAGS "-j 40 --hls.pre_tcl ${CMAKE_CURRENT_LIST_DIR}/settings.compile.xilinx.u280.tcl" CACHE STRING "" FORCE)
+set(XILINX_COMPILE_FLAGS "-j 40 --hls.pre_tcl ${CMAKE_CURRENT_LIST_DIR}/settings.compile.xilinx.u280.tcl --kernel_frequency 200" CACHE STRING "" FORCE)
 
 set(DEFAULT_MATRIX_SIZE 8 CACHE STRING "Default size of the used matrices" FORCE)
 set(BLOCK_SIZE 256 CACHE STRING "Block size used in the FPGA kernel" FORCE)
