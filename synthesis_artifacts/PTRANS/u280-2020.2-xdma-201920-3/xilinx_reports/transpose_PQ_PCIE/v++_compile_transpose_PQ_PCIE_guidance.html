@@ -3407,9 +3407,9 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xrcserver v.2020.2 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Fri Oct 29 10:14:50 2021</td></tr>
+<tr><td><b>Date</b></td><td>Tue Nov  9 10:21:57 2021</td></tr>
 <tr><td><b>Host</b></td><td>alveo0 running 64-bit Ubuntu 18.04.6 LTS</td></tr>
-<tr><td><b>Command</b></td><td>v++  -DXILINX_FPGA --report_dir=/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports --log_dir=/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs -O3 -t hw -I/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/common/ -I/dev/shm/meyermar_synth/ptrans/HPCC_FPGA/PTRANS/src/device --platform xilinx_u280_xdma_201920_3 -R2 -c -j 40 -o xilinx_tmp_compile/transpose_PQ_PCIE.xo /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl </td></tr>
+<tr><td><b>Command</b></td><td>v++  -DXILINX_FPGA --report_dir=/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/bin/xilinx_reports --log_dir=/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/bin/xilinx_reports/logs -O3 -t hw -I/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/common/ -I/dev/shm/meyermar_synth/ptrans/HPCC_FPGA/PTRANS/src/device --platform xilinx_u280_xdma_201920_3 -R2 -c -j 40 --hls.pre_tcl /mnt/scratch/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/PTRANS/u280/settings.compile.xilinx.u280.tcl -o xilinx_tmp_compile/transpose_PQ_PCIE.xo /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl </td></tr>
 </table></center><br>
 <table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
 <tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
@@ -3417,7 +3417,7 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#CONFIG FILE DETAILS">3 CONFIG FILE DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 13
+<pre>Violations found: 16
 </pre>
 <pre>Rule Specs Violated: 4
 </pre>
@@ -3435,117 +3435,95 @@ window.onload = function () { addSorting(); }
 <th align="left" width="380">Resolution</th>
 </tr>
 <tr>
-<td align="left">1</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.transpose0.Interface</td>
-<td align="left">Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=62">transpose_PQ_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=62">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.transpose0.Interface</td>
-<td align="left">Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=109">transpose_PQ_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=109">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">3</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.transpose0.Interface</td>
-<td align="left">Multiple burst writes of length 16 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=167">transpose_PQ_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=167">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.transpose0.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-1.1' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=56">transpose_PQ_PCIE_replicated_xilinx.cl</a>) in function 'transpose0' the outer loop is not a perfect loop.
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">5</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.transpose0.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-1.2' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=103">transpose_PQ_PCIE_replicated_xilinx.cl</a>) in function 'transpose0' the outer loop is not a perfect loop.
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
-</tr>
-<tr>
 <td align="left">6</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.transpose0.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-1.3' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=161">transpose_PQ_PCIE_replicated_xilinx.cl</a>) in function 'transpose0' the outer loop is not a perfect loop.
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.transpose0.Interface</td>
+<td align="left">Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=176">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
 </td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">7</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.transpose0.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-1' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=46">transpose_PQ_PCIE_replicated_xilinx.cl</a>) in function 'transpose0' more than one sub loop.
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.transpose0.Interface</td>
+<td align="left">Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=176">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
 </td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">8</td>
-<td align="left">Throughput</td>
+<td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.transpose0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'Loop 1.1.1'
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.transpose0.Interface</td>
+<td align="left">Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=176">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
 </td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">9</td>
-<td align="left">Throughput</td>
+<td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.transpose0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'Loop 1.2.1'
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.transpose0.Interface</td>
+<td align="left">Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=176">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
 </td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">10</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.transpose0.Latency</td>
+<td align="left">Cannot flatten loop 'Loop-1' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=46">transpose_PQ_PCIE_replicated_xilinx.cl</a>) in function 'transpose0' more than one sub loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">11</td>
 <td align="left">Throughput</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.transpose0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 1.3.1'
+<td align="left">Pipelining result : Target II = 16, Final II = 16, Depth = 93, loop 'Loop 1.1'
 </td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">11</td>
+<td align="left">12</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.transpose0.Throughput</td>
+<td align="left">Pipelining result : Target II = 16, Final II = 16, Depth = 99, loop 'Loop 1.2'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.transpose0.Throughput</td>
+<td align="left">Pipelining result : Target II = 16, Final II = 16, Depth = 90, loop 'Loop 1.3'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">14</td>
 <td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -3556,7 +3534,7 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">12</td>
+<td align="left">15</td>
 <td align="left">Kernel</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -3567,13 +3545,68 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">13</td>
+<td align="left">16</td>
 <td align="left">Kernel</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.transpose0.Kernel</td>
-<td align="left">**** Estimated Fmax: 411.00 MHz
+<td align="left">**** Estimated Fmax: 388.47 MHz
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.transpose0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=75">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.transpose0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=75">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.transpose0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=75">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.transpose0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=75">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.transpose0.Interface</td>
+<td align="left">Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=109">transpose_PQ_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl#line=109">transpose_PQ_PCIE_replicated_xilinx.cl</a>)
 </td>
 <td align="left"></td>
 </tr>

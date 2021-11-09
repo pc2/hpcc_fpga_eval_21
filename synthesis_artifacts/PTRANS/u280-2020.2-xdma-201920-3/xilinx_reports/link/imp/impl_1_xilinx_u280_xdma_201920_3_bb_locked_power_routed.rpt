@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date             : Fri Oct 29 12:43:40 2021
+| Date             : Tue Nov  9 13:48:34 2021
 | Host             : alveo0 running 64-bit Ubuntu 18.04.6 LTS
 | Command          : report_power -file xilinx_u280_xdma_201920_3_bb_locked_power_routed.rpt -pb xilinx_u280_xdma_201920_3_bb_locked_power_summary_routed.pb -rpx xilinx_u280_xdma_201920_3_bb_locked_power_routed.rpx
 | Design           : pfm_top_wrapper
@@ -30,13 +30,13 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 43.035       |
-|   FPGA Power (W)         | 33.272       |
+| Total On-Chip Power (W)  | 43.105       |
+|   FPGA Power (W)         | 33.341       |
 |   HBM Power (W)          | 9.763        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 38.787       |
-| Device Static (W)        | 4.248        |
+| Dynamic (W)              | 38.851       |
+| Device Static (W)        | 4.254        |
 | Effective TJA (C/W)      | 0.4          |
 | Max Ambient (C)          | 81.2         |
 | Junction Temperature (C) | 43.8         |
@@ -54,31 +54,30 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     2.800 |       82 |       --- |             --- |
-| CLB Logic                |     2.422 |   616381 |       --- |             --- |
-|   LUT as Logic           |     1.042 |   177450 |   1302720 |           13.62 |
-|   LUT as Distributed RAM |     1.005 |    16477 |    600480 |            2.74 |
-|   LUT as Shift Register  |     0.191 |     8281 |    600480 |            1.38 |
-|   Register               |     0.172 |   306597 |   2605440 |           11.77 |
-|   CARRY8                 |     0.011 |     1987 |    162840 |            1.22 |
-|   BUFG                   |    <0.001 |        1 |        96 |            1.04 |
-|   Others                 |    <0.001 |    15351 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |    15789 |   1302720 |            1.21 |
-| Signals                  |     3.391 |   518962 |       --- |             --- |
-| Block RAM                |     4.685 |    853.5 |      2016 |           42.34 |
+| Clocks                   |     3.183 |       82 |       --- |             --- |
+| CLB Logic                |     3.088 |   810189 |       --- |             --- |
+|   LUT as Logic           |     1.598 |   250107 |   1302720 |           19.20 |
+|   LUT as Distributed RAM |     1.003 |    16477 |    600480 |            2.74 |
+|   LUT as Shift Register  |     0.243 |    16493 |    600480 |            2.75 |
+|   Register               |     0.230 |   381561 |   2605440 |           14.64 |
+|   CARRY8                 |     0.014 |     2061 |    162840 |            1.27 |
+|   Others                 |    <0.001 |    13493 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |    45919 |   1302720 |            3.52 |
+| Signals                  |     3.826 |   603408 |       --- |             --- |
+| Block RAM                |     3.151 |    597.5 |      2016 |           29.64 |
 | HBM                      |    17.780 |        2 |         2 |          100.00 |
 | MMCM                     |     0.517 |        0 |       --- |             --- |
 | PLL                      |     0.563 |       10 |       --- |             --- |
-| DSPs                     |     0.123 |       96 |      9024 |            1.06 |
-| I/O                      |     1.592 |      297 |       297 |          100.00 |
+| DSPs                     |     0.239 |       96 |      9024 |            1.06 |
+| I/O                      |     1.589 |      297 |       297 |          100.00 |
 | GTY                      |     4.360 |       16 |        24 |           66.67 |
 | SYSMON                   |     0.014 |        1 |       --- |             --- |
 | Hard IPs                 |     0.538 |        1 |       --- |             --- |
 |   PCIE                   |     0.538 |        1 |       --- |             --- |
-| Static Power             |     4.248 |          |           |                 |
+| Static Power             |     4.254 |          |           |                 |
 |   HBM Static             |     0.293 |          |           |                 |
-|   Device Static          |     3.955 |          |           |                 |
-| Total                    |    43.033 |          |           |                 |
+|   Device Static          |     3.961 |          |           |                 |
+| Total                    |    43.102 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -88,17 +87,17 @@ Table of Contents
 +------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint     |       0.850 |    19.720 |      17.333 |      2.387 |       NA    | Unspecified | NA         |
+| Vccint     |       0.850 |    19.804 |      17.410 |      2.394 |       NA    | Unspecified | NA         |
 | Vccint_io  |       0.850 |     7.980 |       7.643 |      0.337 |       NA    | Unspecified | NA         |
-| Vccbram    |       0.850 |     0.530 |       0.469 |      0.061 |       NA    | Unspecified | NA         |
+| Vccbram    |       0.850 |     0.531 |       0.470 |      0.061 |       NA    | Unspecified | NA         |
 | Vccaux     |       1.800 |     1.484 |       0.702 |      0.782 |       NA    | Unspecified | NA         |
-| Vccaux_io  |       1.800 |     0.366 |       0.331 |      0.035 |       NA    | Unspecified | NA         |
+| Vccaux_io  |       1.800 |     0.365 |       0.330 |      0.035 |       NA    | Unspecified | NA         |
 | Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18     |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15     |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco12     |       1.200 |     0.231 |       0.231 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12     |       1.200 |     0.230 |       0.230 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc     |       1.800 |     0.024 |       0.000 |      0.024 |       NA    | Unspecified | NA         |
 | VCC_IO_HBM |       1.200 |     4.531 |       4.437 |      0.094 |       NA    | Unspecified | NA         |
@@ -250,49 +249,49 @@ Table of Contents
 +-----------------------------------------------+-----------+
 | Name                                          | Power (W) |
 +-----------------------------------------------+-----------+
-| pfm_top_wrapper                               |    38.785 |
-|   pfm_top_i                                   |    38.782 |
-|     dynamic_region                            |    31.086 |
+| pfm_top_wrapper                               |    38.848 |
+|   pfm_top_i                                   |    38.845 |
+|     dynamic_region                            |    31.180 |
 |       axilite_user_input_reg                  |     0.003 |
 |       debug_bridge_xsdbm                      |     0.002 |
-|       hmss_0                                  |    18.555 |
-|       memory_subsystem                        |     5.601 |
+|       hmss_0                                  |    18.486 |
+|       memory_subsystem                        |     5.449 |
 |       regslice_pipe_ctrl_hbm_mgntpf           |     0.006 |
 |       regslice_pipe_ctrl_mgntpf               |     0.004 |
 |       slr0                                    |     0.002 |
-|       slr1                                    |     0.177 |
-|       slr2                                    |     0.138 |
-|       transpose0_1                            |     2.593 |
-|       transpose0_2                            |     3.356 |
-|       xdma_smartconnect                       |     0.648 |
-|     static_region                             |     7.696 |
+|       slr1                                    |     0.167 |
+|       slr2                                    |     0.137 |
+|       transpose0_1                            |     3.137 |
+|       transpose0_2                            |     3.169 |
+|       xdma_smartconnect                       |     0.618 |
+|     static_region                             |     7.665 |
 |       Monitor_AXI_Master_dma_pcie             |     0.008 |
-|       Monitor_AXI_Master_p2p                  |     0.009 |
+|       Monitor_AXI_Master_p2p                  |     0.008 |
 |       axi_firewall_ctrl                       |     0.015 |
 |       axi_firewall_ctrl_user                  |     0.013 |
 |       axi_firewall_ctrl_user_debug            |     0.003 |
 |       axi_firewall_data                       |     0.056 |
 |       axi_hwicap                              |     0.026 |
-|       axi_interconnect_0                      |     0.056 |
+|       axi_interconnect_0                      |     0.054 |
 |       axis_register_slice_cc                  |     0.033 |
-|       axis_register_slice_cq                  |     0.044 |
+|       axis_register_slice_cq                  |     0.043 |
 |       axis_register_slice_rc                  |     0.045 |
-|       axis_register_slice_rq                  |     0.034 |
-|       base_clocking                           |     0.518 |
-|       brd_mgmt_scheduler                      |     0.270 |
-|       dma_pcie                                |     0.709 |
+|       axis_register_slice_rq                  |     0.032 |
+|       base_clocking                           |     0.517 |
+|       brd_mgmt_scheduler                      |     0.266 |
+|       dma_pcie                                |     0.696 |
 |       flash_programmer                        |     0.004 |
-|       interconnect_axilite_mgmt_firewall_ctrl |     0.015 |
+|       interconnect_axilite_mgmt_firewall_ctrl |     0.014 |
 |       interconnect_axilite_static_primary     |     0.010 |
 |       interconnect_axilite_static_secondary_a |     0.006 |
 |       interconnect_axilite_static_secondary_b |     0.006 |
-|       interconnect_axilite_static_user        |     0.082 |
+|       interconnect_axilite_static_user        |     0.081 |
 |       interconnect_user_pre_firewall          |     0.005 |
 |       mailbox_0                               |     0.006 |
 |       mgmt_debug_bridge                       |     0.002 |
 |       mgmt_debug_hub                          |     0.001 |
-|       pcie                                    |     5.639 |
-|       pr_isolation_expanded                   |     0.060 |
+|       pcie                                    |     5.635 |
+|       pr_isolation_expanded                   |     0.059 |
 |       sys_mgmt_wiz                            |     0.015 |
 |       user_debug_bridge                       |     0.002 |
 +-----------------------------------------------+-----------+

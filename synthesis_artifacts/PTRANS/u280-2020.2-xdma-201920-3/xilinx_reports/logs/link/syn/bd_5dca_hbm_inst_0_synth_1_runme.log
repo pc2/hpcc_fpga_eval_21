@@ -9,12 +9,12 @@
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
 source bd_5dca_hbm_inst_0.tcl -notrace
-INFO: Dispatch client connection id - 33699
+INFO: Dispatch client connection id - 33183
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_transpose0_1_0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_transpose0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/cache/xilinx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
 Command: synth_design -top bd_5dca_hbm_inst_0 -part xcu280-fsvh2892-2L-e -mode out_of_context
@@ -24,12 +24,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
 INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 68200
+INFO: [Synth 8-7075] Helper process launched with PID 77469
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3345.922 ; gain = 175.719 ; free physical = 53008 ; free virtual = 321220
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3345.762 ; gain = 175.719 ; free physical = 155387 ; free virtual = 368891
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_inst_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/synth/bd_5dca_hbm_inst_0.v:63]
-INFO: [Synth 8-6157] synthesizing module 'hbm_v1_0_9' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_9.sv:66]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_inst_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/synth/bd_5dca_hbm_inst_0.v:63]
+INFO: [Synth 8-6157] synthesizing module 'hbm_v1_0_9' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_9.sv:66]
 	Parameter HBM_STACK bound to: 2 - type: integer 
 	Parameter SWITCH_ENABLE_00 bound to: TRUE - type: string 
 	Parameter SWITCH_ENABLE_01 bound to: TRUE - type: string 
@@ -200,7 +200,7 @@ INFO: [Synth 8-6157] synthesizing module 'hbm_v1_0_9' [/dev/shm/meyermar_synth/p
 	Parameter PHY_ENABLE_31 bound to: TRUE - type: string 
 	Parameter PHY_ENABLE_APB_00 bound to: TRUE - type: string 
 	Parameter PHY_ENABLE_APB_01 bound to: TRUE - type: string 
-INFO: [Synth 8-6157] synthesizing module 'hbm_top' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:81]
+INFO: [Synth 8-6157] synthesizing module 'hbm_top' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:81]
 	Parameter HBM_STACK bound to: 2 - type: integer 
 	Parameter SWITCH_ENABLE_00 bound to: TRUE - type: string 
 	Parameter SWITCH_ENABLE_01 bound to: TRUE - type: string 
@@ -474,13 +474,13 @@ INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instruct
 INFO: [Synth 8-3876] $readmem data file 'xpm_internal_config_file_0.mem' is read successfully [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1104]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (1#1) [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram' (2#1) [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
-INFO: [Synth 8-6157] synthesizing module 'hbm_data_fetch' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:8111]
+INFO: [Synth 8-6157] synthesizing module 'hbm_data_fetch' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:8111]
 	Parameter XPM_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter XPM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
 	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'hbm_data_fetch' (3#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:8111]
-INFO: [Synth 8-6157] synthesizing module 'hbm_apb_mst' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:6746]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_data_fetch' (3#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:8111]
+INFO: [Synth 8-6157] synthesizing module 'hbm_apb_mst' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:6746]
 	Parameter INIT_BYPASS bound to: FALSE - type: string 
 	Parameter INIT_SEQ_TIMEOUT bound to: 0 - type: integer 
 	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
@@ -488,8 +488,8 @@ INFO: [Synth 8-6157] synthesizing module 'hbm_apb_mst' [/dev/shm/meyermar_synth/
 	Parameter C_IDLE bound to: 3'b001 
 	Parameter C_SETUP bound to: 3'b010 
 	Parameter C_ACCESS bound to: 3'b100 
-INFO: [Synth 8-6155] done synthesizing module 'hbm_apb_mst' (4#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:6746]
-INFO: [Synth 8-6157] synthesizing module 'hbm_temp_rd' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7262]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_apb_mst' (4#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:6746]
+INFO: [Synth 8-6157] synthesizing module 'hbm_temp_rd' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7262]
 	Parameter TEMP_WAIT_PERIOD bound to: 100000 - type: integer 
 	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
 	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
@@ -502,16 +502,16 @@ INFO: [Synth 8-6157] synthesizing module 'hbm_temp_rd' [/dev/shm/meyermar_synth/
 	Parameter C_APB_IDLE bound to: 3'b001 
 	Parameter C_APB_SETUP bound to: 3'b010 
 	Parameter C_APB_ACCESS bound to: 3'b100 
-INFO: [Synth 8-6155] done synthesizing module 'hbm_temp_rd' (5#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7262]
-INFO: [Synth 8-6157] synthesizing module 'hbm_apb_arbiter' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7755]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_temp_rd' (5#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7262]
+INFO: [Synth 8-6157] synthesizing module 'hbm_apb_arbiter' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7755]
 	Parameter INIT_BYPASS bound to: FALSE - type: string 
 	Parameter APB_ADDR_WIDTH bound to: 22 - type: integer 
 	Parameter APB_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_IDLE bound to: 3'b001 
 	Parameter C_SETUP bound to: 3'b010 
 	Parameter C_ACCESS bound to: 3'b100 
-INFO: [Synth 8-226] default block is never used [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7907]
-INFO: [Synth 8-6155] done synthesizing module 'hbm_apb_arbiter' (6#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7755]
+INFO: [Synth 8-226] default block is never used [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7907]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_apb_arbiter' (6#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:7755]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram__parameterized0' [/opt/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
 	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
@@ -856,44 +856,44 @@ INFO: [Synth 8-6157] synthesizing module 'HBM_TWO_STACK_INTF' [/opt/Xilinx/Vivad
 	Parameter WRITE_PERCENT_30 bound to: 40 - type: integer 
 	Parameter WRITE_PERCENT_31 bound to: 40 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'HBM_TWO_STACK_INTF' (7#1) [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:29543]
-INFO: [Synth 8-6155] done synthesizing module 'hbm_top' (8#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:81]
-INFO: [Synth 8-6155] done synthesizing module 'hbm_v1_0_9' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_9.sv:66]
-INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_inst_0' (10#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/synth/bd_5dca_hbm_inst_0.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_top' (8#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/e09e/hdl/hbm_v1_0_vl_rfs.sv:81]
+INFO: [Synth 8-6155] done synthesizing module 'hbm_v1_0_9' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/rtl/hbm_v1_0_9.sv:66]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_inst_0' (10#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/synth/bd_5dca_hbm_inst_0.v:63]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3422.422 ; gain = 252.219 ; free physical = 56493 ; free virtual = 324712
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3423.262 ; gain = 253.219 ; free physical = 152482 ; free virtual = 365993
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3438.266 ; gain = 268.062 ; free physical = 56149 ; free virtual = 324367
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3437.137 ; gain = 267.094 ; free physical = 154768 ; free virtual = 368282
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3438.266 ; gain = 268.062 ; free physical = 56149 ; free virtual = 324367
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3437.137 ; gain = 267.094 ; free physical = 154766 ; free virtual = 368280
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.20 . Memory (MB): peak = 3448.172 ; gain = 0.000 ; free physical = 56033 ; free virtual = 324297
+Netlist sorting complete. Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.26 . Memory (MB): peak = 3448.043 ; gain = 0.000 ; free physical = 155932 ; free virtual = 369463
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/bd_5dca_hbm_inst_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/bd_5dca_hbm_inst_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/hbm_ip.xdc] for cell 'inst'
-Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/hbm_ip.xdc] for cell 'inst'
-Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/bd_5dca_hbm_inst_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/bd_5dca_hbm_inst_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/hbm_ip.xdc] for cell 'inst'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/hdl/par/hbm_ip.xdc] for cell 'inst'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3620.422 ; gain = 0.000 ; free physical = 53708 ; free virtual = 322048
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3619.293 ; gain = 0.000 ; free physical = 154070 ; free virtual = 367712
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   HBM_TWO_STACK_INTF => HBM_TWO_STACK_INTF (HBM_REF_CLK(x2), HBM_SNGLBLI_INTF_APB(x2), HBM_SNGLBLI_INTF_AXI(x32)): 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3620.422 ; gain = 0.000 ; free physical = 53699 ; free virtual = 322038
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3619.293 ; gain = 0.000 ; free physical = 154016 ; free virtual = 367657
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 3620.422 ; gain = 450.219 ; free physical = 51733 ; free virtual = 320086
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3619.293 ; gain = 449.250 ; free physical = 151222 ; free virtual = 364879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -901,14 +901,14 @@ Start Loading Part and Timing Information
 Loading part: xcu280-fsvh2892-2L-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 3620.422 ; gain = 450.219 ; free physical = 51728 ; free virtual = 320081
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3619.293 ; gain = 449.250 ; free physical = 151214 ; free virtual = 364872
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc, line 6).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/dont_touch.xdc, line 6).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 3620.422 ; gain = 450.219 ; free physical = 51725 ; free virtual = 320078
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 3619.293 ; gain = 449.250 ; free physical = 151208 ; free virtual = 364865
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'hbm_apb_mst'
 INFO: [Synth 8-802] inferred FSM for state register 'main_fsm_curr_state_reg' in module 'hbm_temp_rd'
@@ -950,7 +950,7 @@ INFO: [Synth 8-5779] Default cascade height of 1 will be used for BRAM '"xpm_mem
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 14 for RAM "xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 3620.422 ; gain = 450.219 ; free physical = 50808 ; free virtual = 319164
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 3619.293 ; gain = 449.250 ; free physical = 150538 ; free virtual = 364186
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1005,7 +1005,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 3620.422 ; gain = 450.219 ; free physical = 48385 ; free virtual = 316750
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 3619.293 ; gain = 449.250 ; free physical = 149234 ; free virtual = 362893
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1027,13 +1027,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 3894.125 ; gain = 723.922 ; free physical = 68198 ; free virtual = 336674
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:01:02 . Memory (MB): peak = 3893.996 ; gain = 723.953 ; free physical = 161685 ; free virtual = 375325
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:04 . Memory (MB): peak = 3936.133 ; gain = 765.930 ; free physical = 74944 ; free virtual = 343456
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 3936.004 ; gain = 765.961 ; free physical = 164722 ; free virtual = 378387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1058,7 +1058,7 @@ INFO: [Synth 8-7052] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_ST
 INFO: [Synth 8-7052] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.xpm_memory_spram_inst_1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/TWO_STACK.u_hbm_top/TWO_STACK_HBM.xpm_memory_spram_inst_1/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:07 ; elapsed = 00:02:22 . Memory (MB): peak = 3968.164 ; gain = 797.961 ; free physical = 50347 ; free virtual = 319152
+Finished Technology Mapping : Time (s): cpu = 00:02:07 ; elapsed = 00:02:21 . Memory (MB): peak = 3968.035 ; gain = 797.992 ; free physical = 156530 ; free virtual = 367300
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1076,37 +1076,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:29 ; elapsed = 00:02:44 . Memory (MB): peak = 3974.102 ; gain = 803.898 ; free physical = 60135 ; free virtual = 328975
+Finished IO Insertion : Time (s): cpu = 00:02:29 ; elapsed = 00:02:44 . Memory (MB): peak = 3973.973 ; gain = 803.930 ; free physical = 177813 ; free virtual = 388553
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:29 ; elapsed = 00:02:44 . Memory (MB): peak = 3974.102 ; gain = 803.898 ; free physical = 60137 ; free virtual = 328977
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:29 ; elapsed = 00:02:44 . Memory (MB): peak = 3973.973 ; gain = 803.930 ; free physical = 177791 ; free virtual = 388530
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:29 ; elapsed = 00:02:44 . Memory (MB): peak = 3974.102 ; gain = 803.898 ; free physical = 60566 ; free virtual = 329403
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:30 ; elapsed = 00:02:44 . Memory (MB): peak = 3973.973 ; gain = 803.930 ; free physical = 177846 ; free virtual = 388585
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:29 ; elapsed = 00:02:44 . Memory (MB): peak = 3974.102 ; gain = 803.898 ; free physical = 60518 ; free virtual = 329355
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:30 ; elapsed = 00:02:44 . Memory (MB): peak = 3973.973 ; gain = 803.930 ; free physical = 177850 ; free virtual = 388590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:30 ; elapsed = 00:02:44 . Memory (MB): peak = 3974.102 ; gain = 803.898 ; free physical = 60487 ; free virtual = 329324
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:30 ; elapsed = 00:02:44 . Memory (MB): peak = 3973.973 ; gain = 803.930 ; free physical = 177873 ; free virtual = 388612
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:30 ; elapsed = 00:02:45 . Memory (MB): peak = 3974.102 ; gain = 803.898 ; free physical = 60442 ; free virtual = 329279
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:30 ; elapsed = 00:02:44 . Memory (MB): peak = 3973.973 ; gain = 803.930 ; free physical = 177981 ; free virtual = 388720
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1135,18 +1135,18 @@ Report Cell Usage:
 |12    |FDPE               |     6|
 +------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:30 ; elapsed = 00:02:45 . Memory (MB): peak = 3974.102 ; gain = 803.898 ; free physical = 60448 ; free virtual = 329285
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:30 ; elapsed = 00:02:44 . Memory (MB): peak = 3973.973 ; gain = 803.930 ; free physical = 178030 ; free virtual = 388769
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:19 ; elapsed = 00:02:32 . Memory (MB): peak = 3974.102 ; gain = 621.742 ; free physical = 60539 ; free virtual = 329376
-Synthesis Optimization Complete : Time (s): cpu = 00:02:30 ; elapsed = 00:02:45 . Memory (MB): peak = 3974.109 ; gain = 803.898 ; free physical = 60538 ; free virtual = 329375
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:18 ; elapsed = 00:02:32 . Memory (MB): peak = 3973.973 ; gain = 621.773 ; free physical = 178028 ; free virtual = 388768
+Synthesis Optimization Complete : Time (s): cpu = 00:02:30 ; elapsed = 00:02:45 . Memory (MB): peak = 3973.980 ; gain = 803.930 ; free physical = 178029 ; free virtual = 388768
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.19 . Memory (MB): peak = 3974.109 ; gain = 0.000 ; free physical = 59510 ; free virtual = 328357
+Netlist sorting complete. Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3973.980 ; gain = 0.000 ; free physical = 178076 ; free virtual = 388864
 INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4075.203 ; gain = 0.000 ; free physical = 59907 ; free virtual = 328748
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4075.074 ; gain = 0.000 ; free physical = 177341 ; free virtual = 388139
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   HBM_TWO_STACK_INTF => HBM_TWO_STACK_INTF (HBM_REF_CLK(x2), HBM_SNGLBLI_INTF_APB(x2), HBM_SNGLBLI_INTF_AXI(x32)): 1 instance 
@@ -1154,13 +1154,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 69 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:51 ; elapsed = 00:03:07 . Memory (MB): peak = 4075.203 ; gain = 1655.359 ; free physical = 59931 ; free virtual = 328772
+synth_design: Time (s): cpu = 00:02:51 ; elapsed = 00:03:06 . Memory (MB): peak = 4075.074 ; gain = 1640.391 ; free physical = 178187 ; free virtual = 388995
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
-INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_5dca_hbm_inst_0, cache-ID = e11a7e39cb43962c
 INFO: [Coretcl 2-1174] Renamed 14 cell refs.
-INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/bd_5dca_hbm_inst_0_synth_1/bd_5dca_hbm_inst_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file bd_5dca_hbm_inst_0_utilization_synth.rpt -pb bd_5dca_hbm_inst_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 29 10:22:34 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  9 10:29:36 2021...

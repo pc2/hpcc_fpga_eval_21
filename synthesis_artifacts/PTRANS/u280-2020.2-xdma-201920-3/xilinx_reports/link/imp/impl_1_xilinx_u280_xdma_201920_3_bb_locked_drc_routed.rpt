@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Fri Oct 29 12:40:55 2021
+| Date         : Tue Nov  9 13:45:02 2021
 | Host         : alveo0 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_drc -file xilinx_u280_xdma_201920_3_bb_locked_drc_routed.rpt -pb xilinx_u280_xdma_201920_3_bb_locked_drc_routed.pb -rpx xilinx_u280_xdma_201920_3_bb_locked_drc_routed.rpx
 | Design       : pfm_top_wrapper
@@ -1670,17 +1670,17 @@ Related violations: <none>
 
 FLBO-1#2 Warning
 Pblock overlap  - PBlock:base_region
-base_region overlaps with pblock_dynamic_region: 1.37%, pblock_dynamic_SLR2: 8.43%, pblock_ddr4_mem00: 1.37%, pblock_dynamic_SLR0: 4.69%.
+base_region overlaps with pblock_dynamic_region: 1.37%, pblock_dynamic_SLR2: 8.43%, pblock_dynamic_SLR0: 4.69%, pblock_ddr4_mem00: 1.37%.
 Related violations: <none>
 
 FLBO-1#3 Warning
 Pblock overlap  - PBlock:pblock_ddr4_mem00
-pblock_ddr4_mem00 overlaps with pblock_dynamic_region:99.60%, base_region: 4.00%, pblock_dynamic_SLR0:99.60%.
+pblock_ddr4_mem00 overlaps with pblock_dynamic_region:99.60%, pblock_dynamic_SLR0:99.60%, base_region: 4.00%.
 Related violations: <none>
 
 FLBO-1#4 Warning
 Pblock overlap  - PBlock:pblock_dynamic_SLR0
-pblock_dynamic_SLR0 overlaps with pblock_dynamic_region:97.55%, SLR0: 1.82%, base_region: 2.57%, pblock_dynamic_SLR2: 0.43%, pblock_dynamic_SLR1: 0.43%.
+pblock_dynamic_SLR0 overlaps with pblock_dynamic_region:97.55%, pblock_dynamic_SLR2: 0.43%, pblock_dynamic_SLR1: 0.43%, base_region: 2.57%, SLR0: 1.82%.
 Related violations: <none>
 
 FLBO-1#5 Warning
@@ -1690,7 +1690,7 @@ Related violations: <none>
 
 FLBO-1#6 Warning
 Pblock overlap  - PBlock:pblock_dynamic_SLR2
-pblock_dynamic_SLR2 overlaps with pblock_dynamic_region:93.23%, base_region: 4.84%, pblock_dynamic_SLR1: 0.45%, pblock_dynamic_SLR0: 0.45%.
+pblock_dynamic_SLR2 overlaps with pblock_dynamic_region:93.23%, pblock_dynamic_SLR1: 0.45%, pblock_dynamic_SLR0: 0.45%, base_region: 4.84%.
 Related violations: <none>
 
 FLBO-1#7 Warning
@@ -1806,11 +1806,11 @@ pfm_top_i/dynamic_region/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/E
 pfm_top_i/dynamic_region/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/EXT_BSCAN.tms_i,
 pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem00/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_CE_riu,
 pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem00/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_UE_riu,
+pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem00/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[12],
+pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem00/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[13],
 pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem01/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_CE_riu,
 pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem01/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_UE_riu,
 pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem01/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[12],
-pfm_top_i/dynamic_region/transpose0_2/inst/a_block_0_0_U/transpose0_a_block_0_0_ram_U/ADDRARDADDR[6],
-pfm_top_i/dynamic_region/transpose0_2/inst/a_block_0_0_U/transpose0_a_block_0_0_ram_U/ADDRARDADDR[7],
 pfm_top_i/static_region/mgmt_debug_hub/inst/xsdbm/inst/BSCANID.u_xsdbm_id/EXT_BSCAN.reset_i,
 pfm_top_i/static_region/mgmt_debug_hub/inst/xsdbm/inst/BSCANID.u_xsdbm_id/EXT_BSCAN.runtest_i,
 pfm_top_i/static_region/mgmt_debug_hub/inst/xsdbm/inst/BSCANID.u_xsdbm_id/EXT_BSCAN.tck_i,

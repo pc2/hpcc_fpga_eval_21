@@ -1,9 +1,9 @@
 INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
-	Reports: /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/transpose_PQ_PCIE
-	Log files: /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/transpose_PQ_PCIE
-INFO: [v++ 60-1548] Creating build summary session with primary output /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/transpose_PQ_PCIE.xo.compile_summary, at Fri Oct 29 10:13:21 2021
-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Fri Oct 29 10:13:21 2021
-INFO: [v++ 60-1315] Creating rulecheck session with output '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/transpose_PQ_PCIE/v++_compile_transpose_PQ_PCIE_guidance.html', at Fri Oct 29 10:13:22 2021
+	Reports: /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/bin/xilinx_reports/transpose_PQ_PCIE
+	Log files: /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/bin/xilinx_reports/logs/transpose_PQ_PCIE
+INFO: [v++ 60-1548] Creating build summary session with primary output /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/xilinx_tmp_compile/transpose_PQ_PCIE.xo.compile_summary, at Tue Nov  9 10:20:07 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Nov  9 10:20:07 2021
+INFO: [v++ 60-1315] Creating rulecheck session with output '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/bin/xilinx_reports/transpose_PQ_PCIE/v++_compile_transpose_PQ_PCIE_guidance.html', at Tue Nov  9 10:20:08 2021
 INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
 INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
 INFO: [v++ 74-74] Compiler Version string: 2020.2
@@ -11,19 +11,19 @@ INFO: [v++ 60-585] Compiling for hardware target
 INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
 INFO: [v++ 60-242] Creating kernel: 'transpose0'
 
-===>The following messages were generated while  performing high-level synthesis for kernel: transpose0 Log file: /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/transpose_PQ_PCIE/transpose0/vitis_hls.log :
-INFO: [v++ 204-61] Pipelining loop 'Loop 1.1.1'.
-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'Loop 1.1.1'
-INFO: [v++ 204-61] Pipelining loop 'Loop 1.2.1'.
-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'Loop 1.2.1'
-INFO: [v++ 204-61] Pipelining loop 'Loop 1.3.1'.
-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 1.3.1'
+===>The following messages were generated while  performing high-level synthesis for kernel: transpose0 Log file: /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/transpose_PQ_PCIE/transpose0/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 16, Final II = 16, Depth = 93, loop 'Loop 1.1'
+INFO: [v++ 204-61] Pipelining loop 'Loop 1.2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 16, Final II = 16, Depth = 99, loop 'Loop 1.2'
+INFO: [v++ 204-61] Pipelining loop 'Loop 1.3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 16, Final II = 16, Depth = 90, loop 'Loop 1.3'
 INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [v++ 200-789] **** Estimated Fmax: 411.00 MHz
+INFO: [v++ 200-789] **** Estimated Fmax: 388.47 MHz
 INFO: [v++ 60-594] Finished kernel compilation
 INFO: [v++ 60-244] Generating system estimate report...
-INFO: [v++ 60-1092] Generated system estimate report: /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/transpose_PQ_PCIE/system_estimate_transpose_PQ_PCIE.xtxt
+INFO: [v++ 60-1092] Generated system estimate report: /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/bin/xilinx_reports/transpose_PQ_PCIE/system_estimate_transpose_PQ_PCIE.xtxt
 INFO: [v++ 60-586] Created xilinx_tmp_compile/transpose_PQ_PCIE.xo
 INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
-    vitis_analyzer /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/transpose_PQ_PCIE.xo.compile_summary 
-INFO: [v++ 60-791] Total elapsed time: 0h 1m 39s
+    vitis_analyzer /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/xilinx_tmp_compile/transpose_PQ_PCIE.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 59s

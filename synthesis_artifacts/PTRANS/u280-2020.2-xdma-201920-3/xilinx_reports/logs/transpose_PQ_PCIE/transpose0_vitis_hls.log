@@ -6,17 +6,17 @@
 
 source /opt/Xilinx/Vitis_HLS/2020.2/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'meyermar' on host 'alveo0.ethz.ch' (Linux_x86_64 version 4.14.156-U) on Fri Oct 29 10:13:32 CEST 2021
+INFO: [HLS 200-10] For user 'meyermar' on host 'alveo0.ethz.ch' (Linux_x86_64 version 4.14.156-U) on Tue Nov 09 10:20:17 CET 2021
 INFO: [HLS 200-10] On os Ubuntu 18.04.6 LTS
-INFO: [HLS 200-10] In directory '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/transpose_PQ_PCIE/transpose0'
+INFO: [HLS 200-10] In directory '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/transpose_PQ_PCIE/transpose0'
 Sourcing Tcl script 'transpose0.tcl'
 INFO: [HLS 200-1510] Running: open_project transpose0 
-INFO: [HLS 200-10] Creating and opening project '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/transpose_PQ_PCIE/transpose0/transpose0'.
+INFO: [HLS 200-10] Creating and opening project '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/transpose_PQ_PCIE/transpose0/transpose0'.
 INFO: [HLS 200-1510] Running: set_top transpose0 
-INFO: [HLS 200-1510] Running: add_files /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl -cflags  -D XILINX_FPGA -I /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/common -I /dev/shm/meyermar_synth/ptrans/HPCC_FPGA/PTRANS/src/device  
-INFO: [HLS 200-10] Adding design file '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl' to the project
+INFO: [HLS 200-1510] Running: add_files /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl -cflags  -D XILINX_FPGA -I /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/common -I /dev/shm/meyermar_synth/ptrans/HPCC_FPGA/PTRANS/src/device  
+INFO: [HLS 200-10] Adding design file '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl' to the project
 INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
-INFO: [HLS 200-10] Creating and opening solution '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/transpose_PQ_PCIE/transpose0/transpose0/solution'.
+INFO: [HLS 200-10] Creating and opening solution '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/transpose_PQ_PCIE/transpose0/transpose0/solution'.
 INFO: [HLS 200-1505] Using flow_target 'vitis'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
@@ -35,68 +35,75 @@ WARNING: [HLS 200-483] The 'config_rtl -m_axi_conservative_mode' command is depr
 INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
 INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -ipname transpose0 
+INFO: [HLS 200-1510] Running: config_compile -unsafe_math_optimizations 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 189.883 MB.
-INFO: [HLS 200-10] Analyzing design file '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl' ... 
-WARNING: [HLS 207-5270] unknown attribute 'max_global_work_dim' ignored: /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:30:16
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.47 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.26 seconds; current allocated memory: 190.630 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 189.876 MB.
+INFO: [HLS 200-10] Analyzing design file '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl' ... 
+WARNING: [HLS 207-5270] unknown attribute 'max_global_work_dim' ignored: /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:30:16
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.45 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.25 seconds; current allocated memory: 190.624 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
-INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:74:17)
-INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:84:17)
-INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:124:17)
-INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:135:17)
-INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:141:17)
-INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:146:17)
-INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:176:17)
-INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:62:13) has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:62:13)
-INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:109:13) has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:109:13)
-INFO: [HLS 214-115] Multiple burst writes of length 16 and bit width 512 in loop 'anonymous'(/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:167:13) has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:167:13)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.23 seconds. CPU system time: 0.29 seconds. Elapsed time: 4.26 seconds; current allocated memory: 195.063 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 195.064 MB.
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:74:17)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:84:17)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:62:13)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:124:17)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:135:17)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:141:17)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:146:17)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:176:17)
+INFO: [HLS 214-129] Unrolled all 16 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:167:13)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:75:47)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:75:47)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:75:47)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:75:47)
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:109:13) has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:109:13)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:176:31)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:176:31)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:176:31)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:176:31)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 12.56 seconds. CPU system time: 0.35 seconds. Elapsed time: 12.66 seconds; current allocated memory: 210.476 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 210.478 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1.69 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.75 seconds; current allocated memory: 198.357 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2.1 seconds. CPU system time: 0.06 seconds. Elapsed time: 2.15 seconds; current allocated memory: 220.441 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 196.862 MB.
-INFO: [XFORM 203-101] Partitioning array 'a_block' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:41) in dimension 1 with a cyclic factor 16.
-INFO: [XFORM 203-101] Partitioning array 'a_plus_b_block' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:43) in dimension 1 with a cyclic factor 16.
-INFO: [XFORM 203-101] Partitioning array 'a_block' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:41) in dimension 2 completely.
-INFO: [XFORM 203-101] Partitioning array 'a_plus_b_block' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:43) in dimension 2 completely.
-INFO: [XFORM 203-11] Balancing expressions in function 'transpose0' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:32)...25 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.91 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.92 seconds; current allocated memory: 223.632 MB.
-WARNING: [HLS 200-960] Cannot flatten loop 'Loop-1.1' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:56:9) in function 'transpose0' the outer loop is not a perfect loop.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.35 seconds. CPU system time: 0 seconds. Elapsed time: 1.35 seconds; current allocated memory: 216.191 MB.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.2' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:103) in function 'transpose0' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.2.1' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:109) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2.1' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:109) in function 'transpose0' completely with a factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'a_block' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:41) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'a_plus_b_block' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:43) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'transpose0' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:32)...400 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 5.56 seconds. CPU system time: 0 seconds. Elapsed time: 5.56 seconds; current allocated memory: 252.873 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'Loop-1' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:46:5) in function 'transpose0' more than one sub loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
-WARNING: [HLS 200-960] Cannot flatten loop 'Loop-1.2' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:103:9) in function 'transpose0' the outer loop is not a perfect loop.
-Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
-WARNING: [HLS 200-960] Cannot flatten loop 'Loop-1.3' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:161:9) in function 'transpose0' the outer loop is not a perfect loop.
-Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
-WARNING: [HLS 200-960] Cannot flatten loop 'Loop-1' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:46:5) in function 'transpose0' more than one sub loop.
-Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
-INFO: [HLS 200-472] Inferring partial write operation for 'a_block[0][0]' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:87:50)
-INFO: [HLS 200-472] Inferring partial write operation for 'a_plus_b_block[0][0]' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:147:57)
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.6 seconds. CPU system time: 0 seconds. Elapsed time: 1.6 seconds; current allocated memory: 232.384 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'a_block[0]' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:87:50)
+INFO: [HLS 200-472] Inferring partial write operation for 'a_plus_b_block[0]' (/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/transpose_PQ_PCIE_replicated_xilinx.cl:147:57)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 6.86 seconds. CPU system time: 0.01 seconds. Elapsed time: 6.86 seconds; current allocated memory: 276.713 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'transpose0' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'transpose0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP48 latency (root=empty_30) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP48 latency (root=empty_51) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP48 latency (root=empty_87) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1.1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'Loop 1.1.1'
-INFO: [SCHED 204-61] Pipelining loop 'Loop 1.2.1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'Loop 1.2.1'
-INFO: [SCHED 204-61] Pipelining loop 'Loop 1.3.1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 1.3.1'
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul1167) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul1271617) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 16, Final II = 16, Depth = 93, loop 'Loop 1.1'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 16, Final II = 16, Depth = 99, loop 'Loop 1.2'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 16, Final II = 16, Depth = 90, loop 'Loop 1.3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6.37 seconds. CPU system time: 0.03 seconds. Elapsed time: 6.41 seconds; current allocated memory: 244.790 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 10.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.49 seconds; current allocated memory: 298.163 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 6.41 seconds. CPU system time: 0.02 seconds. Elapsed time: 6.44 seconds; current allocated memory: 258.320 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 11.14 seconds. CPU system time: 0.03 seconds. Elapsed time: 11.16 seconds; current allocated memory: 324.868 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'transpose0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -111,27 +118,25 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'transpose0/width_in_blocks
 INFO: [RTGEN 206-500] Setting interface mode on port 'transpose0/height_in_blocks' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'transpose0' to 's_axilite & ap_ctrl_chain'.
 INFO: [RTGEN 206-100] Bundling port 'A', 'B', 'A_out', 'offset', 'number_of_blocks', 'width_in_blocks', 'height_in_blocks' to AXI-Lite port control.
-INFO: [RTGEN 206-104] Estimated max fanout for 'transpose0' is 8307 from HDL expression: (1'b1 == ap_CS_fsm_state232)
+INFO: [RTGEN 206-104] Estimated max fanout for 'transpose0' is 9056 from HDL expression: ((icmp_ln103_reg_25714 == 1'd0) & (1'b0 == ap_block_pp1_stage2_11001) & (1'b1 == ap_CS_fsm_pp1_stage2))
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 16 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_32ns_32ns_46_2_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_mul_8ns_24s_24_4_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_1632_32_1_1': 16 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_1664_32_1_1': 16 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32ns_32_36_seq_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32ns_32_36_seq_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'transpose0'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7.7 seconds. CPU system time: 0.02 seconds. Elapsed time: 7.72 seconds; current allocated memory: 281.994 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 6.99 seconds. CPU system time: 0.05 seconds. Elapsed time: 7.05 seconds; current allocated memory: 354.584 MB.
 INFO: [RTMG 210-282] Generating pipelined core: 'transpose0_urem_32ns_32ns_32_36_seq_1_div'
 INFO: [RTMG 210-282] Generating pipelined core: 'transpose0_udiv_32ns_32ns_32_36_seq_1_div'
 INFO: [RTMG 210-282] Generating pipelined core: 'transpose0_mul_32ns_32ns_46_2_1_Multiplier_0'
-INFO: [RTMG 210-278] Implementing memory 'transpose0_a_block_0_0_ram (RAM)' using auto RAMs.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 21.36 seconds. CPU system time: 0.13 seconds. Elapsed time: 21.48 seconds; current allocated memory: 337.546 MB.
+INFO: [RTMG 210-278] Implementing memory 'transpose0_a_block_0_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 13.56 seconds. CPU system time: 0.21 seconds. Elapsed time: 13.77 seconds; current allocated memory: 437.315 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for transpose0.
 INFO: [VLOG 209-307] Generating Verilog RTL for transpose0.
 INFO: [HLS 200-1603] Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 411.00 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 51.04 seconds. CPU system time: 0.59 seconds. Elapsed time: 51.13 seconds; current allocated memory: 338.253 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 388.47 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 71.19 seconds. CPU system time: 0.77 seconds. Elapsed time: 71.46 seconds; current allocated memory: 439.298 MB.
 INFO: [HLS 200-1510] Running: export_design 
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 
@@ -150,9 +155,9 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'transpose0_ap_fad
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 29 10:14:42 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  9 10:21:48 2021...
 INFO: [HLS 200-802] Generated output file transpose0/solution/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 17.7 seconds. CPU system time: 1.69 seconds. Elapsed time: 24.11 seconds; current allocated memory: 343.837 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 17.39 seconds. CPU system time: 1.67 seconds. Elapsed time: 24.39 seconds; current allocated memory: 443.941 MB.
 HLS completed successfully
-INFO: [HLS 200-112] Total CPU user time: 70.73 seconds. Total CPU system time: 2.69 seconds. Total elapsed time: 76.76 seconds; peak allocated memory: 337.546 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Fri Oct 29 10:14:48 2021...
+INFO: [HLS 200-112] Total CPU user time: 90.5 seconds. Total CPU system time: 2.9 seconds. Total elapsed time: 97.35 seconds; peak allocated memory: 437.315 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Nov  9 10:21:55 2021...

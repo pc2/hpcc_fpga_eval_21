@@ -9,12 +9,12 @@
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
 source pfm_dynamic_regslice_pipe_ctrl_mgntpf_0.tcl -notrace
-INFO: Dispatch client connection id - 33699
+INFO: Dispatch client connection id - 33183
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_transpose0_1_0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_transpose0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/cache/xilinx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
 Command: synth_design -top pfm_dynamic_regslice_pipe_ctrl_mgntpf_0 -part xcu280-fsvh2892-2L-e -mode out_of_context
@@ -24,12 +24,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
 INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 72094
+INFO: [Synth 8-7075] Helper process launched with PID 3341
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3328.797 ; gain = 175.719 ; free physical = 84746 ; free virtual = 353473
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3328.828 ; gain = 175.719 ; free physical = 155513 ; free virtual = 366263
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_regslice_pipe_ctrl_mgntpf_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/synth/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axi_register_slice' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_regslice_pipe_ctrl_mgntpf_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/synth/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axi_register_slice' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
@@ -141,7 +141,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axi_registe
 	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 25 - type: integer 
@@ -233,8 +233,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (1#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (1#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 25 - type: integer 
@@ -326,8 +326,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (2#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (2#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_DATA_WIDTH bound to: 28 - type: integer 
 	Parameter C_CHANNEL bound to: 0 - type: integer 
@@ -344,7 +344,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr' 
 	Parameter P_RESP_MIDDLE2_LATENCY bound to: 8 - type: integer 
 	Parameter P_FWD_DEST_LATENCY bound to: 8 - type: integer 
 	Parameter P_RESP_DEST_LATENCY bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_source_region_slr' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_source_region_slr' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_REG_CONFIG bound to: 15 - type: integer 
 	Parameter C_CHANNEL bound to: 0 - type: integer 
@@ -357,8 +357,8 @@ INFO: [Synth 8-6157] synthesizing module 'FDCE' [/opt/Xilinx/Vivado/2020.2/scrip
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'FDCE' (3#1) [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:13508]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_source_region_slr' (4#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_source_region_slr' (4#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_DATA_WIDTH bound to: 28 - type: integer 
 	Parameter C_CHANNEL bound to: 0 - type: integer 
@@ -370,8 +370,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_regi
 	Parameter P_REPLICATION bound to: 1 - type: integer 
 	Parameter P_FORWARD bound to: 0 - type: integer 
 	Parameter P_RESPONSE bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr' (5#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr' (5#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_REG_CONFIG bound to: 15 - type: integer 
 	Parameter C_CHANNEL bound to: 0 - type: integer 
@@ -379,17 +379,17 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region
 	Parameter C_SLR_WIDTH bound to: 28 - type: integer 
 	Parameter C_PIPELINES bound to: 2 - type: integer 
 	Parameter C_SOURCE_LATENCY bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
 	Parameter C_FIFO_WIDTH bound to: 28 - type: integer 
 	Parameter C_FIFO_SIZE bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_srl_rtl' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:1474]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_srl_rtl' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:1474]
 	Parameter C_A_WIDTH bound to: 5 - type: integer 
 	Parameter P_SRLDEPTH bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_srl_rtl' (6#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:1474]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo' (7#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr' (8#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_multi_slr' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_srl_rtl' (6#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:1474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo' (7#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr' (8#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_multi_slr' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_CHANNEL bound to: 0 - type: integer 
@@ -406,15 +406,15 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr__
 	Parameter P_RESP_MIDDLE2_LATENCY bound to: 8 - type: integer 
 	Parameter P_FWD_DEST_LATENCY bound to: 8 - type: integer 
 	Parameter P_RESP_DEST_LATENCY bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_REG_CONFIG bound to: 15 - type: integer 
 	Parameter C_CHANNEL bound to: 0 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_SLR_WIDTH bound to: 36 - type: integer 
 	Parameter C_PIPELINES bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_CHANNEL bound to: 0 - type: integer 
@@ -426,8 +426,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_regi
 	Parameter P_REPLICATION bound to: 1 - type: integer 
 	Parameter P_FORWARD bound to: 0 - type: integer 
 	Parameter P_RESPONSE bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_REG_CONFIG bound to: 15 - type: integer 
 	Parameter C_CHANNEL bound to: 0 - type: integer 
@@ -435,13 +435,13 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region
 	Parameter C_SLR_WIDTH bound to: 36 - type: integer 
 	Parameter C_PIPELINES bound to: 2 - type: integer 
 	Parameter C_SOURCE_LATENCY bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
 	Parameter C_FIFO_WIDTH bound to: 36 - type: integer 
 	Parameter C_FIFO_SIZE bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized1' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized1' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_DATA_WIDTH bound to: 2 - type: integer 
 	Parameter C_CHANNEL bound to: 1 - type: integer 
@@ -458,15 +458,15 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr__
 	Parameter P_RESP_MIDDLE2_LATENCY bound to: 8 - type: integer 
 	Parameter P_FWD_DEST_LATENCY bound to: 8 - type: integer 
 	Parameter P_RESP_DEST_LATENCY bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized1' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized1' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_REG_CONFIG bound to: 15 - type: integer 
 	Parameter C_CHANNEL bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 2 - type: integer 
 	Parameter C_SLR_WIDTH bound to: 2 - type: integer 
 	Parameter C_PIPELINES bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized1' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized1' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized1' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized1' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_DATA_WIDTH bound to: 2 - type: integer 
 	Parameter C_CHANNEL bound to: 1 - type: integer 
@@ -478,8 +478,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_regi
 	Parameter P_REPLICATION bound to: 1 - type: integer 
 	Parameter P_FORWARD bound to: 0 - type: integer 
 	Parameter P_RESPONSE bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized1' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized1' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized1' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized1' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_REG_CONFIG bound to: 15 - type: integer 
 	Parameter C_CHANNEL bound to: 1 - type: integer 
@@ -487,13 +487,13 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region
 	Parameter C_SLR_WIDTH bound to: 2 - type: integer 
 	Parameter C_PIPELINES bound to: 2 - type: integer 
 	Parameter C_SOURCE_LATENCY bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized1' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized1' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
 	Parameter C_FIFO_WIDTH bound to: 2 - type: integer 
 	Parameter C_FIFO_SIZE bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized1' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized1' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized1' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized1' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized1' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized1' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_DATA_WIDTH bound to: 34 - type: integer 
 	Parameter C_CHANNEL bound to: 1 - type: integer 
@@ -510,15 +510,15 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_multi_slr__
 	Parameter P_RESP_MIDDLE2_LATENCY bound to: 8 - type: integer 
 	Parameter P_FWD_DEST_LATENCY bound to: 8 - type: integer 
 	Parameter P_RESP_DEST_LATENCY bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_REG_CONFIG bound to: 15 - type: integer 
 	Parameter C_CHANNEL bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 34 - type: integer 
 	Parameter C_SLR_WIDTH bound to: 34 - type: integer 
 	Parameter C_PIPELINES bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized2' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_source_region_slr__parameterized2' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2854]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_DATA_WIDTH bound to: 34 - type: integer 
 	Parameter C_CHANNEL bound to: 1 - type: integer 
@@ -530,8 +530,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_middle_regi
 	Parameter P_REPLICATION bound to: 1 - type: integer 
 	Parameter P_FORWARD bound to: 0 - type: integer 
 	Parameter P_RESPONSE bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized2' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_middle_region_slr__parameterized2' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2713]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
 	Parameter C_FAMILY bound to: virtexuplusHBM - type: string 
 	Parameter C_REG_CONFIG bound to: 15 - type: integer 
 	Parameter C_CHANNEL bound to: 1 - type: integer 
@@ -539,48 +539,48 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_dest_region
 	Parameter C_SLR_WIDTH bound to: 34 - type: integer 
 	Parameter C_PIPELINES bound to: 2 - type: integer 
 	Parameter C_SOURCE_LATENCY bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
 	Parameter C_FIFO_WIDTH bound to: 34 - type: integer 
 	Parameter C_FIFO_SIZE bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized2' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized2' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized2' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axi_register_slice' (10#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
-INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_regslice_pipe_ctrl_mgntpf_0' (11#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/synth/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axic_reg_srl_fifo__parameterized2' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3442]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_dest_region_slr__parameterized2' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_multi_slr__parameterized2' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:2201]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axi_register_slice' (10#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/pfm_dynamic/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_regslice_pipe_ctrl_mgntpf_0' (11#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/synth/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3382.703 ; gain = 229.625 ; free physical = 81713 ; free virtual = 350444
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3382.734 ; gain = 229.625 ; free physical = 155199 ; free virtual = 365951
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3398.547 ; gain = 245.469 ; free physical = 80093 ; free virtual = 348834
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3398.578 ; gain = 245.469 ; free physical = 155755 ; free virtual = 366502
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3398.547 ; gain = 245.469 ; free physical = 80088 ; free virtual = 348829
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3398.578 ; gain = 245.469 ; free physical = 155755 ; free virtual = 366502
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3409.453 ; gain = 0.000 ; free physical = 79669 ; free virtual = 348398
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3410.484 ; gain = 0.000 ; free physical = 155089 ; free virtual = 365839
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1/dont_touch.xdc]
-Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_clocks.xdc] for cell 'inst'
-Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_clocks.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_propImpl.xdc].
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_clocks.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3533.984 ; gain = 0.000 ; free physical = 70538 ; free virtual = 339276
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3532.047 ; gain = 0.000 ; free physical = 156785 ; free virtual = 367548
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3536.953 ; gain = 2.969 ; free physical = 70241 ; free virtual = 338979
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3535.016 ; gain = 2.969 ; free physical = 156757 ; free virtual = 367520
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3536.953 ; gain = 383.875 ; free physical = 77485 ; free virtual = 346251
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3535.016 ; gain = 381.906 ; free physical = 154549 ; free virtual = 365318
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -588,17 +588,17 @@ Start Loading Part and Timing Information
 Loading part: xcu280-fsvh2892-2L-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3536.953 ; gain = 383.875 ; free physical = 77477 ; free virtual = 346243
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3535.016 ; gain = 381.906 ; free physical = 154571 ; free virtual = 365339
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3536.953 ; gain = 383.875 ; free physical = 77438 ; free virtual = 346204
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3535.016 ; gain = 381.906 ; free physical = 154553 ; free virtual = 365322
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3536.953 ; gain = 383.875 ; free physical = 76598 ; free virtual = 345365
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3535.016 ; gain = 381.906 ; free physical = 154142 ; free virtual = 364924
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -641,25 +641,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3536.953 ; gain = 383.875 ; free physical = 73898 ; free virtual = 342677
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3535.016 ; gain = 381.906 ; free physical = 153843 ; free virtual = 364633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 3847.469 ; gain = 694.391 ; free physical = 53769 ; free virtual = 322581
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 3847.180 ; gain = 694.070 ; free physical = 181376 ; free virtual = 392186
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:47 . Memory (MB): peak = 3874.500 ; gain = 721.422 ; free physical = 52049 ; free virtual = 320849
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:47 . Memory (MB): peak = 3873.211 ; gain = 720.102 ; free physical = 184776 ; free virtual = 395633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3882.508 ; gain = 729.430 ; free physical = 51077 ; free virtual = 319944
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:49 . Memory (MB): peak = 3881.219 ; gain = 728.109 ; free physical = 185439 ; free virtual = 396376
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -677,37 +677,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 3885.477 ; gain = 732.398 ; free physical = 52083 ; free virtual = 320951
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 3884.188 ; gain = 731.078 ; free physical = 184438 ; free virtual = 395312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 3885.477 ; gain = 732.398 ; free physical = 52083 ; free virtual = 320951
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 3884.188 ; gain = 731.078 ; free physical = 184438 ; free virtual = 395312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 3885.477 ; gain = 732.398 ; free physical = 52033 ; free virtual = 320911
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 3884.188 ; gain = 731.078 ; free physical = 184420 ; free virtual = 395294
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 3885.477 ; gain = 732.398 ; free physical = 52033 ; free virtual = 320912
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 3884.188 ; gain = 731.078 ; free physical = 184420 ; free virtual = 395294
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 3885.477 ; gain = 732.398 ; free physical = 52032 ; free virtual = 320937
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 3884.188 ; gain = 731.078 ; free physical = 185120 ; free virtual = 395994
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 3885.477 ; gain = 732.398 ; free physical = 52048 ; free virtual = 320956
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 3884.188 ; gain = 731.078 ; free physical = 185118 ; free virtual = 395992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -749,29 +749,29 @@ Report Cell Usage:
 |10    |FDSE    |   100|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 3885.477 ; gain = 732.398 ; free physical = 52074 ; free virtual = 320983
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 3884.188 ; gain = 731.078 ; free physical = 185117 ; free virtual = 395991
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 3885.477 ; gain = 593.992 ; free physical = 52206 ; free virtual = 321121
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 3885.484 ; gain = 732.398 ; free physical = 52206 ; free virtual = 321121
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 3884.188 ; gain = 594.641 ; free physical = 185168 ; free virtual = 396042
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 3884.195 ; gain = 731.078 ; free physical = 185168 ; free virtual = 396042
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3885.484 ; gain = 0.000 ; free physical = 52151 ; free virtual = 321078
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3884.195 ; gain = 0.000 ; free physical = 185447 ; free virtual = 396340
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3946.922 ; gain = 0.000 ; free physical = 51976 ; free virtual = 320914
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3946.633 ; gain = 0.000 ; free physical = 187437 ; free virtual = 398342
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 73 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:08 . Memory (MB): peak = 3946.922 ; gain = 1513.203 ; free physical = 52774 ; free virtual = 321600
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:09 . Memory (MB): peak = 3946.633 ; gain = 1521.883 ; free physical = 187511 ; free virtual = 398417
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
-INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pfm_dynamic_regslice_pipe_ctrl_mgntpf_0, cache-ID = f9c4e64bfcc811e2
 INFO: [Coretcl 2-1174] Renamed 154 cell refs.
-INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_synth_1/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_utilization_synth.rpt -pb pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 29 10:21:58 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  9 10:29:34 2021...
