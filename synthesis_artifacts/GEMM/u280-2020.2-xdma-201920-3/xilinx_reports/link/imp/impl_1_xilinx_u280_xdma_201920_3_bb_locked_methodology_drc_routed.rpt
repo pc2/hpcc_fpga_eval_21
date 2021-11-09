@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Fri Oct 29 15:40:21 2021
+| Date         : Tue Nov  9 02:28:11 2021
 | Host         : alveo0 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_methodology -file xilinx_u280_xdma_201920_3_bb_locked_methodology_drc_routed.rpt -pb xilinx_u280_xdma_201920_3_bb_locked_methodology_drc_routed.pb -rpx xilinx_u280_xdma_201920_3_bb_locked_methodology_drc_routed.rpx
 | Design       : pfm_top_wrapper
@@ -23,10 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 150
+             Violations found: 152
 +-----------+------------------+-------------------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                                       | Violations |
 +-----------+------------------+-------------------------------------------------------------------+------------+
+| TIMING-1  | Critical Warning | Invalid clock waveform on Clock Modifying Block                   | 1          |
 | TIMING-3  | Critical Warning | Invalid primary clock on Clock Modifying Block                    | 36         |
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree                | 5          |
 | TIMING-14 | Critical Warning | LUT on the clock tree                                             | 6          |
@@ -39,6 +40,7 @@ Table of Contents
 | TIMING-10 | Warning          | Missing property on synchronizer                                  | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                                     | 1          |
 | TIMING-24 | Warning          | Overridden Max delay datapath only                                | 1          |
+| TIMING-30 | Warning          | Sub-optimal master source pin selection for generated clock       | 1          |
 | TIMING-47 | Warning          | False path or asynchronous clock group between synchronous clocks | 4          |
 | XDCB-2    | Warning          | Clock defined on multiple objects                                 | 1          |
 | XDCC-1    | Warning          | Scoped Clock constraint overwritten with the same name            | 2          |
@@ -54,6 +56,11 @@ Table of Contents
 
 2. REPORT DETAILS
 -----------------
+TIMING-1#1 Critical Warning
+Invalid clock waveform on Clock Modifying Block  
+Invalid clock waveform for clock clk_out1_pfm_top_clkwiz_kernel_0 specified at a MMCME4_ADV output pfm_top_i/static_region/base_clocking/clkwiz_kernel/inst/CLK_CORE_DRP_I/clk_inst/mmcme4_adv_inst/CLKOUT0 that does not match the CMB settings. The waveform of the clock is 5 {0 2.5}. The expected waveform is 3.333 {0 1.667}
+Related violations: <none>
+
 TIMING-3#1 Critical Warning
 Invalid primary clock on Clock Modifying Block  
 A primary clock pfm_top_i/static_region/base_clocking/clkwiz_pcie/inst/clk_in1 is created on the output pin or net pfm_top_i/static_region/base_clocking/clkwiz_pcie/inst/clk_in1 of a Clock Modifying Block
@@ -912,6 +919,11 @@ Related violations: <none>
 TIMING-24#1 Warning
 Overridden Max delay datapath only  
 An asynchronous set_clock_groups or a set_false path (see constraint position 161 in the Timing Constraints window in Vivado IDE) between clocks clk_out1_pfm_top_clkwiz_sysclks_0 and pfm_top_i/static_region/brd_mgmt_scheduler/mdm_board_control/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O overrides a set_max_delay -datapath_only (position 337). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-30#1 Warning
+Sub-optimal master source pin selection for generated clock  
+The generated clock clk_out1_pfm_top_clkwiz_kernel_0 has a sub-optimal master source pin selection, timing can be pessimistic
 Related violations: <none>
 
 TIMING-47#1 Warning

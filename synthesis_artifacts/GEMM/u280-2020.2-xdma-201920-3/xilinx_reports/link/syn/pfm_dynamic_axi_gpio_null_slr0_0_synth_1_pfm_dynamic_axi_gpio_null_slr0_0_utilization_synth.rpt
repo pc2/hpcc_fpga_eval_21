@@ -1,13 +1,13 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Fri Oct 29 10:45:51 2021
+| Date         : Mon Nov  8 16:32:57 2021
 | Host         : alveo0 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : report_utilization -file pfm_dynamic_util_and2_hbm_0_utilization_synth.rpt -pb pfm_dynamic_util_and2_hbm_0_utilization_synth.pb
-| Design       : pfm_dynamic_util_and2_hbm_0
+| Command      : report_utilization -file pfm_dynamic_axi_gpio_null_slr0_0_utilization_synth.rpt -pb pfm_dynamic_axi_gpio_null_slr0_0_utilization_synth.pb
+| Design       : pfm_dynamic_axi_gpio_null_slr0_0
 | Device       : xcu280fsvh2892-2L
 | Design State : Synthesized
--------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -35,11 +35,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |    1 |     0 |   1303680 | <0.01 |
-|   LUT as Logic          |    1 |     0 |   1303680 | <0.01 |
+| CLB LUTs*               |  130 |     0 |   1303680 | <0.01 |
+|   LUT as Logic          |  130 |     0 |   1303680 | <0.01 |
 |   LUT as Memory         |    0 |     0 |    600960 |  0.00 |
-| CLB Registers           |    0 |     0 |   2607360 |  0.00 |
-|   Register as Flip Flop |    0 |     0 |   2607360 |  0.00 |
+| CLB Registers           |  382 |     0 |   2607360 |  0.01 |
+|   Register as Flip Flop |  382 |     0 |   2607360 |  0.01 |
 |   Register as Latch     |    0 |     0 |   2607360 |  0.00 |
 | CARRY8                  |    0 |     0 |    162960 |  0.00 |
 | F7 Muxes                |    0 |     0 |    651840 |  0.00 |
@@ -63,8 +63,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 33    |          Yes |         Set |            - |
+| 349   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -162,7 +162,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |    1 |                 CLB |
+| FDRE     |  349 |            Register |
+| LUT5     |  107 |                 CLB |
+| FDSE     |   33 |            Register |
+| LUT2     |   10 |                 CLB |
+| LUT6     |    7 |                 CLB |
+| LUT4     |    7 |                 CLB |
+| LUT3     |    7 |                 CLB |
+| LUT1     |    2 |                 CLB |
 +----------+------+---------------------+
 
 

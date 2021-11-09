@@ -3407,9 +3407,9 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xrcserver v.2020.2 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Fri Oct 29 10:38:38 2021</td></tr>
+<tr><td><b>Date</b></td><td>Mon Nov  8 16:25:19 2021</td></tr>
 <tr><td><b>Host</b></td><td>alveo0 running 64-bit Ubuntu 18.04.6 LTS</td></tr>
-<tr><td><b>Command</b></td><td>v++  -DXILINX_FPGA --report_dir=/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports --log_dir=/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs -O3 -t hw -I/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/common/ -I/dev/shm/meyermar_synth/gemm/HPCC_FPGA/GEMM/src/device --platform xilinx_u280_xdma_201920_3 -R2 -c -j 40 --hls.pre_tcl /mnt/scratch/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/GEMM/u280/settings.compile.xilinx.u280.tcl -o xilinx_tmp_compile/gemm_base.xo /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl </td></tr>
+<tr><td><b>Command</b></td><td>v++  -DXILINX_FPGA --report_dir=/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports --log_dir=/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs -O3 -t hw -I/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/common/ -I/dev/shm/meyermar_synth/gemm/HPCC_FPGA/GEMM/src/device --platform xilinx_u280_xdma_201920_3 -R2 -c -j 40 --hls.pre_tcl /mnt/scratch/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/GEMM/u280/settings.compile.xilinx.u280.tcl --kernel_frequency 200 -o xilinx_tmp_compile/gemm_base.xo /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl </td></tr>
 </table></center><br>
 <table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
 <tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
@@ -3417,7 +3417,7 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#CONFIG FILE DETAILS">3 CONFIG FILE DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 31
+<pre>Violations found: 24
 </pre>
 <pre>Rule Specs Violated: 4
 </pre>
@@ -3435,123 +3435,13 @@ window.onload = function () { addSorting(); }
 <th align="left" width="380">Resolution</th>
 </tr>
 <tr>
-<td align="left">22</td>
-<td align="left">Throughput</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>).
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">23</td>
-<td align="left">Throughput</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>).
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">24</td>
-<td align="left">Throughput</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>).
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">25</td>
-<td align="left">Throughput</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>).
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">26</td>
-<td align="left">Throughput</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>).
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">27</td>
-<td align="left">Throughput</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=426">gemm_base_replicated_xilinx.cl</a>).
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">28</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 16, Depth = 171, loop 'Loop 1.2'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">29</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.gemm0.Interface</td>
-<td align="left">Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">30</td>
-<td align="left">Kernel</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.gemm0.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">31</td>
-<td align="left">Kernel</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.gemm0.Kernel</td>
-<td align="left">**** Estimated Fmax: 344.24 MHz
-</td>
-<td align="left"></td>
-</tr>
-<tr>
 <td align="left">1</td>
 <td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.gemm0.Interface</td>
-<td align="left">Multiple burst reads of length 16 and bit width 512 has been inferred on port 'gmem0' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=346">gemm_base_replicated_xilinx.cl</a>)
+<td align="left">Multiple burst reads of length 16 and bit width 512 has been inferred on port 'gmem0' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=347">gemm_base_replicated_xilinx.cl</a>)
 </td>
 <td align="left"></td>
 </tr>
@@ -3562,7 +3452,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.gemm0.Interface</td>
-<td align="left">Multiple burst reads of length 16 and bit width 512 has been inferred on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=346">gemm_base_replicated_xilinx.cl</a>)
+<td align="left">Multiple burst reads of length 16 and bit width 512 has been inferred on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=347">gemm_base_replicated_xilinx.cl</a>)
 </td>
 <td align="left"></td>
 </tr>
@@ -3573,7 +3463,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.gemm0.Interface</td>
-<td align="left">Multiple burst reads of length 16 and bit width 512 has been inferred on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=405">gemm_base_replicated_xilinx.cl</a>)
+<td align="left">Multiple burst reads of length 16 and bit width 512 has been inferred on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=406">gemm_base_replicated_xilinx.cl</a>)
 </td>
 <td align="left"></td>
 </tr>
@@ -3584,7 +3474,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.gemm0.Interface</td>
-<td align="left">Multiple burst writes of length 16 and bit width 512 has been inferred on port 'gmem3' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=405">gemm_base_replicated_xilinx.cl</a>)
+<td align="left">Multiple burst writes of length 16 and bit width 512 has been inferred on port 'gmem3' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=406">gemm_base_replicated_xilinx.cl</a>)
 </td>
 <td align="left"></td>
 </tr>
@@ -3595,7 +3485,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Latency Related</td>
 <td align="left">Accelerator.gemm0.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-1.1.1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=316">gemm_base_replicated_xilinx.cl</a>) in function 'gemm0' more than one sub loop.
+<td align="left">Cannot flatten loop 'Loop-1.1.1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=317">gemm_base_replicated_xilinx.cl</a>) in function 'gemm0' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
 </tr>
@@ -3606,20 +3496,20 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Latency Related</td>
 <td align="left">Accelerator.gemm0.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-1.1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=310">gemm_base_replicated_xilinx.cl</a>) in function 'gemm0' more than one sub loop.
+<td align="left">Cannot flatten loop 'Loop-1.1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=311">gemm_base_replicated_xilinx.cl</a>) in function 'gemm0' more than one sub loop.
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
 </tr>
 <tr>
 <td align="left">7</td>
 <td align="left">Throughput</td>
-<td align="left">warning</td>
+<td align="left">advisory</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'register_gemm' (function 'register_gemm'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('c_out_addr_write_ln140', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=140">gemm_base_replicated_xilinx.cl</a>) of variable 'sum', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=129">gemm_base_replicated_xilinx.cl</a> on array 'c_out' and 'load' operation ('c_out_load', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=126">gemm_base_replicated_xilinx.cl</a>) on array 'c_out'.
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 27, loop 'Loop 1'
 </td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">8</td>
@@ -3628,7 +3518,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'register_gemm' (function 'register_gemm'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('c_out_addr_write_ln140', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=140">gemm_base_replicated_xilinx.cl</a>) of variable 'sum', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=129">gemm_base_replicated_xilinx.cl</a> on array 'c_out' and 'load' operation ('c_out_load', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=126">gemm_base_replicated_xilinx.cl</a>) on array 'c_out'.
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
@@ -3639,7 +3529,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'register_gemm' (function 'register_gemm'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('c_out_addr_write_ln140', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=140">gemm_base_replicated_xilinx.cl</a>) of variable 'sum', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=129">gemm_base_replicated_xilinx.cl</a> on array 'c_out' and 'load' operation ('c_out_load', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=126">gemm_base_replicated_xilinx.cl</a>) on array 'c_out'.
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
@@ -3650,7 +3540,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'register_gemm' (function 'register_gemm'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('c_out_addr_write_ln140', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=140">gemm_base_replicated_xilinx.cl</a>) of variable 'sum', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=129">gemm_base_replicated_xilinx.cl</a> on array 'c_out' and 'load' operation ('c_out_load', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=126">gemm_base_replicated_xilinx.cl</a>) on array 'c_out'.
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
@@ -3661,7 +3551,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'register_gemm' (function 'register_gemm'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between 'store' operation ('c_out_addr_write_ln140', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=140">gemm_base_replicated_xilinx.cl</a>) of variable 'sum', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=129">gemm_base_replicated_xilinx.cl</a> on array 'c_out' and 'load' operation ('c_out_load', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=126">gemm_base_replicated_xilinx.cl</a>) on array 'c_out'.
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
@@ -3672,31 +3562,31 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'register_gemm' (function 'register_gemm'): Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1) between 'store' operation ('c_out_addr_write_ln140', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=140">gemm_base_replicated_xilinx.cl</a>) of variable 'sum', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=129">gemm_base_replicated_xilinx.cl</a> on array 'c_out' and 'load' operation ('c_out_load', <a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=126">gemm_base_replicated_xilinx.cl</a>) on array 'c_out'.
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
 <tr>
 <td align="left">13</td>
 <td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 24, Depth = 51, function 'register_gemm'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">14</td>
-<td align="left">Throughput</td>
 <td align="left">warning</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>).
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=360">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.gemm0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 16, Depth = 91, loop 'Loop 1.1.1'
+</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">15</td>
@@ -3705,7 +3595,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>).
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
@@ -3716,7 +3606,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>).
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
@@ -3727,7 +3617,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>).
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
@@ -3738,7 +3628,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>).
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
@@ -3749,20 +3639,20 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.1.1'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem1' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=359">gemm_base_replicated_xilinx.cl</a>).
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>).
 </td>
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
 <tr>
 <td align="left">20</td>
 <td align="left">Throughput</td>
-<td align="left">advisory</td>
+<td align="left">warning</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 16, Depth = 92, loop 'Loop 1.1.1'
+<td align="left">The II Violation in module 'gemm0' (loop 'Loop 1.2'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>) and bus read on port 'gmem2' (<a href="file:///dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/gemm_base_replicated_xilinx.cl#line=427">gemm_base_replicated_xilinx.cl</a>).
 </td>
-<td align="left"></td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
 </tr>
 <tr>
 <td align="left">21</td>
@@ -3771,7 +3661,40 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.gemm0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 24, Depth = 52, loop 'Loop 1.1.2'
+<td align="left">Pipelining result : Target II = 1, Final II = 16, Depth = 168, loop 'Loop 1.2'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.gemm0.Interface</td>
+<td align="left">Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left">Kernel</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.gemm0.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">24</td>
+<td align="left">Kernel</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.gemm0.Kernel</td>
+<td align="left">**** Estimated Fmax: 273.97 MHz
 </td>
 <td align="left"></td>
 </tr>
