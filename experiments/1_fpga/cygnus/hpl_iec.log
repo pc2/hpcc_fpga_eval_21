@@ -12,7 +12,7 @@ create child processes) is strongly discouraged.
 
 The process that invoked fork was:
 
-  Local host:          [[47415,1],0] (PID 102209)
+  Local host:          [[16675,1],0] (PID 96078)
 
 If you are *absolutely sure* that your application will successfully
 and correctly survive a call to fork(), you may disable this warning
@@ -26,21 +26,21 @@ Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
 Device Name:   p520_max_sg280h : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
 -------------------------------------------------------------
 -------------------------------------------------------------
-FPGA Setup:../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/hpl_torus_PCIE.aocx
+FPGA Setup:../../../scripts/synthesis/LINPACK_SP/tmp/build/19.4-Nallatech_520N_IEC_B9_SB3_R5_s1_ni/bin/hpl_torus_IEC.aocx
 Prepared FPGA successfully for global Execution!
 -------------------------------------------------------------
 Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
 Version: 2.4
 MPI Version:  3.1
-Config. Time: Fri Nov 05 15:33:20 UTC 2021
+Config. Time: Tue Nov 02 10:28:11 UTC 2021
 Git Commit:   b678d6d-dirty
 
 Summary:
 Block Size                    512
-Communication Type            PCIE
+Communication Type            IEC
 Data Type                     cl_float
 Emulate                       No
-Kernel File                   ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/hpl_torus_PCIE.aocx
+Kernel File                   ../../../scripts/synthesis/LINPACK_SP/tmp/build/19.4-Nallatech_520N_IEC_B9_SB3_R5_s1_ni/bin/hpl_torus_IEC.aocx
 Kernel Replications           5
 MPI Ranks                     1
 Matrix Size                   24576
@@ -51,7 +51,7 @@ Device                        p520_max_sg280h : BittWare Stratix 10 OpenCL platf
 -------------------------------------------------------------
 Start benchmark using the given configuration. Generating data...
 -------------------------------------------------------------
-Generation Time: 2.00734e+01 s
+Generation Time: 1.94163e+01 s
 -------------------------------------------------------------
 Execute benchmark kernel...
 -------------------------------------------------------------
@@ -75,30 +75,30 @@ Torus 0,0Start!
 Torus 0,0End! 
 Torus 0,0Start! 
 Torus 0,0End! 
-Execution Time: 7.95614e+02 s
+Execution Time: 6.69132e+02 s
 -------------------------------------------------------------
 Validate output...
 -------------------------------------------------------------
   norm. resid        resid       machep   
     5.25221e-07    3.82066e-05    1.19209e-07
-Validation Time: 2.69254e-02 s
+Validation Time: 2.19179e-03 s
          Method           best           mean         GFLOPS
-          total    6.69256e+01    6.69765e+01    1.47878e+02
-           GEFA    6.69256e+01    6.69765e+01    1.47860e+02
-           GESL    2.80000e-07    2.91800e-07    4.31414e+06
+          total    4.35817e+01    4.36030e+01    2.27087e+02
+           GEFA    4.35817e+01    4.36030e+01    2.27059e+02
+           GESL    2.85000e-07    3.07800e-07    4.23845e+06
 Validation: SUCCESS!
 
 ============================================================
-Request ID:             453399.nqsv
+Request ID:             432842.nqsv
 Request Name:           HPL_SP_PCIE_EXE
 Queue:                  fpga@nqsv
 Number of Jobs:         1
 User Name:              mellich
 Group Name:             CCUSC
-Created Request Time:   Wed Nov 10 22:50:19 2021
-Started Request Time:   Wed Nov 10 22:50:21 2021
-Ended Request Time:     Wed Nov 10 23:04:05 2021
+Created Request Time:   Mon Nov  8 22:53:22 2021
+Started Request Time:   Mon Nov  8 22:53:23 2021
+Ended Request Time:     Mon Nov  8 23:04:57 2021
 Resources Information:
-  Elapse:               824S
-  Remaining Elapse:     85576S
+  Elapse:               694S
+  Remaining Elapse:     85706S
 ============================================================
