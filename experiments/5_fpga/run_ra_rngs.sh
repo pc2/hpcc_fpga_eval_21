@@ -1,14 +1,13 @@
 #!/bin/bash
 #
 #SBATCH -p fpga
-#SBATCH -w fpga-0001,fpga-0002,fpga-0004,fpga-0005
 #SBATCH -J RA
 #SBATCH --constraint=20.4.0_hpc
 #SBATCH -N 4
 #SBATCH -n 8
 #SBATCH -t 2:00:00
-#SBATCH -o ra_N5-%j.out
-#SBATCH -e ra_N5-%j.out
+#SBATCH -o ra_N4-%j.out
+#SBATCH -e ra_N4-%j.out
 #
 ##
 #
