@@ -11,6 +11,7 @@ set(USE_SVM No CACHE BOOL "" FORCE)
 set(USE_HBM No CACHE BOOL "" FORCE)
 set(FPGA_BOARD_NAME "p520_hpc_sg280l" CACHE STRING "" FORCE)
 set(AOC_FLAGS "-ffp-contract=fast -ffp-reassoc -g0 -no-interleaving=default -global-ring -force-single-store-ring -seed=10" CACHE STRING "" FORCE)
+set(CMAKE_CXX_FLAGS "-march=native" CACHE STRING "CXX compile flags used to optimize code to architecture" FORCE)
 
 # LINPACK specific options
 set(DEFAULT_MATRIX_SIZE 1024 CACHE STRING "Default matrix size" FORCE)

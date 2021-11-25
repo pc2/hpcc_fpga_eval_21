@@ -10,7 +10,7 @@ set(USE_MPI Yes CACHE BOOL "" FORCE)
 set(USE_SVM No CACHE BOOL "" FORCE)
 set(USE_HBM No CACHE BOOL "" FORCE)
 set(FPGA_BOARD_NAME "p520_max_sg280l" CACHE STRING "" FORCE)
-set(AOC_FLAGS "-ffp-contract=fast -ffp-reassoc -global-ring -force-single-store-ring -no-interleaving=default -seed=10" CACHE STRING "" FORCE)
+set(AOC_FLAGS "-ffp-contract=fast -ffp-reassoc -global-ring -force-single-store-ring -no-interleaving=default -seed=1" CACHE STRING "" FORCE)
 set(CMAKE_CXX_FLAGS "-march=native" CACHE STRING "CXX compile flags used to optimize code to architecture" FORCE)
 
 # LINPACK specific options

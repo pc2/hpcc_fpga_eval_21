@@ -38,6 +38,11 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
     if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_gemm_fix_kernel_names_xilinx.patch; then
         echo "ERROR: Xilinx patch failed!"
     fi
+
+    # Apply patch for host optimization with PCIe
+    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_pice_host_optimizations.patch; then
+        echo "ERROR: Host optimization patch failed!"
+    fi
 fi
 
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/${BENCHMARK_NAME}
