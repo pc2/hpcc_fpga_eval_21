@@ -1,62 +1,11 @@
 {
-  "1435691968":
+  "1435714464":
   {
     "nodes":
     [
       {
-        "name":"Cluster 5"
-        , "id":1469698112
-        , "start":"8.00"
-        , "end":"17.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c1_in_for_cond1_preheader_network_layer_tops_c1_enter_network_layer_top6"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"8"
-            , "Cluster Latency":"9"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1466219520
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"8"
-                , "Cluster Logic Latency":"5"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1470130992
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"13"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"704"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
         "name":"Cluster 4"
-        , "id":1466276448
+        , "id":1473793344
         , "start":"0.00"
         , "end":"8.00"
         , "details":
@@ -74,7 +23,7 @@
         [
           {
             "name":"Logic"
-            , "id":1470060880
+            , "id":1465765072
             , "subtype":"entry"
             , "details":
             [
@@ -88,7 +37,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1466155296
+            , "id":1466768848
             , "subtype":"exit"
             , "details":
             [
@@ -106,38 +55,59 @@
         ]
       }
       , {
-        "name":"RD"
-        , "id":1511341504
+        "name":"Cluster 5"
+        , "id":1472234112
         , "start":"8.00"
-        , "end":"8.00"
-        , "subtype":"default"
+        , "end":"17.00"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"Channel Read"
-            , "Width":"256 bits"
-            , "Depth":"1"
-            , "Channel Name":"ch_top_row_out"
-            , "Stall-free":"No"
-            , "Start Cycle":"8"
-            , "Latency":"0"
+            , "Cluster Name":"i_sfc_s_c1_in_for_cond1_preheader_network_layer_tops_c1_enter_network_layer_top6"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"8"
+            , "Cluster Latency":"9"
           }
         ]
-        , "debug":
+        , "type":"cluster"
+        , "children":
         [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":146
-            }
-          ]
+          {
+            "name":"Logic"
+            , "id":1466679472
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"8"
+                , "Cluster Logic Latency":"5"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1471668176
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"13"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"704"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
         ]
-        , "type":"inst"
       }
       , {
         "name":"WR"
-        , "id":1517959440
+        , "id":1475657104
         , "start":"17.00"
         , "end":"17.00"
         , "subtype":"default"
@@ -158,7 +128,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":163
             }
           ]
@@ -167,7 +137,7 @@
       }
       , {
         "name":"RD"
-        , "id":1517988880
+        , "id":1483061920
         , "start":"8.00"
         , "end":"8.00"
         , "subtype":"default"
@@ -188,7 +158,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":150
             }
           ]
@@ -197,7 +167,7 @@
       }
       , {
         "name":"ST"
-        , "id":1627206112
+        , "id":1519282496
         , "start":"17.00"
         , "end":"19.00"
         , "subtype":"load/store"
@@ -218,8 +188,38 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":158
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"RD"
+        , "id":1587649504
+        , "start":"8.00"
+        , "end":"8.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Channel Read"
+            , "Width":"256 bits"
+            , "Depth":"1"
+            , "Channel Name":"ch_top_row_out"
+            , "Stall-free":"No"
+            , "Start Cycle":"8"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":146
             }
           ]
         ]
@@ -229,38 +229,16 @@
     , "links":
     [
       {
-        "from":1466219520
-        , "to":1470130992
+        "from":1465765072
+        , "to":1466768848
       }
       , {
-        "from":1470060880
-        , "to":1466155296
+        "from":1466679472
+        , "to":1471668176
       }
       , {
-        "from":1511341504
-        , "to":1466219520
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"256"
-          }
-        ]
-      }
-      , {
-        "from":1466155296
-        , "to":1511341504
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"64"
-          }
-        ]
-      }
-      , {
-        "from":1470130992
-        , "to":1517959440
+        "from":1471668176
+        , "to":1475657104
         , "details":
         [
           {
@@ -270,8 +248,8 @@
         ]
       }
       , {
-        "from":1517988880
-        , "to":1466219520
+        "from":1483061920
+        , "to":1466679472
         , "details":
         [
           {
@@ -281,8 +259,8 @@
         ]
       }
       , {
-        "from":1466155296
-        , "to":1517988880
+        "from":1466768848
+        , "to":1483061920
         , "details":
         [
           {
@@ -292,25 +270,47 @@
         ]
       }
       , {
-        "from":1470130992
-        , "to":1627206112
+        "from":1471668176
+        , "to":1519282496
         , "details":
         [
           {
             "type":"table"
             , "Width":"704"
+          }
+        ]
+      }
+      , {
+        "from":1587649504
+        , "to":1466679472
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+      , {
+        "from":1466768848
+        , "to":1587649504
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
           }
         ]
       }
     ]
   }
-  , "1435692048":
+  , "1435714816":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1755849232
+        , "id":1727883616
         , "start":"0.00"
         , "end":"1.00"
         , "subtype":"push"
@@ -330,7 +330,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":167
             }
           ]
@@ -342,20 +342,20 @@
     [
     ]
   }
-  , "1435749152":
+  , "1435714896":
   {
     "nodes":
     [
       {
-        "name":"Cluster 0"
-        , "id":1460689168
+        "name":"Cluster 6"
+        , "id":1481781168
         , "start":"1.00"
         , "end":"6.00"
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_entry_network_layer_bottomrights_c0_enter_network_layer_bottomright1"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_network_layer_lefts_c0_enter_network_layer_left1"
             , "Cluster Type":"Stall-Free"
             , "Cluster Start Cycle":"1"
             , "Cluster Latency":"5"
@@ -366,7 +366,7 @@
         [
           {
             "name":"Logic"
-            , "id":1450983200
+            , "id":1480856320
             , "subtype":"entry"
             , "details":
             [
@@ -380,7 +380,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1461629248
+            , "id":1480862176
             , "subtype":"exit"
             , "details":
             [
@@ -399,7 +399,7 @@
       }
       , {
         "name":"?"
-        , "id":1587200800
+        , "id":1597540752
         , "start":"5.00"
         , "end":"6.00"
         , "subtype":"pop"
@@ -419,56 +419,100 @@
     , "links":
     [
       {
-        "from":1450983200
-        , "to":1461629248
+        "from":1480856320
+        , "to":1480862176
       }
     ]
   }
-  , "1435825568":
+  , "1435879760":
   {
     "nodes":
     [
       {
-        "name":"Feedback"
-        , "id":1625524896
-        , "start":"0.00"
-        , "end":"1.00"
-        , "subtype":"push"
+        "name":"Cluster 0"
+        , "id":1441918800
+        , "start":"1.00"
+        , "end":"6.00"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"Feedback Write"
-            , "Variable":"Unknown variable"
-            , "Feedback FIFO Depth":"1"
-            , "Feedback FIFO Width":"1"
-            , "Start Cycle":"0"
-            , "Latency":"1"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_network_layer_bottomrights_c0_enter_network_layer_bottomright1"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"1"
+            , "Cluster Latency":"5"
           }
         ]
-        , "debug":
+        , "type":"cluster"
+        , "children":
         [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":123
-            }
-          ]
+          {
+            "name":"Logic"
+            , "id":1450979408
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"1"
+                , "Cluster Logic Latency":"1"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1450997488
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"2"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"8"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
+        "name":"?"
+        , "id":1587227712
+        , "start":"5.00"
+        , "end":"6.00"
+        , "subtype":"pop"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+            , "Start Cycle":"5"
+            , "Latency":"1"
+          }
         ]
         , "type":"inst"
       }
     ]
     , "links":
     [
+      {
+        "from":1450979408
+        , "to":1450997488
+      }
     ]
   }
-  , "1435844464":
+  , "1435885696":
   {
     "nodes":
     [
       {
         "name":"Cluster 1"
-        , "id":1459516432
+        , "id":1441910896
         , "start":"0.00"
         , "end":"10.00"
         , "details":
@@ -486,7 +530,7 @@
         [
           {
             "name":"Logic"
-            , "id":1461431408
+            , "id":1460400896
             , "subtype":"entry"
             , "details":
             [
@@ -500,7 +544,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1461360592
+            , "id":1459106512
             , "subtype":"exit"
             , "details":
             [
@@ -519,7 +563,7 @@
       }
       , {
         "name":"Cluster 2"
-        , "id":1462321840
+        , "id":1462366656
         , "start":"11.00"
         , "end":"15.00"
         , "details":
@@ -537,7 +581,7 @@
         [
           {
             "name":"Logic"
-            , "id":1462328544
+            , "id":1462373632
             , "subtype":"entry"
             , "details":
             [
@@ -551,7 +595,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1462857072
+            , "id":1460819680
             , "subtype":"exit"
             , "details":
             [
@@ -569,8 +613,68 @@
         ]
       }
       , {
+        "name":"RD"
+        , "id":1464127504
+        , "start":"11.00"
+        , "end":"11.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Channel Read"
+            , "Width":"256 bits"
+            , "Depth":"1"
+            , "Channel Name":"ch_lu_col_out"
+            , "Stall-free":"No"
+            , "Start Cycle":"11"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":88
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
         "name":"WR"
-        , "id":1517388784
+        , "id":1475384848
+        , "start":"15.00"
+        , "end":"15.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Channel Write"
+            , "Width":"256 bits"
+            , "Depth":"1"
+            , "Channel Name":"ch_left_row_in"
+            , "Stall-free":"No"
+            , "Start Cycle":"15"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":108
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"WR"
+        , "id":1483741392
         , "start":"15.00"
         , "end":"15.00"
         , "subtype":"default"
@@ -591,7 +695,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":119
             }
           ]
@@ -600,7 +704,7 @@
       }
       , {
         "name":"WR"
-        , "id":1518008016
+        , "id":1523338816
         , "start":"15.00"
         , "end":"15.00"
         , "subtype":"default"
@@ -611,7 +715,7 @@
             , "Instruction":"Channel Write"
             , "Width":"256 bits"
             , "Depth":"1"
-            , "Channel Name":"ch_left_row_in"
+            , "Channel Name":"ch_top_col_in"
             , "Stall-free":"No"
             , "Start Cycle":"15"
             , "Latency":"0"
@@ -621,8 +725,8 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":108
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":111
             }
           ]
         ]
@@ -630,7 +734,37 @@
       }
       , {
         "name":"RD"
-        , "id":1523182480
+        , "id":1525301152
+        , "start":"11.00"
+        , "end":"11.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Channel Read"
+            , "Width":"256 bits"
+            , "Depth":"1"
+            , "Channel Name":"ch_lu_row_out"
+            , "Stall-free":"No"
+            , "Start Cycle":"11"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":89
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"RD"
+        , "id":1631597760
         , "start":"11.00"
         , "end":"11.00"
         , "subtype":"default"
@@ -651,7 +785,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":94
             }
           ]
@@ -659,68 +793,8 @@
         , "type":"inst"
       }
       , {
-        "name":"RD"
-        , "id":1597852592
-        , "start":"11.00"
-        , "end":"11.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Channel Read"
-            , "Width":"256 bits"
-            , "Depth":"1"
-            , "Channel Name":"ch_lu_col_out"
-            , "Stall-free":"No"
-            , "Start Cycle":"11"
-            , "Latency":"0"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":88
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"RD"
-        , "id":1620195680
-        , "start":"11.00"
-        , "end":"11.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Channel Read"
-            , "Width":"256 bits"
-            , "Depth":"1"
-            , "Channel Name":"ch_lu_row_out"
-            , "Stall-free":"No"
-            , "Start Cycle":"11"
-            , "Latency":"0"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":89
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
         "name":"WR"
-        , "id":1626539280
+        , "id":1664845520
         , "start":"15.00"
         , "end":"15.00"
         , "subtype":"default"
@@ -741,7 +815,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":116
             }
           ]
@@ -749,38 +823,8 @@
         , "type":"inst"
       }
       , {
-        "name":"WR"
-        , "id":1627235552
-        , "start":"15.00"
-        , "end":"15.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Channel Write"
-            , "Width":"256 bits"
-            , "Depth":"1"
-            , "Channel Name":"ch_top_col_in"
-            , "Stall-free":"No"
-            , "Start Cycle":"15"
-            , "Latency":"0"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":111
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
         "name":"RD"
-        , "id":1627311520
+        , "id":1713773872
         , "start":"11.00"
         , "end":"11.00"
         , "subtype":"default"
@@ -801,7 +845,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":100
             }
           ]
@@ -812,49 +856,16 @@
     , "links":
     [
       {
-        "from":1461431408
-        , "to":1461360592
+        "from":1460400896
+        , "to":1459106512
       }
       , {
-        "from":1462328544
-        , "to":1462857072
+        "from":1462373632
+        , "to":1460819680
       }
       , {
-        "from":1461360592
-        , "to":1517388784
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"96"
-          }
-        ]
-      }
-      , {
-        "from":1462857072
-        , "to":1517388784
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"608"
-          }
-        ]
-      }
-      , {
-        "from":1462857072
-        , "to":1518008016
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"608"
-          }
-        ]
-      }
-      , {
-        "from":1523182480
-        , "to":1462328544
+        "from":1464127504
+        , "to":1462373632
         , "details":
         [
           {
@@ -864,8 +875,8 @@
         ]
       }
       , {
-        "from":1461360592
-        , "to":1523182480
+        "from":1459106512
+        , "to":1464127504
         , "details":
         [
           {
@@ -875,63 +886,8 @@
         ]
       }
       , {
-        "from":1597852592
-        , "to":1462328544
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"256"
-          }
-        ]
-      }
-      , {
-        "from":1461360592
-        , "to":1597852592
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"96"
-          }
-        ]
-      }
-      , {
-        "from":1620195680
-        , "to":1462328544
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"256"
-          }
-        ]
-      }
-      , {
-        "from":1461360592
-        , "to":1620195680
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"96"
-          }
-        ]
-      }
-      , {
-        "from":1461360592
-        , "to":1626539280
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"96"
-          }
-        ]
-      }
-      , {
-        "from":1462857072
-        , "to":1626539280
+        "from":1460819680
+        , "to":1475384848
         , "details":
         [
           {
@@ -941,8 +897,8 @@
         ]
       }
       , {
-        "from":1462857072
-        , "to":1627235552
+        "from":1460819680
+        , "to":1483741392
         , "details":
         [
           {
@@ -952,8 +908,30 @@
         ]
       }
       , {
-        "from":1627311520
-        , "to":1462328544
+        "from":1459106512
+        , "to":1483741392
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"96"
+          }
+        ]
+      }
+      , {
+        "from":1460819680
+        , "to":1523338816
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"608"
+          }
+        ]
+      }
+      , {
+        "from":1525301152
+        , "to":1462373632
         , "details":
         [
           {
@@ -963,8 +941,74 @@
         ]
       }
       , {
-        "from":1461360592
-        , "to":1627311520
+        "from":1459106512
+        , "to":1525301152
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"96"
+          }
+        ]
+      }
+      , {
+        "from":1631597760
+        , "to":1462373632
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+      , {
+        "from":1459106512
+        , "to":1631597760
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"96"
+          }
+        ]
+      }
+      , {
+        "from":1460819680
+        , "to":1664845520
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"608"
+          }
+        ]
+      }
+      , {
+        "from":1459106512
+        , "to":1664845520
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"96"
+          }
+        ]
+      }
+      , {
+        "from":1713773872
+        , "to":1462373632
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+      , {
+        "from":1459106512
+        , "to":1713773872
         , "details":
         [
           {
@@ -975,23 +1019,61 @@
       }
     ]
   }
-  , "1436107824":
+  , "1435892016":
   {
     "nodes":
     [
       {
-        "name":"Cluster 51"
-        , "id":1720384272
-        , "start":"224.00"
-        , "end":"231.00"
+        "name":"Feedback"
+        , "id":1892961936
+        , "start":"0.00"
+        , "end":"1.00"
+        , "subtype":"push"
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c1_in_for_cond1_preheader_inner_update_mm2s_c1_enter_inner_update_mm27"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"1"
+            , "Start Cycle":"0"
+            , "Latency":"1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":123
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "1435892096":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 3"
+        , "id":1471859680
+        , "start":"1.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_network_layer_tops_c0_enter_network_layer_top1"
             , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"224"
-            , "Cluster Latency":"7"
+            , "Cluster Start Cycle":"1"
+            , "Cluster Latency":"5"
           }
         ]
         , "type":"cluster"
@@ -999,27 +1081,27 @@
         [
           {
             "name":"Logic"
-            , "id":1730742400
+            , "id":1466432880
             , "subtype":"entry"
             , "details":
             [
               {
                 "type":"table"
-                , "Cluster Logic Start Cycle":"224"
-                , "Cluster Logic Latency":"3"
+                , "Cluster Logic Start Cycle":"1"
+                , "Cluster Logic Latency":"1"
               }
             ]
             , "type":"inst"
           }
           , {
             "name":"Exit"
-            , "id":1725145840
+            , "id":1467123520
             , "subtype":"exit"
             , "details":
             [
               {
                 "type":"table"
-                , "Start Cycle":"227"
+                , "Start Cycle":"2"
                 , "Latency":"3"
                 , "Exit FIFO Depth":"32"
                 , "Exit FIFO Width":"8"
@@ -1031,8 +1113,39 @@
         ]
       }
       , {
+        "name":"?"
+        , "id":1639154464
+        , "start":"5.00"
+        , "end":"6.00"
+        , "subtype":"pop"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+            , "Start Cycle":"5"
+            , "Latency":"1"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1466432880
+        , "to":1467123520
+      }
+    ]
+  }
+  , "1436135104":
+  {
+    "nodes":
+    [
+      {
         "name":"Cluster 50"
-        , "id":1761226304
+        , "id":1724028592
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -1050,7 +1163,7 @@
         [
           {
             "name":"Logic"
-            , "id":1768471184
+            , "id":1753853632
             , "subtype":"entry"
             , "details":
             [
@@ -1064,7 +1177,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1756849376
+            , "id":1752752832
             , "subtype":"exit"
             , "details":
             [
@@ -1082,8 +1195,59 @@
         ]
       }
       , {
+        "name":"Cluster 51"
+        , "id":1729704544
+        , "start":"224.00"
+        , "end":"231.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_cond1_preheader_inner_update_mm2s_c1_enter_inner_update_mm27"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"224"
+            , "Cluster Latency":"7"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1748158496
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"224"
+                , "Cluster Logic Latency":"3"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1750547424
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"227"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"8"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
         "name":"LD"
-        , "id":1523183952
+        , "id":1463960416
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -1104,7 +1268,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1079
             }
           ]
@@ -1113,7 +1277,7 @@
       }
       , {
         "name":"LD"
-        , "id":1596451184
+        , "id":1484148352
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -1134,8 +1298,8 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":1071
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":1075
             }
           ]
         ]
@@ -1143,7 +1307,7 @@
       }
       , {
         "name":"LD"
-        , "id":1830392640
+        , "id":1496476832
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -1164,8 +1328,8 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":1075
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":1071
             }
           ]
         ]
@@ -1175,16 +1339,16 @@
     , "links":
     [
       {
-        "from":1730742400
-        , "to":1725145840
+        "from":1753853632
+        , "to":1752752832
       }
       , {
-        "from":1768471184
-        , "to":1756849376
+        "from":1748158496
+        , "to":1750547424
       }
       , {
-        "from":1523183952
-        , "to":1730742400
+        "from":1463960416
+        , "to":1748158496
         , "details":
         [
           {
@@ -1194,8 +1358,8 @@
         ]
       }
       , {
-        "from":1756849376
-        , "to":1523183952
+        "from":1752752832
+        , "to":1463960416
         , "details":
         [
           {
@@ -1205,8 +1369,8 @@
         ]
       }
       , {
-        "from":1596451184
-        , "to":1730742400
+        "from":1484148352
+        , "to":1748158496
         , "details":
         [
           {
@@ -1216,8 +1380,8 @@
         ]
       }
       , {
-        "from":1756849376
-        , "to":1596451184
+        "from":1752752832
+        , "to":1484148352
         , "details":
         [
           {
@@ -1227,8 +1391,8 @@
         ]
       }
       , {
-        "from":1830392640
-        , "to":1730742400
+        "from":1496476832
+        , "to":1748158496
         , "details":
         [
           {
@@ -1238,8 +1402,8 @@
         ]
       }
       , {
-        "from":1756849376
-        , "to":1830392640
+        "from":1752752832
+        , "to":1496476832
         , "details":
         [
           {
@@ -1250,7 +1414,7 @@
       }
     ]
   }
-  , "1436108192":
+  , "1436136384":
   {
     "nodes":
     [
@@ -1259,7 +1423,7 @@
     [
     ]
   }
-  , "1436108992":
+  , "1436136464":
   {
     "nodes":
     [
@@ -1268,13 +1432,13 @@
     [
     ]
   }
-  , "1436109072":
+  , "1436136544":
   {
     "nodes":
     [
       {
         "name":"Cluster 52"
-        , "id":1759264944
+        , "id":1745147968
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -1292,7 +1456,7 @@
         [
           {
             "name":"Logic"
-            , "id":1764409296
+            , "id":1726815808
             , "subtype":"entry"
             , "details":
             [
@@ -1306,7 +1470,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1715193408
+            , "id":1773919376
             , "subtype":"exit"
             , "details":
             [
@@ -1325,7 +1489,7 @@
       }
       , {
         "name":"ST"
-        , "id":1594404880
+        , "id":1658736192
         , "start":"20.00"
         , "end":"22.00"
         , "subtype":"load/store"
@@ -1346,7 +1510,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1140
             }
           ]
@@ -1357,12 +1521,12 @@
     , "links":
     [
       {
-        "from":1764409296
-        , "to":1715193408
+        "from":1726815808
+        , "to":1773919376
       }
       , {
-        "from":1715193408
-        , "to":1594404880
+        "from":1773919376
+        , "to":1658736192
         , "details":
         [
           {
@@ -1373,13 +1537,13 @@
       }
     ]
   }
-  , "1436109152":
+  , "1436136624":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1498907904
+        , "id":1658743136
         , "start":"0.00"
         , "end":"1.00"
         , "subtype":"push"
@@ -1399,7 +1563,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1145
             }
           ]
@@ -1411,13 +1575,13 @@
     [
     ]
   }
-  , "1436109232":
+  , "1436136704":
   {
     "nodes":
     [
       {
         "name":"Cluster 53"
-        , "id":1725100528
+        , "id":1668741168
         , "start":"0.00"
         , "end":"65.00"
         , "details":
@@ -1435,7 +1599,7 @@
         [
           {
             "name":"Logic"
-            , "id":1680534800
+            , "id":1674080736
             , "subtype":"entry"
             , "details":
             [
@@ -1449,7 +1613,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1711917552
+            , "id":1720865568
             , "subtype":"exit"
             , "details":
             [
@@ -1470,25 +1634,25 @@
     , "links":
     [
       {
-        "from":1680534800
-        , "to":1711917552
+        "from":1674080736
+        , "to":1720865568
       }
     ]
   }
-  , "1436200016":
+  , "1436136784":
   {
     "nodes":
     [
       {
-        "name":"Cluster 3"
-        , "id":1472759248
+        "name":"Cluster 54"
+        , "id":1772863264
         , "start":"1.00"
         , "end":"6.00"
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_entry_network_layer_tops_c0_enter_network_layer_top1"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_inner_update_mm3s_c0_enter_inner_update_mm31"
             , "Cluster Type":"Stall-Free"
             , "Cluster Start Cycle":"1"
             , "Cluster Latency":"5"
@@ -1499,7 +1663,7 @@
         [
           {
             "name":"Logic"
-            , "id":1472809472
+            , "id":1782636640
             , "subtype":"entry"
             , "details":
             [
@@ -1513,7 +1677,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1471795856
+            , "id":1778870224
             , "subtype":"exit"
             , "details":
             [
@@ -1532,7 +1696,7 @@
       }
       , {
         "name":"?"
-        , "id":1509516176
+        , "id":1658749088
         , "start":"5.00"
         , "end":"6.00"
         , "subtype":"pop"
@@ -1552,12 +1716,12 @@
     , "links":
     [
       {
-        "from":1472809472
-        , "to":1471795856
+        "from":1782636640
+        , "to":1778870224
       }
     ]
   }
-  , "1436205776":
+  , "1436232224":
   {
     "nodes":
     [
@@ -1566,64 +1730,13 @@
     [
     ]
   }
-  , "1436206272":
+  , "1436232576":
   {
     "nodes":
     [
       {
-        "name":"Cluster 10"
-        , "id":1492393184
-        , "start":"0.00"
-        , "end":"20.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_for_body_lus_c0_enter2073_lu1"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"0"
-            , "Cluster Latency":"20"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1492401344
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"0"
-                , "Cluster Logic Latency":"16"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1492818656
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"16"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"256"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
         "name":"Cluster 11"
-        , "id":1492999712
+        , "id":1493048864
         , "start":"208.00"
         , "end":"214.00"
         , "details":
@@ -1641,7 +1754,7 @@
         [
           {
             "name":"Logic"
-            , "id":1493005872
+            , "id":1493055168
             , "subtype":"entry"
             , "details":
             [
@@ -1655,7 +1768,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1493113936
+            , "id":1493162400
             , "subtype":"exit"
             , "details":
             [
@@ -1673,8 +1786,59 @@
         ]
       }
       , {
+        "name":"Cluster 10"
+        , "id":1488790192
+        , "start":"0.00"
+        , "end":"20.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body_lus_c0_enter2073_lu1"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"0"
+            , "Cluster Latency":"20"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1492456912
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"0"
+                , "Cluster Logic Latency":"16"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1492867616
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"16"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"256"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
         "name":"LD"
-        , "id":1590094784
+        , "id":1519973552
         , "start":"20.00"
         , "end":"208.00"
         , "subtype":"load/store"
@@ -1695,7 +1859,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":409
             }
           ]
@@ -1706,16 +1870,16 @@
     , "links":
     [
       {
-        "from":1492401344
-        , "to":1492818656
+        "from":1493055168
+        , "to":1493162400
       }
       , {
-        "from":1493005872
-        , "to":1493113936
+        "from":1492456912
+        , "to":1492867616
       }
       , {
-        "from":1590094784
-        , "to":1493005872
+        "from":1519973552
+        , "to":1493055168
         , "details":
         [
           {
@@ -1725,8 +1889,8 @@
         ]
       }
       , {
-        "from":1492818656
-        , "to":1590094784
+        "from":1492867616
+        , "to":1519973552
         , "details":
         [
           {
@@ -1737,7 +1901,7 @@
       }
     ]
   }
-  , "1436206352":
+  , "1436232656":
   {
     "nodes":
     [
@@ -1746,13 +1910,13 @@
     [
     ]
   }
-  , "1436206432":
+  , "1436232736":
   {
     "nodes":
     [
       {
         "name":"Cluster 12"
-        , "id":1493206144
+        , "id":1493254784
         , "start":"1.00"
         , "end":"53.00"
         , "details":
@@ -1770,7 +1934,7 @@
         [
           {
             "name":"Logic"
-            , "id":1493215296
+            , "id":1493261616
             , "subtype":"entry"
             , "details":
             [
@@ -1784,7 +1948,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1495082320
+            , "id":1495121472
             , "subtype":"exit"
             , "details":
             [
@@ -1803,7 +1967,7 @@
       }
       , {
         "name":"Loop Input"
-        , "id":1499992192
+        , "id":1585428512
         , "subtype":"default"
         , "details":
         [
@@ -1817,7 +1981,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":418
             }
           ]
@@ -1828,12 +1992,12 @@
     , "links":
     [
       {
-        "from":1493215296
-        , "to":1495082320
+        "from":1493261616
+        , "to":1495121472
       }
       , {
-        "from":1499992192
-        , "to":1493215296
+        "from":1585428512
+        , "to":1493261616
         , "details":
         [
           {
@@ -1844,13 +2008,13 @@
       }
     ]
   }
-  , "1436206512":
+  , "1436232816":
   {
     "nodes":
     [
       {
         "name":"Cluster 13"
-        , "id":1495234320
+        , "id":1479429216
         , "start":"0.00"
         , "end":"21.00"
         , "details":
@@ -1868,7 +2032,7 @@
         [
           {
             "name":"Logic"
-            , "id":1495243472
+            , "id":1495282576
             , "subtype":"entry"
             , "details":
             [
@@ -1882,7 +2046,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1496339472
+            , "id":1496375040
             , "subtype":"exit"
             , "details":
             [
@@ -1903,18 +2067,18 @@
     , "links":
     [
       {
-        "from":1495243472
-        , "to":1496339472
+        "from":1495282576
+        , "to":1496375040
       }
     ]
   }
-  , "1436206592":
+  , "1436232896":
   {
     "nodes":
     [
       {
         "name":"Cluster 14"
-        , "id":1496497056
+        , "id":1496532000
         , "start":"0.00"
         , "end":"11.00"
         , "details":
@@ -1932,7 +2096,7 @@
         [
           {
             "name":"Logic"
-            , "id":1496503728
+            , "id":1496538720
             , "subtype":"entry"
             , "details":
             [
@@ -1946,7 +2110,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1497906544
+            , "id":1497934224
             , "subtype":"exit"
             , "details":
             [
@@ -1967,18 +2131,18 @@
     , "links":
     [
       {
-        "from":1496503728
-        , "to":1497906544
+        "from":1496538720
+        , "to":1497934224
       }
     ]
   }
-  , "1436206672":
+  , "1436232976":
   {
     "nodes":
     [
       {
         "name":"Cluster 15"
-        , "id":1498028880
+        , "id":1498058704
         , "start":"0.00"
         , "end":"35.00"
         , "details":
@@ -1996,7 +2160,7 @@
         [
           {
             "name":"Logic"
-            , "id":1498035888
+            , "id":1498065360
             , "subtype":"entry"
             , "details":
             [
@@ -2010,7 +2174,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1504388560
+            , "id":1504406112
             , "subtype":"exit"
             , "details":
             [
@@ -2031,12 +2195,12 @@
     , "links":
     [
       {
-        "from":1498035888
-        , "to":1504388560
+        "from":1498065360
+        , "to":1504406112
       }
     ]
   }
-  , "1436206752":
+  , "1436233056":
   {
     "nodes":
     [
@@ -2045,13 +2209,13 @@
     [
     ]
   }
-  , "1436206832":
+  , "1436233136":
   {
     "nodes":
     [
       {
         "name":"Cluster 16"
-        , "id":1504818352
+        , "id":1504835952
         , "start":"0.00"
         , "end":"6.00"
         , "details":
@@ -2069,7 +2233,7 @@
         [
           {
             "name":"Logic"
-            , "id":1504825280
+            , "id":1504842944
             , "subtype":"entry"
             , "details":
             [
@@ -2083,7 +2247,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1504856192
+            , "id":1504873232
             , "subtype":"exit"
             , "details":
             [
@@ -2104,18 +2268,18 @@
     , "links":
     [
       {
-        "from":1504825280
-        , "to":1504856192
+        "from":1504842944
+        , "to":1504873232
       }
     ]
   }
-  , "1436206912":
+  , "1436233216":
   {
     "nodes":
     [
       {
         "name":"Cluster 17"
-        , "id":1504930240
+        , "id":1504948384
         , "start":"0.00"
         , "end":"19.00"
         , "details":
@@ -2133,7 +2297,7 @@
         [
           {
             "name":"Logic"
-            , "id":1504938224
+            , "id":1504955040
             , "subtype":"entry"
             , "details":
             [
@@ -2147,7 +2311,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1506474816
+            , "id":1506489280
             , "subtype":"exit"
             , "details":
             [
@@ -2166,7 +2330,7 @@
       }
       , {
         "name":"WR"
-        , "id":1517338656
+        , "id":1474364192
         , "start":"19.00"
         , "end":"19.00"
         , "subtype":"default"
@@ -2187,7 +2351,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":563
             }
           ]
@@ -2196,7 +2360,7 @@
       }
       , {
         "name":"WR"
-        , "id":1628694736
+        , "id":1520864320
         , "start":"19.00"
         , "end":"19.00"
         , "subtype":"default"
@@ -2217,7 +2381,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":562
             }
           ]
@@ -2228,12 +2392,12 @@
     , "links":
     [
       {
-        "from":1504938224
-        , "to":1506474816
+        "from":1504955040
+        , "to":1506489280
       }
       , {
-        "from":1506474816
-        , "to":1517338656
+        "from":1506489280
+        , "to":1474364192
         , "details":
         [
           {
@@ -2243,8 +2407,8 @@
         ]
       }
       , {
-        "from":1506474816
-        , "to":1628694736
+        "from":1506489280
+        , "to":1520864320
         , "details":
         [
           {
@@ -2255,13 +2419,13 @@
       }
     ]
   }
-  , "1436206992":
+  , "1436233296":
   {
     "nodes":
     [
       {
         "name":"Cluster 18"
-        , "id":1506756560
+        , "id":1506771120
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -2279,7 +2443,7 @@
         [
           {
             "name":"Logic"
-            , "id":1506764576
+            , "id":1506777872
             , "subtype":"entry"
             , "details":
             [
@@ -2293,7 +2457,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1507241584
+            , "id":1507252960
             , "subtype":"exit"
             , "details":
             [
@@ -2312,7 +2476,7 @@
       }
       , {
         "name":"ST"
-        , "id":1523207504
+        , "id":1483070016
         , "start":"20.00"
         , "end":"22.00"
         , "subtype":"load/store"
@@ -2333,7 +2497,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":574
             }
           ]
@@ -2344,12 +2508,12 @@
     , "links":
     [
       {
-        "from":1506764576
-        , "to":1507241584
+        "from":1506777872
+        , "to":1507252960
       }
       , {
-        "from":1507241584
-        , "to":1523207504
+        "from":1507252960
+        , "to":1483070016
         , "details":
         [
           {
@@ -2360,13 +2524,13 @@
       }
     ]
   }
-  , "1436207072":
+  , "1436233376":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1513725728
+        , "id":1513526400
         , "start":"0.00"
         , "end":"1.00"
         , "subtype":"push"
@@ -2386,7 +2550,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":579
             }
           ]
@@ -2398,20 +2562,20 @@
     [
     ]
   }
-  , "1436288656":
+  , "1436233456":
   {
     "nodes":
     [
       {
-        "name":"Cluster 6"
-        , "id":1478587216
+        "name":"Cluster 19"
+        , "id":1558861296
         , "start":"1.00"
         , "end":"6.00"
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_entry_network_layer_lefts_c0_enter_network_layer_left1"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_top_updates_c0_enter_top_update1"
             , "Cluster Type":"Stall-Free"
             , "Cluster Start Cycle":"1"
             , "Cluster Latency":"5"
@@ -2422,7 +2586,7 @@
         [
           {
             "name":"Logic"
-            , "id":1481970128
+            , "id":1550637632
             , "subtype":"entry"
             , "details":
             [
@@ -2436,7 +2600,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1481803824
+            , "id":1546378080
             , "subtype":"exit"
             , "details":
             [
@@ -2455,7 +2619,7 @@
       }
       , {
         "name":"?"
-        , "id":1594939568
+        , "id":1663763248
         , "start":"5.00"
         , "end":"6.00"
         , "subtype":"pop"
@@ -2475,56 +2639,18 @@
     , "links":
     [
       {
-        "from":1481970128
-        , "to":1481803824
+        "from":1550637632
+        , "to":1546378080
       }
     ]
   }
-  , "1436298752":
-  {
-    "nodes":
-    [
-      {
-        "name":"Feedback"
-        , "id":1666035056
-        , "start":"0.00"
-        , "end":"1.00"
-        , "subtype":"push"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Write"
-            , "Variable":"Unknown variable"
-            , "Feedback FIFO Depth":"1"
-            , "Feedback FIFO Width":"1"
-            , "Start Cycle":"0"
-            , "Latency":"1"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":212
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-    ]
-    , "links":
-    [
-    ]
-  }
-  , "1436298912":
+  , "1436325328":
   {
     "nodes":
     [
       {
         "name":"Cluster 8"
-        , "id":1476137344
+        , "id":1476942720
         , "start":"8.00"
         , "end":"17.00"
         , "details":
@@ -2542,7 +2668,7 @@
         [
           {
             "name":"Logic"
-            , "id":1478583888
+            , "id":1476583440
             , "subtype":"entry"
             , "details":
             [
@@ -2556,7 +2682,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1479703920
+            , "id":1477865968
             , "subtype":"exit"
             , "details":
             [
@@ -2575,7 +2701,7 @@
       }
       , {
         "name":"Cluster 7"
-        , "id":1481017344
+        , "id":1480951184
         , "start":"0.00"
         , "end":"8.00"
         , "details":
@@ -2593,7 +2719,7 @@
         [
           {
             "name":"Logic"
-            , "id":1478387120
+            , "id":1481308144
             , "subtype":"entry"
             , "details":
             [
@@ -2607,7 +2733,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1478472784
+            , "id":1477724832
             , "subtype":"exit"
             , "details":
             [
@@ -2626,7 +2752,7 @@
       }
       , {
         "name":"RD"
-        , "id":1517890256
+        , "id":1465041824
         , "start":"8.00"
         , "end":"8.00"
         , "subtype":"default"
@@ -2647,7 +2773,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":195
             }
           ]
@@ -2655,38 +2781,8 @@
         , "type":"inst"
       }
       , {
-        "name":"RD"
-        , "id":1523199408
-        , "start":"8.00"
-        , "end":"8.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Channel Read"
-            , "Width":"256 bits"
-            , "Depth":"1"
-            , "Channel Name":"ch_left_col_out"
-            , "Stall-free":"No"
-            , "Start Cycle":"8"
-            , "Latency":"0"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":190
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
         "name":"ST"
-        , "id":1523219280
+        , "id":1522640432
         , "start":"17.00"
         , "end":"19.00"
         , "subtype":"load/store"
@@ -2707,7 +2803,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":203
             }
           ]
@@ -2716,7 +2812,7 @@
       }
       , {
         "name":"WR"
-        , "id":1627363040
+        , "id":1523354416
         , "start":"17.00"
         , "end":"17.00"
         , "subtype":"default"
@@ -2737,8 +2833,38 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":208
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"RD"
+        , "id":1594811408
+        , "start":"8.00"
+        , "end":"8.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Channel Read"
+            , "Width":"256 bits"
+            , "Depth":"1"
+            , "Channel Name":"ch_left_col_out"
+            , "Stall-free":"No"
+            , "Start Cycle":"8"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":190
             }
           ]
         ]
@@ -2748,16 +2874,16 @@
     , "links":
     [
       {
-        "from":1478583888
-        , "to":1479703920
+        "from":1476583440
+        , "to":1477865968
       }
       , {
-        "from":1478387120
-        , "to":1478472784
+        "from":1481308144
+        , "to":1477724832
       }
       , {
-        "from":1517890256
-        , "to":1478583888
+        "from":1465041824
+        , "to":1476583440
         , "details":
         [
           {
@@ -2767,8 +2893,8 @@
         ]
       }
       , {
-        "from":1478472784
-        , "to":1517890256
+        "from":1477724832
+        , "to":1465041824
         , "details":
         [
           {
@@ -2778,8 +2904,30 @@
         ]
       }
       , {
-        "from":1523199408
-        , "to":1478583888
+        "from":1477865968
+        , "to":1522640432
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"704"
+          }
+        ]
+      }
+      , {
+        "from":1477865968
+        , "to":1523354416
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"704"
+          }
+        ]
+      }
+      , {
+        "from":1594811408
+        , "to":1476583440
         , "details":
         [
           {
@@ -2789,47 +2937,63 @@
         ]
       }
       , {
-        "from":1478472784
-        , "to":1523199408
+        "from":1477724832
+        , "to":1594811408
         , "details":
         [
           {
             "type":"table"
             , "Width":"64"
-          }
-        ]
-      }
-      , {
-        "from":1479703920
-        , "to":1523219280
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"704"
-          }
-        ]
-      }
-      , {
-        "from":1479703920
-        , "to":1627363040
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"704"
           }
         ]
       }
     ]
   }
-  , "1436352720":
+  , "1436326048":
+  {
+    "nodes":
+    [
+      {
+        "name":"Feedback"
+        , "id":1499877888
+        , "start":"0.00"
+        , "end":"1.00"
+        , "subtype":"push"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"1"
+            , "Start Cycle":"0"
+            , "Latency":"1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":212
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+    ]
+  }
+  , "1436326128":
   {
     "nodes":
     [
       {
         "name":"Cluster 9"
-        , "id":1492267680
+        , "id":1485152128
         , "start":"1.00"
         , "end":"6.00"
         , "details":
@@ -2847,7 +3011,7 @@
         [
           {
             "name":"Logic"
-            , "id":1492273952
+            , "id":1492337264
             , "subtype":"entry"
             , "details":
             [
@@ -2861,7 +3025,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1492297024
+            , "id":1487508880
             , "subtype":"exit"
             , "details":
             [
@@ -2880,7 +3044,7 @@
       }
       , {
         "name":"?"
-        , "id":1594385744
+        , "id":1594940320
         , "start":"5.00"
         , "end":"6.00"
         , "subtype":"pop"
@@ -2900,25 +3064,25 @@
     , "links":
     [
       {
-        "from":1492273952
-        , "to":1492297024
+        "from":1492337264
+        , "to":1487508880
       }
     ]
   }
-  , "1436373376":
+  , "1436391120":
   {
     "nodes":
     [
       {
-        "name":"Cluster 32"
-        , "id":1617330640
+        "name":"Cluster 22"
+        , "id":1560535536
         , "start":"224.00"
         , "end":"230.00"
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c1_in_for_body_left_updates_c1_enter_left_update5"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body_top_updates_c1_enter_top_update5"
             , "Cluster Type":"Stall-Free"
             , "Cluster Start Cycle":"224"
             , "Cluster Latency":"6"
@@ -2929,7 +3093,7 @@
         [
           {
             "name":"Logic"
-            , "id":1617336768
+            , "id":1574114208
             , "subtype":"entry"
             , "details":
             [
@@ -2943,7 +3107,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1617412912
+            , "id":1539179952
             , "subtype":"exit"
             , "details":
             [
@@ -2961,15 +3125,15 @@
         ]
       }
       , {
-        "name":"Cluster 31"
-        , "id":1616366736
+        "name":"Cluster 21"
+        , "id":1575477648
         , "start":"0.00"
         , "end":"20.00"
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_for_body_left_updates_c0_enter1043_left_update1"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body_top_updates_c0_enter1043_top_update1"
             , "Cluster Type":"Stall-Free"
             , "Cluster Start Cycle":"0"
             , "Cluster Latency":"20"
@@ -2980,7 +3144,7 @@
         [
           {
             "name":"Logic"
-            , "id":1616275456
+            , "id":1531312736
             , "subtype":"entry"
             , "details":
             [
@@ -2994,7 +3158,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1617154896
+            , "id":1544721584
             , "subtype":"exit"
             , "details":
             [
@@ -3013,7 +3177,7 @@
       }
       , {
         "name":"LD"
-        , "id":1523187632
+        , "id":1464086288
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -3034,7 +3198,178 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":605
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1574114208
+        , "to":1539179952
+      }
+      , {
+        "from":1531312736
+        , "to":1544721584
+      }
+      , {
+        "from":1464086288
+        , "to":1574114208
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+      , {
+        "from":1544721584
+        , "to":1464086288
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+    ]
+  }
+  , "1436399728":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 32"
+        , "id":1617301344
+        , "start":"224.00"
+        , "end":"230.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body_left_updates_c1_enter_left_update5"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"224"
+            , "Cluster Latency":"6"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1617307632
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"224"
+                , "Cluster Logic Latency":"2"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1617383088
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"226"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"8"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
+        "name":"Cluster 31"
+        , "id":1605101984
+        , "start":"0.00"
+        , "end":"20.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body_left_updates_c0_enter1043_left_update1"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"0"
+            , "Cluster Latency":"20"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1616335472
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"0"
+                , "Cluster Logic Latency":"16"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1617125424
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"16"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"256"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
+        "name":"LD"
+        , "id":1521310720
+        , "start":"20.00"
+        , "end":"224.00"
+        , "subtype":"load/store"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"256 bits"
+            , "LSU Style":"Burst-coalesced"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+            , "Start Cycle":"20"
+            , "Latency":"204"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":744
             }
           ]
@@ -3045,16 +3380,16 @@
     , "links":
     [
       {
-        "from":1617336768
-        , "to":1617412912
+        "from":1617307632
+        , "to":1617383088
       }
       , {
-        "from":1616275456
-        , "to":1617154896
+        "from":1616335472
+        , "to":1617125424
       }
       , {
-        "from":1523187632
-        , "to":1617336768
+        "from":1521310720
+        , "to":1617307632
         , "details":
         [
           {
@@ -3064,8 +3399,8 @@
         ]
       }
       , {
-        "from":1617154896
-        , "to":1523187632
+        "from":1617125424
+        , "to":1521310720
         , "details":
         [
           {
@@ -3076,7 +3411,7 @@
       }
     ]
   }
-  , "1436373456":
+  , "1436399808":
   {
     "nodes":
     [
@@ -3085,13 +3420,13 @@
     [
     ]
   }
-  , "1436373536":
+  , "1436399888":
   {
     "nodes":
     [
       {
         "name":"Cluster 33"
-        , "id":1617505296
+        , "id":1617472544
         , "start":"1.00"
         , "end":"8.00"
         , "details":
@@ -3109,7 +3444,7 @@
         [
           {
             "name":"Logic"
-            , "id":1617512208
+            , "id":1617479872
             , "subtype":"entry"
             , "details":
             [
@@ -3123,7 +3458,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1617577216
+            , "id":1617544016
             , "subtype":"exit"
             , "details":
             [
@@ -3142,7 +3477,7 @@
       }
       , {
         "name":"Loop Input"
-        , "id":1586807360
+        , "id":1662773632
         , "subtype":"default"
         , "details":
         [
@@ -3156,7 +3491,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":753
             }
           ]
@@ -3167,12 +3502,12 @@
     , "links":
     [
       {
-        "from":1617512208
-        , "to":1617577216
+        "from":1617479872
+        , "to":1617544016
       }
       , {
-        "from":1586807360
-        , "to":1617512208
+        "from":1662773632
+        , "to":1617479872
         , "details":
         [
           {
@@ -3183,7 +3518,7 @@
       }
     ]
   }
-  , "1436373616":
+  , "1436399968":
   {
     "nodes":
     [
@@ -3192,13 +3527,13 @@
     [
     ]
   }
-  , "1436373696":
+  , "1436400048":
   {
     "nodes":
     [
       {
         "name":"Cluster 34"
-        , "id":1617678576
+        , "id":1617644160
         , "start":"0.00"
         , "end":"9.00"
         , "details":
@@ -3216,7 +3551,7 @@
         [
           {
             "name":"Logic"
-            , "id":1617684848
+            , "id":1617651232
             , "subtype":"entry"
             , "details":
             [
@@ -3230,7 +3565,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1617954880
+            , "id":1617919360
             , "subtype":"exit"
             , "details":
             [
@@ -3249,7 +3584,7 @@
       }
       , {
         "name":"Cluster 35"
-        , "id":1618161488
+        , "id":1618121776
         , "start":"213.00"
         , "end":"228.00"
         , "details":
@@ -3267,7 +3602,7 @@
         [
           {
             "name":"Logic"
-            , "id":1618167088
+            , "id":1618128736
             , "subtype":"entry"
             , "details":
             [
@@ -3281,7 +3616,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1619547216
+            , "id":1619501856
             , "subtype":"exit"
             , "details":
             [
@@ -3299,8 +3634,38 @@
         ]
       }
       , {
+        "name":"LD"
+        , "id":1464469856
+        , "start":"9.00"
+        , "end":"213.00"
+        , "subtype":"load/store"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"256 bits"
+            , "LSU Style":"Burst-coalesced"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+            , "Start Cycle":"9"
+            , "Latency":"204"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":794
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
         "name":"RD"
-        , "id":1517118016
+        , "id":1483203776
         , "start":"213.00"
         , "end":"213.00"
         , "subtype":"default"
@@ -3321,7 +3686,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":783
             }
           ]
@@ -3329,30 +3694,30 @@
         , "type":"inst"
       }
       , {
-        "name":"LD"
-        , "id":1517125408
-        , "start":"9.00"
-        , "end":"213.00"
+        "name":"ST"
+        , "id":1520799584
+        , "start":"228.00"
+        , "end":"230.00"
         , "subtype":"load/store"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"Load"
+            , "Instruction":"Store"
             , "Width":"256 bits"
             , "LSU Style":"Burst-coalesced"
             , "Stall-free":"No"
             , "Global Memory":"Yes"
-            , "Start Cycle":"9"
-            , "Latency":"204"
+            , "Start Cycle":"228"
+            , "Latency":"2"
           }
         ]
         , "debug":
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":794
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":787
             }
           ]
         ]
@@ -3360,7 +3725,7 @@
       }
       , {
         "name":"WR"
-        , "id":1517315760
+        , "id":1594857856
         , "start":"228.00"
         , "end":"228.00"
         , "subtype":"default"
@@ -3381,38 +3746,8 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":776
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"ST"
-        , "id":1517335712
-        , "start":"228.00"
-        , "end":"230.00"
-        , "subtype":"load/store"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Store"
-            , "Width":"256 bits"
-            , "LSU Style":"Burst-coalesced"
-            , "Stall-free":"No"
-            , "Global Memory":"Yes"
-            , "Start Cycle":"228"
-            , "Latency":"2"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":787
             }
           ]
         ]
@@ -3422,16 +3757,16 @@
     , "links":
     [
       {
-        "from":1617684848
-        , "to":1617954880
+        "from":1617651232
+        , "to":1617919360
       }
       , {
-        "from":1618167088
-        , "to":1619547216
+        "from":1618128736
+        , "to":1619501856
       }
       , {
-        "from":1517118016
-        , "to":1618167088
+        "from":1464469856
+        , "to":1618128736
         , "details":
         [
           {
@@ -3441,8 +3776,8 @@
         ]
       }
       , {
-        "from":1617954880
-        , "to":1517118016
+        "from":1617919360
+        , "to":1464469856
         , "details":
         [
           {
@@ -3452,8 +3787,8 @@
         ]
       }
       , {
-        "from":1517125408
-        , "to":1618167088
+        "from":1483203776
+        , "to":1618128736
         , "details":
         [
           {
@@ -3463,8 +3798,8 @@
         ]
       }
       , {
-        "from":1617954880
-        , "to":1517125408
+        "from":1617919360
+        , "to":1483203776
         , "details":
         [
           {
@@ -3474,8 +3809,8 @@
         ]
       }
       , {
-        "from":1619547216
-        , "to":1517315760
+        "from":1619501856
+        , "to":1520799584
         , "details":
         [
           {
@@ -3485,36 +3820,36 @@
         ]
       }
       , {
-        "from":1619547216
-        , "to":1517335712
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"640"
-          }
-        ]
-      }
-      , {
-        "from":1617954880
-        , "to":1517335712
+        "from":1617919360
+        , "to":1520799584
         , "details":
         [
           {
             "type":"table"
             , "Width":"320"
+          }
+        ]
+      }
+      , {
+        "from":1619501856
+        , "to":1594857856
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"640"
           }
         ]
       }
     ]
   }
-  , "1436373776":
+  , "1436400128":
   {
     "nodes":
     [
       {
         "name":"Cluster 36"
-        , "id":1619781920
+        , "id":1619737920
         , "start":"0.00"
         , "end":"22.00"
         , "details":
@@ -3532,7 +3867,7 @@
         [
           {
             "name":"Logic"
-            , "id":1619793136
+            , "id":1619748496
             , "subtype":"entry"
             , "details":
             [
@@ -3546,7 +3881,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1621389104
+            , "id":1621335600
             , "subtype":"exit"
             , "details":
             [
@@ -3567,18 +3902,18 @@
     , "links":
     [
       {
-        "from":1619793136
-        , "to":1621389104
+        "from":1619748496
+        , "to":1621335600
       }
     ]
   }
-  , "1436373856":
+  , "1436400208":
   {
     "nodes":
     [
       {
         "name":"Cluster 37"
-        , "id":1621515008
+        , "id":1621460592
         , "start":"0.00"
         , "end":"6.00"
         , "details":
@@ -3596,7 +3931,7 @@
         [
           {
             "name":"Logic"
-            , "id":1621522304
+            , "id":1621467520
             , "subtype":"entry"
             , "details":
             [
@@ -3610,7 +3945,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1621553280
+            , "id":1621498448
             , "subtype":"exit"
             , "details":
             [
@@ -3631,18 +3966,18 @@
     , "links":
     [
       {
-        "from":1621522304
-        , "to":1621553280
+        "from":1621467520
+        , "to":1621498448
       }
     ]
   }
-  , "1436373936":
+  , "1436400288":
   {
     "nodes":
     [
       {
         "name":"Cluster 38"
-        , "id":1621626144
+        , "id":1621573776
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -3660,7 +3995,7 @@
         [
           {
             "name":"Logic"
-            , "id":1621634192
+            , "id":1621580624
             , "subtype":"entry"
             , "details":
             [
@@ -3674,7 +4009,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1622111440
+            , "id":1622057680
             , "subtype":"exit"
             , "details":
             [
@@ -3693,7 +4028,7 @@
       }
       , {
         "name":"ST"
-        , "id":1631542352
+        , "id":1520681824
         , "start":"20.00"
         , "end":"22.00"
         , "subtype":"load/store"
@@ -3714,7 +4049,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":834
             }
           ]
@@ -3725,12 +4060,12 @@
     , "links":
     [
       {
-        "from":1621634192
-        , "to":1622111440
+        "from":1621580624
+        , "to":1622057680
       }
       , {
-        "from":1622111440
-        , "to":1631542352
+        "from":1622057680
+        , "to":1520681824
         , "details":
         [
           {
@@ -3741,13 +4076,13 @@
       }
     ]
   }
-  , "1436374016":
+  , "1436400368":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1718824240
+        , "id":1618463840
         , "start":"0.00"
         , "end":"1.00"
         , "subtype":"push"
@@ -3767,7 +4102,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":839
             }
           ]
@@ -3779,23 +4114,23 @@
     [
     ]
   }
-  , "1436387728":
+  , "1436400448":
   {
     "nodes":
     [
       {
-        "name":"Cluster 21"
-        , "id":1560884736
-        , "start":"0.00"
-        , "end":"20.00"
+        "name":"Cluster 39"
+        , "id":1632765216
+        , "start":"1.00"
+        , "end":"6.00"
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_for_body_top_updates_c0_enter1043_top_update1"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_inner_update_mm0s_c0_enter_inner_update_mm01"
             , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"0"
-            , "Cluster Latency":"20"
+            , "Cluster Start Cycle":"1"
+            , "Cluster Latency":"5"
           }
         ]
         , "type":"cluster"
@@ -3803,78 +4138,27 @@
         [
           {
             "name":"Logic"
-            , "id":1560600016
+            , "id":1646571536
             , "subtype":"entry"
             , "details":
             [
               {
                 "type":"table"
-                , "Cluster Logic Start Cycle":"0"
-                , "Cluster Logic Latency":"16"
+                , "Cluster Logic Start Cycle":"1"
+                , "Cluster Logic Latency":"1"
               }
             ]
             , "type":"inst"
           }
           , {
             "name":"Exit"
-            , "id":1546083568
+            , "id":1642962912
             , "subtype":"exit"
             , "details":
             [
               {
                 "type":"table"
-                , "Start Cycle":"16"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"256"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
-        "name":"Cluster 22"
-        , "id":1552278720
-        , "start":"224.00"
-        , "end":"230.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c1_in_for_body_top_updates_c1_enter_top_update5"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"224"
-            , "Cluster Latency":"6"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1552284624
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"224"
-                , "Cluster Logic Latency":"2"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1546577264
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"226"
+                , "Start Cycle":"2"
                 , "Latency":"3"
                 , "Exit FIFO Depth":"32"
                 , "Exit FIFO Width":"8"
@@ -3886,32 +4170,20 @@
         ]
       }
       , {
-        "name":"LD"
-        , "id":1523186896
-        , "start":"20.00"
-        , "end":"224.00"
-        , "subtype":"load/store"
+        "name":"?"
+        , "id":1510298240
+        , "start":"5.00"
+        , "end":"6.00"
+        , "subtype":"pop"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"Load"
-            , "Width":"256 bits"
-            , "LSU Style":"Burst-coalesced"
-            , "Stall-free":"No"
-            , "Global Memory":"Yes"
-            , "Start Cycle":"20"
-            , "Latency":"204"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+            , "Start Cycle":"5"
+            , "Latency":"1"
           }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":605
-            }
-          ]
         ]
         , "type":"inst"
       }
@@ -3919,38 +4191,12 @@
     , "links":
     [
       {
-        "from":1560600016
-        , "to":1546083568
-      }
-      , {
-        "from":1552284624
-        , "to":1546577264
-      }
-      , {
-        "from":1523186896
-        , "to":1552284624
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"256"
-          }
-        ]
-      }
-      , {
-        "from":1546083568
-        , "to":1523186896
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"256"
-          }
-        ]
+        "from":1646571536
+        , "to":1642962912
       }
     ]
   }
-  , "1436387808":
+  , "1436414176":
   {
     "nodes":
     [
@@ -3959,13 +4205,13 @@
     [
     ]
   }
-  , "1436387888":
+  , "1436414256":
   {
     "nodes":
     [
       {
         "name":"Cluster 23"
-        , "id":1569675216
+        , "id":1548098176
         , "start":"1.00"
         , "end":"8.00"
         , "details":
@@ -3983,7 +4229,7 @@
         [
           {
             "name":"Logic"
-            , "id":1547938240
+            , "id":1548105408
             , "subtype":"entry"
             , "details":
             [
@@ -3997,7 +4243,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1546180320
+            , "id":1543716368
             , "subtype":"exit"
             , "details":
             [
@@ -4016,7 +4262,7 @@
       }
       , {
         "name":"Loop Input"
-        , "id":1662637552
+        , "id":1660880464
         , "subtype":"default"
         , "details":
         [
@@ -4030,7 +4276,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":614
             }
           ]
@@ -4041,12 +4287,12 @@
     , "links":
     [
       {
-        "from":1547938240
-        , "to":1546180320
+        "from":1548105408
+        , "to":1543716368
       }
       , {
-        "from":1662637552
-        , "to":1547938240
+        "from":1660880464
+        , "to":1548105408
         , "details":
         [
           {
@@ -4057,7 +4303,7 @@
       }
     ]
   }
-  , "1436387968":
+  , "1436414336":
   {
     "nodes":
     [
@@ -4066,64 +4312,13 @@
     [
     ]
   }
-  , "1436388048":
+  , "1436414416":
   {
     "nodes":
     [
       {
-        "name":"Cluster 25"
-        , "id":1548950112
-        , "start":"213.00"
-        , "end":"231.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c1_in_for_body46_top_updates_c1_enter124_top_update6"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"213"
-            , "Cluster Latency":"18"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1548957824
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"213"
-                , "Cluster Logic Latency":"14"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1560505248
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"227"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"640"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
         "name":"Cluster 24"
-        , "id":1547822256
+        , "id":1561213120
         , "start":"0.00"
         , "end":"9.00"
         , "details":
@@ -4141,7 +4336,7 @@
         [
           {
             "name":"Logic"
-            , "id":1548516448
+            , "id":1560571520
             , "subtype":"entry"
             , "details":
             [
@@ -4155,7 +4350,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1547738256
+            , "id":1553278608
             , "subtype":"exit"
             , "details":
             [
@@ -4173,98 +4368,59 @@
         ]
       }
       , {
-        "name":"LD"
-        , "id":1508782144
-        , "start":"9.00"
-        , "end":"213.00"
-        , "subtype":"load/store"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Load"
-            , "Width":"256 bits"
-            , "LSU Style":"Burst-coalesced"
-            , "Stall-free":"No"
-            , "Global Memory":"Yes"
-            , "Start Cycle":"9"
-            , "Latency":"204"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":648
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"RD"
-        , "id":1523197200
+        "name":"Cluster 25"
+        , "id":1546984912
         , "start":"213.00"
-        , "end":"213.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Channel Read"
-            , "Width":"256 bits"
-            , "Depth":"1"
-            , "Channel Name":"ch_top_col_in"
-            , "Stall-free":"No"
-            , "Start Cycle":"213"
-            , "Latency":"0"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":637
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"WR"
-        , "id":1523250192
-        , "start":"231.00"
         , "end":"231.00"
-        , "subtype":"default"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"Channel Write"
-            , "Width":"256 bits"
-            , "Depth":"1"
-            , "Channel Name":"ch_top_row_out"
-            , "Stall-free":"No"
-            , "Start Cycle":"231"
-            , "Latency":"0"
+            , "Cluster Name":"i_sfc_s_c1_in_for_body46_top_updates_c1_enter124_top_update6"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"213"
+            , "Cluster Latency":"18"
           }
         ]
-        , "debug":
+        , "type":"cluster"
+        , "children":
         [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":672
-            }
-          ]
+          {
+            "name":"Logic"
+            , "id":1546991872
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"213"
+                , "Cluster Logic Latency":"14"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1568416480
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"227"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"640"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
         ]
-        , "type":"inst"
       }
       , {
         "name":"ST"
-        , "id":1594879888
+        , "id":1474353920
         , "start":"231.00"
         , "end":"233.00"
         , "subtype":"load/store"
@@ -4285,8 +4441,98 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":641
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"RD"
+        , "id":1520806944
+        , "start":"213.00"
+        , "end":"213.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Channel Read"
+            , "Width":"256 bits"
+            , "Depth":"1"
+            , "Channel Name":"ch_top_col_in"
+            , "Stall-free":"No"
+            , "Start Cycle":"213"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":637
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"WR"
+        , "id":1585445952
+        , "start":"231.00"
+        , "end":"231.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Channel Write"
+            , "Width":"256 bits"
+            , "Depth":"1"
+            , "Channel Name":"ch_top_row_out"
+            , "Stall-free":"No"
+            , "Start Cycle":"231"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":672
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1594382256
+        , "start":"9.00"
+        , "end":"213.00"
+        , "subtype":"load/store"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"256 bits"
+            , "LSU Style":"Burst-coalesced"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+            , "Start Cycle":"9"
+            , "Latency":"204"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":648
             }
           ]
         ]
@@ -4296,27 +4542,16 @@
     , "links":
     [
       {
-        "from":1548957824
-        , "to":1560505248
+        "from":1560571520
+        , "to":1553278608
       }
       , {
-        "from":1548516448
-        , "to":1547738256
+        "from":1546991872
+        , "to":1568416480
       }
       , {
-        "from":1508782144
-        , "to":1548957824
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"256"
-          }
-        ]
-      }
-      , {
-        "from":1547738256
-        , "to":1508782144
+        "from":1553278608
+        , "to":1474353920
         , "details":
         [
           {
@@ -4326,30 +4561,8 @@
         ]
       }
       , {
-        "from":1523197200
-        , "to":1548957824
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"256"
-          }
-        ]
-      }
-      , {
-        "from":1547738256
-        , "to":1523197200
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"320"
-          }
-        ]
-      }
-      , {
-        "from":1560505248
-        , "to":1523250192
+        "from":1568416480
+        , "to":1474353920
         , "details":
         [
           {
@@ -4359,8 +4572,19 @@
         ]
       }
       , {
-        "from":1547738256
-        , "to":1594879888
+        "from":1520806944
+        , "to":1546991872
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+      , {
+        "from":1553278608
+        , "to":1520806944
         , "details":
         [
           {
@@ -4370,25 +4594,47 @@
         ]
       }
       , {
-        "from":1560505248
-        , "to":1594879888
+        "from":1568416480
+        , "to":1585445952
         , "details":
         [
           {
             "type":"table"
             , "Width":"640"
+          }
+        ]
+      }
+      , {
+        "from":1594382256
+        , "to":1546991872
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"256"
+          }
+        ]
+      }
+      , {
+        "from":1553278608
+        , "to":1594382256
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"320"
           }
         ]
       }
     ]
   }
-  , "1436388128":
+  , "1436414496":
   {
     "nodes":
     [
       {
         "name":"Cluster 26"
-        , "id":1532663008
+        , "id":1589165392
         , "start":"0.00"
         , "end":"22.00"
         , "details":
@@ -4406,7 +4652,7 @@
         [
           {
             "name":"Logic"
-            , "id":1532673488
+            , "id":1589175616
             , "subtype":"entry"
             , "details":
             [
@@ -4420,7 +4666,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1591528976
+            , "id":1590611168
             , "subtype":"exit"
             , "details":
             [
@@ -4441,18 +4687,18 @@
     , "links":
     [
       {
-        "from":1532673488
-        , "to":1591528976
+        "from":1589175616
+        , "to":1590611168
       }
     ]
   }
-  , "1436388208":
+  , "1436414576":
   {
     "nodes":
     [
       {
         "name":"Cluster 27"
-        , "id":1588867152
+        , "id":1583912880
         , "start":"0.00"
         , "end":"6.00"
         , "details":
@@ -4470,7 +4716,7 @@
         [
           {
             "name":"Logic"
-            , "id":1588874432
+            , "id":1583919408
             , "subtype":"entry"
             , "details":
             [
@@ -4484,7 +4730,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1588905168
+            , "id":1588956096
             , "subtype":"exit"
             , "details":
             [
@@ -4505,18 +4751,18 @@
     , "links":
     [
       {
-        "from":1588874432
-        , "to":1588905168
+        "from":1583919408
+        , "to":1588956096
       }
     ]
   }
-  , "1436388288":
+  , "1436414656":
   {
     "nodes":
     [
       {
         "name":"Cluster 28"
-        , "id":1588978912
+        , "id":1589030528
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -4534,7 +4780,7 @@
         [
           {
             "name":"Logic"
-            , "id":1588987040
+            , "id":1589036992
             , "subtype":"entry"
             , "details":
             [
@@ -4548,7 +4794,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1585042176
+            , "id":1590137152
             , "subtype":"exit"
             , "details":
             [
@@ -4567,7 +4813,7 @@
       }
       , {
         "name":"ST"
-        , "id":1523230320
+        , "id":1626980448
         , "start":"20.00"
         , "end":"22.00"
         , "subtype":"load/store"
@@ -4588,7 +4834,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":714
             }
           ]
@@ -4599,12 +4845,12 @@
     , "links":
     [
       {
-        "from":1588987040
-        , "to":1585042176
+        "from":1589036992
+        , "to":1590137152
       }
       , {
-        "from":1585042176
-        , "to":1523230320
+        "from":1590137152
+        , "to":1626980448
         , "details":
         [
           {
@@ -4615,13 +4861,13 @@
       }
     ]
   }
-  , "1436388368":
+  , "1436414736":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1660925296
+        , "id":1500030736
         , "start":"0.00"
         , "end":"1.00"
         , "subtype":"push"
@@ -4641,7 +4887,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":719
             }
           ]
@@ -4653,13 +4899,95 @@
     [
     ]
   }
-  , "1436397920":
+  , "1436414816":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 29"
+        , "id":1607838272
+        , "start":"1.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_left_updates_c0_enter_left_update1"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"1"
+            , "Cluster Latency":"5"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1611023232
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"1"
+                , "Cluster Logic Latency":"1"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1605653456
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"2"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"8"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
+        "name":"?"
+        , "id":1519924640
+        , "start":"5.00"
+        , "end":"6.00"
+        , "subtype":"pop"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+            , "Start Cycle":"5"
+            , "Latency":"1"
+          }
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1611023232
+        , "to":1605653456
+      }
+    ]
+  }
+  , "1436944272":
   {
     "nodes":
     [
       {
         "name":"Cluster 20"
-        , "id":1555078848
+        , "id":1545611568
         , "start":"0.00"
         , "end":"5.00"
         , "details":
@@ -4677,7 +5005,7 @@
         [
           {
             "name":"Logic"
-            , "id":1555084912
+            , "id":1544107104
             , "subtype":"entry"
             , "details":
             [
@@ -4691,7 +5019,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1531512976
+            , "id":1565000464
             , "subtype":"exit"
             , "details":
             [
@@ -4712,100 +5040,18 @@
     , "links":
     [
       {
-        "from":1555084912
-        , "to":1531512976
+        "from":1544107104
+        , "to":1565000464
       }
     ]
   }
-  , "1437511520":
-  {
-    "nodes":
-    [
-      {
-        "name":"Cluster 19"
-        , "id":1547618512
-        , "start":"1.00"
-        , "end":"6.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_entry_top_updates_c0_enter_top_update1"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"1"
-            , "Cluster Latency":"5"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1561212496
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"1"
-                , "Cluster Logic Latency":"1"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1561232752
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"2"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"8"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
-        "name":"?"
-        , "id":1594941776
-        , "start":"5.00"
-        , "end":"6.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"Unknown variable"
-            , "Start Cycle":"5"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-    ]
-    , "links":
-    [
-      {
-        "from":1561212496
-        , "to":1561232752
-      }
-    ]
-  }
-  , "1437607536":
+  , "1437633232":
   {
     "nodes":
     [
       {
         "name":"Cluster 41"
-        , "id":1655093472
+        , "id":1655010064
         , "start":"224.00"
         , "end":"231.00"
         , "details":
@@ -4823,7 +5069,7 @@
         [
           {
             "name":"Logic"
-            , "id":1655099904
+            , "id":1655016736
             , "subtype":"entry"
             , "details":
             [
@@ -4837,7 +5083,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1655446448
+            , "id":1655358928
             , "subtype":"exit"
             , "details":
             [
@@ -4856,7 +5102,7 @@
       }
       , {
         "name":"Cluster 40"
-        , "id":1638623712
+        , "id":1633924336
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -4874,7 +5120,7 @@
         [
           {
             "name":"Logic"
-            , "id":1636300848
+            , "id":1640727024
             , "subtype":"entry"
             , "details":
             [
@@ -4888,7 +5134,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1652454528
+            , "id":1653314112
             , "subtype":"exit"
             , "details":
             [
@@ -4907,7 +5153,7 @@
       }
       , {
         "name":"LD"
-        , "id":1626538544
+        , "id":1475391472
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -4928,7 +5174,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":867
             }
           ]
@@ -4937,7 +5183,7 @@
       }
       , {
         "name":"LD"
-        , "id":1626551152
+        , "id":1495123136
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -4958,7 +5204,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":875
             }
           ]
@@ -4967,7 +5213,7 @@
       }
       , {
         "name":"LD"
-        , "id":1843995088
+        , "id":1524998432
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -4988,7 +5234,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":871
             }
           ]
@@ -4999,16 +5245,16 @@
     , "links":
     [
       {
-        "from":1655099904
-        , "to":1655446448
+        "from":1655016736
+        , "to":1655358928
       }
       , {
-        "from":1636300848
-        , "to":1652454528
+        "from":1640727024
+        , "to":1653314112
       }
       , {
-        "from":1626538544
-        , "to":1655099904
+        "from":1475391472
+        , "to":1655016736
         , "details":
         [
           {
@@ -5018,8 +5264,8 @@
         ]
       }
       , {
-        "from":1652454528
-        , "to":1626538544
+        "from":1653314112
+        , "to":1475391472
         , "details":
         [
           {
@@ -5029,8 +5275,8 @@
         ]
       }
       , {
-        "from":1626551152
-        , "to":1655099904
+        "from":1495123136
+        , "to":1655016736
         , "details":
         [
           {
@@ -5040,8 +5286,8 @@
         ]
       }
       , {
-        "from":1652454528
-        , "to":1626551152
+        "from":1653314112
+        , "to":1495123136
         , "details":
         [
           {
@@ -5051,8 +5297,8 @@
         ]
       }
       , {
-        "from":1843995088
-        , "to":1655099904
+        "from":1524998432
+        , "to":1655016736
         , "details":
         [
           {
@@ -5062,8 +5308,8 @@
         ]
       }
       , {
-        "from":1652454528
-        , "to":1843995088
+        "from":1653314112
+        , "to":1524998432
         , "details":
         [
           {
@@ -5074,7 +5320,7 @@
       }
     ]
   }
-  , "1437608624":
+  , "1437634864":
   {
     "nodes":
     [
@@ -5083,7 +5329,7 @@
     [
     ]
   }
-  , "1437608704":
+  , "1437634944":
   {
     "nodes":
     [
@@ -5092,13 +5338,13 @@
     [
     ]
   }
-  , "1437608784":
+  , "1437635024":
   {
     "nodes":
     [
       {
         "name":"Cluster 42"
-        , "id":1655566320
+        , "id":1655477024
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -5116,7 +5362,7 @@
         [
           {
             "name":"Logic"
-            , "id":1655574336
+            , "id":1655483936
             , "subtype":"entry"
             , "details":
             [
@@ -5130,7 +5376,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1656052816
+            , "id":1655958768
             , "subtype":"exit"
             , "details":
             [
@@ -5149,7 +5395,7 @@
       }
       , {
         "name":"ST"
-        , "id":1631541648
+        , "id":1465019568
         , "start":"20.00"
         , "end":"22.00"
         , "subtype":"load/store"
@@ -5170,7 +5416,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":936
             }
           ]
@@ -5181,12 +5427,12 @@
     , "links":
     [
       {
-        "from":1655574336
-        , "to":1656052816
+        "from":1655483936
+        , "to":1655958768
       }
       , {
-        "from":1656052816
-        , "to":1631541648
+        "from":1655958768
+        , "to":1465019568
         , "details":
         [
           {
@@ -5197,13 +5443,13 @@
       }
     ]
   }
-  , "1437608864":
+  , "1437635104":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1465352576
+        , "id":1626836416
         , "start":"0.00"
         , "end":"1.00"
         , "subtype":"push"
@@ -5223,7 +5469,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":941
             }
           ]
@@ -5235,13 +5481,13 @@
     [
     ]
   }
-  , "1437608944":
+  , "1437635184":
   {
     "nodes":
     [
       {
         "name":"Cluster 43"
-        , "id":1656319328
+        , "id":1656224272
         , "start":"0.00"
         , "end":"65.00"
         , "details":
@@ -5259,7 +5505,7 @@
         [
           {
             "name":"Logic"
-            , "id":1656326512
+            , "id":1656231232
             , "subtype":"entry"
             , "details":
             [
@@ -5273,7 +5519,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1659334560
+            , "id":1659229776
             , "subtype":"exit"
             , "details":
             [
@@ -5294,25 +5540,25 @@
     , "links":
     [
       {
-        "from":1656326512
-        , "to":1659334560
+        "from":1656231232
+        , "to":1659229776
       }
     ]
   }
-  , "1437895392":
+  , "1437635264":
   {
     "nodes":
     [
       {
-        "name":"Cluster 29"
-        , "id":1614484624
+        "name":"Cluster 44"
+        , "id":1718864416
         , "start":"1.00"
         , "end":"6.00"
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_entry_left_updates_c0_enter_left_update1"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_inner_update_mm1s_c0_enter_inner_update_mm11"
             , "Cluster Type":"Stall-Free"
             , "Cluster Start Cycle":"1"
             , "Cluster Latency":"5"
@@ -5323,7 +5569,7 @@
         [
           {
             "name":"Logic"
-            , "id":1611166688
+            , "id":1691136256
             , "subtype":"entry"
             , "details":
             [
@@ -5337,7 +5583,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1598674800
+            , "id":1699226128
             , "subtype":"exit"
             , "details":
             [
@@ -5356,7 +5602,7 @@
       }
       , {
         "name":"?"
-        , "id":1594942512
+        , "id":1463318304
         , "start":"5.00"
         , "end":"6.00"
         , "subtype":"pop"
@@ -5376,18 +5622,18 @@
     , "links":
     [
       {
-        "from":1611166688
-        , "to":1598674800
+        "from":1691136256
+        , "to":1699226128
       }
     ]
   }
-  , "1437945952":
+  , "1437968816":
   {
     "nodes":
     [
       {
         "name":"Cluster 30"
-        , "id":1607954768
+        , "id":1612020560
         , "start":"0.00"
         , "end":"5.00"
         , "details":
@@ -5405,7 +5651,7 @@
         [
           {
             "name":"Logic"
-            , "id":1605409616
+            , "id":1608883360
             , "subtype":"entry"
             , "details":
             [
@@ -5419,7 +5665,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1608262096
+            , "id":1605966512
             , "subtype":"exit"
             , "details":
             [
@@ -5440,315 +5686,18 @@
     , "links":
     [
       {
-        "from":1605409616
-        , "to":1608262096
+        "from":1608883360
+        , "to":1605966512
       }
     ]
   }
-  , "1438154400":
+  , "1438972016":
   {
     "nodes":
     [
       {
-        "name":"Cluster 39"
-        , "id":1640800400
-        , "start":"1.00"
-        , "end":"6.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_entry_inner_update_mm0s_c0_enter_inner_update_mm01"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"1"
-            , "Cluster Latency":"5"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1638752432
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"1"
-                , "Cluster Logic Latency":"1"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1644631504
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"2"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"8"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
-        "name":"?"
-        , "id":1492990224
-        , "start":"5.00"
-        , "end":"6.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"Unknown variable"
-            , "Start Cycle":"5"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-    ]
-    , "links":
-    [
-      {
-        "from":1638752432
-        , "to":1644631504
-      }
-    ]
-  }
-  , "1438785136":
-  {
-    "nodes":
-    [
-      {
-        "name":"Cluster 54"
-        , "id":1777132384
-        , "start":"1.00"
-        , "end":"6.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_entry_inner_update_mm3s_c0_enter_inner_update_mm31"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"1"
-            , "Cluster Latency":"5"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1790956656
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"1"
-                , "Cluster Logic Latency":"1"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1773672560
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"2"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"8"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
-        "name":"?"
-        , "id":1594370288
-        , "start":"5.00"
-        , "end":"6.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"Unknown variable"
-            , "Start Cycle":"5"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-    ]
-    , "links":
-    [
-      {
-        "from":1790956656
-        , "to":1773672560
-      }
-    ]
-  }
-  , "1438867536":
-  {
-    "nodes":
-    [
-      {
-        "name":"Cluster 44"
-        , "id":1728109520
-        , "start":"1.00"
-        , "end":"6.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_entry_inner_update_mm1s_c0_enter_inner_update_mm11"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"1"
-            , "Cluster Latency":"5"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1706914144
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"1"
-                , "Cluster Logic Latency":"1"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1668860352
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"2"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"8"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
-        "name":"?"
-        , "id":1517120992
-        , "start":"5.00"
-        , "end":"6.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"Unknown variable"
-            , "Start Cycle":"5"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-    ]
-    , "links":
-    [
-      {
-        "from":1706914144
-        , "to":1668860352
-      }
-    ]
-  }
-  , "1438950160":
-  {
-    "nodes":
-    [
-      {
-        "name":"Cluster 45"
-        , "id":1724166832
-        , "start":"0.00"
-        , "end":"20.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_for_cond1_preheader_inner_update_mm1s_c0_enter5313_inner_update_mm11"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"0"
-            , "Cluster Latency":"20"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1703881552
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"0"
-                , "Cluster Logic Latency":"16"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1678067184
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"16"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"384"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
         "name":"Cluster 46"
-        , "id":1711544720
+        , "id":1667728272
         , "start":"224.00"
         , "end":"231.00"
         , "details":
@@ -5766,7 +5715,7 @@
         [
           {
             "name":"Logic"
-            , "id":1716096544
+            , "id":1716856096
             , "subtype":"entry"
             , "details":
             [
@@ -5780,7 +5729,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1703161328
+            , "id":1717738928
             , "subtype":"exit"
             , "details":
             [
@@ -5798,8 +5747,59 @@
         ]
       }
       , {
+        "name":"Cluster 45"
+        , "id":1714330064
+        , "start":"0.00"
+        , "end":"20.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_cond1_preheader_inner_update_mm1s_c0_enter5313_inner_update_mm11"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"0"
+            , "Cluster Latency":"20"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1691321312
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"0"
+                , "Cluster Logic Latency":"16"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1722905536
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"16"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"384"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
         "name":"LD"
-        , "id":1494841152
+        , "id":1631813200
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -5820,8 +5820,8 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":977
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":973
             }
           ]
         ]
@@ -5829,7 +5829,7 @@
       }
       , {
         "name":"LD"
-        , "id":1597133024
+        , "id":1631882976
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -5850,7 +5850,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":969
             }
           ]
@@ -5859,7 +5859,7 @@
       }
       , {
         "name":"LD"
-        , "id":1630717504
+        , "id":1771941280
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -5880,8 +5880,8 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":973
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":977
             }
           ]
         ]
@@ -5891,16 +5891,16 @@
     , "links":
     [
       {
-        "from":1703881552
-        , "to":1678067184
+        "from":1716856096
+        , "to":1717738928
       }
       , {
-        "from":1716096544
-        , "to":1703161328
+        "from":1691321312
+        , "to":1722905536
       }
       , {
-        "from":1494841152
-        , "to":1716096544
+        "from":1631813200
+        , "to":1716856096
         , "details":
         [
           {
@@ -5910,8 +5910,8 @@
         ]
       }
       , {
-        "from":1678067184
-        , "to":1494841152
+        "from":1722905536
+        , "to":1631813200
         , "details":
         [
           {
@@ -5921,8 +5921,8 @@
         ]
       }
       , {
-        "from":1597133024
-        , "to":1716096544
+        "from":1631882976
+        , "to":1716856096
         , "details":
         [
           {
@@ -5932,8 +5932,8 @@
         ]
       }
       , {
-        "from":1678067184
-        , "to":1597133024
+        "from":1722905536
+        , "to":1631882976
         , "details":
         [
           {
@@ -5943,8 +5943,8 @@
         ]
       }
       , {
-        "from":1630717504
-        , "to":1716096544
+        "from":1771941280
+        , "to":1716856096
         , "details":
         [
           {
@@ -5954,8 +5954,8 @@
         ]
       }
       , {
-        "from":1678067184
-        , "to":1630717504
+        "from":1722905536
+        , "to":1771941280
         , "details":
         [
           {
@@ -5966,7 +5966,7 @@
       }
     ]
   }
-  , "1438950528":
+  , "1438973296":
   {
     "nodes":
     [
@@ -5975,7 +5975,7 @@
     [
     ]
   }
-  , "1438951328":
+  , "1438973376":
   {
     "nodes":
     [
@@ -5984,13 +5984,13 @@
     [
     ]
   }
-  , "1438951408":
+  , "1438973456":
   {
     "nodes":
     [
       {
         "name":"Cluster 47"
-        , "id":1700482672
+        , "id":1667723136
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -6008,7 +6008,7 @@
         [
           {
             "name":"Logic"
-            , "id":1693787520
+            , "id":1686576240
             , "subtype":"entry"
             , "details":
             [
@@ -6022,7 +6022,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1685843056
+            , "id":1676754912
             , "subtype":"exit"
             , "details":
             [
@@ -6041,7 +6041,7 @@
       }
       , {
         "name":"ST"
-        , "id":1517993296
+        , "id":1588182064
         , "start":"20.00"
         , "end":"22.00"
         , "subtype":"load/store"
@@ -6062,7 +6062,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1038
             }
           ]
@@ -6073,12 +6073,12 @@
     , "links":
     [
       {
-        "from":1693787520
-        , "to":1685843056
+        "from":1686576240
+        , "to":1676754912
       }
       , {
-        "from":1685843056
-        , "to":1517993296
+        "from":1676754912
+        , "to":1588182064
         , "details":
         [
           {
@@ -6089,13 +6089,13 @@
       }
     ]
   }
-  , "1438951488":
+  , "1438973536":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1530146416
+        , "id":1658735200
         , "start":"0.00"
         , "end":"1.00"
         , "subtype":"push"
@@ -6115,7 +6115,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1043
             }
           ]
@@ -6127,13 +6127,13 @@
     [
     ]
   }
-  , "1438951568":
+  , "1438973616":
   {
     "nodes":
     [
       {
         "name":"Cluster 48"
-        , "id":1682490432
+        , "id":1681309952
         , "start":"0.00"
         , "end":"65.00"
         , "details":
@@ -6151,7 +6151,7 @@
         [
           {
             "name":"Logic"
-            , "id":1691722048
+            , "id":1677092528
             , "subtype":"entry"
             , "details":
             [
@@ -6165,7 +6165,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1674942048
+            , "id":1701136144
             , "subtype":"exit"
             , "details":
             [
@@ -6186,18 +6186,18 @@
     , "links":
     [
       {
-        "from":1691722048
-        , "to":1674942048
+        "from":1677092528
+        , "to":1701136144
       }
     ]
   }
-  , "1439614256":
+  , "1438973696":
   {
     "nodes":
     [
       {
         "name":"Cluster 49"
-        , "id":1756908000
+        , "id":1725696288
         , "start":"1.00"
         , "end":"6.00"
         , "details":
@@ -6215,7 +6215,7 @@
         [
           {
             "name":"Logic"
-            , "id":1676890752
+            , "id":1756500688
             , "subtype":"entry"
             , "details":
             [
@@ -6229,7 +6229,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1699199968
+            , "id":1728356768
             , "subtype":"exit"
             , "details":
             [
@@ -6248,7 +6248,7 @@
       }
       , {
         "name":"?"
-        , "id":1594879152
+        , "id":1521163008
         , "start":"5.00"
         , "end":"6.00"
         , "subtype":"pop"
@@ -6268,18 +6268,18 @@
     , "links":
     [
       {
-        "from":1676890752
-        , "to":1699199968
+        "from":1756500688
+        , "to":1728356768
       }
     ]
   }
-  , "1440351936":
+  , "1440372672":
   {
     "nodes":
     [
       {
         "name":"Cluster 55"
-        , "id":1769087872
+        , "id":1778649184
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -6297,7 +6297,7 @@
         [
           {
             "name":"Logic"
-            , "id":1806226736
+            , "id":1793714720
             , "subtype":"entry"
             , "details":
             [
@@ -6311,7 +6311,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1769173488
+            , "id":1727873328
             , "subtype":"exit"
             , "details":
             [
@@ -6330,7 +6330,7 @@
       }
       , {
         "name":"Cluster 56"
-        , "id":1679521392
+        , "id":1788276560
         , "start":"224.00"
         , "end":"231.00"
         , "details":
@@ -6348,7 +6348,7 @@
         [
           {
             "name":"Logic"
-            , "id":1789613488
+            , "id":1730032880
             , "subtype":"entry"
             , "details":
             [
@@ -6362,7 +6362,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1682637504
+            , "id":1814076896
             , "subtype":"exit"
             , "details":
             [
@@ -6381,7 +6381,7 @@
       }
       , {
         "name":"LD"
-        , "id":1662398640
+        , "id":1658736688
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -6402,37 +6402,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-              , "line":1173
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"LD"
-        , "id":1665420368
-        , "start":"20.00"
-        , "end":"224.00"
-        , "subtype":"load/store"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Load"
-            , "Width":"256 bits"
-            , "LSU Style":"Burst-coalesced"
-            , "Stall-free":"No"
-            , "Global Memory":"Yes"
-            , "Start Cycle":"20"
-            , "Latency":"204"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1181
             }
           ]
@@ -6441,7 +6411,7 @@
       }
       , {
         "name":"LD"
-        , "id":1777351792
+        , "id":1658743632
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -6462,8 +6432,38 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1177
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1665042560
+        , "start":"20.00"
+        , "end":"224.00"
+        , "subtype":"load/store"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"256 bits"
+            , "LSU Style":"Burst-coalesced"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+            , "Start Cycle":"20"
+            , "Latency":"204"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+              , "line":1173
             }
           ]
         ]
@@ -6473,16 +6473,16 @@
     , "links":
     [
       {
-        "from":1806226736
-        , "to":1769173488
+        "from":1793714720
+        , "to":1727873328
       }
       , {
-        "from":1789613488
-        , "to":1682637504
+        "from":1730032880
+        , "to":1814076896
       }
       , {
-        "from":1662398640
-        , "to":1789613488
+        "from":1658736688
+        , "to":1730032880
         , "details":
         [
           {
@@ -6492,8 +6492,8 @@
         ]
       }
       , {
-        "from":1769173488
-        , "to":1662398640
+        "from":1727873328
+        , "to":1658736688
         , "details":
         [
           {
@@ -6503,8 +6503,8 @@
         ]
       }
       , {
-        "from":1665420368
-        , "to":1789613488
+        "from":1658743632
+        , "to":1730032880
         , "details":
         [
           {
@@ -6514,8 +6514,8 @@
         ]
       }
       , {
-        "from":1769173488
-        , "to":1665420368
+        "from":1727873328
+        , "to":1658743632
         , "details":
         [
           {
@@ -6525,8 +6525,8 @@
         ]
       }
       , {
-        "from":1777351792
-        , "to":1789613488
+        "from":1665042560
+        , "to":1730032880
         , "details":
         [
           {
@@ -6536,8 +6536,8 @@
         ]
       }
       , {
-        "from":1769173488
-        , "to":1777351792
+        "from":1727873328
+        , "to":1665042560
         , "details":
         [
           {
@@ -6548,7 +6548,7 @@
       }
     ]
   }
-  , "1440352304":
+  , "1440374480":
   {
     "nodes":
     [
@@ -6557,7 +6557,7 @@
     [
     ]
   }
-  , "1440353104":
+  , "1440374560":
   {
     "nodes":
     [
@@ -6566,13 +6566,13 @@
     [
     ]
   }
-  , "1440353184":
+  , "1440374640":
   {
     "nodes":
     [
       {
         "name":"Cluster 57"
-        , "id":1679252928
+        , "id":1749127504
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -6590,7 +6590,7 @@
         [
           {
             "name":"Logic"
-            , "id":1721317568
+            , "id":1815212064
             , "subtype":"entry"
             , "details":
             [
@@ -6604,7 +6604,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1759222720
+            , "id":1790909744
             , "subtype":"exit"
             , "details":
             [
@@ -6623,7 +6623,7 @@
       }
       , {
         "name":"ST"
-        , "id":1624381680
+        , "id":1658754544
         , "start":"20.00"
         , "end":"22.00"
         , "subtype":"load/store"
@@ -6644,7 +6644,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1242
             }
           ]
@@ -6655,12 +6655,12 @@
     , "links":
     [
       {
-        "from":1721317568
-        , "to":1759222720
+        "from":1815212064
+        , "to":1790909744
       }
       , {
-        "from":1759222720
-        , "to":1624381680
+        "from":1790909744
+        , "to":1658754544
         , "details":
         [
           {
@@ -6671,13 +6671,13 @@
       }
     ]
   }
-  , "1440353264":
+  , "1440374720":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1640157232
+        , "id":1454756032
         , "start":"0.00"
         , "end":"1.00"
         , "subtype":"push"
@@ -6697,7 +6697,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1247
             }
           ]
@@ -6709,13 +6709,13 @@
     [
     ]
   }
-  , "1440353344":
+  , "1440374800":
   {
     "nodes":
     [
       {
         "name":"Cluster 58"
-        , "id":1765747248
+        , "id":1705811632
         , "start":"0.00"
         , "end":"65.00"
         , "details":
@@ -6733,7 +6733,7 @@
         [
           {
             "name":"Logic"
-            , "id":1766941648
+            , "id":1730569056
             , "subtype":"entry"
             , "details":
             [
@@ -6747,7 +6747,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1759119568
+            , "id":1781212880
             , "subtype":"exit"
             , "details":
             [
@@ -6768,18 +6768,18 @@
     , "links":
     [
       {
-        "from":1766941648
-        , "to":1759119568
+        "from":1730569056
+        , "to":1781212880
       }
     ]
   }
-  , "1441016032":
+  , "1440374880":
   {
     "nodes":
     [
       {
         "name":"Cluster 59"
-        , "id":1840945984
+        , "id":1839575904
         , "start":"1.00"
         , "end":"6.00"
         , "details":
@@ -6797,7 +6797,7 @@
         [
           {
             "name":"Logic"
-            , "id":1848902208
+            , "id":1827158208
             , "subtype":"entry"
             , "details":
             [
@@ -6811,7 +6811,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1790666784
+            , "id":1854797984
             , "subtype":"exit"
             , "details":
             [
@@ -6830,7 +6830,7 @@
       }
       , {
         "name":"?"
-        , "id":1484027632
+        , "id":1831696144
         , "start":"5.00"
         , "end":"6.00"
         , "subtype":"pop"
@@ -6850,69 +6850,18 @@
     , "links":
     [
       {
-        "from":1848902208
-        , "to":1790666784
+        "from":1827158208
+        , "to":1854797984
       }
     ]
   }
-  , "1441098656":
+  , "1441119344":
   {
     "nodes":
     [
       {
-        "name":"Cluster 60"
-        , "id":1841331312
-        , "start":"0.00"
-        , "end":"20.00"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_for_cond1_preheader_inner_update_mm4s_c0_enter5313_inner_update_mm41"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"0"
-            , "Cluster Latency":"20"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1805265248
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"0"
-                , "Cluster Logic Latency":"16"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1855261328
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"16"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"384"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
-          }
-        ]
-      }
-      , {
         "name":"Cluster 61"
-        , "id":1774032800
+        , "id":1861073232
         , "start":"224.00"
         , "end":"231.00"
         , "details":
@@ -6930,7 +6879,7 @@
         [
           {
             "name":"Logic"
-            , "id":1855878912
+            , "id":1744051088
             , "subtype":"entry"
             , "details":
             [
@@ -6944,7 +6893,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1828967712
+            , "id":1859936720
             , "subtype":"exit"
             , "details":
             [
@@ -6962,8 +6911,59 @@
         ]
       }
       , {
+        "name":"Cluster 60"
+        , "id":1699169424
+        , "start":"0.00"
+        , "end":"20.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_cond1_preheader_inner_update_mm4s_c0_enter5313_inner_update_mm41"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"0"
+            , "Cluster Latency":"20"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1836228000
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"0"
+                , "Cluster Logic Latency":"16"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1846495536
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"16"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"384"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
         "name":"LD"
-        , "id":1594409296
+        , "id":1464662432
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -6984,7 +6984,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1279
             }
           ]
@@ -6993,7 +6993,7 @@
       }
       , {
         "name":"LD"
-        , "id":1626346304
+        , "id":1656958128
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -7014,7 +7014,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1283
             }
           ]
@@ -7023,7 +7023,7 @@
       }
       , {
         "name":"LD"
-        , "id":1752257552
+        , "id":1763370128
         , "start":"20.00"
         , "end":"224.00"
         , "subtype":"load/store"
@@ -7044,7 +7044,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1275
             }
           ]
@@ -7055,16 +7055,16 @@
     , "links":
     [
       {
-        "from":1805265248
-        , "to":1855261328
+        "from":1744051088
+        , "to":1859936720
       }
       , {
-        "from":1855878912
-        , "to":1828967712
+        "from":1836228000
+        , "to":1846495536
       }
       , {
-        "from":1594409296
-        , "to":1855878912
+        "from":1464662432
+        , "to":1744051088
         , "details":
         [
           {
@@ -7074,8 +7074,8 @@
         ]
       }
       , {
-        "from":1855261328
-        , "to":1594409296
+        "from":1846495536
+        , "to":1464662432
         , "details":
         [
           {
@@ -7085,8 +7085,8 @@
         ]
       }
       , {
-        "from":1626346304
-        , "to":1855878912
+        "from":1656958128
+        , "to":1744051088
         , "details":
         [
           {
@@ -7096,8 +7096,8 @@
         ]
       }
       , {
-        "from":1855261328
-        , "to":1626346304
+        "from":1846495536
+        , "to":1656958128
         , "details":
         [
           {
@@ -7107,8 +7107,8 @@
         ]
       }
       , {
-        "from":1752257552
-        , "to":1855878912
+        "from":1763370128
+        , "to":1744051088
         , "details":
         [
           {
@@ -7118,8 +7118,8 @@
         ]
       }
       , {
-        "from":1855261328
-        , "to":1752257552
+        "from":1846495536
+        , "to":1763370128
         , "details":
         [
           {
@@ -7130,7 +7130,7 @@
       }
     ]
   }
-  , "1441099024":
+  , "1441121152":
   {
     "nodes":
     [
@@ -7139,7 +7139,7 @@
     [
     ]
   }
-  , "1441099824":
+  , "1441121232":
   {
     "nodes":
     [
@@ -7148,13 +7148,13 @@
     [
     ]
   }
-  , "1441099904":
+  , "1441121312":
   {
     "nodes":
     [
       {
         "name":"Cluster 62"
-        , "id":1817988496
+        , "id":1824813280
         , "start":"0.00"
         , "end":"20.00"
         , "details":
@@ -7172,7 +7172,7 @@
         [
           {
             "name":"Logic"
-            , "id":1848186000
+            , "id":1859647488
             , "subtype":"entry"
             , "details":
             [
@@ -7186,7 +7186,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1698431824
+            , "id":1806442656
             , "subtype":"exit"
             , "details":
             [
@@ -7205,7 +7205,7 @@
       }
       , {
         "name":"ST"
-        , "id":1586349136
+        , "id":1727842624
         , "start":"20.00"
         , "end":"22.00"
         , "subtype":"load/store"
@@ -7226,7 +7226,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1344
             }
           ]
@@ -7237,12 +7237,12 @@
     , "links":
     [
       {
-        "from":1848186000
-        , "to":1698431824
+        "from":1859647488
+        , "to":1806442656
       }
       , {
-        "from":1698431824
-        , "to":1586349136
+        "from":1806442656
+        , "to":1727842624
         , "details":
         [
           {
@@ -7253,13 +7253,13 @@
       }
     ]
   }
-  , "1441099984":
+  , "1441121392":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1665365488
+        , "id":1511827808
         , "start":"0.00"
         , "end":"1.00"
         , "subtype":"push"
@@ -7279,7 +7279,7 @@
         [
           [
             {
-              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+              "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
               , "line":1349
             }
           ]
@@ -7291,13 +7291,13 @@
     [
     ]
   }
-  , "1441100064":
+  , "1441121472":
   {
     "nodes":
     [
       {
         "name":"Cluster 63"
-        , "id":1797914896
+        , "id":1840691664
         , "start":"0.00"
         , "end":"65.00"
         , "details":
@@ -7315,7 +7315,7 @@
         [
           {
             "name":"Logic"
-            , "id":1768641280
+            , "id":1730770272
             , "subtype":"entry"
             , "details":
             [
@@ -7329,7 +7329,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1816956688
+            , "id":1828243152
             , "subtype":"exit"
             , "details":
             [
@@ -7350,8 +7350,8 @@
     , "links":
     [
       {
-        "from":1768641280
-        , "to":1816956688
+        "from":1730770272
+        , "to":1828243152
       }
     ]
   }

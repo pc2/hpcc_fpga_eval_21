@@ -4,428 +4,8 @@
     {
       "name":"a_buffer"
       , "id":4294967295
-      , "src":"1462873056"
-      , "dst":"1511514128"
-      , "type":"fMAX/II"
-      , "brief":"Memory dependency"
-      , "loop":"inner_update_mm2.B6"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"a_buffer"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"1060"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Memory dependency"
-          , "Estimated fmax reduced to: ":"480.0"
-          , "Loop feedback path that lowered II and Fmax: ":
-          [
-            {
-              "type":"text"
-              , "text":"LD(%L)"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"1119"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"ST(%L)"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"1128"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"a_buffer"
-          , "id":1462873056
-          , "start":"4.00"
-          , "parent":"inner_update_mm2.B6"
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1128
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"LD"
-          , "id":1862152592
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1119
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"ST"
-          , "id":1617392496
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1128
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1511514128
-          , "end":"61.00"
-          , "parent":"inner_update_mm2.B6"
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1128
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1462873056
-          , "to":1862152592
-        }
-        , {
-          "from":1862152592
-          , "to":1617392496
-        }
-        , {
-          "from":1617392496
-          , "to":1511514128
-        }
-        , {
-          "from":1462873056
-          , "to":1511514128
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"a_buffer"
-      , "id":4294967295
-      , "src":"1618116240"
-      , "dst":"1507831248"
-      , "type":"fMAX/II"
-      , "brief":"Memory dependency"
-      , "loop":"inner_update_mm4.B6"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"a_buffer"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"1264"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Memory dependency"
-          , "Estimated fmax reduced to: ":"480.0"
-          , "Loop feedback path that lowered II and Fmax: ":
-          [
-            {
-              "type":"text"
-              , "text":"LD(%L)"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"1323"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"ST(%L)"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"1332"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"a_buffer"
-          , "id":1618116240
-          , "start":"4.00"
-          , "parent":"inner_update_mm4.B6"
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1332
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"LD"
-          , "id":1618112448
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1323
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"ST"
-          , "id":1862959616
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1332
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1507831248
-          , "end":"61.00"
-          , "parent":"inner_update_mm4.B6"
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1332
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1618116240
-          , "to":1618112448
-        }
-        , {
-          "from":1618112448
-          , "to":1862959616
-        }
-        , {
-          "from":1862959616
-          , "to":1507831248
-        }
-        , {
-          "from":1618116240
-          , "to":1507831248
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"a_buffer"
-      , "id":4294967295
-      , "src":"1499263168"
-      , "dst":"1911129360"
-      , "type":"fMAX/II"
-      , "brief":"Memory dependency"
-      , "loop":"inner_update_mm3.B6"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"a_buffer"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"1162"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Memory dependency"
-          , "Estimated fmax reduced to: ":"480.0"
-          , "Loop feedback path that lowered II and Fmax: ":
-          [
-            {
-              "type":"text"
-              , "text":"LD(%L)"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"1221"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"ST(%L)"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"1230"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"a_buffer"
-          , "id":1499263168
-          , "start":"4.00"
-          , "parent":"inner_update_mm3.B6"
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1230
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"LD"
-          , "id":1499259280
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1221
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"ST"
-          , "id":1706053888
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1230
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1911129360
-          , "end":"61.00"
-          , "parent":"inner_update_mm3.B6"
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":1230
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1499263168
-          , "to":1499259280
-        }
-        , {
-          "from":1499259280
-          , "to":1706053888
-        }
-        , {
-          "from":1706053888
-          , "to":1911129360
-        }
-        , {
-          "from":1499263168
-          , "to":1911129360
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"a_buffer"
-      , "id":4294967295
-      , "src":"1584588880"
-      , "dst":"1506035392"
+      , "src":"1631494496"
+      , "dst":"1494625424"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
       , "loop":"inner_update_mm0.B6"
@@ -442,7 +22,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"856"
                 }
               ]
@@ -458,7 +38,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"915"
                 }
               ]
@@ -469,7 +49,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"924"
                 }
               ]
@@ -481,14 +61,14 @@
       [
         {
           "name":"a_buffer"
-          , "id":1584588880
+          , "id":1631494496
           , "start":"4.00"
           , "parent":"inner_update_mm0.B6"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":924
               }
             ]
@@ -497,12 +77,12 @@
         }
         , {
           "name":"LD"
-          , "id":1584585536
+          , "id":1665937040
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":915
               }
             ]
@@ -511,12 +91,12 @@
         }
         , {
           "name":"ST"
-          , "id":1498458128
+          , "id":1497065696
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":924
               }
             ]
@@ -525,14 +105,14 @@
         }
         , {
           "name":"Feedback"
-          , "id":1506035392
+          , "id":1494625424
           , "end":"61.00"
           , "parent":"inner_update_mm0.B6"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":924
               }
             ]
@@ -543,20 +123,20 @@
       , "links":
       [
         {
-          "from":1584588880
-          , "to":1584585536
+          "from":1631494496
+          , "to":1665937040
         }
         , {
-          "from":1584585536
-          , "to":1498458128
+          "from":1665937040
+          , "to":1497065696
         }
         , {
-          "from":1498458128
-          , "to":1506035392
+          "from":1497065696
+          , "to":1494625424
         }
         , {
-          "from":1584588880
-          , "to":1506035392
+          "from":1631494496
+          , "to":1494625424
           , "reverse":1
         }
       ]
@@ -564,8 +144,288 @@
     , {
       "name":"a_buffer"
       , "id":4294967295
-      , "src":"1511162400"
-      , "dst":"1508500544"
+      , "src":"1526751648"
+      , "dst":"1622109008"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"inner_update_mm3.B6"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"a_buffer"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"1162"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"LD(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"1221"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"1230"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"a_buffer"
+          , "id":1526751648
+          , "start":"4.00"
+          , "parent":"inner_update_mm3.B6"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1230
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":1526724464
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1221
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":1507309376
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1230
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1622109008
+          , "end":"61.00"
+          , "parent":"inner_update_mm3.B6"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1230
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1526751648
+          , "to":1526724464
+        }
+        , {
+          "from":1526724464
+          , "to":1507309376
+        }
+        , {
+          "from":1507309376
+          , "to":1622109008
+        }
+        , {
+          "from":1526751648
+          , "to":1622109008
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"a_buffer"
+      , "id":4294967295
+      , "src":"1704129312"
+      , "dst":"1858188176"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"inner_update_mm2.B6"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"a_buffer"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"1060"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"LD(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"1119"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"1128"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"a_buffer"
+          , "id":1704129312
+          , "start":"4.00"
+          , "parent":"inner_update_mm2.B6"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1128
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":1842969104
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1119
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":1510173728
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1128
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1858188176
+          , "end":"61.00"
+          , "parent":"inner_update_mm2.B6"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1128
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1704129312
+          , "to":1842969104
+        }
+        , {
+          "from":1842969104
+          , "to":1510173728
+        }
+        , {
+          "from":1510173728
+          , "to":1858188176
+        }
+        , {
+          "from":1704129312
+          , "to":1858188176
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"a_buffer"
+      , "id":4294967295
+      , "src":"1628775744"
+      , "dst":"1468886864"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
       , "loop":"inner_update_mm1.B6"
@@ -582,7 +442,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"958"
                 }
               ]
@@ -598,7 +458,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"1017"
                 }
               ]
@@ -609,7 +469,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"1026"
                 }
               ]
@@ -621,14 +481,14 @@
       [
         {
           "name":"a_buffer"
-          , "id":1511162400
+          , "id":1628775744
           , "start":"4.00"
           , "parent":"inner_update_mm1.B6"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":1026
               }
             ]
@@ -637,12 +497,12 @@
         }
         , {
           "name":"LD"
-          , "id":1484001696
+          , "id":1461632864
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":1017
               }
             ]
@@ -651,12 +511,12 @@
         }
         , {
           "name":"ST"
-          , "id":1476341456
+          , "id":1586335312
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":1026
               }
             ]
@@ -665,14 +525,14 @@
         }
         , {
           "name":"Feedback"
-          , "id":1508500544
+          , "id":1468886864
           , "end":"61.00"
           , "parent":"inner_update_mm1.B6"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":1026
               }
             ]
@@ -683,37 +543,37 @@
       , "links":
       [
         {
-          "from":1511162400
-          , "to":1484001696
+          "from":1628775744
+          , "to":1461632864
         }
         , {
-          "from":1484001696
-          , "to":1476341456
+          "from":1461632864
+          , "to":1586335312
         }
         , {
-          "from":1476341456
-          , "to":1508500544
+          "from":1586335312
+          , "to":1468886864
         }
         , {
-          "from":1511162400
-          , "to":1508500544
+          "from":1628775744
+          , "to":1468886864
           , "reverse":1
         }
       ]
     }
     , {
-      "name":"top_buffer"
+      "name":"a_buffer"
       , "id":4294967295
-      , "src":"1618795456"
-      , "dst":"1475469408"
+      , "src":"1810982848"
+      , "dst":"1892362544"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
-      , "loop":"lu.B7"
+      , "loop":"inner_update_mm4.B6"
       , "details":
       [
         {
           "type":"table"
-          , "Variable on critical loop carried feedback path: ":"top_buffer"
+          , "Variable on critical loop carried feedback path: ":"a_buffer"
           , "Declared at: ":
           [
             {
@@ -722,14 +582,13 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"399"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"1264"
                 }
               ]
             }
           ]
           , "Dependency: ":"Memory dependency"
-          , "Ivdep safelen pragma: ":"64"
           , "Estimated fmax reduced to: ":"480.0"
           , "Loop feedback path that lowered II and Fmax: ":
           [
@@ -739,8 +598,8 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"519"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"1323"
                 }
               ]
             }
@@ -750,8 +609,8 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"533"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"1332"
                 }
               ]
             }
@@ -761,16 +620,16 @@
       , "nodes":
       [
         {
-          "name":"top_buffer"
-          , "id":1618795456
-          , "start":"12.00"
-          , "parent":"lu.B7"
+          "name":"a_buffer"
+          , "id":1810982848
+          , "start":"4.00"
+          , "parent":"inner_update_mm4.B6"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":533
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1332
               }
             ]
           ]
@@ -778,13 +637,13 @@
         }
         , {
           "name":"LD"
-          , "id":1618695152
+          , "id":1810983920
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":519
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1323
               }
             ]
           ]
@@ -792,13 +651,13 @@
         }
         , {
           "name":"ST"
-          , "id":1475405168
+          , "id":1543239088
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":533
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1332
               }
             ]
           ]
@@ -806,15 +665,15 @@
         }
         , {
           "name":"Feedback"
-          , "id":1475469408
-          , "end":"31.00"
-          , "parent":"lu.B7"
+          , "id":1892362544
+          , "end":"61.00"
+          , "parent":"inner_update_mm4.B6"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":533
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":1332
               }
             ]
           ]
@@ -824,20 +683,20 @@
       , "links":
       [
         {
-          "from":1618795456
-          , "to":1618695152
+          "from":1810982848
+          , "to":1810983920
         }
         , {
-          "from":1618695152
-          , "to":1475405168
+          "from":1810983920
+          , "to":1543239088
         }
         , {
-          "from":1475405168
-          , "to":1475469408
+          "from":1543239088
+          , "to":1892362544
         }
         , {
-          "from":1618795456
-          , "to":1475469408
+          "from":1810982848
+          , "to":1892362544
           , "reverse":1
         }
       ]
@@ -845,8 +704,8 @@
     , {
       "name":"a_buffer"
       , "id":4294967295
-      , "src":"1479118544"
-      , "dst":"1524728720"
+      , "src":"1502283952"
+      , "dst":"1463123488"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
       , "loop":"lu.B7"
@@ -863,7 +722,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"394"
                 }
               ]
@@ -880,7 +739,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"512"
                 }
               ]
@@ -891,7 +750,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"546"
                 }
               ]
@@ -903,14 +762,14 @@
       [
         {
           "name":"a_buffer"
-          , "id":1479118544
+          , "id":1502283952
           , "start":"9.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -919,12 +778,12 @@
         }
         , {
           "name":"LD"
-          , "id":1471739456
+          , "id":1502318816
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":512
               }
             ]
@@ -933,12 +792,12 @@
         }
         , {
           "name":"ST"
-          , "id":1665764688
+          , "id":1654865104
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -947,14 +806,14 @@
         }
         , {
           "name":"Feedback"
-          , "id":1524728720
+          , "id":1463123488
           , "end":"30.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -965,20 +824,20 @@
       , "links":
       [
         {
-          "from":1479118544
-          , "to":1471739456
+          "from":1502283952
+          , "to":1502318816
         }
         , {
-          "from":1471739456
-          , "to":1665764688
+          "from":1502318816
+          , "to":1654865104
         }
         , {
-          "from":1665764688
-          , "to":1524728720
+          "from":1654865104
+          , "to":1463123488
         }
         , {
-          "from":1479118544
-          , "to":1524728720
+          "from":1502283952
+          , "to":1463123488
           , "reverse":1
         }
       ]
@@ -986,8 +845,8 @@
     , {
       "name":"a_buffer"
       , "id":4294967295
-      , "src":"1498905040"
-      , "dst":"1525376208"
+      , "src":"1501701408"
+      , "dst":"1463130560"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
       , "loop":"lu.B7"
@@ -1004,7 +863,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"394"
                 }
               ]
@@ -1021,7 +880,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"512"
                 }
               ]
@@ -1032,7 +891,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"546"
                 }
               ]
@@ -1044,14 +903,14 @@
       [
         {
           "name":"a_buffer"
-          , "id":1498905040
+          , "id":1501701408
           , "start":"9.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1060,12 +919,12 @@
         }
         , {
           "name":"LD"
-          , "id":1498820128
+          , "id":1501684048
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":512
               }
             ]
@@ -1074,12 +933,12 @@
         }
         , {
           "name":"ST"
-          , "id":1665448144
+          , "id":1494370864
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1088,14 +947,14 @@
         }
         , {
           "name":"Feedback"
-          , "id":1525376208
+          , "id":1463130560
           , "end":"30.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1106,20 +965,20 @@
       , "links":
       [
         {
-          "from":1498905040
-          , "to":1498820128
+          "from":1501701408
+          , "to":1501684048
         }
         , {
-          "from":1498820128
-          , "to":1665448144
+          "from":1501684048
+          , "to":1494370864
         }
         , {
-          "from":1665448144
-          , "to":1525376208
+          "from":1494370864
+          , "to":1463130560
         }
         , {
-          "from":1498905040
-          , "to":1525376208
+          "from":1501701408
+          , "to":1463130560
           , "reverse":1
         }
       ]
@@ -1127,8 +986,8 @@
     , {
       "name":"a_buffer"
       , "id":4294967295
-      , "src":"1629958080"
-      , "dst":"1529413248"
+      , "src":"1546439152"
+      , "dst":"1463138160"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
       , "loop":"lu.B7"
@@ -1145,7 +1004,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"394"
                 }
               ]
@@ -1162,7 +1021,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"512"
                 }
               ]
@@ -1173,7 +1032,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"546"
                 }
               ]
@@ -1185,14 +1044,14 @@
       [
         {
           "name":"a_buffer"
-          , "id":1629958080
+          , "id":1546439152
           , "start":"9.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1201,12 +1060,12 @@
         }
         , {
           "name":"LD"
-          , "id":1623714448
+          , "id":1619359008
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":512
               }
             ]
@@ -1215,12 +1074,12 @@
         }
         , {
           "name":"ST"
-          , "id":1631517568
+          , "id":1531930256
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1229,14 +1088,14 @@
         }
         , {
           "name":"Feedback"
-          , "id":1529413248
+          , "id":1463138160
           , "end":"30.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1247,20 +1106,20 @@
       , "links":
       [
         {
-          "from":1629958080
-          , "to":1623714448
+          "from":1546439152
+          , "to":1619359008
         }
         , {
-          "from":1623714448
-          , "to":1631517568
+          "from":1619359008
+          , "to":1531930256
         }
         , {
-          "from":1631517568
-          , "to":1529413248
+          "from":1531930256
+          , "to":1463138160
         }
         , {
-          "from":1629958080
-          , "to":1529413248
+          "from":1546439152
+          , "to":1463138160
           , "reverse":1
         }
       ]
@@ -1268,8 +1127,8 @@
     , {
       "name":"a_buffer"
       , "id":4294967295
-      , "src":"1894372688"
-      , "dst":"1596671136"
+      , "src":"1619292800"
+      , "dst":"1463145232"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
       , "loop":"lu.B7"
@@ -1286,7 +1145,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"394"
                 }
               ]
@@ -1303,7 +1162,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"512"
                 }
               ]
@@ -1314,7 +1173,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"546"
                 }
               ]
@@ -1326,14 +1185,14 @@
       [
         {
           "name":"a_buffer"
-          , "id":1894372688
+          , "id":1619292800
           , "start":"9.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1342,12 +1201,12 @@
         }
         , {
           "name":"LD"
-          , "id":1802030832
+          , "id":1562140112
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":512
               }
             ]
@@ -1356,12 +1215,12 @@
         }
         , {
           "name":"ST"
-          , "id":1483560736
+          , "id":1496565024
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1370,14 +1229,14 @@
         }
         , {
           "name":"Feedback"
-          , "id":1596671136
+          , "id":1463145232
           , "end":"30.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1388,161 +1247,20 @@
       , "links":
       [
         {
-          "from":1894372688
-          , "to":1802030832
+          "from":1619292800
+          , "to":1562140112
         }
         , {
-          "from":1802030832
-          , "to":1483560736
+          "from":1562140112
+          , "to":1496565024
         }
         , {
-          "from":1483560736
-          , "to":1596671136
+          "from":1496565024
+          , "to":1463145232
         }
         , {
-          "from":1894372688
-          , "to":1596671136
-          , "reverse":1
-        }
-      ]
-    }
-    , {
-      "name":"a_buffer"
-      , "id":4294967295
-      , "src":"1585260080"
-      , "dst":"1596787536"
-      , "type":"fMAX/II"
-      , "brief":"Memory dependency"
-      , "loop":"lu.B7"
-      , "details":
-      [
-        {
-          "type":"table"
-          , "Variable on critical loop carried feedback path: ":"a_buffer"
-          , "Declared at: ":
-          [
-            {
-              "type":"text"
-              , "text":"%L"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"394"
-                }
-              ]
-            }
-          ]
-          , "Dependency: ":"Memory dependency"
-          , "Ivdep safelen pragma: ":"64"
-          , "Estimated fmax reduced to: ":"480.0"
-          , "Loop feedback path that lowered II and Fmax: ":
-          [
-            {
-              "type":"text"
-              , "text":"LD(%L)"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"512"
-                }
-              ]
-            }
-            , {
-              "type":"text"
-              , "text":"ST(%L)"
-              , "links":
-              [
-                {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                  , "line":"546"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-      , "nodes":
-      [
-        {
-          "name":"a_buffer"
-          , "id":1585260080
-          , "start":"9.00"
-          , "parent":"lu.B7"
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":546
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"LD"
-          , "id":1477890128
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":512
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"ST"
-          , "id":1596107760
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":546
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-        , {
-          "name":"Feedback"
-          , "id":1596787536
-          , "end":"30.00"
-          , "parent":"lu.B7"
-          , "debug":
-          [
-            [
-              {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
-                , "line":546
-              }
-            ]
-          ]
-          , "type":"inst"
-        }
-      ]
-      , "links":
-      [
-        {
-          "from":1585260080
-          , "to":1477890128
-        }
-        , {
-          "from":1477890128
-          , "to":1596107760
-        }
-        , {
-          "from":1596107760
-          , "to":1596787536
-        }
-        , {
-          "from":1585260080
-          , "to":1596787536
+          "from":1619292800
+          , "to":1463145232
           , "reverse":1
         }
       ]
@@ -1550,8 +1268,8 @@
     , {
       "name":"left_buffer"
       , "id":4294967295
-      , "src":"1475675696"
-      , "dst":"1629603648"
+      , "src":"1525570208"
+      , "dst":"1506625952"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
       , "loop":"lu.B7"
@@ -1568,7 +1286,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"400"
                 }
               ]
@@ -1585,7 +1303,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"504"
                 }
               ]
@@ -1596,7 +1314,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"539"
                 }
               ]
@@ -1608,14 +1326,14 @@
       [
         {
           "name":"left_buffer"
-          , "id":1475675696
+          , "id":1525570208
           , "start":"12.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":539
               }
             ]
@@ -1624,12 +1342,12 @@
         }
         , {
           "name":"LD"
-          , "id":1484057248
+          , "id":1525560832
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":504
               }
             ]
@@ -1638,12 +1356,12 @@
         }
         , {
           "name":"ST"
-          , "id":1507493024
+          , "id":1658901648
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":539
               }
             ]
@@ -1652,14 +1370,14 @@
         }
         , {
           "name":"Feedback"
-          , "id":1629603648
+          , "id":1506625952
           , "end":"31.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":539
               }
             ]
@@ -1670,20 +1388,161 @@
       , "links":
       [
         {
-          "from":1475675696
-          , "to":1484057248
+          "from":1525570208
+          , "to":1525560832
         }
         , {
-          "from":1484057248
-          , "to":1507493024
+          "from":1525560832
+          , "to":1658901648
         }
         , {
-          "from":1507493024
-          , "to":1629603648
+          "from":1658901648
+          , "to":1506625952
         }
         , {
-          "from":1475675696
-          , "to":1629603648
+          "from":1525570208
+          , "to":1506625952
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"top_buffer"
+      , "id":4294967295
+      , "src":"1584985088"
+      , "dst":"1506647696"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"lu.B7"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"top_buffer"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"399"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Ivdep safelen pragma: ":"64"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"LD(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"519"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"533"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"top_buffer"
+          , "id":1584985088
+          , "start":"12.00"
+          , "parent":"lu.B7"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":533
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":1586021696
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":519
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":1589647360
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":533
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1506647696
+          , "end":"31.00"
+          , "parent":"lu.B7"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":533
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1584985088
+          , "to":1586021696
+        }
+        , {
+          "from":1586021696
+          , "to":1589647360
+        }
+        , {
+          "from":1589647360
+          , "to":1506647696
+        }
+        , {
+          "from":1584985088
+          , "to":1506647696
           , "reverse":1
         }
       ]
@@ -1691,8 +1550,8 @@
     , {
       "name":"a_buffer"
       , "id":4294967295
-      , "src":"1503297120"
-      , "dst":"1630499296"
+      , "src":"1502124720"
+      , "dst":"1506680384"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
       , "loop":"lu.B7"
@@ -1709,7 +1568,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"394"
                 }
               ]
@@ -1726,7 +1585,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"512"
                 }
               ]
@@ -1737,7 +1596,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"546"
                 }
               ]
@@ -1749,14 +1608,14 @@
       [
         {
           "name":"a_buffer"
-          , "id":1503297120
+          , "id":1502124720
           , "start":"9.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1765,12 +1624,12 @@
         }
         , {
           "name":"LD"
-          , "id":1503292992
+          , "id":1502107360
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":512
               }
             ]
@@ -1779,12 +1638,12 @@
         }
         , {
           "name":"ST"
-          , "id":1526880128
+          , "id":1592608896
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1793,14 +1652,14 @@
         }
         , {
           "name":"Feedback"
-          , "id":1630499296
+          , "id":1506680384
           , "end":"30.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1811,20 +1670,20 @@
       , "links":
       [
         {
-          "from":1503297120
-          , "to":1503292992
+          "from":1502124720
+          , "to":1502107360
         }
         , {
-          "from":1503292992
-          , "to":1526880128
+          "from":1502107360
+          , "to":1592608896
         }
         , {
-          "from":1526880128
-          , "to":1630499296
+          "from":1592608896
+          , "to":1506680384
         }
         , {
-          "from":1503297120
-          , "to":1630499296
+          "from":1502124720
+          , "to":1506680384
           , "reverse":1
         }
       ]
@@ -1832,8 +1691,8 @@
     , {
       "name":"a_buffer"
       , "id":4294967295
-      , "src":"1656004816"
-      , "dst":"1631219200"
+      , "src":"1526842864"
+      , "dst":"1506691520"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
       , "loop":"lu.B7"
@@ -1850,7 +1709,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"394"
                 }
               ]
@@ -1867,7 +1726,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"512"
                 }
               ]
@@ -1878,7 +1737,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"546"
                 }
               ]
@@ -1890,14 +1749,14 @@
       [
         {
           "name":"a_buffer"
-          , "id":1656004816
+          , "id":1526842864
           , "start":"9.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1906,12 +1765,12 @@
         }
         , {
           "name":"LD"
-          , "id":1590772336
+          , "id":1526788688
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":512
               }
             ]
@@ -1920,12 +1779,12 @@
         }
         , {
           "name":"ST"
-          , "id":1665410976
+          , "id":1658926672
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1934,14 +1793,14 @@
         }
         , {
           "name":"Feedback"
-          , "id":1631219200
+          , "id":1506691520
           , "end":"30.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -1952,20 +1811,20 @@
       , "links":
       [
         {
-          "from":1656004816
-          , "to":1590772336
+          "from":1526842864
+          , "to":1526788688
         }
         , {
-          "from":1590772336
-          , "to":1665410976
+          "from":1526788688
+          , "to":1658926672
         }
         , {
-          "from":1665410976
-          , "to":1631219200
+          "from":1658926672
+          , "to":1506691520
         }
         , {
-          "from":1656004816
-          , "to":1631219200
+          "from":1526842864
+          , "to":1506691520
           , "reverse":1
         }
       ]
@@ -1973,8 +1832,8 @@
     , {
       "name":"a_buffer"
       , "id":4294967295
-      , "src":"1524723952"
-      , "dst":"1631224320"
+      , "src":"1630068144"
+      , "dst":"1506702128"
       , "type":"fMAX/II"
       , "brief":"Memory dependency"
       , "loop":"lu.B7"
@@ -1991,7 +1850,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"394"
                 }
               ]
@@ -2008,7 +1867,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"512"
                 }
               ]
@@ -2019,7 +1878,7 @@
               , "links":
               [
                 {
-                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                   , "line":"546"
                 }
               ]
@@ -2031,14 +1890,14 @@
       [
         {
           "name":"a_buffer"
-          , "id":1524723952
+          , "id":1630068144
           , "start":"9.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -2047,12 +1906,12 @@
         }
         , {
           "name":"LD"
-          , "id":1506478560
+          , "id":1526311392
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":512
               }
             ]
@@ -2061,12 +1920,12 @@
         }
         , {
           "name":"ST"
-          , "id":1510911376
+          , "id":1658912528
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -2075,14 +1934,14 @@
         }
         , {
           "name":"Feedback"
-          , "id":1631224320
+          , "id":1506702128
           , "end":"30.00"
           , "parent":"lu.B7"
           , "debug":
           [
             [
               {
-                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s10_ni/src/device/hpl_torus_IEC_replicated_intel.cl"
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
                 , "line":546
               }
             ]
@@ -2093,20 +1952,161 @@
       , "links":
       [
         {
-          "from":1524723952
-          , "to":1506478560
+          "from":1630068144
+          , "to":1526311392
         }
         , {
-          "from":1506478560
-          , "to":1510911376
+          "from":1526311392
+          , "to":1658912528
         }
         , {
-          "from":1510911376
-          , "to":1631224320
+          "from":1658912528
+          , "to":1506702128
         }
         , {
-          "from":1524723952
-          , "to":1631224320
+          "from":1630068144
+          , "to":1506702128
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"a_buffer"
+      , "id":4294967295
+      , "src":"1483949456"
+      , "dst":"1584275440"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"lu.B7"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"a_buffer"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"394"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Ivdep safelen pragma: ":"64"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"LD(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"512"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                  , "line":"546"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"a_buffer"
+          , "id":1483949456
+          , "start":"9.00"
+          , "parent":"lu.B7"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":546
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":1527200496
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":512
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":1476462912
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":546
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1584275440
+          , "end":"30.00"
+          , "parent":"lu.B7"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/scratch/pc2-mitarbeiter/mariusme/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/tmp/build/21.2.0-20.4.0-Nallatech_520N_IEC_B9_SB3_R5_s1/src/device/hpl_torus_IEC_replicated_intel.cl"
+                , "line":546
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1483949456
+          , "to":1527200496
+        }
+        , {
+          "from":1527200496
+          , "to":1476462912
+        }
+        , {
+          "from":1476462912
+          , "to":1584275440
+        }
+        , {
+          "from":1483949456
+          , "to":1584275440
           , "reverse":1
         }
       ]
