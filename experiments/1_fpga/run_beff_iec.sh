@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #SBATCH -p fpga
-#SBATCH -w fpga-0002
+##SBATCH -w fpga-0002
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -J beff
