@@ -1,5 +1,5 @@
 diff --git a/LINPACK/src/host/execution_types/execution_pcie.hpp b/LINPACK/src/host/execution_types/execution_pcie.hpp
-index d5ac447..18da619 100644
+index d5ac447..6d47372 100644
 --- a/LINPACK/src/host/execution_types/execution_pcie.hpp
 +++ b/LINPACK/src/host/execution_types/execution_pcie.hpp
 @@ -33,6 +33,7 @@ SOFTWARE.
@@ -65,9 +65,9 @@ index d5ac447..18da619 100644
 -        posix_memalign(reinterpret_cast<void**>(&top_blocks[i]), 1024, sizeof(HOST_DATA_TYPE) * (config.programSettings->blockSize)*(config.programSettings->blockSize));
 +        posix_memalign(reinterpret_cast<void**>(&(left_blocks[i])), 4096, sizeof(HOST_DATA_TYPE) * (config.programSettings->blockSize)*(config.programSettings->blockSize));
 +        posix_memalign(reinterpret_cast<void**>(&(top_blocks[i])), 4096, sizeof(HOST_DATA_TYPE) * (config.programSettings->blockSize)*(config.programSettings->blockSize));
-+        Buffer_top_list.emplace_back(*config.context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_WRITE,
++        Buffer_top_list.emplace_back(*config.context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY,
 +                                        sizeof(HOST_DATA_TYPE)*config.programSettings->blockSize * (config.programSettings->blockSize), top_blocks[i]);
-+        Buffer_left_list.emplace_back(*config.context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_WRITE,
++        Buffer_left_list.emplace_back(*config.context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY,
 +                                        sizeof(HOST_DATA_TYPE)*config.programSettings->blockSize * (config.programSettings->blockSize), left_blocks[i]);
      }
  
@@ -85,7 +85,7 @@ index d5ac447..18da619 100644
          ASSERT_CL(err)
          buffer_queue.finish();
  
-@@ -148,29 +145,24 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+@@ -148,29 +145,23 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
          std::chrono::time_point<std::chrono::high_resolution_clock> t1, t2, twait1, twait2;
          std::chrono::duration<double> currentwaittime = std::chrono::duration<double>::zero();
  
@@ -97,17 +97,8 @@ index d5ac447..18da619 100644
          // Trigger the user event that will start the first tasks in the queue
          start_event.setStatus(CL_COMPLETE);
  
-+
-+        int kernel_offset = 0;
-+        #pragma omp parallel
-+        {
-+
-+        #pragma omp single
-+        all_events.back().reserve(omp_get_num_threads()*config.programSettings->kernelReplications*3);
-+        uint current_replication = 0;
-+
-         // For every row of blocks create kernels and enqueue them
-         for (int block_row=0; block_row < config.programSettings->matrixSize / config.programSettings->blockSize * config.programSettings->torus_width; block_row++) {
+-        // For every row of blocks create kernels and enqueue them
+-        for (int block_row=0; block_row < config.programSettings->matrixSize / config.programSettings->blockSize * config.programSettings->torus_width; block_row++) {
  
 -            // Create Command queues
 -            lu_queues.emplace_back(*config.context, *config.device, 0, &err);
@@ -116,15 +107,24 @@ index d5ac447..18da619 100644
 -            ASSERT_CL(err)
 -            left_queues.emplace_back(*config.context, *config.device, 0, &err);
 -            ASSERT_CL(err)
--
++        int kernel_offset = 0;
++        #pragma omp parallel
++        {
+ 
 -            // already emplace new buffer list for next iteration since left and top buffers need to be stored until all MMs are executed.
 -            // this is only the case after the next iteration is finished, because the inner MMs are calculated overlapped with the next iteration!
 -            left_buffers.emplace_back();
 -            top_buffers.emplace_back();
++        #pragma omp single
++        all_events.back().reserve(omp_get_num_threads()*config.programSettings->kernelReplications*3);
++        uint current_replication = 0;
++
++        // For every row of blocks create kernels and enqueue them
++        for (int block_row=0; block_row < config.programSettings->matrixSize / config.programSettings->blockSize * config.programSettings->torus_width; block_row++) {
  
              int local_block_row_remainder = (block_row % config.programSettings->torus_width);
              int local_block_row= (block_row / config.programSettings->torus_width);
-@@ -185,38 +177,52 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+@@ -185,38 +176,53 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
              num_inner_block_rows = (num_inner_block_cols > 0) ?num_inner_block_rows : 0;
              int num_network_layer_executions = (config.programSettings->matrixSize / config.programSettings->blockSize) - std::min(start_col_index, start_row_index);
              num_network_layer_executions = std::max(num_network_layer_executions, 1);
@@ -139,6 +139,7 @@ index d5ac447..18da619 100644
 +            uint current_update = 0;
 +
 +            std::vector<cl::Kernel> private_kernels;
++
 +
 +            #pragma omp single
 +            {
@@ -192,12 +193,12 @@ index d5ac447..18da619 100644
                  ASSERT_CL(err)
              }
  
-@@ -229,100 +235,96 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+@@ -228,101 +234,97 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+             MPI_Bcast(lu_block, config.programSettings->blockSize*config.programSettings->blockSize, MPI_DATA_TYPE, local_block_row_remainder, col_communicator);
              // Broadcast LU block in row to update all top blocks
              MPI_Bcast(lu_trans_block, config.programSettings->blockSize*config.programSettings->blockSize, MPI_DATA_TYPE, local_block_row_remainder, row_communicator);
++           }
  
-+            }
-+
              if (num_top_blocks > 0) {
  
 +                #pragma omp single
@@ -210,7 +211,7 @@ index d5ac447..18da619 100644
 +                }
  
                  // Create top kernels
-+                #pragma omp for nowait
++                #pragma omp for
                  for (int tops=start_col_index; tops < (config.programSettings->matrixSize / config.programSettings->blockSize); tops++) {
 -                    kernels.back().emplace_back(*config.program, "top_update",
 +                    cl::Kernel k(*config.program, "top_update",
@@ -242,7 +243,7 @@ index d5ac447..18da619 100644
                      ASSERT_CL(err)
  
 -                    err = top_queues.back().enqueueNDRangeKernel(kernels.back().back(), cl::NullRange, cl::NDRange(1), cl::NDRange(1),  &(*std::prev(std::prev(all_events.end()))));
-+                    err = top_queues.back().enqueueNDRangeKernel(k, cl::NullRange, cl::NDRange(1), cl::NDRange(1));
++                    err = top_queues.back().enqueueNDRangeKernel(k, cl::NullRange, cl::NDRange(1), cl::NDRange(1),  &(*std::prev(std::prev(all_events.end()))));
                      ASSERT_CL(err) 
  
 -                    if (tops + 1 == (config.programSettings->matrixSize / config.programSettings->blockSize)) {
@@ -308,7 +309,7 @@ index d5ac447..18da619 100644
                      ASSERT_CL(err)
  
 -                    err = left_queues.back().enqueueNDRangeKernel(kernels.back().back(), cl::NullRange, cl::NDRange(1), cl::NDRange(1), &(*std::prev(std::prev(all_events.end()))));
-+                    err = left_queues.back().enqueueNDRangeKernel(k, cl::NullRange, cl::NDRange(1), cl::NDRange(1));
++                    err = left_queues.back().enqueueNDRangeKernel(k, cl::NullRange, cl::NDRange(1), cl::NDRange(1),  &(*std::prev(std::prev(all_events.end()))));
                      ASSERT_CL(err) 
  
 -                    if (tops + 1 == (config.programSettings->matrixSize / config.programSettings->blockSize)) {
@@ -324,6 +325,7 @@ index d5ac447..18da619 100644
 -                        ASSERT_CL(err) 
 -                    }
 +                    err = left_queues.back().enqueueMigrateMemObjects({Buffer_left_list[tops - start_row_index]}, CL_MIGRATE_MEM_OBJECT_HOST);
++
 +                    ASSERT_CL(err) 
 +
 +                    private_kernels.push_back(k);
@@ -335,7 +337,7 @@ index d5ac447..18da619 100644
              // Wait until all top and left blocks are calculated
              top_queues.back().finish();
              left_queues.back().finish();
-@@ -337,133 +339,154 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+@@ -337,133 +339,153 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
  
              // update all remaining inner blocks using only global memory
  
@@ -353,7 +355,7 @@ index d5ac447..18da619 100644
 -                                        sizeof(HOST_DATA_TYPE)*config.programSettings->blockSize * (config.programSettings->blockSize));
 -                err = inner_queues.back()[0].enqueueWriteBuffer(left_buffers.back().back(), CL_TRUE, 0,
 -                                    sizeof(HOST_DATA_TYPE)*config.programSettings->blockSize*config.programSettings->blockSize, left_blocks[lbi]);
-+                left_buffers.back().emplace_back(*config.context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_WRITE,
++                left_buffers.back().emplace_back(*config.context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_ONLY,
 +                                        sizeof(HOST_DATA_TYPE)*config.programSettings->blockSize * (config.programSettings->blockSize), left_blocks[lbi]);
 +                err = buffer_transfer_queue.enqueueMigrateMemObjects({left_buffers.back().back()}, 0);
              }
@@ -362,7 +364,7 @@ index d5ac447..18da619 100644
 -                                        sizeof(HOST_DATA_TYPE)*config.programSettings->blockSize * (config.programSettings->blockSize));
 -                err = inner_queues.back()[0].enqueueWriteBuffer(top_buffers.back().back(), CL_TRUE, 0,
 -                                    sizeof(HOST_DATA_TYPE)*config.programSettings->blockSize*config.programSettings->blockSize, top_blocks[tbi]);
-+                top_buffers.back().emplace_back(*config.context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_WRITE,
++                top_buffers.back().emplace_back(*config.context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_ONLY,
 +                        sizeof(HOST_DATA_TYPE)*config.programSettings->blockSize * config.programSettings->blockSize, top_blocks[tbi]);
 +                err = buffer_transfer_queue.enqueueMigrateMemObjects({top_buffers.back().back()}, 0);
              }
@@ -378,11 +380,10 @@ index d5ac447..18da619 100644
              // Wait until data is copied to FPGA
 -            inner_queues.back()[0].finish();
 +            buffer_transfer_queue.finish();
-+
 +            }
-+            current_update = 0;
++            current_update = 0;    
 +
-+            #pragma omp for nowait
++            #pragma omp for
 +            for (int lbi=1; lbi < num_inner_block_rows; lbi++) {
 +
 +                current_replication = (lbi)  % config.programSettings->kernelReplications;
@@ -542,7 +543,7 @@ index d5ac447..18da619 100644
              inner_queues.emplace_back();
              current_update = 0;
              for (uint rep = 0; rep < config.programSettings->kernelReplications; rep++) {
-@@ -471,56 +494,67 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+@@ -471,58 +493,70 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
                  ASSERT_CL(err)
              }
  
@@ -626,7 +627,10 @@ index d5ac447..18da619 100644
 -                    current_replication = (current_replication + 1) % config.programSettings->kernelReplications;
                  }
              }
++
  #ifndef NDEBUG
+             MPI_Barrier(MPI_COMM_WORLD);
+             if (is_calulating_lu_block) std::cout << "---------------" << std::endl;
 @@ -542,17 +576,15 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
  
              if (block_row == blocks_per_row * config.programSettings->torus_width - 1) {
