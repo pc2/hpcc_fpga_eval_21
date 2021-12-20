@@ -31,6 +31,10 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
     if ! git apply ${SCRIPT_PATH}/../../../patches/ptrans_simplify_memory_layout_xilinx.patch; then
         echo "ERROR: Apply patch failed!"
     fi
+
+    if ! git apply ${SCRIPT_PATH}/../../../patches/ptrans_use_migrate_mem_object.patch; then
+        echo "ERROR: Apply patch failed!"
+    fi
 fi
 
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/${BENCHMARK_NAME}
