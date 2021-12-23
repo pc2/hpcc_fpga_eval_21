@@ -43,6 +43,11 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
     if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_pice_host_optimizations.patch; then
         echo "ERROR: Host optimization patch failed!"
     fi
+
+    # Apply patch for host optimization with PCIe
+    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_add_update_queue_thread.patch; then
+        echo "ERROR: Host thread optimization patch failed!"
+    fi
 fi
 
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/${BENCHMARK_NAME}
