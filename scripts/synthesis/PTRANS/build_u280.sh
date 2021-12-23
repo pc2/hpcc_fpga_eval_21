@@ -10,13 +10,13 @@ HPCC_FPGA_VERSION=v0.5.1
 BENCHMARK_NAME=PTRANS
 BM_MAKE_TARGETS=(transpose_PQ_PCIE_xilinx Transpose_xilinx)
 
-CONFIG_NAMES=($(ls u280/*.cmake))
+CONFIG_NAMES=($(ls u280/Xilinx_Alveo_U280_b256.cmake))
 
 SCRIPT_PATH=${PWD}
 
 STORE_DIR_ROOT=/mnt/scratch/meyermar/synth/ptrans
 # build in memory
-TMP_DIR=/dev/shm/meyermar_synth/ptrans
+TMP_DIR=${SCRIPT_PATH}/tmp
 TMP_PROJECT_DIR=${TMP_DIR}/HPCC_FPGA
 SYNTH_DIR=${TMP_DIR}/build
 
@@ -32,7 +32,7 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
         echo "ERROR: Apply patch failed!"
     fi
 
-    if ! git apply ${SCRIPT_PATH}/../../../patches/ptrans_use_migrate_mem_object.patch; then
+    if ! git apply ${SCRIPT_PATH}/../../../patches/ptrans_prevent_early_kernel_start.patch; then
         echo "ERROR: Apply patch failed!"
     fi
 fi
