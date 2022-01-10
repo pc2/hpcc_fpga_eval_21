@@ -12,10 +12,10 @@ module load intel intelFPGA_pro/21.2.0 bittware_520n/20.4.0_max devel/CMake/3.15
 
 for i in {1..30}; do
     blocks=$i
-    srun ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/Linpack_intel -f ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/hpl_torus_IEC.aocx -n 5 -m ${blocks} -r 5 -b 9 --device 0 | tee m${blocks}.txt
+    srun ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/Linpack_intel -f ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/hpl_torus_IEC.aocx -n 5 -m ${blocks} -r 5 -b 9  --platform 1 --device 0 | tee m${blocks}.txt
 done
 
 for i in {1..7}; do
     blocks=$((30+$i*5))
-    srun ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/Linpack_intel -f ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/hpl_torus_IEC.aocx -n 5 -m ${blocks} -r 5 -b 9 --device 0 | tee m${blocks}.txt
+    srun ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/Linpack_intel -f ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/hpl_torus_IEC.aocx -n 5 -m ${blocks} -r 5 -b 9  --platform 1 --device 0 | tee m${blocks}.txt
 done
