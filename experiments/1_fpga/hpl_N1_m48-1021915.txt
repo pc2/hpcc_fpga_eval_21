@@ -1,7 +1,8 @@
-cpu-bind=MASK - fpga-0002, task  0  0 [7708]: mask 0xffffffffff set
+cpu-bind=MASK - fpga-0004, task  0  0 [17824]: mask 0xffffffffff set
 	>>>> The module 'intel/19.0.4' is deprecated and will be removed from the system
 	>>>> on Dec 2021. Try ml spider intel to find newer releases
-cpu-bind=MASK - fpga-0002, task  0  0 [7735]: mask 0xffffffffff set
+cpu-bind=MASK - fpga-0004, task  0  0 [17853]: mask 0xffffffffff set
+Init MPI with thread support
 -------------------------------------------------------------
 General setup:
 C++ high resolution clock is used.
@@ -25,7 +26,7 @@ Prepared FPGA successfully for global Execution!
 Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
 Version: 2.4
 MPI Version:  3.1
-Config. Time: Mon Nov 29 16:46:14 UTC 2021
+Config. Time: Tue Dec 14 10:02:11 UTC 2021
 Git Commit:   b678d6d-dirty
 
 Summary:
@@ -44,7 +45,7 @@ Device                        p520_max_sg280l : BittWare Stratix 10 OpenCL platf
 -------------------------------------------------------------
 Start benchmark using the given configuration. Generating data...
 -------------------------------------------------------------
-Generation Time: 2.76102e+01 s
+Generation Time: 2.50100e+01 s
 -------------------------------------------------------------
 Execute benchmark kernel...
 -------------------------------------------------------------
@@ -68,15 +69,15 @@ Torus 0,0Start!
 Torus 0,0End! 
 Torus 0,0Start! 
 Torus 0,0End! 
-Execution Time: 3.46385e+02 s
+Execution Time: 3.47367e+02 s
 -------------------------------------------------------------
 Validate output...
 -------------------------------------------------------------
   norm. resid        resid       machep   
     5.21944e-07    3.79682e-05    1.19209e-07
-Validation Time: 2.77887e-02 s
+Validation Time: 1.48320e-04 s
          Method           best           mean         GFLOPS
-          total    1.15467e+01    1.15660e+01    8.57115e+02
-           GEFA    1.15467e+01    1.15660e+01    8.57010e+02
-           GESL    2.70000e-08    3.08000e-08    4.47392e+07
+          total    1.15530e+01    1.15628e+01    8.56647e+02
+           GEFA    1.15530e+01    1.15628e+01    8.56542e+02
+           GESL    3.10000e-08    3.64000e-08    3.89664e+07
 Validation: SUCCESS!
