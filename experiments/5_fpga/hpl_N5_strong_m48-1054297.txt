@@ -1,0 +1,585 @@
+cpu-bind=MASK - fpga-0003, task  0  0 [5854]: mask 0xffffffffff set
+Summarizing most recent topology information and exporting FPGALINK variables:
+Host list
+fpga-0003
+fpga-0005
+fpga-0007
+fpga-0008
+fpga-0009
+Torus topology with width 3 and height 3
+Torus topology information: columns from north to south, rows from west to east, end connected back to start
+fpga-0003:acl0 - fpga-0003:acl1 - fpga-0005:acl0
+fpga-0005:acl1 - fpga-0007:acl0 - fpga-0007:acl1
+fpga-0008:acl0 - fpga-0008:acl1 - fpga-0009:acl0
+Generated connections
+FPGALINK0=fpga-0003:acl0:ch1-fpga-0005:acl1:ch0
+FPGALINK1=fpga-0003:acl0:ch3-fpga-0003:acl1:ch2
+FPGALINK2=fpga-0003:acl1:ch1-fpga-0007:acl0:ch0
+FPGALINK3=fpga-0003:acl1:ch3-fpga-0005:acl0:ch2
+FPGALINK4=fpga-0005:acl0:ch1-fpga-0007:acl1:ch0
+FPGALINK5=fpga-0005:acl0:ch3-fpga-0003:acl0:ch2
+FPGALINK6=fpga-0005:acl1:ch1-fpga-0008:acl0:ch0
+FPGALINK7=fpga-0005:acl1:ch3-fpga-0007:acl0:ch2
+FPGALINK8=fpga-0007:acl0:ch1-fpga-0008:acl1:ch0
+FPGALINK9=fpga-0007:acl0:ch3-fpga-0007:acl1:ch2
+FPGALINK10=fpga-0007:acl1:ch1-fpga-0009:acl0:ch0
+FPGALINK11=fpga-0007:acl1:ch3-fpga-0005:acl1:ch2
+FPGALINK12=fpga-0008:acl0:ch1-fpga-0003:acl0:ch0
+FPGALINK13=fpga-0008:acl0:ch3-fpga-0008:acl1:ch2
+FPGALINK14=fpga-0008:acl1:ch1-fpga-0003:acl1:ch0
+FPGALINK15=fpga-0008:acl1:ch3-fpga-0009:acl0:ch2
+FPGALINK16=fpga-0009:acl0:ch1-fpga-0005:acl0:ch0
+FPGALINK17=fpga-0009:acl0:ch3-fpga-0008:acl0:ch2
+Topology configuration request accepted after 0.33949804306s
+	>>>> The module 'intel/19.0.4' is deprecated and will be removed from the system
+	>>>> on Dec 2021. Try ml spider intel to find newer releases
+srun: found predefined topology, ignoring explictily given links
+srun: using predefined topology torus3
+cpu-bind=MASK - fpga-0003, task  0  0 [5993]: mask 0xfffff set
+cpu-bind=MASK - fpga-0005, task  2  0 [5869]: mask 0xfffff set
+cpu-bind=MASK - fpga-0009, task  8  0 [5903]: mask 0xffffffffff set
+cpu-bind=MASK - fpga-0007, task  4  0 [5874]: mask 0xfffff set
+cpu-bind=MASK - fpga-0008, task  6  0 [5870]: mask 0xfffff set
+cpu-bind=MASK - fpga-0003, task  1  1 [5994]: mask 0xfffff set
+cpu-bind=MASK - fpga-0005, task  3  1 [5870]: mask 0xfffff set
+cpu-bind=MASK - fpga-0007, task  5  1 [5875]: mask 0xfffff set
+cpu-bind=MASK - fpga-0008, task  7  1 [5871]: mask 0xfffff set
+Summarizing most recent topology information and exporting FPGALINK variables:
+Summarizing most recent topology information and exporting FPGALINK variables:
+Host list
+Host list
+fpga-0003
+fpga-0003
+fpga-0005
+fpga-0005
+fpga-0007
+fpga-0007
+fpga-0008
+fpga-0008
+fpga-0009
+fpga-0009
+Torus topology with width 3 and height 3
+Torus topology with width 3 and height 3
+Torus topology information: columns from north to south, rows from west to east, end connected back to start
+Torus topology information: columns from north to south, rows from west to east, end connected back to start
+fpga-0003:acl0 - fpga-0003:acl1 - fpga-0005:acl0
+fpga-0003:acl0 - fpga-0003:acl1 - fpga-0005:acl0
+fpga-0005:acl1 - fpga-0007:acl0 - fpga-0007:acl1
+fpga-0005:acl1 - fpga-0007:acl0 - fpga-0007:acl1
+fpga-0008:acl0 - fpga-0008:acl1 - fpga-0009:acl0
+fpga-0008:acl0 - fpga-0008:acl1 - fpga-0009:acl0
+Generated connections
+Generated connections
+FPGALINK0=fpga-0003:acl0:ch1-fpga-0005:acl1:ch0
+FPGALINK0=fpga-0003:acl0:ch1-fpga-0005:acl1:ch0
+FPGALINK1=fpga-0003:acl0:ch3-fpga-0003:acl1:ch2
+FPGALINK1=fpga-0003:acl0:ch3-fpga-0003:acl1:ch2
+FPGALINK2=fpga-0003:acl1:ch1-fpga-0007:acl0:ch0
+FPGALINK2=fpga-0003:acl1:ch1-fpga-0007:acl0:ch0
+FPGALINK3=fpga-0003:acl1:ch3-fpga-0005:acl0:ch2
+FPGALINK3=fpga-0003:acl1:ch3-fpga-0005:acl0:ch2
+FPGALINK4=fpga-0005:acl0:ch1-fpga-0007:acl1:ch0
+FPGALINK4=fpga-0005:acl0:ch1-fpga-0007:acl1:ch0
+FPGALINK5=fpga-0005:acl0:ch3-fpga-0003:acl0:ch2
+FPGALINK5=fpga-0005:acl0:ch3-fpga-0003:acl0:ch2
+FPGALINK6=fpga-0005:acl1:ch1-fpga-0008:acl0:ch0
+FPGALINK6=fpga-0005:acl1:ch1-fpga-0008:acl0:ch0
+FPGALINK7=fpga-0005:acl1:ch3-fpga-0007:acl0:ch2
+FPGALINK7=fpga-0005:acl1:ch3-fpga-0007:acl0:ch2
+FPGALINK8=fpga-0007:acl0:ch1-fpga-0008:acl1:ch0
+FPGALINK8=fpga-0007:acl0:ch1-fpga-0008:acl1:ch0
+FPGALINK9=fpga-0007:acl0:ch3-fpga-0007:acl1:ch2
+FPGALINK9=fpga-0007:acl0:ch3-fpga-0007:acl1:ch2
+FPGALINK10=fpga-0007:acl1:ch1-fpga-0009:acl0:ch0
+FPGALINK10=fpga-0007:acl1:ch1-fpga-0009:acl0:ch0
+FPGALINK11=fpga-0007:acl1:ch3-fpga-0005:acl1:ch2
+FPGALINK11=fpga-0007:acl1:ch3-fpga-0005:acl1:ch2
+FPGALINK12=fpga-0008:acl0:ch1-fpga-0003:acl0:ch0
+FPGALINK12=fpga-0008:acl0:ch1-fpga-0003:acl0:ch0
+FPGALINK13=fpga-0008:acl0:ch3-fpga-0008:acl1:ch2
+FPGALINK13=fpga-0008:acl0:ch3-fpga-0008:acl1:ch2
+Summarizing most recent topology information and exporting FPGALINK variables:
+Summarizing most recent topology information and exporting FPGALINK variables:
+Summarizing most recent topology information and exporting FPGALINK variables:
+FPGALINK14=fpga-0008:acl1:ch1-fpga-0003:acl1:ch0
+FPGALINK14=fpga-0008:acl1:ch1-fpga-0003:acl1:ch0
+Summarizing most recent topology information and exporting FPGALINK variables:
+FPGALINK15=fpga-0008:acl1:ch3-fpga-0009:acl0:ch2
+FPGALINK15=fpga-0008:acl1:ch3-fpga-0009:acl0:ch2
+FPGALINK16=fpga-0009:acl0:ch1-fpga-0005:acl0:ch0
+FPGALINK16=fpga-0009:acl0:ch1-fpga-0005:acl0:ch0
+FPGALINK17=fpga-0009:acl0:ch3-fpga-0008:acl0:ch2
+FPGALINK17=fpga-0009:acl0:ch3-fpga-0008:acl0:ch2
+Topology configuration request accepted after 0.33949804306s
+Topology configuration request accepted after 0.33949804306s
+Summarizing most recent topology information and exporting FPGALINK variables:
+Host list
+Host list
+fpga-0003
+fpga-0003
+fpga-0005
+fpga-0005
+fpga-0007
+fpga-0007
+fpga-0008
+fpga-0008
+fpga-0009
+fpga-0009
+Torus topology with width 3 and height 3
+Torus topology with width 3 and height 3
+Torus topology information: columns from north to south, rows from west to east, end connected back to start
+Torus topology information: columns from north to south, rows from west to east, end connected back to start
+fpga-0003:acl0 - fpga-0003:acl1 - fpga-0005:acl0
+fpga-0003:acl0 - fpga-0003:acl1 - fpga-0005:acl0
+fpga-0005:acl1 - fpga-0007:acl0 - fpga-0007:acl1
+fpga-0005:acl1 - fpga-0007:acl0 - fpga-0007:acl1
+fpga-0008:acl0 - fpga-0008:acl1 - fpga-0009:acl0
+fpga-0008:acl0 - fpga-0008:acl1 - fpga-0009:acl0
+Generated connections
+Generated connections
+FPGALINK0=fpga-0003:acl0:ch1-fpga-0005:acl1:ch0
+FPGALINK0=fpga-0003:acl0:ch1-fpga-0005:acl1:ch0
+FPGALINK1=fpga-0003:acl0:ch3-fpga-0003:acl1:ch2
+FPGALINK1=fpga-0003:acl0:ch3-fpga-0003:acl1:ch2
+FPGALINK2=fpga-0003:acl1:ch1-fpga-0007:acl0:ch0
+FPGALINK2=fpga-0003:acl1:ch1-fpga-0007:acl0:ch0
+FPGALINK3=fpga-0003:acl1:ch3-fpga-0005:acl0:ch2
+Summarizing most recent topology information and exporting FPGALINK variables:
+Host list
+Host list
+fpga-0003
+fpga-0003
+fpga-0005
+fpga-0005
+fpga-0007
+fpga-0007
+fpga-0008
+fpga-0008
+fpga-0009
+fpga-0009
+Torus topology with width 3 and height 3
+Torus topology with width 3 and height 3
+Torus topology information: columns from north to south, rows from west to east, end connected back to start
+Torus topology information: columns from north to south, rows from west to east, end connected back to start
+fpga-0003:acl0 - fpga-0003:acl1 - fpga-0005:acl0
+fpga-0003:acl0 - fpga-0003:acl1 - fpga-0005:acl0
+fpga-0005:acl1 - fpga-0007:acl0 - fpga-0007:acl1
+fpga-0005:acl1 - fpga-0007:acl0 - fpga-0007:acl1
+fpga-0008:acl0 - fpga-0008:acl1 - fpga-0009:acl0
+fpga-0008:acl0 - fpga-0008:acl1 - fpga-0009:acl0
+Generated connections
+Generated connections
+FPGALINK0=fpga-0003:acl0:ch1-fpga-0005:acl1:ch0
+FPGALINK0=fpga-0003:acl0:ch1-fpga-0005:acl1:ch0
+FPGALINK1=fpga-0003:acl0:ch3-fpga-0003:acl1:ch2
+FPGALINK1=fpga-0003:acl0:ch3-fpga-0003:acl1:ch2
+FPGALINK2=fpga-0003:acl1:ch1-fpga-0007:acl0:ch0
+FPGALINK2=fpga-0003:acl1:ch1-fpga-0007:acl0:ch0
+FPGALINK3=fpga-0003:acl1:ch3-fpga-0005:acl0:ch2
+Summarizing most recent topology information and exporting FPGALINK variables:
+Host list
+Host list
+fpga-0003
+fpga-0003
+fpga-0005
+fpga-0005
+fpga-0007
+fpga-0007
+fpga-0008
+fpga-0008
+fpga-0009
+fpga-0009
+Torus topology with width 3 and height 3
+Torus topology with width 3 and height 3
+Torus topology information: columns from north to south, rows from west to east, end connected back to start
+Torus topology information: columns from north to south, rows from west to east, end connected back to start
+fpga-0003:acl0 - fpga-0003:acl1 - fpga-0005:acl0
+fpga-0003:acl0 - fpga-0003:acl1 - fpga-0005:acl0
+fpga-0005:acl1 - fpga-0007:acl0 - fpga-0007:acl1
+fpga-0005:acl1 - fpga-0007:acl0 - fpga-0007:acl1
+fpga-0008:acl0 - fpga-0008:acl1 - fpga-0009:acl0
+fpga-0008:acl0 - fpga-0008:acl1 - fpga-0009:acl0
+Generated connections
+Generated connections
+FPGALINK0=fpga-0003:acl0:ch1-fpga-0005:acl1:ch0
+FPGALINK0=fpga-0003:acl0:ch1-fpga-0005:acl1:ch0
+FPGALINK1=fpga-0003:acl0:ch3-fpga-0003:acl1:ch2
+FPGALINK1=fpga-0003:acl0:ch3-fpga-0003:acl1:ch2
+FPGALINK2=fpga-0003:acl1:ch1-fpga-0007:acl0:ch0
+FPGALINK2=fpga-0003:acl1:ch1-fpga-0007:acl0:ch0
+FPGALINK3=fpga-0003:acl1:ch3-fpga-0005:acl0:ch2
+Host list
+fpga-0003
+fpga-0005
+fpga-0007
+fpga-0008
+fpga-0009
+Torus topology with width 3 and height 3
+Torus topology information: columns from north to south, rows from west to east, end connected back to start
+fpga-0003:acl0 - fpga-0003:acl1 - fpga-0005:acl0
+fpga-0005:acl1 - fpga-0007:acl0 - fpga-0007:acl1
+fpga-0008:acl0 - fpga-0008:acl1 - fpga-0009:acl0
+Generated connections
+FPGALINK0=fpga-0003:acl0:ch1-fpga-0005:acl1:ch0
+FPGALINK1=fpga-0003:acl0:ch3-fpga-0003:acl1:ch2
+FPGALINK2=fpga-0003:acl1:ch1-fpga-0007:acl0:ch0
+FPGALINK3=fpga-0003:acl1:ch3-fpga-0005:acl0:ch2
+FPGALINK4=fpga-0005:acl0:ch1-fpga-0007:acl1:ch0
+FPGALINK5=fpga-0005:acl0:ch3-fpga-0003:acl0:ch2
+FPGALINK6=fpga-0005:acl1:ch1-fpga-0008:acl0:ch0
+FPGALINK7=fpga-0005:acl1:ch3-fpga-0007:acl0:ch2
+FPGALINK8=fpga-0007:acl0:ch1-fpga-0008:acl1:ch0
+FPGALINK9=fpga-0007:acl0:ch3-fpga-0007:acl1:ch2
+FPGALINK10=fpga-0007:acl1:ch1-fpga-0009:acl0:ch0
+FPGALINK11=fpga-0007:acl1:ch3-fpga-0005:acl1:ch2
+FPGALINK12=fpga-0008:acl0:ch1-fpga-0003:acl0:ch0
+FPGALINK13=fpga-0008:acl0:ch3-fpga-0008:acl1:ch2
+FPGALINK14=fpga-0008:acl1:ch1-fpga-0003:acl1:ch0
+FPGALINK15=fpga-0008:acl1:ch3-fpga-0009:acl0:ch2
+FPGALINK16=fpga-0009:acl0:ch1-fpga-0005:acl0:ch0
+FPGALINK3=fpga-0003:acl1:ch3-fpga-0005:acl0:ch2
+FPGALINK4=fpga-0005:acl0:ch1-fpga-0007:acl1:ch0
+FPGALINK4=fpga-0005:acl0:ch1-fpga-0007:acl1:ch0
+FPGALINK5=fpga-0005:acl0:ch3-fpga-0003:acl0:ch2
+FPGALINK5=fpga-0005:acl0:ch3-fpga-0003:acl0:ch2
+FPGALINK6=fpga-0005:acl1:ch1-fpga-0008:acl0:ch0
+FPGALINK6=fpga-0005:acl1:ch1-fpga-0008:acl0:ch0
+FPGALINK7=fpga-0005:acl1:ch3-fpga-0007:acl0:ch2
+FPGALINK7=fpga-0005:acl1:ch3-fpga-0007:acl0:ch2
+FPGALINK8=fpga-0007:acl0:ch1-fpga-0008:acl1:ch0
+FPGALINK8=fpga-0007:acl0:ch1-fpga-0008:acl1:ch0
+FPGALINK9=fpga-0007:acl0:ch3-fpga-0007:acl1:ch2
+FPGALINK9=fpga-0007:acl0:ch3-fpga-0007:acl1:ch2
+FPGALINK10=fpga-0007:acl1:ch1-fpga-0009:acl0:ch0
+FPGALINK10=fpga-0007:acl1:ch1-fpga-0009:acl0:ch0
+FPGALINK11=fpga-0007:acl1:ch3-fpga-0005:acl1:ch2
+FPGALINK11=fpga-0007:acl1:ch3-fpga-0005:acl1:ch2
+FPGALINK12=fpga-0008:acl0:ch1-fpga-0003:acl0:ch0
+FPGALINK12=fpga-0008:acl0:ch1-fpga-0003:acl0:ch0
+FPGALINK13=fpga-0008:acl0:ch3-fpga-0008:acl1:ch2
+FPGALINK13=fpga-0008:acl0:ch3-fpga-0008:acl1:ch2
+FPGALINK14=fpga-0008:acl1:ch1-fpga-0003:acl1:ch0
+FPGALINK14=fpga-0008:acl1:ch1-fpga-0003:acl1:ch0
+FPGALINK15=fpga-0008:acl1:ch3-fpga-0009:acl0:ch2
+FPGALINK15=fpga-0008:acl1:ch3-fpga-0009:acl0:ch2
+FPGALINK3=fpga-0003:acl1:ch3-fpga-0005:acl0:ch2
+FPGALINK4=fpga-0005:acl0:ch1-fpga-0007:acl1:ch0
+FPGALINK4=fpga-0005:acl0:ch1-fpga-0007:acl1:ch0
+FPGALINK5=fpga-0005:acl0:ch3-fpga-0003:acl0:ch2
+FPGALINK5=fpga-0005:acl0:ch3-fpga-0003:acl0:ch2
+FPGALINK6=fpga-0005:acl1:ch1-fpga-0008:acl0:ch0
+FPGALINK6=fpga-0005:acl1:ch1-fpga-0008:acl0:ch0
+FPGALINK7=fpga-0005:acl1:ch3-fpga-0007:acl0:ch2
+FPGALINK7=fpga-0005:acl1:ch3-fpga-0007:acl0:ch2
+FPGALINK8=fpga-0007:acl0:ch1-fpga-0008:acl1:ch0
+FPGALINK8=fpga-0007:acl0:ch1-fpga-0008:acl1:ch0
+FPGALINK9=fpga-0007:acl0:ch3-fpga-0007:acl1:ch2
+FPGALINK9=fpga-0007:acl0:ch3-fpga-0007:acl1:ch2
+FPGALINK10=fpga-0007:acl1:ch1-fpga-0009:acl0:ch0
+FPGALINK10=fpga-0007:acl1:ch1-fpga-0009:acl0:ch0
+FPGALINK11=fpga-0007:acl1:ch3-fpga-0005:acl1:ch2
+FPGALINK11=fpga-0007:acl1:ch3-fpga-0005:acl1:ch2
+FPGALINK12=fpga-0008:acl0:ch1-fpga-0003:acl0:ch0
+FPGALINK12=fpga-0008:acl0:ch1-fpga-0003:acl0:ch0
+FPGALINK13=fpga-0008:acl0:ch3-fpga-0008:acl1:ch2
+FPGALINK13=fpga-0008:acl0:ch3-fpga-0008:acl1:ch2
+FPGALINK14=fpga-0008:acl1:ch1-fpga-0003:acl1:ch0
+FPGALINK14=fpga-0008:acl1:ch1-fpga-0003:acl1:ch0
+FPGALINK15=fpga-0008:acl1:ch3-fpga-0009:acl0:ch2
+FPGALINK15=fpga-0008:acl1:ch3-fpga-0009:acl0:ch2
+FPGALINK17=fpga-0009:acl0:ch3-fpga-0008:acl0:ch2
+FPGALINK3=fpga-0003:acl1:ch3-fpga-0005:acl0:ch2
+FPGALINK4=fpga-0005:acl0:ch1-fpga-0007:acl1:ch0
+FPGALINK4=fpga-0005:acl0:ch1-fpga-0007:acl1:ch0
+FPGALINK5=fpga-0005:acl0:ch3-fpga-0003:acl0:ch2
+FPGALINK5=fpga-0005:acl0:ch3-fpga-0003:acl0:ch2
+FPGALINK6=fpga-0005:acl1:ch1-fpga-0008:acl0:ch0
+FPGALINK6=fpga-0005:acl1:ch1-fpga-0008:acl0:ch0
+FPGALINK7=fpga-0005:acl1:ch3-fpga-0007:acl0:ch2
+FPGALINK7=fpga-0005:acl1:ch3-fpga-0007:acl0:ch2
+FPGALINK8=fpga-0007:acl0:ch1-fpga-0008:acl1:ch0
+FPGALINK8=fpga-0007:acl0:ch1-fpga-0008:acl1:ch0
+FPGALINK9=fpga-0007:acl0:ch3-fpga-0007:acl1:ch2
+FPGALINK9=fpga-0007:acl0:ch3-fpga-0007:acl1:ch2
+FPGALINK10=fpga-0007:acl1:ch1-fpga-0009:acl0:ch0
+FPGALINK10=fpga-0007:acl1:ch1-fpga-0009:acl0:ch0
+FPGALINK11=fpga-0007:acl1:ch3-fpga-0005:acl1:ch2
+FPGALINK11=fpga-0007:acl1:ch3-fpga-0005:acl1:ch2
+FPGALINK12=fpga-0008:acl0:ch1-fpga-0003:acl0:ch0
+FPGALINK12=fpga-0008:acl0:ch1-fpga-0003:acl0:ch0
+FPGALINK13=fpga-0008:acl0:ch3-fpga-0008:acl1:ch2
+FPGALINK13=fpga-0008:acl0:ch3-fpga-0008:acl1:ch2
+FPGALINK14=fpga-0008:acl1:ch1-fpga-0003:acl1:ch0
+FPGALINK14=fpga-0008:acl1:ch1-fpga-0003:acl1:ch0
+FPGALINK15=fpga-0008:acl1:ch3-fpga-0009:acl0:ch2
+FPGALINK15=fpga-0008:acl1:ch3-fpga-0009:acl0:ch2
+Topology configuration request accepted after 0.33949804306s
+FPGALINK16=fpga-0009:acl0:ch1-fpga-0005:acl0:ch0
+FPGALINK16=fpga-0009:acl0:ch1-fpga-0005:acl0:ch0
+FPGALINK17=fpga-0009:acl0:ch3-fpga-0008:acl0:ch2
+FPGALINK17=fpga-0009:acl0:ch3-fpga-0008:acl0:ch2
+Topology configuration request accepted after 0.33949804306s
+Topology configuration request accepted after 0.33949804306s
+FPGALINK16=fpga-0009:acl0:ch1-fpga-0005:acl0:ch0
+FPGALINK16=fpga-0009:acl0:ch1-fpga-0005:acl0:ch0
+FPGALINK17=fpga-0009:acl0:ch3-fpga-0008:acl0:ch2
+FPGALINK17=fpga-0009:acl0:ch3-fpga-0008:acl0:ch2
+Topology configuration request accepted after 0.33949804306s
+Topology configuration request accepted after 0.33949804306s
+FPGALINK16=fpga-0009:acl0:ch1-fpga-0005:acl0:ch0
+FPGALINK16=fpga-0009:acl0:ch1-fpga-0005:acl0:ch0
+FPGALINK17=fpga-0009:acl0:ch3-fpga-0008:acl0:ch2
+FPGALINK17=fpga-0009:acl0:ch3-fpga-0008:acl0:ch2
+Topology configuration request accepted after 0.33949804306s
+Topology configuration request accepted after 0.33949804306s
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_max_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/hpl_torus_IEC.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.4
+MPI Version:  3.1
+Config. Time: Mon Nov 29 16:46:14 UTC 2021
+Git Commit:   b678d6d-dirty
+
+Summary:
+Block Size                    512
+Communication Type            IEC
+Data Type                     cl_float
+Emulate                       No
+Kernel File                   ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/hpl_torus_IEC.aocx
+Kernel Replications           5
+MPI Ranks                     9
+Matrix Size                   8192
+Repetitions                   10
+Test Mode                     No
+Device                        p520_max_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Generation Time: 2.77117e+00 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 2,0Start! 
+Torus 1,1Start! 
+Torus 0,2Start! 
+Torus 2,1Start! 
+Torus 2,2Start! 
+Torus 1,2Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 0,2End! 
+Torus 1,1End! 
+Torus 1,2End! 
+Torus 2,0End! 
+Torus 2,1End! 
+Torus 2,2End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 1,1Start! 
+Torus 2,0Start! 
+Torus 0,2Start! 
+Torus 2,1Start! 
+Torus 1,2Start! 
+Torus 2,2Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 0,2End! 
+Torus 2,0End! 
+Torus 1,1End! 
+Torus 2,1End! 
+Torus 1,2End! 
+Torus 2,2End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 2,0Start! 
+Torus 0,2Start! 
+Torus 1,1Start! 
+Torus 2,1Start! 
+Torus 1,2Start! 
+Torus 2,2Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 0,2End! 
+Torus 2,0End! 
+Torus 1,1End! 
+Torus 2,1End! 
+Torus 1,2End! 
+Torus 2,2End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 2,0Start! 
+Torus 1,1Start! 
+Torus 0,2Start! 
+Torus 2,1Start! 
+Torus 1,2Start! 
+Torus 2,2Start! 
+Torus 0,0End! 
+Torus 0,1End! 
+Torus 1,0End! 
+Torus 0,2End! 
+Torus 2,0End! 
+Torus 1,1End! 
+Torus 2,1End! 
+Torus 1,2End! 
+Torus 2,2End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 1,1Start! 
+Torus 0,2Start! 
+Torus 2,0Start! 
+Torus 1,2Start! 
+Torus 2,1Start! 
+Torus 2,2Start! 
+Torus 0,0End! 
+Torus 0,1End! 
+Torus 1,0End! 
+Torus 0,2End! 
+Torus 2,0End! 
+Torus 1,1End! 
+Torus 2,1End! 
+Torus 1,2End! 
+Torus 2,2End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 2,0Start! 
+Torus 0,2Start! 
+Torus 1,1Start! 
+Torus 2,1Start! 
+Torus 1,2Start! 
+Torus 2,2Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 0,2End! 
+Torus 1,1End! 
+Torus 1,2End! 
+Torus 2,0End! 
+Torus 2,1End! 
+Torus 2,2End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 1,1Start! 
+Torus 2,0Start! 
+Torus 0,2Start! 
+Torus 2,1Start! 
+Torus 1,2Start! 
+Torus 2,2Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 0,2End! 
+Torus 2,0End! 
+Torus 2,1End! 
+Torus 1,1End! 
+Torus 1,2End! 
+Torus 2,2End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 0,2Start! 
+Torus 2,0Start! 
+Torus 1,1Start! 
+Torus 2,1Start! 
+Torus 1,2Start! 
+Torus 2,2Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 0,2End! 
+Torus 2,0End! 
+Torus 2,1End! 
+Torus 1,1End! 
+Torus 1,2End! 
+Torus 2,2End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 2,0Start! 
+Torus 1,1Start! 
+Torus 0,2Start! 
+Torus 2,1Start! 
+Torus 1,2Start! 
+Torus 2,2Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 0,2End! 
+Torus 2,0End! 
+Torus 2,1End! 
+Torus 1,1End! 
+Torus 1,2End! 
+Torus 2,2End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 2,0Start! 
+Torus 1,1Start! 
+Torus 0,2Start! 
+Torus 2,1Start! 
+Torus 1,2Start! 
+Torus 2,2Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 0,2End! 
+Torus 2,0End! 
+Torus 1,1End! 
+Torus 2,1End! 
+Torus 1,2End! 
+Torus 2,2End! 
+Execution Time: 3.15053e+01 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+  norm. resid        resid       machep   
+    4.67021e-07    3.39746e-05    1.19209e-07
+Validation Time: 6.64905e-02 s
+         Method           best           mean         GFLOPS
+          total    2.72512e+00    2.72662e+00    3.63170e+03
+           GEFA    2.72512e+00    2.72662e+00    3.63126e+03
+           GESL    8.60000e-08    9.55000e-08    1.40460e+07
+Validation: SUCCESS!
