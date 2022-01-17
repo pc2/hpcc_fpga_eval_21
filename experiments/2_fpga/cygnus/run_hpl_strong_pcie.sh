@@ -3,7 +3,7 @@
 # Schedule with qsub 
 #
 #PBS -q fpga
-#PBS -N HPL_SP_PCIE_N2_EXE
+#PBS -N HPL_SP_PCIE_N2_STRONG_EXE
 #PBS -A CCUSC
 #PBS -B JSV=02,03
 #PBS -b 2
@@ -20,4 +20,4 @@ module load openmpi/$NQSV_MPI_VER
 
 cd $PBS_O_WORKDIR
 
-mpirun ${NQSII_MPIOPTS} -np 4 -npernode 2 -bind-to socket ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/Linpack_intel -f ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/hpl_torus_PCIE.aocx -n 10 -m 48
+mpirun ${NQSII_MPIOPTS} -np 4 -npernode 2 -bind-to socket ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/Linpack_intel -f ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/hpl_torus_PCIE.aocx -n 10 -m 24

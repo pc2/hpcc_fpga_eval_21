@@ -3,12 +3,12 @@
 # Schedule with qsub 
 #
 #PBS -q fpga
-#PBS -N HPL_SP_PCIE_EXE
+#PBS -N HPL_SP_IEC_EXE
 #PBS -A CCUSC
 #PBS -B JSV=01
 #PBS -M marius.meyer@uni-paderborn.de
 #PBS -m e
-#PBS -o hpl_iec.log
+#PBS -o hpl_iec_N1.log
 #PBS -j o
 
 module load intelFPGA_pro/19.4

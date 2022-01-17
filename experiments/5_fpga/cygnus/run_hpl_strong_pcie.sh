@@ -8,7 +8,7 @@
 #PBS -B JSV=09,10,11,12,13
 #PBS -M marius.meyer@uni-paderborn.de
 #PBS -m e
-#PBS -o hpl_pcie_N5.log
+#PBS -o hpl_strong_pcie_N5.log
 #PBS -j o
 #PBS -b 5
 #PBS -T openmpi 
@@ -20,4 +20,4 @@ module load openmpi/$NQSV_MPI_VER
 
 cd $PBS_O_WORKDIR
 
-mpirun ${NQSII_MPIOPTS} -np 9 -npernode 2 -bind-to socket ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/Linpack_intel -f ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/hpl_torus_PCIE.aocx -n 10 -m 48
+mpirun ${NQSII_MPIOPTS} -np 9 -npernode 2 -bind-to socket ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/Linpack_intel -f ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/hpl_torus_PCIE.aocx -n 10 -m 16
