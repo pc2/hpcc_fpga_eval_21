@@ -60,6 +60,14 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
     if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_add_update_queue_thread.patch; then
         echo "ERROR: Update thread patch failed!"
     fi
+    # Apply patch that prevents failing validation for multiple repetitions
+    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_pcie_fix_multi_repetition_host_bug.patch; then
+        echo "ERROR: Fix multi repetition host bug!"
+    fi
+    # Apply patch that fixes some scheduling errors in matrix multiplication
+    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_fix_scheduling_errors_intel.patch; then
+        echo "ERROR: Fix MM scheudling!"
+    fi
 fi
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/LINPACK
 

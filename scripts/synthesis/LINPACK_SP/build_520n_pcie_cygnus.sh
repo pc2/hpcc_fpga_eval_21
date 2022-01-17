@@ -40,10 +40,6 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
     
     # Apply patches
     cd ${TMP_PROJECT_DIR};
-    # Apply channel reordering patch
-    if ! git apply ${SCRIPT_PATH}/../../../patches/cygnus_hpl_channel_ordering.patch; then
-        echo "ERROR: Apply channel reordering patch failed!"
-    fi
     # Apply configuration improvement patch
     if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_gemm_scaling_use_combined_read_pipeline_intel.patch; then
         echo "ERROR: Apply separate read pipelines patch failed!"
@@ -59,6 +55,14 @@ if [ ! -d ${TMP_PROJECT_DIR} ]; then
         # Apply patch with host optimization for PCIe
     if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_add_update_queue_thread.patch; then
         echo "ERROR: Update thread patch failed!"
+    fi
+    # Apply patch that prevents failing validation for multiple repetitions
+    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_pcie_fix_multi_repetition_host_bug.patch; then
+        echo "ERROR: Fix multi repetition host bug!"
+    fi
+    # Apply patch that fixes some scheduling errors in matrix multiplication
+    if ! git apply ${SCRIPT_PATH}/../../../patches/hpl_fix_scheduling_errors_intel.patch; then
+        echo "ERROR: Fix MM scheudling bug!"
     fi
 fi
 BENCHMARK_DIR=${TMP_PROJECT_DIR}/LINPACK

@@ -1,0 +1,130 @@
+アーキテクチャ: x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                24
+On-line CPU(s) list:   0-23
+コアあたりのスレッド数:1
+ソケットあたりのコア数:12
+Socket(s):             2
+NUMAノード:         2
+ベンダーID:        GenuineIntel
+CPUファミリー:    6
+モデル:             85
+Model name:            Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
+ステッピング:    4
+CPU MHz:               2480.187
+CPU max MHz:           3700.0000
+CPU min MHz:           1000.0000
+BogoMIPS:              5200.00
+仮想化:             VT-x
+L1d キャッシュ:   32K
+L1i キャッシュ:   32K
+L2 キャッシュ:    1024K
+L3 キャッシュ:    19712K
+NUMAノード 0 CPU:   0-11
+NUMAノード 1 CPU:   12-23
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear spec_ctrl intel_stibp flush_l1d
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[26064,1],0] (PID 86943)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_max_sg280h : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-iec/hpl_torus_IEC.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.4
+MPI Version:  3.1
+Config. Time: Tue Dec 21 09:25:02 UTC 2021
+Git Commit:   b678d6d-dirty
+
+Summary:
+Block Size                    512
+Communication Type            IEC
+Data Type                     cl_float
+Emulate                       No
+Kernel File                   ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-iec/hpl_torus_IEC.aocx
+Kernel Replications           5
+MPI Ranks                     1
+Matrix Size                   24576
+Repetitions                   10
+Test Mode                     No
+Device                        p520_max_sg280h : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 2.07646e+01 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Execution Time: 7.41715e+02 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+  norm. resid        resid       machep   
+    5.25221e-07    3.82066e-05    1.19209e-07
+Validation Time: 2.63400e-02 s
+         Method           best           mean         GFLOPS
+          total    4.35782e+01    4.35999e+01    2.27104e+02
+           GEFA    4.35782e+01    4.35999e+01    2.27077e+02
+           GESL    2.77000e-07    3.04200e-07    4.36086e+06
+Validation: SUCCESS!
+
+============================================================
+Request ID:             519132.nqsv
+Request Name:           HPL_SP_PCIE_EXE
+Queue:                  fpga@nqsv
+Number of Jobs:         1
+User Name:              mellich
+Group Name:             CCUSC
+Created Request Time:   Tue Dec 21 18:31:33 2021
+Started Request Time:   Tue Dec 21 18:31:36 2021
+Ended Request Time:     Tue Dec 21 18:44:26 2021
+Resources Information:
+  Elapse:               770S
+  Remaining Elapse:     85630S
+============================================================
