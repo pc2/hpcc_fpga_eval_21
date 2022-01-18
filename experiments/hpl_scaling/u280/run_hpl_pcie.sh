@@ -1,4 +1,5 @@
 #!/bin/bash
+export OMP_NUM_THREADS=16
 
 for i in {1..30}; do
     blocks=$i
