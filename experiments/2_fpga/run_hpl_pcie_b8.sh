@@ -4,8 +4,8 @@
 #SBATCH -N 1
 #SBATCH -n 1 
 #SBATCH -t 2:00:00 
-#SBATCH -o hpl_pcie_b8_N2_m96-%j.txt
-#SBATCH -e hpl_pcie_b8_N2_m96-%j.txt
+#SBATCH -o hpl_strong_pcie_b8_N2_m96-%j.txt
+#SBATCH -e hpl_strong_pcie_b8_N2_m96-%j.txt
 #SBATCH -J HPL
 
 export OMP_NUM_THREADS=20
