@@ -3407,9 +3407,9 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xrcserver v.2020.2 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Fri Oct 29 13:02:16 2021</td></tr>
+<tr><td><b>Date</b></td><td>Thu Nov  4 09:32:24 2021</td></tr>
 <tr><td><b>Host</b></td><td>alveo0 running 64-bit Ubuntu 18.04.6 LTS</td></tr>
-<tr><td><b>Command</b></td><td>v++  -DXILINX_FPGA --report_dir=/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports --log_dir=/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs -O3 -t hw -I/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/common/ -I/dev/shm/meyermar_synth/linpack_sp/HPCC_FPGA/LINPACK/src/device --platform xilinx_u280_xdma_201920_3 -R2 -c -j 40 --hls.pre_tcl /mnt/scratch/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/u280/settings.compile.xilinx.u280.tcl -o xilinx_tmp_compile/hpl_torus_PCIE.xo /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl </td></tr>
+<tr><td><b>Command</b></td><td>v++  -DXILINX_FPGA --report_dir=/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports --log_dir=/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs -O3 -t hw -I/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/common/ -I/dev/shm/meyermar_synth/linpack_sp/HPCC_FPGA/LINPACK/src/device --platform xilinx_u280_xdma_201920_3 -R2 -c -j 40 --hls.pre_tcl /mnt/scratch/meyermar/devel/hpcc_fpga_evaluation_multi_fpga/scripts/synthesis/LINPACK_SP/u280/settings.compile.xilinx.u280.tcl --kernel_frequency 200 -o xilinx_tmp_compile/hpl_torus_PCIE.xo /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl </td></tr>
 </table></center><br>
 <table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
 <tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
@@ -3417,7 +3417,7 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#CONFIG FILE DETAILS">3 CONFIG FILE DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 62
+<pre>Violations found: 87
 </pre>
 <pre>Rule Specs Violated: 4
 </pre>
@@ -3435,224 +3435,81 @@ window.onload = function () { addSorting(); }
 <th align="left" width="380">Resolution</th>
 </tr>
 <tr>
-<td align="left">1</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.top_update.Interface</td>
-<td align="left">Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=470">hpl_torus_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=470">hpl_torus_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.top_update.Interface</td>
-<td align="left">Multiple burst writes of length 16 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=562">hpl_torus_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">3</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.top_update.Interface</td>
-<td align="left">Multiple burst writes of length 4096 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=572">hpl_torus_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.left_update.Interface</td>
-<td align="left">Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=605">hpl_torus_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=605">hpl_torus_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">5</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.left_update.Interface</td>
-<td align="left">Multiple burst writes of length 16 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=688">hpl_torus_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">6</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.left_update.Interface</td>
-<td align="left">Multiple burst writes of length 4096 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=699">hpl_torus_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">7</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.inner_update_mm0.Interface</td>
-<td align="left">Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=760">hpl_torus_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=760">hpl_torus_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">8</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.inner_update_mm0.Interface</td>
-<td align="left">Multiple burst reads of length 4096 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=770">hpl_torus_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=770">hpl_torus_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">9</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.inner_update_mm0.Interface</td>
-<td align="left">Multiple burst reads of length 4096 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=782">hpl_torus_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=782">hpl_torus_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">10</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.inner_update_mm0.Interface</td>
-<td align="left">Multiple burst writes of length 16 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=849">hpl_torus_PCIE_replicated_xilinx.cl</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">11</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.left_update.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-1.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=604">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'left_update' either the parent loop or sub loop is do-while loop.
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">12</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.left_update.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-2' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=617">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'left_update' more than one sub loop.
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">13</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.left_update.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-3.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=687">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'left_update' the outer loop is not a perfect loop.
-</td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
-</tr>
-<tr>
 <td align="left">14</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.top_update.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-1.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=469">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'top_update' either the parent loop or sub loop is do-while loop.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.left_update.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 73, loop 'Loop 2.1'
 </td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">15</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.top_update.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-2' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=482">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'top_update' more than one sub loop.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.left_update.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'Loop 2.2'
 </td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">16</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.top_update.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-3.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=561">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'top_update' the outer loop is not a perfect loop.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.left_update.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 3.1'
 </td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">17</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.inner_update_mm0.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-1.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=759">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'inner_update_mm0' either the parent loop or sub loop is do-while loop.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.left_update.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'Loop 4'
 </td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">18</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.inner_update_mm0.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-2.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=771">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'inner_update_mm0' either the parent loop or sub loop is do-while loop.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.top_update.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Loop 1.1'
 </td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">19</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.inner_update_mm0.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-3.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=783">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'inner_update_mm0' either the parent loop or sub loop is do-while loop.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.top_update.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 77, loop 'Loop 2.1'
 </td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">20</td>
-<td align="left">Latency</td>
-<td align="left">warning</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.inner_update_mm0.Latency</td>
-<td align="left">Cannot flatten loop 'Loop-5.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=848">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'inner_update_mm0' the outer loop is not a perfect loop.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.top_update.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'Loop 2.2'
 </td>
-<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">21</td>
@@ -3660,8 +3517,8 @@ window.onload = function () { addSorting(); }
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.left_update.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Loop 1.1'
+<td align="left">Accelerator.top_update.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 3.1'
 </td>
 <td align="left"></td>
 </tr>
@@ -3671,101 +3528,13 @@ window.onload = function () { addSorting(); }
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.left_update.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'Loop 2.1'
+<td align="left">Accelerator.top_update.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'Loop 4'
 </td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">23</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.left_update.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'Loop 2.2'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">24</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.left_update.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 3.1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">25</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.left_update.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'Loop 4'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">26</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.top_update.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Loop 1.1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">27</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.top_update.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 80, loop 'Loop 2.1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">28</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.top_update.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'Loop 2.2'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">29</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.top_update.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 3.1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">30</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.top_update.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'Loop 4'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">31</td>
 <td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -3776,7 +3545,7 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">32</td>
+<td align="left">24</td>
 <td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -3787,7 +3556,7 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">33</td>
+<td align="left">25</td>
 <td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -3798,7 +3567,7 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">34</td>
+<td align="left">26</td>
 <td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -3809,62 +3578,7 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">35</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.inner_update_mm0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Loop 1.1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">36</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.inner_update_mm0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Loop 2.1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">37</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.inner_update_mm0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Loop 3.1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">38</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.inner_update_mm0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 35, loop 'Loop 4'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">39</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.inner_update_mm0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 5.1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">40</td>
+<td align="left">27</td>
 <td align="left">Latency</td>
 <td align="left">warning</td>
 <td align="left"><undefined></td>
@@ -3875,7 +3589,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
 </tr>
 <tr>
-<td align="left">41</td>
+<td align="left">28</td>
 <td align="left">Latency</td>
 <td align="left">warning</td>
 <td align="left"><undefined></td>
@@ -3886,7 +3600,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
 </tr>
 <tr>
-<td align="left">42</td>
+<td align="left">29</td>
 <td align="left">Latency</td>
 <td align="left">warning</td>
 <td align="left"><undefined></td>
@@ -3897,18 +3611,194 @@ window.onload = function () { addSorting(); }
 <td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
 </tr>
 <tr>
-<td align="left">43</td>
-<td align="left">Throughput</td>
+<td align="left">30</td>
+<td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.lu.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 18, function 'update_block.1'
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">31</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">32</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">33</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">34</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">35</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">36</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">38</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">39</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">40</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">41</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">42</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">43</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>)
 </td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">44</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">45</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">46</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lu.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 14, function 'update_block.1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">47</td>
 <td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -3919,7 +3809,7 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">45</td>
+<td align="left">48</td>
 <td align="left">Kernel</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -3930,46 +3820,13 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">46</td>
+<td align="left">49</td>
 <td align="left">Kernel</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.left_update.Kernel</td>
-<td align="left">**** Estimated Fmax: 411.00 MHz
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">47</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.lu.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Loop 1.1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">48</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.lu.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'Loop 2.1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">49</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.lu.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 22, loop 'Loop 2.2'
+<td align="left">**** Estimated Fmax: 273.97 MHz
 </td>
 <td align="left"></td>
 </tr>
@@ -3980,7 +3837,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.lu.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 23, loop 'Loop 2.3'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Loop 1.1'
 </td>
 <td align="left"></td>
 </tr>
@@ -3991,7 +3848,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.lu.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 3.1'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'Loop 2.1'
 </td>
 <td align="left"></td>
 </tr>
@@ -4002,7 +3859,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.lu.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'Loop 4'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 17, loop 'Loop 2.2'
 </td>
 <td align="left"></td>
 </tr>
@@ -4013,12 +3870,34 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.lu.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'Loop 5'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 17, loop 'Loop 2.3'
 </td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">54</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lu.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 3.1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">55</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lu.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'Loop 4'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">56</td>
 <td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -4029,7 +3908,7 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">55</td>
+<td align="left">57</td>
 <td align="left">Kernel</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -4040,18 +3919,29 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">56</td>
+<td align="left">58</td>
 <td align="left">Kernel</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.top_update.Kernel</td>
-<td align="left">**** Estimated Fmax: 411.00 MHz
+<td align="left">**** Estimated Fmax: 273.97 MHz
 </td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">57</td>
+<td align="left">59</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lu.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'Loop 5'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">60</td>
 <td align="left">Interface</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
@@ -4062,45 +3952,12 @@ window.onload = function () { addSorting(); }
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">58</td>
-<td align="left">Kernel</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.lu.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">59</td>
-<td align="left">Kernel</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.lu.Kernel</td>
-<td align="left">**** Estimated Fmax: 411.00 MHz
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">60</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.inner_update_mm0.Interface</td>
-<td align="left">Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
 <td align="left">61</td>
 <td align="left">Kernel</td>
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.inner_update_mm0.Kernel</td>
+<td align="left">Accelerator.lu.Kernel</td>
 <td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
 </td>
 <td align="left"></td>
@@ -4111,8 +3968,426 @@ window.onload = function () { addSorting(); }
 <td align="left">advisory</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.lu.Kernel</td>
+<td align="left">**** Estimated Fmax: 273.97 MHz
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">63</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">64</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">65</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">66</td>
+<td align="left">Kernel</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.inner_update_mm0.Kernel</td>
-<td align="left">**** Estimated Fmax: 411.00 MHz
+<td align="left">Unable to schedule bus request on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=763">hpl_torus_PCIE_replicated_xilinx.cl</a>) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html">See here for more help on vitis_hls 200-885 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">67</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 128, Depth = 201, loop 'Loop 1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">68</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">69</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">70</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">71</td>
+<td align="left">Kernel</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.inner_update_mm0.Kernel</td>
+<td align="left">Unable to schedule bus request on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=775">hpl_torus_PCIE_replicated_xilinx.cl</a>) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html">See here for more help on vitis_hls 200-885 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">72</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 128, Depth = 200, loop 'Loop 2'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">73</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">74</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">75</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus read on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">76</td>
+<td align="left">Kernel</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.inner_update_mm0.Kernel</td>
+<td align="left">Unable to schedule bus request on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=787">hpl_torus_PCIE_replicated_xilinx.cl</a>) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html">See here for more help on vitis_hls 200-885 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">77</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 128, Depth = 200, loop 'Loop 3'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">78</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 26, loop 'Loop 4'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">79</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus write on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus write on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">80</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 5'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus write on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus write on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">81</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">The II Violation in module 'inner_update_mm0' (loop 'Loop 5'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus write on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>) and bus write on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html">See here for more help on vitis_hls 200-880 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">82</td>
+<td align="left">Kernel</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.inner_update_mm0.Kernel</td>
+<td align="left">Unable to schedule 'load' operation ('a_buffer_0_0_load_9', <a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=857">hpl_torus_PCIE_replicated_xilinx.cl</a>) on array 'a_buffer_0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'a_buffer_0_0'.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html">See here for more help on vitis_hls 200-885 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">83</td>
+<td align="left">Kernel</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.inner_update_mm0.Kernel</td>
+<td align="left">Unable to schedule bus write on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=856">hpl_torus_PCIE_replicated_xilinx.cl</a>) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html">See here for more help on vitis_hls 200-885 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">84</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.inner_update_mm0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 128, Depth = 199, loop 'Loop 5'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">85</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.inner_update_mm0.Interface</td>
+<td align="left">Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">86</td>
+<td align="left">Kernel</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.inner_update_mm0.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">87</td>
+<td align="left">Kernel</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.inner_update_mm0.Kernel</td>
+<td align="left">**** Estimated Fmax: 273.97 MHz
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.left_update.Interface</td>
+<td align="left">Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=605">hpl_torus_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=605">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.left_update.Interface</td>
+<td align="left">Multiple burst writes of length 16 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=688">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.left_update.Interface</td>
+<td align="left">Multiple burst writes of length 4096 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=699">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.top_update.Interface</td>
+<td align="left">Multiple burst reads of length 16 and bit width 512 in loop 'anonymous'(<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=470">hpl_torus_PCIE_replicated_xilinx.cl</a>) has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=470">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.top_update.Interface</td>
+<td align="left">Multiple burst writes of length 16 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=562">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.top_update.Interface</td>
+<td align="left">Multiple burst writes of length 4096 and bit width 512 has been inferred on port 'gmem' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=572">hpl_torus_PCIE_replicated_xilinx.cl</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.left_update.Latency</td>
+<td align="left">Cannot flatten loop 'Loop-1.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=604">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'left_update' either the parent loop or sub loop is do-while loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.left_update.Latency</td>
+<td align="left">Cannot flatten loop 'Loop-2' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=617">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'left_update' more than one sub loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.left_update.Latency</td>
+<td align="left">Cannot flatten loop 'Loop-3.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=687">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'left_update' the outer loop is not a perfect loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.top_update.Latency</td>
+<td align="left">Cannot flatten loop 'Loop-1.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=469">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'top_update' either the parent loop or sub loop is do-while loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.top_update.Latency</td>
+<td align="left">Cannot flatten loop 'Loop-2' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=482">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'top_update' more than one sub loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.top_update.Latency</td>
+<td align="left">Cannot flatten loop 'Loop-3.1' (<a href="file:///dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl#line=561">hpl_torus_PCIE_replicated_xilinx.cl</a>) in function 'top_update' the outer loop is not a perfect loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.left_update.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Loop 1.1'
 </td>
 <td align="left"></td>
 </tr>

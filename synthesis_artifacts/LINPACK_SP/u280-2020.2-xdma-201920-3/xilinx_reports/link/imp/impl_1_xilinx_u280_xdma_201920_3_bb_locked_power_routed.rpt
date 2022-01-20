@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date             : Fri Oct 29 22:01:29 2021
+| Date             : Fri Nov  5 19:39:00 2021
 | Host             : alveo0 running 64-bit Ubuntu 18.04.6 LTS
 | Command          : report_power -file xilinx_u280_xdma_201920_3_bb_locked_power_routed.rpt -pb xilinx_u280_xdma_201920_3_bb_locked_power_summary_routed.pb -rpx xilinx_u280_xdma_201920_3_bb_locked_power_routed.rpx
 | Design           : pfm_top_wrapper
@@ -30,16 +30,16 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 84.620       |
-|   FPGA Power (W)         | 74.784       |
-|   HBM Power (W)          | 9.837        |
+| Total On-Chip Power (W)  | 76.357       |
+|   FPGA Power (W)         | 66.538       |
+|   HBM Power (W)          | 9.820        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 78.488       |
-| Device Static (W)        | 6.133        |
+| Dynamic (W)              | 70.686       |
+| Device Static (W)        | 5.672        |
 | Effective TJA (C/W)      | 0.4          |
-| Max Ambient (C)          | 63.0         |
-| Junction Temperature (C) | 62.0         |
+| Max Ambient (C)          | 66.6         |
+| Junction Temperature (C) | 58.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -54,31 +54,31 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     7.325 |       74 |       --- |             --- |
-| CLB Logic                |    11.546 |  1706825 |       --- |             --- |
-|   LUT as Logic           |     8.708 |   482425 |   1302720 |           37.03 |
-|   Register               |     1.614 |   826535 |   2605440 |           31.72 |
-|   LUT as Distributed RAM |     0.821 |    14471 |    600480 |            2.41 |
-|   LUT as Shift Register  |     0.253 |    12780 |    600480 |            2.13 |
-|   CARRY8                 |     0.150 |    17785 |    162840 |           10.92 |
-|   BUFG                   |    <0.001 |        9 |        96 |            9.38 |
-|   Others                 |    <0.001 |   162529 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |     8447 |   1302720 |            0.65 |
-| Signals                  |    18.106 |  1572561 |       --- |             --- |
-| Block RAM                |     6.329 |      994 |      2016 |           49.31 |
+| Clocks                   |     5.602 |       74 |       --- |             --- |
+| CLB Logic                |     9.525 |  1955486 |       --- |             --- |
+|   LUT as Logic           |     7.406 |   636337 |   1302720 |           48.85 |
+|   Register               |     1.043 |   925009 |   2605440 |           35.50 |
+|   LUT as Distributed RAM |     0.722 |    14475 |    600480 |            2.41 |
+|   LUT as Shift Register  |     0.231 |    12606 |    600480 |            2.10 |
+|   CARRY8                 |     0.123 |    19801 |    162840 |           12.16 |
+|   BUFG                   |    <0.001 |       31 |        96 |           32.29 |
+|   Others                 |    <0.001 |   140543 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |     7897 |   1302720 |            0.61 |
+| Signals                  |    16.651 |  1848289 |       --- |             --- |
+| Block RAM                |     5.548 |      994 |      2016 |           49.31 |
 | HBM                      |    17.780 |        2 |         2 |          100.00 |
-| MMCM                     |     0.404 |        0 |       --- |             --- |
+| MMCM                     |     0.403 |        0 |       --- |             --- |
 | PLL                      |     0.384 |        7 |       --- |             --- |
-| DSPs                     |    10.897 |     6179 |      9024 |           68.47 |
-| I/O                      |     0.801 |      158 |       297 |           53.20 |
+| DSPs                     |     9.078 |     6201 |      9024 |           68.72 |
+| I/O                      |     0.799 |      158 |       297 |           53.20 |
 | GTY                      |     4.360 |       16 |        24 |           66.67 |
 | SYSMON                   |     0.014 |        1 |       --- |             --- |
 | Hard IPs                 |     0.538 |        1 |       --- |             --- |
 |   PCIE                   |     0.538 |        1 |       --- |             --- |
-| Static Power             |     6.133 |          |           |                 |
-|   HBM Static             |     0.369 |          |           |                 |
-|   Device Static          |     5.764 |          |           |                 |
-| Total                    |    84.617 |          |           |                 |
+| Static Power             |     5.672 |          |           |                 |
+|   HBM Static             |     0.352 |          |           |                 |
+|   Device Static          |     5.320 |          |           |                 |
+| Total                    |    76.355 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -88,11 +88,11 @@ Table of Contents
 +------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint     |       0.850 |    69.313 |      64.961 |      4.352 |       NA    | Unspecified | NA         |
-| Vccint_io  |       0.850 |     7.732 |       7.221 |      0.511 |       NA    | Unspecified | NA         |
-| Vccbram    |       0.850 |     0.928 |       0.811 |      0.117 |       NA    | Unspecified | NA         |
-| Vccaux     |       1.800 |     1.283 |       0.545 |      0.739 |       NA    | Unspecified | NA         |
-| Vccaux_io  |       1.800 |     0.204 |       0.168 |      0.035 |       NA    | Unspecified | NA         |
+| Vccint     |       0.850 |    59.548 |      55.676 |      3.872 |       NA    | Unspecified | NA         |
+| Vccint_io  |       0.850 |     7.690 |       7.221 |      0.469 |       NA    | Unspecified | NA         |
+| Vccbram    |       0.850 |     1.024 |       0.920 |      0.104 |       NA    | Unspecified | NA         |
+| Vccaux     |       1.800 |     1.292 |       0.544 |      0.747 |       NA    | Unspecified | NA         |
+| Vccaux_io  |       1.800 |     0.203 |       0.168 |      0.035 |       NA    | Unspecified | NA         |
 | Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18     |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -101,11 +101,11 @@ Table of Contents
 | Vcco12     |       1.200 |     0.115 |       0.115 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc     |       1.800 |     0.024 |       0.000 |      0.024 |       NA    | Unspecified | NA         |
-| VCC_IO_HBM |       1.200 |     4.556 |       4.437 |      0.119 |       NA    | Unspecified | NA         |
-| VCC_HBM    |       1.200 |     4.888 |       4.748 |      0.140 |       NA    | Unspecified | NA         |
+| VCC_IO_HBM |       1.200 |     4.549 |       4.437 |      0.112 |       NA    | Unspecified | NA         |
+| VCC_HBM    |       1.200 |     4.881 |       4.748 |      0.132 |       NA    | Unspecified | NA         |
 | VCCAUX_HBM |       2.500 |     0.117 |       0.093 |      0.023 |       NA    | Unspecified | NA         |
-| MGTYAVcc   |       0.900 |     0.687 |       0.616 |      0.070 |       NA    | Unspecified | NA         |
-| MGTYAVtt   |       1.200 |     2.558 |       2.536 |      0.022 |       NA    | Unspecified | NA         |
+| MGTYAVcc   |       0.900 |     0.683 |       0.616 |      0.067 |       NA    | Unspecified | NA         |
+| MGTYAVtt   |       1.200 |     2.557 |       2.536 |      0.021 |       NA    | Unspecified | NA         |
 | MGTYVccaux |       1.800 |     0.096 |       0.093 |      0.002 |       NA    | Unspecified | NA         |
 +------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 
@@ -155,7 +155,7 @@ Table of Contents
 | clk_out1_pfm_top_clk_wiz_0_0                                                                                                                                                                                                                                                                                                                                                                     | pfm_top_i/static_region/base_clocking/clk_wiz_0/inst/clk_out1_pfm_top_clk_wiz_0_0                                                                                                                                                                                                                                                                                                 |            20.0 |
 | clk_out1_pfm_top_clkwiz_hbm_aclk_0                                                                                                                                                                                                                                                                                                                                                               | pfm_top_i/static_region/base_clocking/clkwiz_hbm_aclk/inst/CLK_CORE_DRP_I/clk_inst/clk_out1_pfm_top_clkwiz_hbm_aclk_0                                                                                                                                                                                                                                                             |             2.2 |
 | clk_out1_pfm_top_clkwiz_kernel2_0                                                                                                                                                                                                                                                                                                                                                                | pfm_top_i/static_region/base_clocking/clkwiz_kernel2/inst/CLK_CORE_DRP_I/clk_inst/clk_out1_pfm_top_clkwiz_kernel2_0                                                                                                                                                                                                                                                               |             2.0 |
-| clk_out1_pfm_top_clkwiz_kernel_0                                                                                                                                                                                                                                                                                                                                                                 | pfm_top_i/static_region/base_clocking/clkwiz_kernel/inst/CLK_CORE_DRP_I/clk_inst/clk_out1_pfm_top_clkwiz_kernel_0                                                                                                                                                                                                                                                                 |             3.3 |
+| clk_out1_pfm_top_clkwiz_kernel_0                                                                                                                                                                                                                                                                                                                                                                 | pfm_top_i/static_region/base_clocking/clkwiz_kernel/inst/CLK_CORE_DRP_I/clk_inst/clk_out1_pfm_top_clkwiz_kernel_0                                                                                                                                                                                                                                                                 |             5.0 |
 | clk_out1_pfm_top_clkwiz_pcie_0                                                                                                                                                                                                                                                                                                                                                                   | pfm_top_i/static_region/base_clocking/clkwiz_pcie/inst/clk_out1                                                                                                                                                                                                                                                                                                                   |            10.0 |
 | clk_out1_pfm_top_clkwiz_pcie_0                                                                                                                                                                                                                                                                                                                                                                   | pfm_top_i/static_region/base_clocking/clkwiz_pcie/inst/clk_out1_pfm_top_clkwiz_pcie_0                                                                                                                                                                                                                                                                                             |            10.0 |
 | clk_out1_pfm_top_clkwiz_scheduler_0                                                                                                                                                                                                                                                                                                                                                              | pfm_top_i/static_region/base_clocking/clkwiz_scheduler/inst/clk_out1_pfm_top_clkwiz_scheduler_0                                                                                                                                                                                                                                                                                   |             4.0 |
@@ -242,53 +242,53 @@ Table of Contents
 +-----------------------------------------------+-----------+
 | Name                                          | Power (W) |
 +-----------------------------------------------+-----------+
-| pfm_top_wrapper                               |    78.484 |
-|   pfm_top_i                                   |    78.481 |
-|     dynamic_region                            |    70.783 |
-|       axilite_user_input_reg                  |     0.003 |
+| pfm_top_wrapper                               |    70.683 |
+|   pfm_top_i                                   |    70.681 |
+|     dynamic_region                            |    62.978 |
+|       axilite_user_input_reg                  |     0.004 |
 |       debug_bridge_xsdbm                      |     0.002 |
-|       hmss_0                                  |    18.482 |
-|       inner_update_mm0_1                      |    18.197 |
-|       inner_update_mm0_2                      |    18.212 |
-|       left_update_1                           |     3.184 |
-|       lu_1                                    |     3.791 |
-|       memory_subsystem                        |     4.589 |
+|       hmss_0                                  |    18.516 |
+|       inner_update_mm0_1                      |    16.346 |
+|       inner_update_mm0_2                      |    16.023 |
+|       left_update_1                           |     2.106 |
+|       lu_1                                    |     2.784 |
+|       memory_subsystem                        |     3.814 |
 |       regslice_pipe_ctrl_hbm_mgntpf           |     0.006 |
 |       regslice_pipe_ctrl_mgntpf               |     0.006 |
-|       slr0                                    |     0.015 |
-|       slr1                                    |     0.171 |
-|       slr2                                    |     0.139 |
-|       top_update_1                            |     3.319 |
-|       xdma_smartconnect                       |     0.667 |
-|     static_region                             |     7.698 |
+|       slr0                                    |     0.011 |
+|       slr1                                    |     0.137 |
+|       slr2                                    |     0.137 |
+|       top_update_1                            |     2.389 |
+|       xdma_smartconnect                       |     0.697 |
+|     static_region                             |     7.703 |
 |       Monitor_AXI_Master_dma_pcie             |     0.008 |
 |       Monitor_AXI_Master_p2p                  |     0.009 |
 |       axi_firewall_ctrl                       |     0.015 |
 |       axi_firewall_ctrl_user                  |     0.013 |
 |       axi_firewall_ctrl_user_debug            |     0.003 |
-|       axi_firewall_data                       |     0.056 |
+|       axi_firewall_data                       |     0.055 |
 |       axi_hwicap                              |     0.026 |
-|       axi_interconnect_0                      |     0.056 |
+|       axi_interconnect_0                      |     0.058 |
 |       axis_register_slice_cc                  |     0.033 |
 |       axis_register_slice_cq                  |     0.044 |
 |       axis_register_slice_rc                  |     0.045 |
 |       axis_register_slice_rq                  |     0.034 |
-|       base_clocking                           |     0.518 |
-|       brd_mgmt_scheduler                      |     0.270 |
-|       dma_pcie                                |     0.708 |
+|       base_clocking                           |     0.517 |
+|       brd_mgmt_scheduler                      |     0.266 |
+|       dma_pcie                                |     0.713 |
 |       flash_programmer                        |     0.004 |
 |       interconnect_axilite_mgmt_firewall_ctrl |     0.015 |
 |       interconnect_axilite_static_primary     |     0.010 |
 |       interconnect_axilite_static_secondary_a |     0.006 |
-|       interconnect_axilite_static_secondary_b |     0.006 |
+|       interconnect_axilite_static_secondary_b |     0.007 |
 |       interconnect_axilite_static_user        |     0.083 |
 |       interconnect_user_pre_firewall          |     0.005 |
 |       mailbox_0                               |     0.006 |
 |       mgmt_debug_bridge                       |     0.002 |
 |       mgmt_debug_hub                          |     0.001 |
-|       pcie                                    |     5.639 |
-|       pr_isolation_expanded                   |     0.061 |
-|       sys_mgmt_wiz                            |     0.016 |
+|       pcie                                    |     5.640 |
+|       pr_isolation_expanded                   |     0.065 |
+|       sys_mgmt_wiz                            |     0.015 |
 |       user_debug_bridge                       |     0.002 |
 +-----------------------------------------------+-----------+
 

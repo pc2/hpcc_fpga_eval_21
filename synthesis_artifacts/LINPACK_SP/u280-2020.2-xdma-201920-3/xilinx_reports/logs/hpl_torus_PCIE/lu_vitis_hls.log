@@ -6,7 +6,7 @@
 
 source /opt/Xilinx/Vitis_HLS/2020.2/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'meyermar' on host 'alveo0.ethz.ch' (Linux_x86_64 version 4.14.156-U) on Fri Oct 29 13:00:12 CEST 2021
+INFO: [HLS 200-10] For user 'meyermar' on host 'alveo0.ethz.ch' (Linux_x86_64 version 4.14.156-U) on Thu Nov 04 09:18:43 CET 2021
 INFO: [HLS 200-10] On os Ubuntu 18.04.6 LTS
 INFO: [HLS 200-10] In directory '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/hpl_torus_PCIE/lu'
 Sourcing Tcl script 'lu.tcl'
@@ -26,8 +26,8 @@ INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: co
 INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
 INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
 INFO: [HLS 200-10] Setting target device to 'xcu280-fsvh2892-2L-e'
-INFO: [HLS 200-1510] Running: create_clock -period 300.000000MHz -name default 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: create_clock -period 200MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
 INFO: [HLS 200-1510] Running: config_export -disable_deadlock_detection=true 
 INFO: [HLS 200-1510] Running: config_rtl -m_axi_conservative_mode=1 
@@ -40,7 +40,7 @@ INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signed
 INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
 INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 189.874 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 189.841 MB.
 INFO: [HLS 200-10] Analyzing design file '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl' ... 
 WARNING: [HLS 207-5270] unknown attribute 'register' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:119:73
 WARNING: [HLS 207-5270] unknown attribute 'register' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:140:57
@@ -69,12 +69,8 @@ WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_
 WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:698:10
 WARNING: [HLS 207-5301] unused parameter 'is_first_block': /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:593:16
 WARNING: [HLS 207-5270] unknown attribute 'uses_global_work_offset' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:716:17
-WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:757:10
-WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:769:10
-WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:781:10
 WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:795:10
-WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:846:10
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.65 seconds. CPU system time: 0.14 seconds. Elapsed time: 0.39 seconds; current allocated memory: 190.989 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.55 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.3 seconds; current allocated memory: 190.904 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
 INFO: [HLS 214-131] Inlining function 'lu_block' into 'lu' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:264:3)
 INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:195:4)
@@ -126,12 +122,12 @@ INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 512 in loop 
 INFO: [HLS 214-115] Multiple burst writes of length 16 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:415:4)
 INFO: [HLS 214-115] Multiple burst writes of length 4096 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:425:2)
 INFO: [HLS 214-115] Multiple burst writes of length 4096 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:436:2)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 14.32 seconds. CPU system time: 0.58 seconds. Elapsed time: 14.56 seconds; current allocated memory: 216.861 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 216.862 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 13.86 seconds. CPU system time: 0.42 seconds. Elapsed time: 14.07 seconds; current allocated memory: 216.840 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 216.842 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2.32 seconds. CPU system time: 0.08 seconds. Elapsed time: 2.41 seconds; current allocated memory: 223.652 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2.26 seconds. CPU system time: 0.06 seconds. Elapsed time: 2.32 seconds; current allocated memory: 223.635 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.59 seconds. CPU system time: 0 seconds. Elapsed time: 0.59 seconds; current allocated memory: 224.496 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.54 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 224.473 MB.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:233) in function 'lu' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-3.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:77) in function 'lu' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-3.2' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:286) in function 'lu' automatically.
@@ -160,7 +156,7 @@ INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/dev/shm/meye
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:357:11) to (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:391:11) in function 'lu'... converting 3 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:245:11) to (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:77:2) in function 'lu'... converting 15 basic blocks.
 INFO: [XFORM 203-11] Balancing expressions in function 'lu' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:214)...162 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.22 seconds. CPU system time: 0 seconds. Elapsed time: 3.22 seconds; current allocated memory: 256.037 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2.9 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.92 seconds; current allocated memory: 256.008 MB.
 WARNING: [HLS 200-960] Cannot flatten loop 'Loop-1.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:232:3) in function 'lu' either the parent loop or sub loop is do-while loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:231:2) in function 'lu'.
@@ -181,7 +177,7 @@ INFO: [HLS 200-472] Inferring partial write operation for 'a_buffer.0.0' (/dev/s
 INFO: [HLS 200-472] Inferring partial write operation for 'top_buffer.0' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:395:27)
 INFO: [HLS 200-472] Inferring partial write operation for 'a_buffer.0.0' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:402:32)
 INFO: [HLS 200-472] Inferring partial write operation for 'a_buffer.0.0' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:236:29)
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 3.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.06 seconds; current allocated memory: 283.048 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2.89 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.9 seconds; current allocated memory: 283.020 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'lu' ...
 WARNING: [SYN 201-103] Legalizing function name 'update_block.1' to 'update_block_1'.
@@ -190,15 +186,15 @@ INFO: [HLS 200-42] -- Implementing module 'update_block_1'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'update_block.1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 18, function 'update_block.1'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, function 'update_block.1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.18 seconds. CPU system time: 0 seconds. Elapsed time: 1.18 seconds; current allocated memory: 288.136 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.18 seconds. CPU system time: 0 seconds. Elapsed time: 1.19 seconds; current allocated memory: 287.985 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.28 seconds. CPU system time: 0 seconds. Elapsed time: 1.28 seconds; current allocated memory: 292.627 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.17 seconds; current allocated memory: 292.317 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'lu' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -209,34 +205,34 @@ INFO: [HLS 200-1457] Automatically inferring 1WnR RAM type for array 'lu_a_buffe
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Loop 1.1'
 INFO: [SCHED 204-61] Pipelining loop 'Loop 2.1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'Loop 2.1'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'Loop 2.1'
 INFO: [SCHED 204-61] Pipelining loop 'Loop 2.2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 22, loop 'Loop 2.2'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 17, loop 'Loop 2.2'
 INFO: [SCHED 204-61] Pipelining loop 'Loop 2.3'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 23, loop 'Loop 2.3'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 17, loop 'Loop 2.3'
 INFO: [SCHED 204-61] Pipelining loop 'Loop 3.1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 71, loop 'Loop 3.1'
 INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'Loop 4'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'Loop 4'
 INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'Loop 5'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'Loop 5'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 11.18 seconds. CPU system time: 0.04 seconds. Elapsed time: 11.2 seconds; current allocated memory: 303.673 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 10.84 seconds. CPU system time: 0.04 seconds. Elapsed time: 10.89 seconds; current allocated memory: 303.307 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 5.78 seconds. CPU system time: 0.03 seconds. Elapsed time: 5.81 seconds; current allocated memory: 324.940 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 5.5 seconds. CPU system time: 0.02 seconds. Elapsed time: 5.53 seconds; current allocated memory: 323.955 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'update_block_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-104] Estimated max fanout for 'update_block_1' is 43605 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_0': 64 instance(s).
+INFO: [RTGEN 206-104] Estimated max fanout for 'update_block_1' is 32260 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_0': 64 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_0': 72 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_83_32_1_0': 8 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'update_block_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 5.28 seconds. CPU system time: 0.03 seconds. Elapsed time: 5.31 seconds; current allocated memory: 345.223 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 5.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 5.21 seconds; current allocated memory: 343.362 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'lu' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -250,29 +246,29 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'lu/block_row' to 's_axilit
 INFO: [RTGEN 206-500] Setting interface mode on port 'lu/blocks_per_row' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'lu' to 's_axilite & ap_ctrl_chain'.
 INFO: [RTGEN 206-100] Bundling port 'a', 'a_block_trans', 'a_block', 'block_col', 'block_row', 'blocks_per_row' to AXI-Lite port control.
-INFO: [RTGEN 206-104] Estimated max fanout for 'lu' is 53594 from HDL expression: (((1'b1 == ap_CS_fsm_pp3_stage0) & (1'b0 == ap_block_pp3_stage0_11001_ignoreCallOp3391)) | ((1'b1 == ap_CS_fsm_pp2_stage0) & (1'b0 == ap_block_pp2_stage0_11001_ignoreCallOp2914)))
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_0': 7 instance(s).
+INFO: [RTGEN 206-104] Estimated max fanout for 'lu' is 41481 from HDL expression: (((1'b1 == ap_CS_fsm_pp3_stage0) & (1'b0 == ap_block_pp3_stage0_11001_ignoreCallOp3342)) | ((1'b1 == ap_CS_fsm_pp2_stage0) & (1'b0 == ap_block_pp2_stage0_11001_ignoreCallOp2869)))
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_0': 7 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_0': 7 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'frecip_32ns_32ns_32_14_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_4ns_24s_24_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'frecip_32ns_32ns_32_10_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_4ns_24s_24_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_mul_6ns_21s_21_4_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_83_32_1_0': 56 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'lu'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7.53 seconds. CPU system time: 0.03 seconds. Elapsed time: 7.56 seconds; current allocated memory: 394.075 MB.
-INFO: [RTMG 210-282] Generating pipelined core: 'lu_mul_32s_32s_32_2_1_Multiplier_0'
-INFO: [RTMG 210-282] Generating pipelined core: 'lu_mul_4ns_24s_24_2_1_Multiplier_1'
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7.03 seconds. CPU system time: 0.06 seconds. Elapsed time: 7.09 seconds; current allocated memory: 390.280 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'lu_mul_32s_32s_32_1_1_Multiplier_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'lu_mul_4ns_24s_24_1_1_Multiplier_1'
 INFO: [RTMG 210-278] Implementing memory 'lu_a_buffer_0_0_ram (RAM)' using auto RAMs with power-on initialization.
 INFO: [RTMG 210-278] Implementing memory 'lu_left_buffer_0_ram (RAM)' using auto RAMs with power-on initialization.
 INFO: [RTMG 210-278] Implementing memory 'lu_top_buffer_0_ram (RAM)' using auto RAMs with power-on initialization.
 INFO: [RTMG 210-278] Implementing memory 'lu_lu_a_buffer_in_ram (RAM_1WnR)' using auto RAMs.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 13.68 seconds. CPU system time: 0.22 seconds. Elapsed time: 13.89 seconds; current allocated memory: 453.165 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 13.3 seconds. CPU system time: 0.18 seconds. Elapsed time: 13.48 seconds; current allocated memory: 449.261 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for lu.
 INFO: [VLOG 209-307] Generating Verilog RTL for lu.
 INFO: [HLS 200-1603] Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 411.00 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 70.27 seconds. CPU system time: 1.17 seconds. Elapsed time: 70.7 seconds; current allocated memory: 456.068 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 273.97 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 67.42 seconds. CPU system time: 0.91 seconds. Elapsed time: 67.81 seconds; current allocated memory: 452.151 MB.
 INFO: [HLS 200-1510] Running: export_design 
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 
@@ -285,19 +281,19 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lu_ap_fadd_5_full_dsp_32'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lu_ap_fadd_5_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lu_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lu_ap_fadd_3_full_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lu_ap_fmul_2_max_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lu_ap_fmul_2_max_dsp_32'...
-WARNING: [IP_Flow 19-4832] The IP name 'lu_ap_frecip_12_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lu_ap_frecip_12_full_dsp_32'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lu_ap_frecip_12_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'lu_ap_frecip_8_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lu_ap_frecip_8_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lu_ap_frecip_8_full_dsp_32'...
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 29 13:01:50 2021...
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  4 09:20:17 2021...
 INFO: [HLS 200-802] Generated output file lu/solution/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 25.7 seconds. CPU system time: 1.71 seconds. Elapsed time: 31.94 seconds; current allocated memory: 460.772 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 24.78 seconds. CPU system time: 1.84 seconds. Elapsed time: 31.28 seconds; current allocated memory: 456.864 MB.
 HLS completed successfully
-INFO: [HLS 200-112] Total CPU user time: 98 seconds. Total CPU system time: 3.56 seconds. Total elapsed time: 104.36 seconds; peak allocated memory: 453.165 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Fri Oct 29 13:01:56 2021...
+INFO: [HLS 200-112] Total CPU user time: 94.24 seconds. Total CPU system time: 3.19 seconds. Total elapsed time: 100.69 seconds; peak allocated memory: 449.261 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Nov  4 09:20:24 2021...
