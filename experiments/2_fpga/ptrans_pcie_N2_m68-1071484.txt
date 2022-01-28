@@ -1,3 +1,10 @@
+cpu-bind=MASK - fpga-0009, task  0  0 [279194]: mask 0xffffffffff set
+	>>>> The module 'intel/19.0.4' is deprecated and will be removed from the system
+	>>>> on Dec 2021. Try ml spider intel to find newer releases
+cpu-bind=MASK - fpga-0010, task  2  0 [13836]: mask 0xfffff set
+cpu-bind=MASK - fpga-0009, task  0  0 [279224]: mask 0xfffff set
+cpu-bind=MASK - fpga-0010, task  3  1 [13837]: mask 0xfffff set
+cpu-bind=MASK - fpga-0009, task  1  1 [279225]: mask 0xfffff set
 -------------------------------------------------------------
 General setup:
 C++ high resolution clock is used.
@@ -15,12 +22,6 @@ MMD INFO : Disabling SmartVID (fix) polling
 MMD INFO : Disabling SmartVID (fix) polling
 MMD INFO : Disabling SmartVID (fix) polling
 MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
 MMD INFO : Enabling SmartVID (fix) polling
 MMD INFO : Enabling SmartVID (fix) polling
 Prepared FPGA successfully for global Execution!
@@ -38,8 +39,8 @@ Data Handler                  PQ
 Dist. Buffers                 No
 Kernel File                   ../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-pcie/transpose_PQ_PCIE.aocx
 Kernel Replications           4
-MPI Ranks                     9
-Matrix Size                   98304
+MPI Ranks                     4
+Matrix Size                   131072
 Repetitions                   10
 Test Mode                     No
 Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
@@ -49,22 +50,18 @@ Start benchmark using the given configuration. Generating data...
 -------------------------------------------------------------
 MMD INFO : Enabling SmartVID (fix) polling
 MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-Generation Time: 4.95430e+00 s
+Generation Time: 4.59195e+01 s
 -------------------------------------------------------------
 Execute benchmark kernel...
 -------------------------------------------------------------
-Execution Time: 1.20241e+01 s
+Execution Time: 1.03754e+02 s
 -------------------------------------------------------------
 Validate output...
 -------------------------------------------------------------
 Maximum error: 7.62939e-06 < 1.19209e-05
 Mach. Epsilon: 1.19209e-07
-Validation Time: 2.01899e+00 s
+Validation Time: 5.94383e+01 s
        total [s]     transfer [s]  calc [s]      calc FLOPS    Mem [B/s]     PCIe [B/s]
-avg:   1.12347e+00   4.61899e-01   6.61575e-01   1.62301e+09   1.94761e+10   2.78955e+10
-best:  1.09656e+00   4.54290e-01   6.42269e-01   1.67179e+09   2.00615e+10   2.83627e+10
+avg:   1.00458e+01   4.20002e+00   5.84575e+00   7.34716e+08   8.81659e+09   1.22713e+10
+best:  9.93025e+00   4.18666e+00   5.74360e+00   7.47784e+08   8.97341e+09   1.23105e+10
 Validation: SUCCESS!

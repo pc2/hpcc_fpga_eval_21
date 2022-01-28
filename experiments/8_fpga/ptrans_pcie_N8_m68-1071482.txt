@@ -1,3 +1,22 @@
+cpu-bind=MASK - fpga-0002, task  0  0 [13083]: mask 0xffffffffff set
+	>>>> The module 'intel/19.0.4' is deprecated and will be removed from the system
+	>>>> on Dec 2021. Try ml spider intel to find newer releases
+cpu-bind=MASK - fpga-0003, task  2  0 [100227]: mask 0xfffff set
+cpu-bind=MASK - fpga-0006, task  8  0 [12058]: mask 0xfffff set
+cpu-bind=MASK - fpga-0007, task 10  0 [20999]: mask 0xfffff set
+cpu-bind=MASK - fpga-0005, task  6  0 [12377]: mask 0xfffff set
+cpu-bind=MASK - fpga-0004, task  4  0 [45624]: mask 0xfffff set
+cpu-bind=MASK - fpga-0010, task 14  0 [12421]: mask 0xfffff set
+cpu-bind=MASK - fpga-0002, task  0  0 [13120]: mask 0xfffff set
+cpu-bind=MASK - fpga-0008, task 12  0 [84526]: mask 0xfffff set
+cpu-bind=MASK - fpga-0003, task  3  1 [100228]: mask 0xfffff set
+cpu-bind=MASK - fpga-0006, task  9  1 [12059]: mask 0xfffff set
+cpu-bind=MASK - fpga-0007, task 11  1 [21000]: mask 0xfffff set
+cpu-bind=MASK - fpga-0005, task  7  1 [12378]: mask 0xfffff set
+cpu-bind=MASK - fpga-0004, task  5  1 [45625]: mask 0xfffff set
+cpu-bind=MASK - fpga-0010, task 15  1 [12422]: mask 0xfffff set
+cpu-bind=MASK - fpga-0002, task  1  1 [13121]: mask 0xfffff set
+cpu-bind=MASK - fpga-0008, task 13  1 [84527]: mask 0xfffff set
 -------------------------------------------------------------
 General setup:
 C++ high resolution clock is used.
@@ -27,15 +46,13 @@ MMD INFO : Disabling SmartVID (fix) polling
 MMD INFO : Disabling SmartVID (fix) polling
 MMD INFO : Disabling SmartVID (fix) polling
 MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
-MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
 MMD INFO : Enabling SmartVID (fix) polling
 Prepared FPGA successfully for global Execution!
 -------------------------------------------------------------
@@ -52,8 +69,8 @@ Data Handler                  PQ
 Dist. Buffers                 No
 Kernel File                   ../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-pcie/transpose_PQ_PCIE.aocx
 Kernel Replications           4
-MPI Ranks                     25
-Matrix Size                   163840
+MPI Ranks                     16
+Matrix Size                   524288
 Repetitions                   10
 Test Mode                     No
 Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
@@ -69,34 +86,18 @@ MMD INFO : Enabling SmartVID (fix) polling
 MMD INFO : Enabling SmartVID (fix) polling
 MMD INFO : Enabling SmartVID (fix) polling
 MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-Generation Time: 1.61759e+00 s
+Generation Time: 4.58242e+01 s
 -------------------------------------------------------------
 Execute benchmark kernel...
 -------------------------------------------------------------
-Execution Time: 4.00122e+00 s
+Execution Time: 1.09549e+02 s
 -------------------------------------------------------------
 Validate output...
 -------------------------------------------------------------
 Maximum error: 7.62939e-06 < 1.19209e-05
 Mach. Epsilon: 1.19209e-07
-Validation Time: 2.63093e+00 s
+Validation Time: 7.61298e+01 s
        total [s]     transfer [s]  calc [s]      calc FLOPS    Mem [B/s]     PCIe [B/s]
-avg:   3.68780e-01   1.52961e-01   2.15819e-01   4.97519e+09   5.97023e+10   8.42364e+10
-best:  3.62698e-01   1.51620e-01   2.11078e-01   5.08694e+09   6.10432e+10   8.49816e+10
+avg:   1.01996e+01   4.21385e+00   5.98576e+00   2.87012e+09   3.44415e+10   4.89241e+10
+best:  1.00769e+01   4.19165e+00   5.88528e+00   2.91913e+09   3.50295e+10   4.91831e+10
 Validation: SUCCESS!

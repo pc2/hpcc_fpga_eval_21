@@ -1,3 +1,8 @@
+
+The following have been reloaded with a version change:
+  1) bittware_520n/20.4.0 => bittware_520n/20.4.0_hpc
+  2) intelFPGA_pro/21.1.0 => intelFPGA_pro/21.2.0
+
 -------------------------------------------------------------
 General setup:
 C++ high resolution clock is used.
@@ -16,8 +21,6 @@ MMD INFO : Disabling SmartVID (fix) polling
 MMD INFO : Disabling SmartVID (fix) polling
 MMD INFO : Disabling SmartVID (fix) polling
 MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
-MMD INFO : Enabling SmartVID (fix) polling
 Prepared FPGA successfully for global Execution!
 -------------------------------------------------------------
 Implementation of the matrix transposition benchmark proposed in the HPCC benchmark suite for FPGA.
@@ -34,7 +37,7 @@ Dist. Buffers                 No
 Kernel File                   ../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-pcie/transpose_PQ_PCIE.aocx
 Kernel Replications           4
 MPI Ranks                     4
-Matrix Size                   32768
+Matrix Size                   65536
 Repetitions                   10
 Test Mode                     No
 Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
@@ -43,18 +46,20 @@ Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platf
 Start benchmark using the given configuration. Generating data...
 -------------------------------------------------------------
 MMD INFO : Enabling SmartVID (fix) polling
-Generation Time: 2.87267e+00 s
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Generation Time: 1.14968e+01 s
 -------------------------------------------------------------
 Execute benchmark kernel...
 -------------------------------------------------------------
-Execution Time: 6.82329e+00 s
+Execution Time: 2.75674e+01 s
 -------------------------------------------------------------
 Validate output...
 -------------------------------------------------------------
 Maximum error: 7.62939e-06 < 1.19209e-05
 Mach. Epsilon: 1.19209e-07
-Validation Time: 3.93186e+00 s
+Validation Time: 1.61975e+01 s
        total [s]     transfer [s]  calc [s]      calc FLOPS    Mem [B/s]     PCIe [B/s]
-avg:   6.44366e-01   2.68981e-01   3.75384e-01   7.15095e+08   8.58114e+09   1.19757e+10
-best:  6.30958e-01   2.63404e-01   3.67554e-01   7.30330e+08   8.76395e+09   1.22292e+10
+avg:   2.58155e+00   1.06860e+00   1.51295e+00   7.09700e+08   8.51640e+09   1.20577e+10
+best:  2.52312e+00   1.05492e+00   1.46820e+00   7.31334e+08   8.77601e+09   1.22141e+10
 Validation: SUCCESS!

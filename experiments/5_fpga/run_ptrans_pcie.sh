@@ -13,4 +13,4 @@ module load intel intelFPGA_pro/21.2.0 bittware_520n/20.4.0_hpc devel/CMake/3.15
 
 srun ../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-pcie/Transpose_intel \
     -f ../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-pcie/transpose_PQ_PCIE.aocx \
-    -n 10 -m 64 -b 512 -r 4 --platform 1
+    -n 10 -m 192 -b 512 -r 4 --platform 1
