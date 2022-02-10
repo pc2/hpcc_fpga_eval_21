@@ -4,6 +4,7 @@
 #SBATCH -N 13
 #SBATCH -n 25
 #SBATCH -t 2:00:00 
+#SBATCH -w fpga-[0001-0013]
 #SBATCH --fpgalink="n00:acl0:ch0-n00:acl0:ch1"
 #SBATCH --fpgalink="n00:acl0:ch2-n00:acl0:ch3"
 #SBATCH --fpgalink="n00:acl1:ch0-n02:acl1:ch1"
@@ -60,8 +61,8 @@
 
 module load intel intelFPGA_pro/21.2.0 bittware_520n/20.4.0_max devel/CMake/3.15.3-GCCcore-8.3.0
 
-sleep 10
+sleep 60
 
 srun ../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-iec/Transpose_intel \
     -f ../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-iec/transpose_PQ_IEC.aocx \
-    -n 2 -m 68 -b 512 -r 4
+    -n 10 -m 320 -b 512 -r 4
