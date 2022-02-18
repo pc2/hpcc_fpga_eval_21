@@ -1,0 +1,104 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[27026,1],0] (PID 24542)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_max_sg280h : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-iec/hpl_torus_IEC.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.4
+MPI Version:  3.1
+Config. Time: Fri Jan 07 09:19:32 UTC 2022
+Git Commit:   b678d6d-dirty
+
+Summary:
+Block Size                    512
+Communication Type            IEC
+Data Type                     cl_float
+Emulate                       No
+Kernel File                   ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-iec/hpl_torus_IEC.aocx
+Kernel Replications           5
+MPI Ranks                     1
+Matrix Size                   24576
+Repetitions                   10
+Test Mode                     No
+Device                        p520_max_sg280h : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 1.89702e+01 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Execution Time: 6.72039e+02 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+  norm. resid        resid       machep   
+    5.25221e-07    3.82066e-05    1.19209e-07
+Validation Time: 2.86084e-03 s
+         Method           best           mean         GFLOPS
+          total    4.35938e+01    4.36044e+01    2.27023e+02
+           GEFA    4.35938e+01    4.36044e+01    2.26996e+02
+           GESL    2.78000e-07    3.00400e-07    4.34518e+06
+Validation: SUCCESS!
+
+============================================================
+Request ID:             523235.nqsv
+Request Name:           HPL_SP_IEC_EXE
+Queue:                  fpga@nqsv
+Number of Jobs:         1
+User Name:              mellich
+Group Name:             CCUSC
+Created Request Time:   Fri Jan  7 19:20:56 2022
+Started Request Time:   Fri Jan  7 19:22:31 2022
+Ended Request Time:     Fri Jan  7 19:34:09 2022
+Resources Information:
+  Elapse:               698S
+  Remaining Elapse:     85702S
+============================================================

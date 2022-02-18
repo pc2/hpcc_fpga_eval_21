@@ -1,0 +1,148 @@
+cpu-bind=MASK - fpga-0001, task  0  0 [7389]: mask 0xffffffffff set
+	>>>> The module 'intel/19.0.4' is deprecated and will be removed from the system
+	>>>> on Dec 2021. Try ml spider intel to find newer releases
+cpu-bind=MASK - fpga-0002, task  2  0 [7295]: mask 0xfffff set
+cpu-bind=MASK - fpga-0001, task  0  0 [7417]: mask 0xfffff set
+cpu-bind=MASK - fpga-0002, task  3  1 [7296]: mask 0xfffff set
+cpu-bind=MASK - fpga-0001, task  1  1 [7418]: mask 0xfffff set
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-pcie/hpl_torus_PCIE.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.4
+MPI Version:  3.1
+Config. Time: Thu Dec 23 16:42:58 UTC 2021
+Git Commit:   e851bcf-dirty
+
+Summary:
+Block Size                    512
+Communication Type            PCIE
+Data Type                     cl_float
+Emulate                       No
+Kernel File                   ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-pcie/hpl_torus_PCIE.aocx
+Kernel Replications           5
+MPI Ranks                     4
+Matrix Size                   12288
+Repetitions                   10
+Test Mode                     No
+Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Generation Time: 7.58489e+00 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Torus 0,0Start! 
+Torus 1,0Start! 
+Torus 1,1Start! 
+Torus 0,1Start! 
+Torus 0,1End! 
+Torus 1,1End! 
+Torus 1,0End! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 1,0Start! 
+Torus 0,1Start! 
+Torus 1,1Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 1,1End! 
+Torus 0,1End! 
+Torus 0,0Start! 
+Torus 1,0Start! 
+Torus 0,1Start! 
+Torus 1,1Start! 
+Torus 0,1End! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 1,1End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 1,1Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 1,1End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 1,1Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 1,1End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 1,1Start! 
+Torus 0,0End! 
+Torus 1,0End! 
+Torus 0,1End! 
+Torus 1,1End! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 1,1Start! 
+Torus 1,0End! 
+Torus 0,0End! 
+Torus 0,1End! 
+Torus 1,1End! 
+Torus 0,0Start! 
+Torus 1,0Start! 
+Torus 0,1Start! 
+Torus 1,1Start! 
+Torus 0,0End! 
+Torus 0,1End! 
+Torus 1,1End! 
+Torus 1,0End! 
+Torus 0,0Start! 
+Torus 1,1Start! 
+Torus 1,0Start! 
+Torus 0,1Start! 
+Torus 0,0End! 
+Torus 1,1End! 
+Torus 0,1End! 
+Torus 1,0End! 
+Torus 1,1Start! 
+Torus 0,0Start! 
+Torus 0,1Start! 
+Torus 1,0Start! 
+Torus 0,0End! 
+Torus 0,1End! 
+Torus 1,1End! 
+Torus 1,0End! 
+Execution Time: 6.13031e+01 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+  norm. resid        resid       machep   
+    4.96058e-07    3.61204e-05    1.19209e-07
+Validation Time: 5.15820e-05 s
+         Method           best           mean         GFLOPS
+          total    5.56910e+00    5.63649e+00    1.77709e+03
+           GEFA    5.56910e+00    5.63649e+00    1.77688e+03
+           GESL    3.10000e-08    4.25000e-08    3.89664e+07
+Validation: SUCCESS!

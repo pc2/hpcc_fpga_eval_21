@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #SBATCH -p fpga
-#SBATCH -w fpga-0002,fpga-0003,fpga-0004,fpga-0005,fpga-0006,fpga-0007,fpga-0008,fpga-0009
+#SBATCH -w fpga-0002,fpga-0003,fpga-0004,fpga-0005,fpga-0006,fpga-0007,fpga-0008,fpga-0010
 #SBATCH -N 8
 #SBATCH -n 16
 #SBATCH -J beff

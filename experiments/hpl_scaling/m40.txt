@@ -1,0 +1,63 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_max_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/hpl_torus_IEC.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.4
+MPI Version:  3.1
+Config. Time: Thu Dec 23 16:42:58 UTC 2021
+Git Commit:   e851bcf-dirty
+
+Summary:
+Block Size                    512
+Communication Type            IEC
+Data Type                     cl_float
+Emulate                       No
+Kernel File                   ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/hpl_torus_IEC.aocx
+Kernel Replications           5
+MPI Ranks                     1
+Matrix Size                   20480
+Repetitions                   5
+Test Mode                     No
+Device                        p520_max_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 1.02959e+01 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Execution Time: 6.10107e+01 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+  norm. resid        resid       machep   
+    7.49350e-07    3.79086e-05    1.19209e-07
+Validation Time: 2.83172e-02 s
+         Method           best           mean         GFLOPS
+          total    6.79512e+00    6.80220e+00    8.42879e+02
+           GEFA    6.79512e+00    6.80220e+00    8.42756e+02
+           GESL    2.80000e-08    3.56000e-08    2.99593e+07
+Validation: SUCCESS!

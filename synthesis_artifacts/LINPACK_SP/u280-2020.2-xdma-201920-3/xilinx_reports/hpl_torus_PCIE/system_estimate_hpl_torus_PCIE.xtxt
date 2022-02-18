@@ -1,0 +1,54 @@
+===============================================================================
+Version:    v++ v2020.2 (64-bit)
+Build:      SW Build (by xbuild) on 2020-11-18-05:13:29
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Thu Nov  4 09:32:23 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             hpl_torus_PCIE
+Target Device:           xilinx:u280:xdma:201920.3
+Target Clock:            200MHz
+Total number of kernels: 4
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name       Type  Target              OpenCL Library  Compute Units
+----------------  ----  ------------------  --------------  -------------
+inner_update_mm0  clc   fpga0:OCL_REGION_0  hpl_torus_PCIE  1
+left_update       clc   fpga0:OCL_REGION_0  hpl_torus_PCIE  1
+top_update        clc   fpga0:OCL_REGION_0  hpl_torus_PCIE  1
+lu                clc   fpga0:OCL_REGION_0  hpl_torus_PCIE  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     hpl_torus_PCIE
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit        Kernel Name       Module Name       Target Frequency  Estimated Frequency
+------------------  ----------------  ----------------  ----------------  -------------------
+lu_1                lu                update_block_1    200               283.929565
+lu_1                lu                lu                200               273.972595
+top_update_1        top_update        top_update        200               273.972595
+left_update_1       left_update       left_update       200               273.972595
+inner_update_mm0_1  inner_update_mm0  inner_update_mm0  200               273.972595
+
+Latency Information
+Compute Unit        Kernel Name       Module Name       Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------------  ----------------  ----------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+lu_1                lu                update_block_1    1               13             13            13              65.000 ns        65.000 ns       65.000 ns
+lu_1                lu                lu                94099 ~ 364435  94098          undef         364434          0.470 ms         undef           1.822 ms
+top_update_1        top_update        top_update        98637 ~ 352589  98636          undef         352588          0.493 ms         undef           1.763 ms
+left_update_1       left_update       left_update       97613 ~ 351565  97612          undef         351564          0.488 ms         undef           1.758 ms
+inner_update_mm0_1  inner_update_mm0  inner_update_mm0  49471           49470          49470         49470           0.247 ms         0.247 ms        0.247 ms
+
+Area Information
+Compute Unit        Kernel Name       Module Name       FF      LUT     DSP  BRAM  URAM
+------------------  ----------------  ----------------  ------  ------  ---  ----  ----
+lu_1                lu                update_block_1    41481   37892   0    0     0
+lu_1                lu                lu                76094   71343   0    158   0
+top_update_1        top_update        top_update        44409   38960   0    158   0
+left_update_1       left_update       left_update       39256   34849   0    158   0
+inner_update_mm0_1  inner_update_mm0  inner_update_mm0  344105  249028  0    414   0
+-------------------------------------------------------------------------------

@@ -1,0 +1,73 @@
+cpu-bind=MASK - fpga-0005, task  0  0 [486722]: mask 0xffffffffff set
+cpu-bind=MASK - fpga-0006, task  2  0 [435225]: mask 0xfffff set
+cpu-bind=MASK - fpga-0007, task  4  0 [455909]: mask 0xfffff set
+cpu-bind=MASK - fpga-0005, task  0  0 [486754]: mask 0xfffff set
+cpu-bind=MASK - fpga-0008, task  6  0 [447005]: mask 0xfffff set
+cpu-bind=MASK - fpga-0006, task  3  1 [435226]: mask 0xfffff00000 set
+cpu-bind=MASK - fpga-0007, task  5  1 [455910]: mask 0xfffff00000 set
+cpu-bind=MASK - fpga-0005, task  1  1 [486755]: mask 0xfffff00000 set
+cpu-bind=MASK - fpga-0008, task  7  1 [447006]: mask 0xfffff00000 set
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/RandomAccess/520n-21.2.0-20.4.0/random_access_kernels_single.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the random access benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.5
+MPI Version:  3.1
+Config. Time: Fri Oct 08 09:53:39 UTC 2021
+Git Commit:   b678d6d
+
+Summary:
+#RNGs                         32
+Array Size                    1073741824 (6.87195e+10 Byte )
+Communication Type            UNSUPPORTED
+Kernel File                   ../../synthesis_artifacts/RandomAccess/520n-21.2.0-20.4.0/random_access_kernels_single.aocx
+Kernel Replications           4
+MPI Ranks                     8
+Repetitions                   10
+Test Mode                     No
+Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Generation Time: 2.13247e+00 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Execution Time: 3.75768e+02 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+Error: 1.33633e-04%
+Validation Time: 5.29988e+02 s
+           best           mean          GUOPS
+    2.33561e+01    2.33562e+01    1.47112e+00
+Validation: SUCCESS!

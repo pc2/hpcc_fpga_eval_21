@@ -1,0 +1,83 @@
+cpu-bind=MASK - fpga-0004, task  0  0 [17824]: mask 0xffffffffff set
+	>>>> The module 'intel/19.0.4' is deprecated and will be removed from the system
+	>>>> on Dec 2021. Try ml spider intel to find newer releases
+cpu-bind=MASK - fpga-0004, task  0  0 [17853]: mask 0xffffffffff set
+Init MPI with thread support
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+Multiple devices have been found. Select the device by typing a number:
+0) p520_max_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+1) p520_max_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie1)
+Enter device id [0-1]:-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_max_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/hpl_torus_IEC.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.4
+MPI Version:  3.1
+Config. Time: Tue Dec 14 10:02:11 UTC 2021
+Git Commit:   b678d6d-dirty
+
+Summary:
+Block Size                    512
+Communication Type            IEC
+Data Type                     cl_float
+Emulate                       No
+Kernel File                   ../../synthesis_artifacts/LINPACK_SP/520n-21.2.0-20.4.0-iec/hpl_torus_IEC.aocx
+Kernel Replications           5
+MPI Ranks                     1
+Matrix Size                   24576
+Repetitions                   10
+Test Mode                     No
+Device                        p520_max_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 2.50100e+01 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Execution Time: 3.47367e+02 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+  norm. resid        resid       machep   
+    5.21944e-07    3.79682e-05    1.19209e-07
+Validation Time: 1.48320e-04 s
+         Method           best           mean         GFLOPS
+          total    1.15530e+01    1.15628e+01    8.56647e+02
+           GEFA    1.15530e+01    1.15628e+01    8.56542e+02
+           GESL    3.10000e-08    3.64000e-08    3.89664e+07
+Validation: SUCCESS!

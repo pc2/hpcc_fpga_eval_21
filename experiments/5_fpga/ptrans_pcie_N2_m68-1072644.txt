@@ -1,0 +1,82 @@
+cpu-bind=MASK - fpga-0002, task  0  0 [88776]: mask 0xffffffffff set
+	>>>> The module 'intel/19.0.4' is deprecated and will be removed from the system
+	>>>> on Dec 2021. Try ml spider intel to find newer releases
+cpu-bind=MASK - fpga-0002, task  0  0 [88809]: mask 0xfffff set
+cpu-bind=MASK - fpga-0004, task  4  0 [121510]: mask 0xfffff set
+cpu-bind=MASK - fpga-0005, task  6  0 [9133]: mask 0xfffff set
+cpu-bind=MASK - fpga-0003, task  2  0 [28905]: mask 0xfffff set
+cpu-bind=MASK - fpga-0006, task  8  0 [14033]: mask 0xffffffffff set
+cpu-bind=MASK - fpga-0002, task  1  1 [88810]: mask 0xfffff set
+cpu-bind=MASK - fpga-0004, task  5  1 [121511]: mask 0xfffff set
+cpu-bind=MASK - fpga-0005, task  7  1 [9134]: mask 0xfffff set
+cpu-bind=MASK - fpga-0003, task  3  1 [28906]: mask 0xfffff set
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-pcie/transpose_PQ_PCIE.aocx
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Disabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the matrix transposition benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 1.5
+MPI Version:  3.1
+Config. Time: Thu Oct 07 13:22:14 UTC 2021
+Git Commit:   48e0386
+
+Summary:
+Block Size                    512
+Communication Type            PCIE
+Data Handler                  PQ
+Dist. Buffers                 No
+Kernel File                   ../../synthesis_artifacts/PTRANS/520n-21.2.0-20.4.0-pcie/transpose_PQ_PCIE.aocx
+Kernel Replications           4
+MPI Ranks                     9
+Matrix Size                   294912
+Repetitions                   10
+Test Mode                     No
+Device                        p520_hpc_sg280l : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+MMD INFO : Enabling SmartVID (fix) polling
+Generation Time: 4.59112e+01 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Execution Time: 1.10072e+02 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+Maximum error: 7.62939e-06 < 1.19209e-05
+Mach. Epsilon: 1.19209e-07
+Validation Time: 6.06135e+01 s
+       total [s]     transfer [s]  calc [s]      calc FLOPS    Mem [B/s]     PCIe [B/s]
+avg:   1.02445e+01   4.20908e+00   6.03541e+00   1.60116e+09   1.92139e+10   2.75510e+10
+best:  1.01257e+01   4.19002e+00   5.93569e+00   1.62806e+09   1.95368e+10   2.76762e+10
+Validation: SUCCESS!

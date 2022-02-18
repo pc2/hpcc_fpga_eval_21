@@ -1,0 +1,231 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link
+	Log files: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/bin/hpl_torus_PCIE.xclbin.link_summary, at Wed Nov  3 07:53:48 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Wed Nov  3 07:53:48 2021
+INFO: [v++ 60-1315] Creating rulecheck session with output '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/v++_link_hpl_torus_PCIE_guidance.html', at Wed Nov  3 07:53:49 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 74-74] Compiler Version string: 2020.2
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [07:53:56] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/hpl_torus_PCIE.xo --config /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --temp_dir /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Wed Nov  3 07:53:58 2021
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/hpl_torus_PCIE.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [07:53:58] build_xd_ip_db started: /opt/Xilinx/Vitis/2020.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/xilinx_u280_xdma_201920_3.hpfm -clkid 0 -ip /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/iprepo/xilinx_com_hls_inner_update_mm0_1_0,inner_update_mm0 -ip /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/iprepo/xilinx_com_hls_left_update_1_0,left_update -ip /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/iprepo/xilinx_com_hls_top_update_1_0,top_update -ip /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/iprepo/xilinx_com_hls_lu_1_0,lu -o /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [07:54:06] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1694.141 ; gain = 0.000 ; free physical = 146724 ; free virtual = 433014
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [07:54:06] cfgen started: /opt/Xilinx/Vitis/2020.2/bin/cfgen  -nk lu:1 -nk left_update:1 -nk top_update:1 -nk inner_update_mm0:2 -slr lu_1:SLR0 -slr left_update_1:SLR0 -slr top_update_1:SLR0 -slr inner_update_mm0_1:SLR1 -slr inner_update_mm0_2:SLR2 -sp lu_1.m_axi_gmem:DDR[0] -sp top_update_1.m_axi_gmem:DDR[0] -sp left_update_1.m_axi_gmem:DDR[0] -sp inner_update_mm0_1.m_axi_gmem:DDR[0] -sp inner_update_mm0_2.m_axi_gmem:DDR[0] -dmclkid 0 -r /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: lu, num: 1  {lu_1}
+INFO: [CFGEN 83-0]   kernel: left_update, num: 1  {left_update_1}
+INFO: [CFGEN 83-0]   kernel: top_update, num: 1  {top_update_1}
+INFO: [CFGEN 83-0]   kernel: inner_update_mm0, num: 2  {inner_update_mm0_1 inner_update_mm0_2}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: lu_1, k_port: m_axi_gmem, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: top_update_1, k_port: m_axi_gmem, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: left_update_1, k_port: m_axi_gmem, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: inner_update_mm0_1, k_port: m_axi_gmem, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: inner_update_mm0_2, k_port: m_axi_gmem, sptag: DDR[0]
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: inner_update_mm0_1, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: inner_update_mm0_2, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: left_update_1, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: lu_1, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: top_update_1, SLR: SLR0
+INFO: [CFGEN 83-2228] Creating mapping for argument lu_1.a to DDR[0] for directive lu_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument lu_1.a_block_trans to DDR[0] for directive lu_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument lu_1.a_block to DDR[0] for directive lu_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument left_update_1.a to DDR[0] for directive left_update_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument left_update_1.left_block to DDR[0] for directive left_update_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument left_update_1.lu_global_buffer to DDR[0] for directive left_update_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument top_update_1.a to DDR[0] for directive top_update_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument top_update_1.top_block to DDR[0] for directive top_update_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument top_update_1.lu_global_buffer_transposed to DDR[0] for directive top_update_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument inner_update_mm0_1.a to DDR[0] for directive inner_update_mm0_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument inner_update_mm0_1.left_global_buffer to DDR[0] for directive inner_update_mm0_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument inner_update_mm0_1.top_global_buffer to DDR[0] for directive inner_update_mm0_1.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument inner_update_mm0_2.a to DDR[0] for directive inner_update_mm0_2.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument inner_update_mm0_2.left_global_buffer to DDR[0] for directive inner_update_mm0_2.m_axi_gmem:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument inner_update_mm0_2.top_global_buffer to DDR[0] for directive inner_update_mm0_2.m_axi_gmem:DDR[0]
+INFO: [SYSTEM_LINK 82-37] [07:54:12] cfgen finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1694.141 ; gain = 0.000 ; free physical = 146724 ; free virtual = 433015
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [07:54:12] cf2bd started: /opt/Xilinx/Vitis/2020.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.xsd --temp_dir /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link --output_dir /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --target_bd pfm_dynamic.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd pfm_dynamic.bd -dn dr -dp /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [07:54:16] cf2bd finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1694.141 ; gain = 0.000 ; free physical = 146717 ; free virtual = 433012
+INFO: [v++ 60-1441] [07:54:16] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1564.102 ; gain = 0.000 ; free physical = 146772 ; free virtual = 433062
+INFO: [v++ 60-1443] [07:54:16] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/sdsl.dat -rtd /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/cf2sw.rtd -nofilter /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/cf2sw_full.rtd -xclbin /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.xml -o /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [07:54:21] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1564.102 ; gain = 0.000 ; free physical = 146771 ; free virtual = 433061
+INFO: [v++ 60-1443] [07:54:21] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [07:54:22] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:01 . Memory (MB): peak = 1564.102 ; gain = 0.000 ; free physical = 146039 ; free virtual = 432330
+INFO: [v++ 60-1443] [07:54:22] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u280_xdma_201920_3 --remote_ip_cache /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/.ipcache --output_dir /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --log_dir /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link --report_dir /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link --config /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/vplConfig.ini -k /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link --no-info --iprepo /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_inner_update_mm0_1_0 --iprepo /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_left_update_1_0 --iprepo /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_top_update_1_0 --iprepo /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_lu_1_0 --messageDb /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link/vpl.pb /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+
+****** vpl v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/kernel_info.dat'.
+INFO: [VPL 74-74] Compiler Version string: 2020.2
+INFO: [VPL 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform
+WARNING: /opt/Xilinx/Vitis/2020.2/tps/lnx64/jre9.0.4 does not exist.
+[07:54:44] Run vpl: Step create_project: Started
+Creating Vivado project.
+[07:54:46] Run vpl: Step create_project: Completed
+[07:54:46] Run vpl: Step create_bd: Started
+[07:55:26] Run vpl: Step create_bd: Completed
+[07:55:26] Run vpl: Step update_bd: Started
+[07:55:26] Run vpl: Step update_bd: Completed
+[07:55:26] Run vpl: Step generate_target: Started
+[07:56:42] Run vpl: Step generate_target: RUNNING...
+[07:57:52] Run vpl: Step generate_target: Completed
+[07:57:52] Run vpl: Step config_hw_runs: Started
+[07:57:54] Run vpl: Step config_hw_runs: Completed
+[07:57:54] Run vpl: Step synth: Started
+[08:09:27] Block-level synthesis in progress, 0 of 5 jobs complete, 1 job running.
+[08:09:58] Block-level synthesis in progress, 0 of 5 jobs complete, 1 job running.
+[08:10:28] Block-level synthesis in progress, 1 of 5 jobs complete, 0 jobs running.
+[08:10:32] Run vpl: Step synth: Completed
+[08:10:32] Run vpl: Step impl: Started
+[09:24:10] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 01h 29m 44s 
+
+[09:24:10] Starting logic optimization..
+[09:25:15] Phase 1 Generate And Synthesize MIG Cores
+[09:40:02] Phase 2 Generate And Synthesize Debug Cores
+[09:47:41] Phase 3 Retarget
+[09:48:46] Phase 4 Constant propagation
+[09:49:19] Phase 5 Sweep
+[09:50:57] Phase 6 BUFG optimization
+[09:52:02] Phase 7 Shift Register Optimization
+[09:52:35] Phase 8 Post Processing Netlist
+[10:19:52] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 55m 42s 
+
+[10:19:52] Starting logic placement..
+[10:22:04] Phase 1 Placer Initialization
+[10:22:04] Phase 1.1 Placer Initialization Netlist Sorting
+[10:26:25] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[10:28:36] Phase 1.3 Build Placer Netlist Model
+[10:35:10] Phase 1.4 Constrain Clocks/Macros
+[10:35:42] Phase 2 Global Placement
+[10:35:42] Phase 2.1 Floorplanning
+[10:37:53] Phase 2.1.1 Partition Driven Placement
+[10:37:53] Phase 2.1.1.1 PBP: Partition Driven Placement
+[10:46:39] Phase 2.1.1.2 PBP: Clock Region Placement
+[10:49:24] Phase 2.1.1.3 PBP: Discrete Incremental
+[10:49:24] Phase 2.1.1.4 PBP: Compute Congestion
+[10:49:57] Phase 2.1.1.5 PBP: Macro Placement
+[10:50:30] Phase 2.1.1.6 PBP: UpdateTiming
+[10:51:36] Phase 2.2 Update Timing before SLR Path Opt
+[10:52:09] Phase 2.3 Global Placement Core
+[11:19:42] Phase 2.3.1 Physical Synthesis In Placer
+[11:51:05] Phase 3 Detail Placement
+[11:51:05] Phase 3.1 Commit Multi Column Macros
+[11:51:38] Phase 3.2 Commit Most Macros & LUTRAMs
+[11:55:29] Phase 3.3 Small Shape DP
+[11:55:29] Phase 3.3.1 Small Shape Clustering
+[11:58:48] Phase 3.3.2 Flow Legalize Slice Clusters
+[11:58:48] Phase 3.3.3 Slice Area Swap
+[12:10:21] Phase 3.4 Place Remaining
+[12:10:54] Phase 3.5 Re-assign LUT pins
+[12:12:00] Phase 3.6 Pipeline Register Optimization
+[12:12:00] Phase 3.7 Fast Optimization
+[12:15:18] Phase 4 Post Placement Optimization and Clean-Up
+[12:15:18] Phase 4.1 Post Commit Optimization
+[12:21:22] Phase 4.1.1 Post Placement Optimization
+[12:21:55] Phase 4.1.1.1 BUFG Insertion
+[12:21:55] Phase 1 Physical Synthesis Initialization
+[12:26:20] Phase 4.1.1.2 BUFG Replication
+[12:39:33] Phase 4.1.1.3 Replication
+[12:43:58] Phase 4.2 Post Placement Cleanup
+[12:43:58] Phase 4.3 Placer Reporting
+[12:43:58] Phase 4.3.1 Print Estimated Congestion
+[12:44:31] Phase 4.4 Final Placement Cleanup
+[13:50:37] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 03h 30m 43s 
+
+[13:50:37] Starting logic routing..
+[13:53:22] Phase 1 Build RT Design
+[13:59:59] Phase 2 Router Initialization
+[13:59:59] Phase 2.1 Fix Topology Constraints
+[14:01:05] Phase 2.2 Pre Route Cleanup
+[14:02:11] Phase 2.3 Global Clock Net Routing
+[14:04:23] Phase 2.4 Update Timing
+[14:14:18] Phase 2.5 Update Timing for Bus Skew
+[14:14:18] Phase 2.5.1 Update Timing
+[14:18:43] Phase 3 Initial Routing
+[14:18:43] Phase 3.1 Global Routing
+[14:29:11] Phase 3.2 Update Timing
+[14:40:12] Phase 4 Rip-up And Reroute
+[14:40:12] Phase 4.1 Global Iteration 0
+[17:37:17] Phase 4.2 Global Iteration 1
+[18:41:15] Phase 4.3 Global Iteration 2
+[19:29:12] Phase 4.4 Global Iteration 3
+[20:03:23] Phase 4.5 Global Iteration 4
+[20:39:15] Phase 5 Delay and Skew Optimization
+[20:39:15] Phase 5.1 Delay CleanUp
+[20:39:15] Phase 5.1.1 Update Timing
+[20:43:07] Phase 5.1.2 Update Timing
+[20:46:59] Phase 5.2 Clock Skew Optimization
+[20:48:38] Phase 6 Post Hold Fix
+[20:48:38] Phase 6.1 Hold Fix Iter
+[20:48:38] Phase 6.1.1 Update Timing
+[20:54:08] Phase 6.1.2 Lut RouteThru Assignment for hold
+[20:55:47] Phase 6.2 Additional Hold Fix
+[21:04:02] Phase 7 Leaf Clock Prog Delay Opt
+[21:12:18] Phase 7.1 Hold Fix Iter
+[21:12:18] Phase 7.1.1 Update Timing
+[21:17:48] Phase 7.1.2 Lut RouteThru Assignment for hold
+[21:19:27] Phase 7.2 Additional Hold Fix
+[21:37:04] Phase 7.3 Global Iteration for Hold
+[21:37:04] Phase 7.3.1 Update Timing
+[21:45:51] Phase 8 Route finalize
+[21:46:57] Phase 9 Verifying routed nets
+[21:48:03] Phase 10 Depositing Routes
+[21:50:15] Phase 11 Post Router Timing
+[21:53:00] Phase 12 Physical Synthesis in Router
+[21:53:00] Phase 12.1 Physical Synthesis Initialization
+[21:57:24] Phase 12.2 Critical Path Optimization
+[22:04:01] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 08h 13m 21s 
+
+[22:04:01] Starting bitstream generation..
+Starting optional post-route physical design optimization.
+[23:00:12] Phase 1 Physical Synthesis Initialization
+[23:09:33] Phase 2 Critical Path Optimization
+Finished optional post-route physical design optimization.
+[01:19:36] Run vpl: Step impl: Failed
+[01:19:39] Run vpl: FINISHED. Run Status: impl ERROR
+
+===>The following messages were generated while  Compiling (bitstream) accelerator binary: hpl_torus_PCIE Log file: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log  :
+ERROR: [VPL 101-2] design did not meet timing - Design did not meet timing. One or more unscalable system clocks did not meet their required target frequency. For all system clocks, this design is using 0 nanoseconds as the threshold worst negative slack (WNS) value. List of system clocks with timing failure:
+system clock: mmcm_clkout0; slack: -0.981 ns
+ERROR: [VPL 101-3] sourcing script /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/scripts/_full_write_bitstream_pre.tcl failed
+ERROR: [VPL 60-773] In '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/vivado.log', caught Tcl error:  problem implementing dynamic region, impl_1: write_bitstream ERROR, please look at the run log file '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+WARNING: [VPL 60-732] Link warning: No monitor points found for BD automation.
+ERROR: [VPL 60-704] Integration error, problem implementing dynamic region, impl_1: write_bitstream ERROR, please look at the run log file '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+ERROR: [VPL 60-1328] Vpl run 'vpl' failed
+ERROR: [VPL 60-806] Failed to finish platform linker
+INFO: [v++ 60-1442] [01:19:43] Run run_link: Step vpl: Failed
+Time (s): cpu = 01:27:40 ; elapsed = 17:25:14 . Memory (MB): peak = 1564.102 ; gain = 0.000 ; free physical = 108626 ; free virtual = 412222
+ERROR: [v++ 60-661] v++ link run 'run_link' failed
+ERROR: [v++ 60-626] Kernel link failed to complete
+ERROR: [v++ 60-703] Failed to finish linking
+INFO: [v++ 60-1653] Closing dispatch client.

@@ -1,0 +1,412 @@
+This run was done on: Wed May 26 22:04:21 CEST 2021
+HPL.dat: 
+HPLinpack benchmark input file
+Innovative Computing Laboratory, University of Tennessee
+HPL.out      output file name (if any)
+6            device out (6=stdout,7=stderr,file)
+1            # of problems sizes (N)
+24576        Ns
+1            # of NBs
+384          NBs
+1            PMAP process mapping (0=Row-,1=Column-major)
+1            # of process grids (P x Q)
+1            Ps
+1            Qs
+16.0         threshold
+1            # of panel fact
+2 1 0        PFACTs (0=left, 1=Crout, 2=Right)
+1            # of recursive stopping criterium
+2            NBMINs (>= 1)
+1            # of panels in recursion
+2            NDIVs
+1            # of recursive panel fact.
+1 0 2        RFACTs (0=left, 1=Crout, 2=Right)
+1            # of broadcast
+0            BCASTs (0=1rg,1=1rM,2=2rg,3=2rM,4=Lng,5=LnM)
+1            # of lookahead depth
+0            DEPTHs (>=0)
+0            SWAP (0=bin-exch,1=long,2=mix)
+1            swapping threshold
+1            L1 in (0=transposed,1=no-transposed) form
+1            U  in (0=transposed,1=no-transposed) form
+0            Equilibration (0=no,1=yes)
+8            memory alignment in double (> 0)
+Binary name: 
+-rwxr-xr-x 1 mariusme pc2-mitarbeiter 19203106 May 21 14:14 xhpl_intel64_static
+This script: 
+#!/bin/bash
+#===============================================================================
+# Copyright 2001-2019 Intel Corporation.
+#
+# This software and the related documents are Intel copyrighted  materials,  and
+# your use of  them is  governed by the  express license  under which  they were
+# provided to you (License).  Unless the License provides otherwise, you may not
+# use, modify, copy, publish, distribute,  disclose or transmit this software or
+# the related documents without Intel's prior written permission.
+#
+# This software and the related documents  are provided as  is,  with no express
+# or implied  warranties,  other  than those  that are  expressly stated  in the
+# License.
+#===============================================================================
+
+#
+echo "This is a SAMPLE run script.  Change it to reflect the correct number"
+echo "of CPUs/threads, number of nodes, MPI processes per node, etc.."
+
+# Set total number of MPI processes for the HPL (should be equal to PxQ).
+#export MPI_PROC_NUM=2
+export MPI_PROC_NUM=1
+
+# Set the MPI per node to each node.
+# MPI_PER_NODE should be equal to 1 or number of sockets in the system. Otherwise,
+# the HPL performance will be low. 
+# MPI_PER_NODE is same as -perhost or -ppn paramaters in mpirun/mpiexec
+export MPI_PER_NODE=2
+
+#
+# You can find description of all Intel(R) MPI parameters in the
+# Intel(R) MPI Reference Manual.
+export I_MPI_DAPL_DIRECT_COPY_THRESHOLD=655360
+
+#         "export I_MPI_PIN_CELL=core"
+#         You can use this variable (beginning Intel(R) MPI 4.0.1 for cases if HT is enabled. 
+#         The variable forces to pin MPI processes and threads to real cores, 
+#         so logical processors will not be involved.
+#         It can be used together with the variable below, when Hydra Process Manager:
+#         "export I_MPI_PIN_DOMAIN=auto" This allows uniform distribution of
+#	      the processes and thread domains
+
+# export I_MPI_EAGER_THRESHOLD=128000
+#          This setting may give 1-2% of performance increase over the
+#          default value of 262000 for large problems and high number of cores
+
+export OUT=xhpl_intel64_static_outputs.txt
+export HPL_EXE=xhpl_intel64_static
+
+echo -n "This run was done on: "
+date
+
+# Capture some meaningful data for future reference:
+echo -n "This run was done on: " >> $OUT
+date >> $OUT
+echo "HPL.dat: " >> $OUT
+cat HPL.dat >> $OUT
+echo "Binary name: " >> $OUT
+ls -l xhpl_intel64_static >> $OUT
+echo "This script: " >> $OUT
+cat runme_intel64_static >> $OUT
+echo "Environment variables: " >> $OUT
+env >> $OUT
+echo "Actual run: " >> $OUT
+
+# Environment variables can also be also be set on the Intel(R) MPI command line
+# using the -genv option (to appear before the -np 1):
+
+# mpirun -np ${MPI_PROC_NUM} ./runme_intel64_prv "$@" | tee -a $OUT
+
+# In case of multiple nodes involved, please set the number of MPI processes
+# per node (ppn=1,2 typically) through the -perhost option (because the
+# default is all cores):
+
+numactl --cpubind  0 --membind 0 mpirun -perhost ${MPI_PER_NODE} -np ${MPI_PROC_NUM} ./runme_intel64_prv "$@" | tee -a $OUT
+
+echo -n "Done: " >> $OUT
+date >> $OUT
+
+echo -n "Done: "
+date
+Environment variables: 
+SLURM_NODELIST=fpga-0001
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+CPLUS_INCLUDE_PATH=/cm/shared/opt/intel/20.0.0/clck/2019.9/include
+MKLROOT=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl
+MANPATH=/cm/shared/opt/intel/20.0.0/itac/2020.2.031/man:/cm/shared/opt/intel/20.0.0/clck/2019.9/man:/cm/shared/opt/intel/20.0.0/man/common:/cm/shared/opt/intel/20.0.0/documentation_2020/en/debugger/gdb-ia/man:/opt/cray/slurm/17.11.8/share/man:/usr/share/lmod/lmod/share/man:/usr/local/share/man:/usr/share/man/overrides:/usr/share/man:/cm/local/apps/environment-modules/current/share/man::
+SLURM_ACCOUNT=pc2-mitarbeiter
+SLURM_JOB_NAME=run.sh
+MPI_PROC_NUM=1
+XDG_SESSION_ID=287183
+_ModuleTable003_=dWxlZmlsZXMvaW50ZWwvMjAuMDIiLFsiZnVsbE5hbWUiXT0iaW50ZWwvMjAuMDIiLFsibG9hZE9yZGVyIl09Nyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJpbnRlbCIsfSxwYzJmcz17WyJmbiJdPSIvY20vc2hhcmVkL2FwcHMvcGMyL3BjMmFkbWluL21vZHVsZXMvcGMyZnMiLFsiZnVsbE5hbWUiXT0icGMyZnMiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwYzJmcyIsfSxzaGFyZWQ9e1siZm4iXT0iL2NtL2xvY2FsL21vZHVsZWZpbGVzL3NoYXJlZCIsWyJmdWxsTmFtZSJdPSJzaGFyZWQiLFsibG9hZE9yZGVyIl09MSxw
+HOSTNAME=fpga-0001
+TERM_PROGRAM=vscode
+SLURM_TOPOLOGY_ADDR=opasw[06,14-15,07,11].opasw16.fpga-0001
+SLURMD_NODENAME=fpga-0001
+VT_MPI=impi4
+SLURM_PRIO_PROCESS=0
+__LMOD_REF_COUNT_CLASSPATH=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/lib/mpi.jar:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/lib/daal.jar:1
+SLURM_NODE_ALIASES=(null)
+INTEL_LICENSE_FILE=27000@license5.uni-paderborn.de
+IPPROOT=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/ipp
+SHELL=/bin/bash
+TERM=xterm-256color
+CLCK_ROOT=/cm/shared/opt/intel/20.0.0/clck/2019.9
+HISTSIZE=10000
+SLURM_JOB_QOS=cont
+I_MPI_FABRICS=shm:ofi
+LMOD_SYSTEM_DEFAULT_MODULES=DefaultModules
+MODULEPATH_ROOT=/usr/share/modulefiles
+SSH_CLIENT=131.234.142.134 44844 22
+SLURM_TOPOLOGY_ADDR_PATTERN=switch.switch.node
+TMPDIR=/tmp
+CONDA_SHLVL=1
+LIBRARY_PATH=/cm/shared/opt/intel/20.0.0/clck/2019.9/lib/intel64:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/libfabric/lib:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/ipp/lib/intel64:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/compiler/lib/intel64_lin:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl/lib/intel64_lin:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/tbb/lib/intel64/gcc4.8:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/lib/intel64_lin:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/../tbb/lib/intel64_lin/gcc4.4:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/../tbb/lib/intel64_lin/gcc4.8
+TERM_PROGRAM_VERSION=1.56.2
+CONDA_PROMPT_MODIFIER=(base) 
+PC2SCRATCH=/upb/scratch/departments/pc2/groups
+PC2DATA=/upb/departments/pc2/groups
+LMOD_PKG=/usr/share/lmod/lmod
+OUT=xhpl_intel64_static_outputs.txt
+LMOD_VERSION=7.7.14
+__LMOD_REF_COUNT_LOADEDMODULES=shared:1;pc2fs:1;slurm/17.11.8:1;DefaultModules:1;craype-x86-skylake:1;craype-network-opa:1;intel/20.02:1
+ZSH=/upb/departments/pc2/users/m/mariusme/.oh-my-zsh
+slurm_VERSION=17.11.8
+USER=mariusme
+HISTFILESIZE=10000
+SLURM_NNODES=1
+LD_LIBRARY_PATH=/cm/shared/opt/intel/20.0.0/itac/2020.2.031/intel64/slib:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/compiler/lib/intel64_lin:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/libfabric/lib:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/lib/release:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/lib:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/ipp/lib/intel64:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl/lib/intel64_lin:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/tbb/lib/intel64/gcc4.8:/cm/shared/opt/intel/20.0.0/debugger_2020/python/intel64/lib:/cm/shared/opt/intel/20.0.0/debugger_2020/libipt/intel64/lib:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/lib/intel64_lin:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/../tbb/lib/intel64_lin/gcc4.4:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/../tbb/lib/intel64_lin/gcc4.8:/opt/cray/pe/lib64:/opt/cray/pe/lib64/cce:/opt/cray/lib64:/opt/cray/slurm/17.11.8/lib
+LMOD_sys=Linux
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+__LMOD_REF_COUNT_FI_PROVIDER_PATH=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/libfabric/lib/prov:1
+PSTLROOT=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/pstl
+CONDA_EXE=/cm/shared/opt/intel/20.0.0/intelpython3/bin/conda
+SBATCH_ACCOUNT=pc2-mitarbeiter
+FI_PROVIDER_PATH=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/libfabric/lib/prov
+_ModuleTable004_=cm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJzaGFyZWQiLH0sc2x1cm09e1siZm4iXT0iL29wdC9jcmF5L21vZHVsZWZpbGVzL3NsdXJtLzE3LjExLjgiLFsiZnVsbE5hbWUiXT0ic2x1cm0vMTcuMTEuOCIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNsdXJtIix9LH0sbXBhdGhBPXsiL29wdC9jcmF5L3BlL2NyYXlwZS9kZWZhdWx0L21vZHVsZWZpbGVzIiwiL29wdC9jcmF5L3BlL21vZHVsZWZpbGVzIiwiL29wdC9jcmF5L21vZHVsZWZpbGVzIiwiL29wdC9tb2R1bGVmaWxlcyIsIi9jbS9zaGFyZWQvYXBwcy9wYzIvRUItU1cv
+SLURM_JOBID=861608
+CPATH=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/ipp/include:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl/include:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/pstl/include:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/pstl/stdlib:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/tbb/include:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/include
+MPI_PER_NODE=2
+__LMOD_REF_COUNT__LMFILES_=/cm/local/modulefiles/shared:1;/cm/shared/apps/pc2/pc2admin/modules/pc2fs:1;/opt/cray/modulefiles/slurm/17.11.8:1;/usr/share/modulefiles/DefaultModules.lua:1;/opt/cray/pe/craype/default/modulefiles/craype-x86-skylake:1;/opt/cray/pe/craype/default/modulefiles/craype-network-opa:1;/opt/cray/modulefiles/intel/20.02:1
+PE_PRODUCT_LIST=CRAYPE_X86_SKYLAKE
+DATA=/upb/departments/pc2/groups/pc2-mitarbeiter/mariusme
+SLURM_NTASKS=1
+PAGER=less
+SLURM_SPANK_SPANK_FPGALINKENABLED=NO
+PFS_SCRATCH=/scratch/pc2-mitarbeiter/mariusme
+LMOD_PREPEND_BLOCK=normal
+LSCOLORS=Gxfxcxdxbxegedabagacad
+_CE_CONDA=
+NLSPATH=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/compiler/lib/intel64/locale/%l_%t/%N:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl/lib/intel64_lin/locale/%l_%t/%N:/cm/shared/opt/intel/20.0.0/debugger_2020/gdb/intel64/share/locale/%l_%t/%N
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtEZWZhdWx0TW9kdWxlcz17WyJmbiJdPSIvdXNyL3NoYXJlL21vZHVsZWZpbGVzL0RlZmF1bHRNb2R1bGVzLmx1YSIsWyJmdWxsTmFtZSJdPSJEZWZhdWx0TW9kdWxlcyIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IkRlZmF1bHRNb2R1bGVzIix9LFsiY3JheXBlLW5ldHdvcmstb3BhIl09e1siZm4iXT0iL29wdC9jcmF5L3BlL2NyYXlwZS9kZWZhdWx0L21vZHVsZWZpbGVzL2NyYXlwZS1uZXR3b3JrLW9wYSIs
+MAIL=/var/spool/mail/mariusme
+PATH=/cm/shared/opt/intel/20.0.0/intelpython3/bin:/cm/shared/opt/intel/20.0.0/intelpython3/condabin:/cm/shared/opt/intel/20.0.0/advisor_2020.2.0.606470/bin64:/cm/shared/opt/intel/20.0.0/vtune_profiler_2020.2.0.610396/bin64:/cm/shared/opt/intel/20.0.0/inspector_2020.2.0.604588/bin64:/cm/shared/opt/intel/20.0.0/itac/2020.2.031/intel64/bin:/cm/shared/opt/intel/20.0.0/clck/2019.9/bin/intel64:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/bin/intel64:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/bin:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/libfabric/bin:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/bin:/cm/shared/opt/intel/20.0.0/debugger_2020/gdb/intel64/bin:/upb/departments/pc2/users/m/mariusme/.local/bin:/scratch/pc2-mitarbeiter/mariusme/homevscode/bin/054a9295330880ed74ceaedda236253b4f39a335/bin:/upb/departments/pc2/users/m/mariusme/.vscode-server/bin/054a9295330880ed74ceaedda236253b4f39a335/bin:/opt/cray/slurm/17.11.8/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cm/shared/opt/intel/20.0.0/parallel_studio_xe_2020.2.108/bin
+SLURM_TASKS_PER_NODE=1
+__LMOD_REF_COUNT_NLSPATH=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/compiler/lib/intel64/locale/%l_%t/%N:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl/lib/intel64_lin/locale/%l_%t/%N:1;/cm/shared/opt/intel/20.0.0/debugger_2020/gdb/intel64/share/locale/%l_%t/%N:1
+VT_ADD_LIBS=-ldwarf -lelf -lvtunwind -lm -lpthread
+I_MPI_DAPL_DIRECT_COPY_THRESHOLD=655360
+SLURM_WORKING_CLUSTER=noctua:10.10.3.254:6817:8192
+SLURM_JOB_ID=861608
+__LMOD_REF_COUNT_CPLUS_INCLUDE_PATH=/cm/shared/opt/intel/20.0.0/clck/2019.9/include:1
+LMOD_SETTARG_CMD=:
+CONDA_PREFIX=/cm/shared/opt/intel/20.0.0/intelpython3
+TBBROOT=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/tbb
+HPL_EXE=xhpl_intel64_static
+__LMOD_REF_COUNT_PE_PRODUCT_LIST=CRAYPE_X86_SKYLAKE:1
+PC2SW=/cm/shared/apps/pc2
+PWD=/upb/departments/pc2/users/m/mariusme/pfs/benchmarks/mp_linpack/scaling_test/strong_scaling/1_cpu
+SLURM_JOB_USER=mariusme
+_LMFILES_=/cm/local/modulefiles/shared:/cm/shared/apps/pc2/pc2admin/modules/pc2fs:/opt/cray/modulefiles/slurm/17.11.8:/usr/share/modulefiles/DefaultModules.lua:/opt/cray/pe/craype/default/modulefiles/craype-x86-skylake:/opt/cray/pe/craype/default/modulefiles/craype-network-opa:/opt/cray/modulefiles/intel/20.02
+LANG=en_US.UTF-8
+__LMOD_REF_COUNT_PYTHONPATH=/cm/shared/opt/intel/20.0.0/advisor_2020.2.0.606470/pythonapi:1
+MODULEPATH=/opt/cray/pe/craype/default/modulefiles:/opt/cray/pe/modulefiles:/opt/cray/modulefiles:/opt/modulefiles:/cm/shared/apps/pc2/EB-SW/modules/all:/cm/shared/apps/pc2/pc2admin/modules:/cm/local/modulefiles:/etc/modulefiles:/usr/share/modulefiles:/usr/share/Modules/modulefiles:/cm/shared/modulefiles:/cm/shared/apps/pc2/pc2admin/DEPRECATED-MODULES
+_ModuleTable_Sz_=5
+LOADEDMODULES=shared:pc2fs:slurm/17.11.8:DefaultModules:craype-x86-skylake:craype-network-opa:intel/20.02
+SLURM_JOB_UID=18577
+__LMOD_REF_COUNT_INFOPATH=/cm/shared/opt/intel/20.0.0/documentation_2020/en/debugger/gdb-ia/info:1
+VT_LIB_DIR=/cm/shared/opt/intel/20.0.0/itac/2020.2.031/intel64/lib
+SLURM_NODEID=0
+VTUNE_PROFILER_2020_DIR=/cm/shared/opt/intel/20.0.0/vtune_profiler_2020.2.0.610396
+ENABLE_LMOD=1
+SLURM_SUBMIT_DIR=/scratch/pc2-mitarbeiter/mariusme/benchmarks/mp_linpack/scaling_test/strong_scaling/1_cpu
+_ModuleTable005_=bW9kdWxlcy9hbGwiLCIvY20vc2hhcmVkL2FwcHMvcGMyL3BjMmFkbWluL21vZHVsZXMiLCIvY20vbG9jYWwvbW9kdWxlZmlsZXMiLCIvZXRjL21vZHVsZWZpbGVzIiwiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcyIsIi91c3Ivc2hhcmUvTW9kdWxlcy9tb2R1bGVmaWxlcyIsIi9jbS9zaGFyZWQvbW9kdWxlZmlsZXMiLCIvY20vc2hhcmVkL2FwcHMvcGMyL3BjMmFkbWluL0RFUFJFQ0FURUQtTU9EVUxFUyIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvY20vbG9jYWwvbW9kdWxlZmlsZXM6L2NtL3NoYXJlZC9tb2R1bGVmaWxlczovZXRjL21vZHVsZWZpbGVzOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXM6L3Vzci9zaGFyZS9Nb2R1bGVzL21vZHVsZWZpbGVzIix9
+LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
+SLURM_NPROCS=1
+SLURM_TASK_PID=202703
+VT_ROOT=/cm/shared/opt/intel/20.0.0/itac/2020.2.031
+SLURM_CPUS_ON_NODE=40
+DAALROOT=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal
+PC2SYSNAME=Noctua
+HISTCONTROL=ignoredups
+ENVIRONMENT=BATCH
+SLURM_PROCID=0
+_CE_M=
+OMP_PROC_BIND=master
+PC2PFS=/scratch
+SLURM_JOB_NODELIST=fpga-0001
+INTEL_PYTHONHOME=/cm/shared/opt/intel/20.0.0/debugger_2020/python/intel64/
+SHLVL=6
+HOME=/upb/departments/pc2/users/m/mariusme
+__LMOD_REF_COUNT_PATH=/cm/shared/opt/intel/20.0.0/intelpython3/bin:1;/cm/shared/opt/intel/20.0.0/intelpython3/condabin:1;/cm/shared/opt/intel/20.0.0/advisor_2020.2.0.606470/bin64:1;/cm/shared/opt/intel/20.0.0/vtune_profiler_2020.2.0.610396/bin64:1;/cm/shared/opt/intel/20.0.0/inspector_2020.2.0.604588/bin64:1;/cm/shared/opt/intel/20.0.0/itac/2020.2.031/intel64/bin:2;/cm/shared/opt/intel/20.0.0/clck/2019.9/bin/intel64:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/bin/intel64:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/bin:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/libfabric/bin:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/bin:1;/cm/shared/opt/intel/20.0.0/debugger_2020/gdb/intel64/bin:1;/upb/departments/pc2/users/m/mariusme/.local/bin:1;/scratch/pc2-mitarbeiter/mariusme/homevscode/bin/054a9295330880ed74ceaedda236253b4f39a335/bin:1;/upb/departments/pc2/users/m/mariusme/.vscode-server/bin/054a9295330880ed74ceaedda236253b4f39a335/bin:1;/opt/cray/slurm/17.11.8/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/cm/shared/opt/intel/20.0.0/parallel_studio_xe_2020.2.108/bin:1
+VSCODE_GIT_ASKPASS_MAIN=/scratch/pc2-mitarbeiter/mariusme/homevscode/bin/054a9295330880ed74ceaedda236253b4f39a335/extensions/git/dist/askpass-main.js
+SLURM_LOCALID=0
+ADVISOR_2020_DIR=/cm/shared/opt/intel/20.0.0/advisor_2020.2.0.606470
+__LMOD_REF_COUNT_CPATH=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/ipp/include:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl/include:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/pstl/include:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/pstl/stdlib:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/tbb/include:2;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/include:1
+_ModuleTable002_=WyJmdWxsTmFtZSJdPSJjcmF5cGUtbmV0d29yay1vcGEiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjcmF5cGUtbmV0d29yay1vcGEiLH0sWyJjcmF5cGUteDg2LXNreWxha2UiXT17WyJmbiJdPSIvb3B0L2NyYXkvcGUvY3JheXBlL2RlZmF1bHQvbW9kdWxlZmlsZXMvY3JheXBlLXg4Ni1za3lsYWtlIixbImZ1bGxOYW1lIl09ImNyYXlwZS14ODYtc2t5bGFrZSIsWyJsb2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNyYXlwZS14ODYtc2t5bGFrZSIsfSxpbnRlbD17WyJmbiJdPSIvb3B0L2NyYXkvbW9k
+SLURM_CLUSTER_NAME=noctua
+SLURM_JOB_CPUS_PER_NODE=40
+SLURM_JOB_GID=10000
+CRAYPE_NETWORK_TARGET=opa
+SHOST=ln-0001
+SLURM_SUBMIT_HOST=ln-0001
+SLURM_GTIDS=0
+VT_ARCH=intel64
+VT_SLIB_DIR=/cm/shared/opt/intel/20.0.0/itac/2020.2.031/intel64/slib
+BASH_ENV=/usr/share/lmod/lmod/init/bash
+SLURM_JOB_PARTITION=fpga
+INSPECTOR_2020_DIR=/cm/shared/opt/intel/20.0.0/inspector_2020.2.0.604588
+LMOD_arch=x86_64
+LOGNAME=mariusme
+LESS=-R
+CONDA_PYTHON_EXE=/cm/shared/opt/intel/20.0.0/intelpython3/bin/python
+PYTHONPATH=/cm/shared/opt/intel/20.0.0/advisor_2020.2.0.606470/pythonapi
+APM=/cm/shared/opt/intel/20.0.0/advisor_2020.2.0.606470/perfmodels
+XDG_DATA_DIRS=/upb/departments/pc2/users/m/mariusme/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+SSH_CONNECTION=131.234.142.134 44844 131.234.92.97 22
+VSCODE_GIT_IPC_HANDLE=/run/user/18577/vscode-git-65ba3edbeb.sock
+SLURM_JOB_ACCOUNT=pc2-mitarbeiter
+CLASSPATH=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/lib/mpi.jar:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/lib/daal.jar
+MODULESHOME=/usr/share/lmod/lmod
+VSCODE_IPC_HOOK_CLI=/run/user/18577/vscode-ipc-1fb31c97-307b-461f-b00d-ca0938f56000.sock
+SLURM_JOB_NUM_NODES=1
+__LMOD_REF_COUNT_LIBRARY_PATH=/cm/shared/opt/intel/20.0.0/clck/2019.9/lib/intel64:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/libfabric/lib:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/ipp/lib/intel64:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/compiler/lib/intel64_lin:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl/lib/intel64_lin:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/tbb/lib/intel64/gcc4.8:2;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/lib/intel64_lin:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/../tbb/lib/intel64_lin/gcc4.4:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/../tbb/lib/intel64_lin/gcc4.8:1
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/cm/shared/opt/intel/20.0.0/itac/2020.2.031/intel64/slib:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/compiler/lib/intel64_lin:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/libfabric/lib:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/lib/release:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi/intel64/lib:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/ipp/lib/intel64:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl/lib/intel64_lin:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/tbb/lib/intel64/gcc4.8:1;/cm/shared/opt/intel/20.0.0/debugger_2020/python/intel64/lib:1;/cm/shared/opt/intel/20.0.0/debugger_2020/libipt/intel64/lib:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/lib/intel64_lin:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/../tbb/lib/intel64_lin/gcc4.4:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/daal/../tbb/lib/intel64_lin/gcc4.8:1;/opt/cray/pe/lib64:2;/opt/cray/pe/lib64/cce:2;/opt/cray/lib64:2;/opt/cray/slurm/17.11.8/lib:1
+LMOD_SETTARG_FULL_SUPPORT=no
+CONDA_DEFAULT_ENV=base
+PKG_CONFIG_PATH=/cm/shared/opt/intel/20.0.0/advisor_2020.2.0.606470/include/pkgconfig/lib64:/cm/shared/opt/intel/20.0.0/vtune_profiler_2020.2.0.610396/include/pkgconfig/lib64:/cm/shared/opt/intel/20.0.0/inspector_2020.2.0.604588/include/pkgconfig/lib64:/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl/bin/pkgconfig
+OMP_NUM_THREADS=20
+OMP_PLACES=sockets
+__Init_Default_Modules=1
+BROWSER=/scratch/pc2-mitarbeiter/mariusme/homevscode/bin/054a9295330880ed74ceaedda236253b4f39a335/bin/helpers/browser.sh
+SLURM_SPANK_SPANK_RECOMMENDATIONS=off
+LMOD_FULL_SETTARG_SUPPORT=no
+GIT_ASKPASS=/scratch/pc2-mitarbeiter/mariusme/homevscode/bin/054a9295330880ed74ceaedda236253b4f39a335/extensions/git/dist/askpass.sh
+VSCODE_GIT_ASKPASS_NODE=/scratch/pc2-mitarbeiter/mariusme/homevscode/bin/054a9295330880ed74ceaedda236253b4f39a335/node
+INFOPATH=/cm/shared/opt/intel/20.0.0/documentation_2020/en/debugger/gdb-ia/info
+CRAY_CPU_TARGET=x86-skylake
+XDG_RUNTIME_DIR=/run/user/18577
+__LMOD_REF_COUNT_PKG_CONFIG_PATH=/cm/shared/opt/intel/20.0.0/advisor_2020.2.0.606470/include/pkgconfig/lib64:1;/cm/shared/opt/intel/20.0.0/vtune_profiler_2020.2.0.610396/include/pkgconfig/lib64:1;/cm/shared/opt/intel/20.0.0/inspector_2020.2.0.604588/include/pkgconfig/lib64:1;/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mkl/bin/pkgconfig:1
+PC2DEPOT=/upb/depot
+__LMOD_REF_COUNT_MANPATH=/cm/shared/opt/intel/20.0.0/itac/2020.2.031/man:1;/cm/shared/opt/intel/20.0.0/clck/2019.9/man:1;/cm/shared/opt/intel/20.0.0/man/common:1;/cm/shared/opt/intel/20.0.0/documentation_2020/en/debugger/gdb-ia/man:1;/opt/cray/slurm/17.11.8/share/man:3;/usr/share/lmod/lmod/share/man:1;/usr/local/share/man:2;/usr/share/man/overrides:2;/usr/share/man:2;/cm/local/apps/environment-modules/current/share/man:2
+LMOD_DIR=/usr/share/lmod/lmod/libexec
+SLURM_SPANK_SPANK_COLLECTORS=normal
+LMOD_COLORIZE=0
+SCRATCH=/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/mariusme
+SALLOC_ACCOUNT=pc2-mitarbeiter
+HISTFILE=/upb/departments/pc2/users/m/mariusme/.local/share/zsh/default-history-ln-0001
+SLURM_MEM_PER_NODE=182000
+COLORTERM=truecolor
+I_MPI_ROOT=/cm/shared/opt/intel/20.0.0/compilers_and_libraries_2020.2.254/linux/mpi
+BASH_FUNC_module()=() {  eval $($LMOD_CMD bash "$@") && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+}
+BASH_FUNC_ml()=() {  eval $($LMOD_DIR/ml_cmd "$@")
+}
+_=/usr/bin/env
+Actual run: 
+RANK=0, NODE=0
+================================================================================
+HPLinpack 2.2  --  High-Performance Linpack benchmark  --   February 24, 2016
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N        :   24576 
+NB       :     384 
+PMAP     : Column-major process mapping
+P        :       1 
+Q        :       1 
+PFACT    :   Right 
+NBMIN    :       2 
+NDIV     :       2 
+RFACT    :   Crout 
+BCAST    :   1ring 
+DEPTH    :       0 
+SWAP     : Binary-exchange
+L1       : no-transposed form
+U        : no-transposed form
+EQUIL    : no
+ALIGN    :    8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+fpga-0001       : Column=000384 Fraction=0.005 Kernel=    0.01 Mflops=3428352.16
+fpga-0001       : Column=000768 Fraction=0.020 Kernel=1078303.84 Mflops=1654289.64
+fpga-0001       : Column=001152 Fraction=0.035 Kernel=985979.37 Mflops=1357389.77
+fpga-0001       : Column=001536 Fraction=0.050 Kernel=1032906.49 Mflops=1262972.41
+fpga-0001       : Column=001920 Fraction=0.065 Kernel=988187.53 Mflops=1200512.01
+fpga-0001       : Column=002304 Fraction=0.080 Kernel=911223.49 Mflops=1144842.99
+fpga-0001       : Column=002688 Fraction=0.095 Kernel=986928.10 Mflops=1121707.91
+fpga-0001       : Column=003072 Fraction=0.110 Kernel=974016.33 Mflops=1103193.33
+fpga-0001       : Column=003456 Fraction=0.125 Kernel=946715.10 Mflops=1085874.90
+fpga-0001       : Column=003840 Fraction=0.145 Kernel=1013619.86 Mflops=1079325.40
+fpga-0001       : Column=004224 Fraction=0.160 Kernel=983749.28 Mflops=1071433.74
+fpga-0001       : Column=004608 Fraction=0.175 Kernel=901140.98 Mflops=1057832.81
+fpga-0001       : Column=004992 Fraction=0.190 Kernel=984737.79 Mflops=1053029.83
+fpga-0001       : Column=005376 Fraction=0.205 Kernel=962590.23 Mflops=1047539.12
+fpga-0001       : Column=005760 Fraction=0.220 Kernel=1047819.69 Mflops=1047553.39
+fpga-0001       : Column=006144 Fraction=0.235 Kernel=918225.43 Mflops=1040727.82
+fpga-0001       : Column=006528 Fraction=0.250 Kernel=966389.39 Mflops=1037316.22
+fpga-0001       : Column=006912 Fraction=0.270 Kernel=957669.82 Mflops=1033931.61
+fpga-0001       : Column=007296 Fraction=0.285 Kernel=972488.87 Mflops=1031564.61
+fpga-0001       : Column=007680 Fraction=0.300 Kernel=994758.42 Mflops=1030284.80
+fpga-0001       : Column=008064 Fraction=0.315 Kernel=920258.42 Mflops=1026470.07
+fpga-0001       : Column=008448 Fraction=0.330 Kernel=917623.97 Mflops=1022973.48
+fpga-0001       : Column=008832 Fraction=0.345 Kernel=991886.85 Mflops=1022116.86
+fpga-0001       : Column=009216 Fraction=0.360 Kernel=953160.80 Mflops=1020283.70
+fpga-0001       : Column=009600 Fraction=0.375 Kernel=929598.76 Mflops=1017991.77
+fpga-0001       : Column=009984 Fraction=0.395 Kernel=921398.33 Mflops=1015707.25
+fpga-0001       : Column=010368 Fraction=0.410 Kernel=1033256.19 Mflops=1016051.50
+fpga-0001       : Column=010752 Fraction=0.425 Kernel=941310.08 Mflops=1014557.28
+fpga-0001       : Column=011136 Fraction=0.440 Kernel=919751.99 Mflops=1012757.18
+fpga-0001       : Column=011520 Fraction=0.455 Kernel=912522.46 Mflops=1010977.62
+fpga-0001       : Column=011904 Fraction=0.470 Kernel=931033.84 Mflops=1009687.16
+fpga-0001       : Column=012288 Fraction=0.485 Kernel=991806.03 Mflops=1009435.73
+fpga-0001       : Column=012672 Fraction=0.515 Kernel=869301.49 Mflops=1007355.14
+fpga-0001       : Column=013440 Fraction=0.535 Kernel=980816.95 Mflops=1006736.23
+fpga-0001       : Column=013824 Fraction=0.555 Kernel=881925.40 Mflops=1005292.75
+fpga-0001       : Column=014208 Fraction=0.575 Kernel=908146.47 Mflops=1004287.39
+fpga-0001       : Column=014976 Fraction=0.595 Kernel=913094.69 Mflops=1002639.04
+fpga-0001       : Column=015360 Fraction=0.615 Kernel=922949.61 Mflops=1002011.56
+fpga-0001       : Column=015744 Fraction=0.635 Kernel=878002.02 Mflops=1001074.33
+fpga-0001       : Column=016128 Fraction=0.655 Kernel=869160.43 Mflops=1000157.51
+fpga-0001       : Column=016896 Fraction=0.675 Kernel=832266.96 Mflops=998059.73
+fpga-0001       : Column=017280 Fraction=0.695 Kernel=793752.76 Mflops=996912.86
+fpga-0001       : Column=019584 Fraction=0.795 Kernel=679655.39 Mflops=988636.35
+fpga-0001       : Column=022272 Fraction=0.895 Kernel=415270.74 Mflops=978419.25
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2       24576   384     1     1              10.25            9.65421e+02
+HPL_pdgesv() start time Wed May 26 22:04:26 2021
+
+HPL_pdgesv() end time   Wed May 26 22:04:36 2021
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0038172 ...... PASSED
+================================================================================
+
+Finished      1 tests with the following results:
+              1 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
+Done: Wed May 26 22:04:38 CEST 2021

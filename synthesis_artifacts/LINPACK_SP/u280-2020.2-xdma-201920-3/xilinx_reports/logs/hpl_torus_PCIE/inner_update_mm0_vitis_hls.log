@@ -1,0 +1,253 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2020.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'meyermar' on host 'alveo0.ethz.ch' (Linux_x86_64 version 4.14.156-U) on Thu Nov 04 09:18:43 CET 2021
+INFO: [HLS 200-10] On os Ubuntu 18.04.6 LTS
+INFO: [HLS 200-10] In directory '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/hpl_torus_PCIE/inner_update_mm0'
+Sourcing Tcl script 'inner_update_mm0.tcl'
+INFO: [HLS 200-1510] Running: open_project inner_update_mm0 
+INFO: [HLS 200-10] Creating and opening project '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/hpl_torus_PCIE/inner_update_mm0/inner_update_mm0'.
+INFO: [HLS 200-1510] Running: set_top inner_update_mm0 
+INFO: [HLS 200-1510] Running: add_files /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl -cflags  -D XILINX_FPGA -I /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/common -I /dev/shm/meyermar_synth/linpack_sp/HPCC_FPGA/LINPACK/src/device  
+INFO: [HLS 200-10] Adding design file '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/hpl_torus_PCIE/inner_update_mm0/inner_update_mm0/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_offset=slave
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-10] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 200MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_export -disable_deadlock_detection=true 
+INFO: [HLS 200-1510] Running: config_rtl -m_axi_conservative_mode=1 
+WARNING: [HLS 200-483] The 'config_rtl -m_axi_conservative_mode' command is deprecated and will be removed in a future release. Use 'config_interface -m_axi_conservative_mode' as its replacement.
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -ipname inner_update_mm0 
+INFO: [HLS 200-1510] Running: config_compile -unsafe_math_optimizations 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 189.924 MB.
+INFO: [HLS 200-10] Analyzing design file '/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl' ... 
+WARNING: [HLS 207-5270] unknown attribute 'register' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:119:73
+WARNING: [HLS 207-5270] unknown attribute 'register' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:140:57
+WARNING: [HLS 207-5270] unknown attribute 'register' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:160:63
+WARNING: [HLS 207-5270] unknown attribute 'uses_global_work_offset' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:211:16
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:230:10
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:244:10
+WARNING: [HLS 207-5270] unknown attribute 'register' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:310:66
+WARNING: [HLS 207-5270] unknown attribute 'register' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:384:67
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:412:10
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:424:10
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:435:10
+WARNING: [HLS 207-5270] unknown attribute 'uses_global_work_offset' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:452:17
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:467:10
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:481:10
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:537:11
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:559:10
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:571:10
+WARNING: [HLS 207-5301] unused parameter 'is_first_block': /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:457:16
+WARNING: [HLS 207-5270] unknown attribute 'uses_global_work_offset' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:588:17
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:602:10
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:616:10
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:657:11
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:659:11
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:685:10
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:698:10
+WARNING: [HLS 207-5301] unused parameter 'is_first_block': /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:593:16
+WARNING: [HLS 207-5270] unknown attribute 'uses_global_work_offset' ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:716:17
+WARNING: [HLS 207-1017] unknown pragma ignored: /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:795:10
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.54 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.3 seconds; current allocated memory: 190.972 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856:5)
+INFO: [HLS 214-129] Unrolled all 32 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:854:4)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:808:4)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:806:3)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:816:4)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:814:3)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:829:5)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:825:4)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:823:3)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:839:4)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:837:3)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:786:5)
+INFO: [HLS 214-129] Unrolled all 32 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:784:4)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:774:5)
+INFO: [HLS 214-129] Unrolled all 32 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:772:4)
+INFO: [HLS 214-129] Unrolled all 8 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:762:5)
+INFO: [HLS 214-129] Unrolled all 32 iterations of the loop 'anonymous' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:760:4)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763:31)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763:31)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763:31)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763:31)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775:33)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775:33)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775:33)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775:33)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787:34)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787:34)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787:34)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787:34)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856:14)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856:14)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856:14)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 512 has been inferred on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856:14)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 20.53 seconds. CPU system time: 0.53 seconds. Elapsed time: 20.87 seconds; current allocated memory: 227.043 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 227.045 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2.53 seconds. CPU system time: 0.07 seconds. Elapsed time: 2.61 seconds; current allocated memory: 241.713 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2.93 seconds. CPU system time: 0 seconds. Elapsed time: 2.93 seconds; current allocated memory: 240.212 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-5' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:796) in function 'inner_update_mm0' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:758) in function 'inner_update_mm0' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:759) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:770) in function 'inner_update_mm0' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-2.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:771) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-3' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:782) in function 'inner_update_mm0' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-3.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:783) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-5' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:852) in function 'inner_update_mm0' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-5.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:853) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:759) in function 'inner_update_mm0' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:771) in function 'inner_update_mm0' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:783) in function 'inner_update_mm0' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5.1' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:853) in function 'inner_update_mm0' completely with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 'a_buffer' in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'top_buffer' in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'left_buffer' in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'a_buffer' in dimension 4 completely.
+INFO: [XFORM 203-101] Partitioning array 'top_buffer' in dimension 4 completely.
+INFO: [XFORM 203-101] Partitioning array 'left_buffer' in dimension 4 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'inner_update_mm0' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:718)...512 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 63.88 seconds. CPU system time: 0.11 seconds. Elapsed time: 63.99 seconds; current allocated memory: 338.393 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'a_buffer.0.0' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'top_buffer.0.0' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775:31)
+INFO: [HLS 200-472] Inferring partial write operation for 'left_buffer.0.0' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'a_buffer.0.0' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:840:35)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 71.71 seconds. CPU system time: 0.07 seconds. Elapsed time: 71.79 seconds; current allocated memory: 527.658 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inner_update_mm0' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inner_update_mm0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763) and bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763) and bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763) and bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] Unable to schedule bus request on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:763) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 128, Depth = 201, loop 'Loop 1'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775) and bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775) and bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775) and bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] Unable to schedule bus request on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:775) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 128, Depth = 200, loop 'Loop 2'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787) and bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787) and bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787) and bus read on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] Unable to schedule bus request on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:787) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 128, Depth = 200, loop 'Loop 3'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 26, loop 'Loop 4'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus write on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856) and bus write on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 5'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus write on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856) and bus write on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'inner_update_mm0' (loop 'Loop 5'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus write on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856) and bus write on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('a_buffer_0_0_load_9', /dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:857) on array 'a_buffer_0_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'a_buffer_0_0'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] Unable to schedule bus write on port 'gmem' (/dev/shm/meyermar_synth/linpack_sp/build/u280/Xilinx_Alveo_U280.cmake/src/device/hpl_torus_PCIE_replicated_xilinx.cl:856) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 128, Depth = 199, loop 'Loop 5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 173.55 seconds. CPU system time: 0.67 seconds. Elapsed time: 174.28 seconds; current allocated memory: 654.459 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 92.06 seconds. CPU system time: 0.35 seconds. Elapsed time: 92.44 seconds; current allocated memory: 828.120 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inner_update_mm0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_update_mm0/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_update_mm0/a' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_update_mm0/left_global_buffer' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_update_mm0/top_global_buffer' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_update_mm0/block_col' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_update_mm0/block_row' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_update_mm0/blocks_per_row' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inner_update_mm0' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'a', 'left_global_buffer', 'top_global_buffer', 'block_col', 'block_row', 'blocks_per_row' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-104] Estimated max fanout for 'inner_update_mm0' is 14336 from HDL expression: ((1'b0 == ap_block_pp3_stage0_11001) & (icmp_ln796_reg_160117_pp3_iter8_reg == 1'd0))
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 512 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 512 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_24s_24s_24_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inner_update_mm0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 86.68 seconds. CPU system time: 0.46 seconds. Elapsed time: 87.16 seconds; current allocated memory: 986.938 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'inner_update_mm0_mul_24s_24s_24_1_1_Multiplier_0'
+INFO: [RTMG 210-278] Implementing memory 'inner_update_mm0_a_buffer_0_0_ram (RAM)' using auto RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'inner_update_mm0_top_buffer_0_0_ram (RAM)' using auto RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 62.06 seconds. CPU system time: 1.48 seconds. Elapsed time: 63.59 seconds; current allocated memory: 1.417 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for inner_update_mm0.
+INFO: [VLOG 209-307] Generating Verilog RTL for inner_update_mm0.
+INFO: [HLS 200-1603] Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 273.97 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 576.68 seconds. CPU system time: 3.79 seconds. Elapsed time: 580.17 seconds; current allocated memory: 1.420 GB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'inner_update_mm0_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'inner_update_mm0_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'inner_update_mm0_ap_fadd_3_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'inner_update_mm0_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'inner_update_mm0_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'inner_update_mm0_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  4 09:32:06 2021...
+INFO: [HLS 200-802] Generated output file inner_update_mm0/solution/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 220.82 seconds. CPU system time: 1.98 seconds. Elapsed time: 227.97 seconds; current allocated memory: 1.428 GB.
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 800.24 seconds. Total CPU system time: 6.31 seconds. Total elapsed time: 810.5 seconds; peak allocated memory: 1.417 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Nov  4 09:32:13 2021...

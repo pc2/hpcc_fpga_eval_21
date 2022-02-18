@@ -1,0 +1,630 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"Unknown name (address space 66)"
+      , "id":4294967295
+      , "src":"1600388768"
+      , "dst":"1855352096"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"lu.B9"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Unknown name (address space 66)"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":""
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Ivdep safelen pragma: ":"63"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"LD(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Unknown name (address space 66)"
+          , "id":1600388768
+          , "start":"13.00"
+          , "parent":"lu.B9"
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":1854308640
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":1477919584
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1855352096
+          , "end":"28.00"
+          , "parent":"lu.B9"
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1600388768
+          , "to":1854308640
+        }
+        , {
+          "from":1854308640
+          , "to":1477919584
+        }
+        , {
+          "from":1477919584
+          , "to":1855352096
+        }
+        , {
+          "from":1600388768
+          , "to":1855352096
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Unknown name (address space 69)"
+      , "id":4294967295
+      , "src":"1497343824"
+      , "dst":"1471875104"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"inner_update_mm0.B3"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Unknown name (address space 69)"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":""
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"LD(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Unknown name (address space 69)"
+          , "id":1497343824
+          , "start":"4.00"
+          , "parent":"inner_update_mm0.B3"
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":1618712096
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":1502266672
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1471875104
+          , "end":"31.00"
+          , "parent":"inner_update_mm0.B3"
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1497343824
+          , "to":1618712096
+        }
+        , {
+          "from":1618712096
+          , "to":1502266672
+        }
+        , {
+          "from":1502266672
+          , "to":1471875104
+        }
+        , {
+          "from":1497343824
+          , "to":1471875104
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Unknown name (address space 75)"
+      , "id":4294967295
+      , "src":"1655120784"
+      , "dst":"1461824944"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"inner_update_mm2.B3"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Unknown name (address space 75)"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":""
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"LD(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Unknown name (address space 75)"
+          , "id":1655120784
+          , "start":"4.00"
+          , "parent":"inner_update_mm2.B3"
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":1655117424
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":1606317840
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1461824944
+          , "end":"31.00"
+          , "parent":"inner_update_mm2.B3"
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1655120784
+          , "to":1655117424
+        }
+        , {
+          "from":1655117424
+          , "to":1606317840
+        }
+        , {
+          "from":1606317840
+          , "to":1461824944
+        }
+        , {
+          "from":1655120784
+          , "to":1461824944
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Unknown name (address space 81)"
+      , "id":4294967295
+      , "src":"1496859632"
+      , "dst":"1582448160"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"inner_update_mm4.B3"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Unknown name (address space 81)"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":""
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"LD(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Unknown name (address space 81)"
+          , "id":1496859632
+          , "start":"4.00"
+          , "parent":"inner_update_mm4.B3"
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":1496846384
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":1573377424
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1582448160
+          , "end":"31.00"
+          , "parent":"inner_update_mm4.B3"
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1496859632
+          , "to":1496846384
+        }
+        , {
+          "from":1496846384
+          , "to":1573377424
+        }
+        , {
+          "from":1573377424
+          , "to":1582448160
+        }
+        , {
+          "from":1496859632
+          , "to":1582448160
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Unknown name (address space 78)"
+      , "id":4294967295
+      , "src":"1501479456"
+      , "dst":"1499345248"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"inner_update_mm3.B3"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Unknown name (address space 78)"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":""
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"LD(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Unknown name (address space 78)"
+          , "id":1501479456
+          , "start":"4.00"
+          , "parent":"inner_update_mm3.B3"
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":1501470896
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":1603266592
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1499345248
+          , "end":"31.00"
+          , "parent":"inner_update_mm3.B3"
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1501479456
+          , "to":1501470896
+        }
+        , {
+          "from":1501470896
+          , "to":1603266592
+        }
+        , {
+          "from":1603266592
+          , "to":1499345248
+        }
+        , {
+          "from":1501479456
+          , "to":1499345248
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Unknown name (address space 72)"
+      , "id":4294967295
+      , "src":"1515406464"
+      , "dst":"1765052928"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"inner_update_mm1.B3"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Unknown name (address space 72)"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":""
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"LD(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Unknown name (address space 72)"
+          , "id":1515406464
+          , "start":"4.00"
+          , "parent":"inner_update_mm1.B3"
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":1584345568
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":1840098240
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1765052928
+          , "end":"31.00"
+          , "parent":"inner_update_mm1.B3"
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1515406464
+          , "to":1584345568
+        }
+        , {
+          "from":1584345568
+          , "to":1840098240
+        }
+        , {
+          "from":1840098240
+          , "to":1765052928
+        }
+        , {
+          "from":1515406464
+          , "to":1765052928
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

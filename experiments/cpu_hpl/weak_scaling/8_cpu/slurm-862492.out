@@ -1,0 +1,195 @@
+This is a SAMPLE run script.  Change it to reflect the correct number
+of CPUs/threads, number of nodes, MPI processes per node, etc..
+This run was done on: Do 27. Mai 16:18:39 CEST 2021
+RANK=1, NODE=1
+RANK=0, NODE=0
+RANK=7, NODE=1
+RANK=2, NODE=0
+RANK=6, NODE=0
+RANK=3, NODE=1
+RANK=14, NODE=0
+RANK=15, NODE=1
+RANK=8, NODE=0
+RANK=5, NODE=1
+RANK=12, NODE=0
+RANK=4, NODE=0
+RANK=9, NODE=1
+RANK=11, NODE=1
+RANK=13, NODE=1
+RANK=10, NODE=0
+================================================================================
+HPLinpack 2.2  --  High-Performance Linpack benchmark  --   February 24, 2016
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N        :   98304 
+NB       :     384 
+PMAP     : Column-major process mapping
+P        :       4 
+Q        :       4 
+PFACT    :   Right 
+NBMIN    :       2 
+NDIV     :       2 
+RFACT    :   Crout 
+BCAST    :   1ring 
+DEPTH    :       0 
+SWAP     : Binary-exchange
+L1       : no-transposed form
+U        : no-transposed form
+EQUIL    : no
+ALIGN    :    8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+fpga-0001       : Column=000768 Fraction=0.005 Kernel=    0.38 Mflops=24184844.31
+fpga-0003       : Column=001152 Fraction=0.010 Kernel=16931977.84 Mflops=21108863.39
+fpga-0006       : Column=001536 Fraction=0.015 Kernel=16638741.90 Mflops=19075257.03
+fpga-0001       : Column=002304 Fraction=0.020 Kernel=15921993.93 Mflops=18115582.46
+fpga-0003       : Column=002688 Fraction=0.025 Kernel=18444542.67 Mflops=18253323.76
+fpga-0006       : Column=003072 Fraction=0.030 Kernel=15360358.87 Mflops=17136800.89
+fpga-0008       : Column=003456 Fraction=0.035 Kernel=14193967.35 Mflops=17189209.69
+fpga-0003       : Column=004224 Fraction=0.040 Kernel=16318322.23 Mflops=17375509.29
+fpga-0006       : Column=004608 Fraction=0.045 Kernel=17164703.24 Mflops=16894518.80
+fpga-0008       : Column=004992 Fraction=0.050 Kernel=14382470.65 Mflops=16840625.07
+fpga-0003       : Column=005760 Fraction=0.055 Kernel=16893035.64 Mflops=17016354.58
+fpga-0006       : Column=006144 Fraction=0.060 Kernel=16329736.00 Mflops=16572455.09
+fpga-0008       : Column=006528 Fraction=0.065 Kernel=14838812.45 Mflops=16603839.95
+fpga-0001       : Column=006912 Fraction=0.070 Kernel=15855731.71 Mflops=16525015.88
+fpga-0006       : Column=007680 Fraction=0.075 Kernel=14804490.75 Mflops=16315704.28
+fpga-0008       : Column=008064 Fraction=0.080 Kernel=19892356.27 Mflops=16554492.02
+fpga-0001       : Column=008448 Fraction=0.085 Kernel=17358685.30 Mflops=16411024.71
+fpga-0006       : Column=009216 Fraction=0.090 Kernel=15486027.48 Mflops=16307244.86
+fpga-0008       : Column=009600 Fraction=0.095 Kernel=16103643.51 Mflops=16439599.21
+fpga-0001       : Column=009984 Fraction=0.100 Kernel=17011387.38 Mflops=16317350.24
+fpga-0003       : Column=010368 Fraction=0.105 Kernel=11775806.38 Mflops=16316988.48
+fpga-0008       : Column=011136 Fraction=0.110 Kernel=15712628.85 Mflops=16280836.07
+fpga-0001       : Column=011520 Fraction=0.115 Kernel=16575638.59 Mflops=16218045.15
+fpga-0003       : Column=011904 Fraction=0.120 Kernel=14180792.75 Mflops=16292310.90
+fpga-0008       : Column=012672 Fraction=0.125 Kernel=15090349.50 Mflops=16227225.48
+fpga-0001       : Column=013056 Fraction=0.130 Kernel=16465113.66 Mflops=16182808.56
+fpga-0003       : Column=013440 Fraction=0.135 Kernel=14228851.43 Mflops=16245219.11
+fpga-0006       : Column=013824 Fraction=0.140 Kernel=15797292.19 Mflops=16123171.40
+fpga-0001       : Column=014592 Fraction=0.145 Kernel=16114663.82 Mflops=16175071.69
+fpga-0003       : Column=014976 Fraction=0.150 Kernel=14149965.18 Mflops=16195863.61
+fpga-0006       : Column=015360 Fraction=0.155 Kernel=16300202.75 Mflops=16093092.48
+fpga-0008       : Column=015744 Fraction=0.160 Kernel=15095532.36 Mflops=16177022.80
+fpga-0003       : Column=016512 Fraction=0.165 Kernel=14972775.81 Mflops=16138222.36
+fpga-0006       : Column=016896 Fraction=0.170 Kernel=17392529.18 Mflops=16066058.77
+fpga-0008       : Column=017280 Fraction=0.175 Kernel=14814084.48 Mflops=16140710.80
+fpga-0003       : Column=018048 Fraction=0.180 Kernel=14053134.89 Mflops=16065657.60
+fpga-0006       : Column=018432 Fraction=0.185 Kernel=11024713.86 Mflops=15899702.49
+fpga-0008       : Column=018816 Fraction=0.190 Kernel=12837374.63 Mflops=16050505.66
+fpga-0001       : Column=019200 Fraction=0.195 Kernel=16504207.61 Mflops=16066143.05
+fpga-0006       : Column=019968 Fraction=0.200 Kernel=15185301.26 Mflops=15996240.21
+fpga-0008       : Column=020352 Fraction=0.205 Kernel=15948838.08 Mflops=16054585.64
+fpga-0001       : Column=020736 Fraction=0.210 Kernel=17405518.29 Mflops=16054296.37
+fpga-0006       : Column=021504 Fraction=0.215 Kernel=15645332.91 Mflops=15985246.43
+fpga-0008       : Column=021888 Fraction=0.220 Kernel=15398410.90 Mflops=16020669.08
+fpga-0001       : Column=022272 Fraction=0.225 Kernel=15885688.14 Mflops=16004950.96
+fpga-0003       : Column=022656 Fraction=0.230 Kernel=13636345.69 Mflops=15984389.75
+fpga-0008       : Column=023424 Fraction=0.235 Kernel=16173748.83 Mflops=15992124.79
+fpga-0001       : Column=023808 Fraction=0.240 Kernel=14630740.83 Mflops=15981348.70
+fpga-0003       : Column=024192 Fraction=0.245 Kernel=13857550.63 Mflops=15969582.72
+fpga-0008       : Column=024960 Fraction=0.250 Kernel=16041226.49 Mflops=15973221.53
+fpga-0001       : Column=025344 Fraction=0.255 Kernel=16460036.61 Mflops=15959644.16
+fpga-0003       : Column=025728 Fraction=0.260 Kernel=11363358.12 Mflops=15933233.40
+fpga-0006       : Column=026112 Fraction=0.265 Kernel=15484697.21 Mflops=15916932.92
+fpga-0001       : Column=026880 Fraction=0.270 Kernel=16282686.08 Mflops=15933974.88
+fpga-0003       : Column=027264 Fraction=0.275 Kernel=13465942.93 Mflops=15922121.09
+fpga-0006       : Column=027648 Fraction=0.280 Kernel=16484798.26 Mflops=15916107.68
+fpga-0008       : Column=028032 Fraction=0.285 Kernel=13701155.20 Mflops=15914002.09
+fpga-0003       : Column=028800 Fraction=0.290 Kernel=15003768.88 Mflops=15905308.87
+fpga-0006       : Column=029184 Fraction=0.295 Kernel=17234033.86 Mflops=15878157.71
+fpga-0008       : Column=029568 Fraction=0.300 Kernel=13290074.29 Mflops=15892835.53
+fpga-0003       : Column=030336 Fraction=0.305 Kernel=14736926.64 Mflops=15894671.61
+fpga-0006       : Column=030720 Fraction=0.310 Kernel=17498547.07 Mflops=15880443.00
+fpga-0008       : Column=031104 Fraction=0.315 Kernel=13602656.45 Mflops=15898525.19
+fpga-0001       : Column=031488 Fraction=0.320 Kernel=14849131.79 Mflops=15896642.04
+fpga-0006       : Column=032256 Fraction=0.325 Kernel=14286092.37 Mflops=15861795.66
+fpga-0008       : Column=032640 Fraction=0.330 Kernel=13054781.71 Mflops=15871248.57
+fpga-0001       : Column=033024 Fraction=0.335 Kernel=28688616.32 Mflops=15884058.45
+fpga-0006       : Column=033792 Fraction=0.340 Kernel=13860933.97 Mflops=15842834.41
+fpga-0008       : Column=034176 Fraction=0.345 Kernel=10001110.97 Mflops=15827272.51
+fpga-0001       : Column=034560 Fraction=0.350 Kernel=15940821.52 Mflops=15833016.74
+fpga-0003       : Column=034944 Fraction=0.355 Kernel=11775664.74 Mflops=15804964.88
+fpga-0008       : Column=035712 Fraction=0.360 Kernel=16114673.15 Mflops=15809519.27
+fpga-0001       : Column=036096 Fraction=0.365 Kernel=18685307.91 Mflops=15803019.05
+fpga-0003       : Column=036480 Fraction=0.370 Kernel=14245952.95 Mflops=15801595.64
+fpga-0008       : Column=037248 Fraction=0.375 Kernel=15386951.99 Mflops=15797593.32
+fpga-0001       : Column=037632 Fraction=0.380 Kernel=15263573.20 Mflops=15803387.68
+fpga-0003       : Column=038016 Fraction=0.385 Kernel=12322562.87 Mflops=15787692.62
+fpga-0006       : Column=038400 Fraction=0.390 Kernel=17342005.37 Mflops=15800939.76
+fpga-0001       : Column=039168 Fraction=0.395 Kernel=13944596.37 Mflops=15775301.98
+fpga-0003       : Column=039552 Fraction=0.400 Kernel=13667832.16 Mflops=15768624.05
+fpga-0006       : Column=039936 Fraction=0.405 Kernel=14548846.99 Mflops=15770380.04
+fpga-0008       : Column=040320 Fraction=0.410 Kernel=13444850.25 Mflops=15758496.85
+fpga-0003       : Column=041088 Fraction=0.415 Kernel=14848504.20 Mflops=15753898.33
+fpga-0006       : Column=041472 Fraction=0.420 Kernel=14665668.29 Mflops=15755203.19
+fpga-0008       : Column=041856 Fraction=0.425 Kernel=12874860.33 Mflops=15739153.56
+fpga-0003       : Column=042624 Fraction=0.430 Kernel=14570130.87 Mflops=15733835.71
+fpga-0006       : Column=043008 Fraction=0.435 Kernel=14205241.47 Mflops=15732276.97
+fpga-0008       : Column=043392 Fraction=0.440 Kernel=12636844.28 Mflops=15715849.10
+fpga-0001       : Column=043776 Fraction=0.445 Kernel=13393513.86 Mflops=15697022.22
+fpga-0006       : Column=044544 Fraction=0.450 Kernel=14074996.93 Mflops=15690949.37
+fpga-0008       : Column=044928 Fraction=0.455 Kernel=12768811.40 Mflops=15675984.63
+fpga-0001       : Column=045312 Fraction=0.460 Kernel=13967873.87 Mflops=15670787.79
+fpga-0006       : Column=046080 Fraction=0.465 Kernel=13506784.36 Mflops=15657152.62
+fpga-0008       : Column=046464 Fraction=0.470 Kernel=12222767.45 Mflops=15641080.81
+fpga-0001       : Column=046848 Fraction=0.475 Kernel=13497137.69 Mflops=15634433.55
+fpga-0003       : Column=047232 Fraction=0.480 Kernel=12118497.38 Mflops=15624458.40
+fpga-0008       : Column=048000 Fraction=0.485 Kernel=13505071.63 Mflops=15605645.02
+fpga-0001       : Column=048384 Fraction=0.490 Kernel=14548933.18 Mflops=15596421.16
+fpga-0003       : Column=048768 Fraction=0.495 Kernel=11690987.16 Mflops=15585194.04
+fpga-0006       : Column=050688 Fraction=0.515 Kernel=12518600.60 Mflops=15529638.88
+fpga-0008       : Column=052608 Fraction=0.535 Kernel=12352098.07 Mflops=15470553.56
+fpga-0003       : Column=054912 Fraction=0.555 Kernel=11863773.25 Mflops=15397934.34
+fpga-0006       : Column=056832 Fraction=0.575 Kernel=9128834.39 Mflops=15280882.75
+fpga-0008       : Column=058752 Fraction=0.595 Kernel=10347030.53 Mflops=15202822.90
+fpga-0001       : Column=060672 Fraction=0.615 Kernel=11128922.18 Mflops=15152289.29
+fpga-0003       : Column=062592 Fraction=0.635 Kernel=10285482.00 Mflops=15094710.15
+fpga-0006       : Column=064512 Fraction=0.655 Kernel=9688713.73 Mflops=15038119.99
+fpga-0008       : Column=066432 Fraction=0.675 Kernel=9670672.36 Mflops=14980916.86
+fpga-0001       : Column=068352 Fraction=0.695 Kernel=9293719.58 Mflops=14928614.49
+fpga-0006       : Column=078336 Fraction=0.795 Kernel=7545390.48 Mflops=14645077.94
+fpga-0001       : Column=088320 Fraction=0.895 Kernel=4581829.61 Mflops=14409022.62
+fpga-0003       : Column=097920 Fraction=0.995 Kernel=1269669.87 Mflops=14256124.72
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2       98304   384     4     4              44.47            1.42403e+04
+HPL_pdgesv() start time Thu May 27 16:18:43 2021
+
+HPL_pdgesv() end time   Thu May 27 16:19:28 2021
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0036319 ...... PASSED
+================================================================================
+
+Finished      1 tests with the following results:
+              1 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
+Done: Do 27. Mai 16:19:31 CEST 2021

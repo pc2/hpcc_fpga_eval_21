@@ -1,0 +1,104 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link
+	Log files: /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/gemm_base.xclbin.link_summary, at Wed Nov  3 17:25:40 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Wed Nov  3 17:25:40 2021
+INFO: [v++ 60-1315] Creating rulecheck session with output '/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link/v++_link_gemm_base_guidance.html', at Wed Nov  3 17:25:41 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 74-74] Compiler Version string: 2020.2
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [17:25:48] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/gemm_base.xo --config /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --temp_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Wed Nov  3 17:25:50 2021
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/xilinx_tmp_compile/gemm_base.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [17:25:50] build_xd_ip_db started: /opt/Xilinx/Vitis/2020.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/xilinx_u280_xdma_201920_3.hpfm -clkid 0 -ip /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/iprepo/xilinx_com_hls_gemm0_1_0,gemm0 -o /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [17:25:58] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1695.129 ; gain = 0.000 ; free physical = 106733 ; free virtual = 397781
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [17:25:58] cfgen started: /opt/Xilinx/Vitis/2020.2/bin/cfgen  -nk gemm0:3 -slr gemm0_1:SLR0 -slr gemm0_2:SLR1 -slr gemm0_3:SLR2 -sp gemm0_1.m_axi_gmem0:DDR[0] -sp gemm0_1.m_axi_gmem1:DDR[1] -sp gemm0_1.m_axi_gmem2:DDR[0] -sp gemm0_1.m_axi_gmem3:DDR[1] -sp gemm0_2.m_axi_gmem0:DDR[0] -sp gemm0_2.m_axi_gmem1:DDR[1] -sp gemm0_2.m_axi_gmem2:DDR[0] -sp gemm0_2.m_axi_gmem3:DDR[1] -sp gemm0_3.m_axi_gmem0:DDR[0] -sp gemm0_3.m_axi_gmem1:DDR[1] -sp gemm0_3.m_axi_gmem2:DDR[0] -sp gemm0_3.m_axi_gmem3:DDR[1] -dmclkid 0 -r /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: gemm0, num: 3  {gemm0_1 gemm0_2 gemm0_3}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: gemm0_1, k_port: m_axi_gmem0, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: gemm0_1, k_port: m_axi_gmem1, sptag: DDR[1]
+INFO: [CFGEN 83-0]   kernel: gemm0_1, k_port: m_axi_gmem2, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: gemm0_1, k_port: m_axi_gmem3, sptag: DDR[1]
+INFO: [CFGEN 83-0]   kernel: gemm0_2, k_port: m_axi_gmem0, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: gemm0_2, k_port: m_axi_gmem1, sptag: DDR[1]
+INFO: [CFGEN 83-0]   kernel: gemm0_2, k_port: m_axi_gmem2, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: gemm0_2, k_port: m_axi_gmem3, sptag: DDR[1]
+INFO: [CFGEN 83-0]   kernel: gemm0_3, k_port: m_axi_gmem0, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: gemm0_3, k_port: m_axi_gmem1, sptag: DDR[1]
+INFO: [CFGEN 83-0]   kernel: gemm0_3, k_port: m_axi_gmem2, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: gemm0_3, k_port: m_axi_gmem3, sptag: DDR[1]
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: gemm0_1, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: gemm0_2, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: gemm0_3, SLR: SLR2
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_1.a to DDR[0] for directive gemm0_1.m_axi_gmem0:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_1.b to DDR[1] for directive gemm0_1.m_axi_gmem1:DDR[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_1.c to DDR[0] for directive gemm0_1.m_axi_gmem2:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_1.c_out to DDR[1] for directive gemm0_1.m_axi_gmem3:DDR[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_2.a to DDR[0] for directive gemm0_2.m_axi_gmem0:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_2.b to DDR[1] for directive gemm0_2.m_axi_gmem1:DDR[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_2.c to DDR[0] for directive gemm0_2.m_axi_gmem2:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_2.c_out to DDR[1] for directive gemm0_2.m_axi_gmem3:DDR[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_3.a to DDR[0] for directive gemm0_3.m_axi_gmem0:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_3.b to DDR[1] for directive gemm0_3.m_axi_gmem1:DDR[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_3.c to DDR[0] for directive gemm0_3.m_axi_gmem2:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument gemm0_3.c_out to DDR[1] for directive gemm0_3.m_axi_gmem3:DDR[1]
+INFO: [SYSTEM_LINK 82-37] [17:26:05] cfgen finished successfully
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1695.129 ; gain = 0.000 ; free physical = 106833 ; free virtual = 397881
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [17:26:05] cf2bd started: /opt/Xilinx/Vitis/2020.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.xsd --temp_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link --output_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --target_bd pfm_dynamic.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd pfm_dynamic.bd -dn dr -dp /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [17:26:08] cf2bd finished successfully
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1695.129 ; gain = 0.000 ; free physical = 106863 ; free virtual = 397916
+INFO: [v++ 60-1441] [17:26:08] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 1564.113 ; gain = 0.000 ; free physical = 106907 ; free virtual = 397954
+INFO: [v++ 60-1443] [17:26:08] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/sdsl.dat -rtd /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/cf2sw.rtd -nofilter /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/cf2sw_full.rtd -xclbin /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.xml -o /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [17:26:13] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1564.113 ; gain = 0.000 ; free physical = 106485 ; free virtual = 397532
+INFO: [v++ 60-1443] [17:26:13] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+INFO: [v++ 60-1441] [17:26:14] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 1564.113 ; gain = 0.000 ; free physical = 106378 ; free virtual = 397425
+INFO: [v++ 60-1443] [17:26:14] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u280_xdma_201920_3 --remote_ip_cache /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/.ipcache --output_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int --log_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/logs/link --report_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/bin/xilinx_reports/link --config /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/vplConfig.ini -k /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link --no-info --iprepo /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_gemm0_1_0 --messageDb /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link/vpl.pb /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/run_link
+
+****** vpl v2020.2 (64-bit)
+  **** SW Build (by xbuild) on 2020-11-18-05:13:29
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/kernel_info.dat'.
+INFO: [VPL 74-74] Compiler Version string: 2020.2
+INFO: [VPL 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /dev/shm/meyermar_synth/gemm/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform
+WARNING: /opt/Xilinx/Vitis/2020.2/tps/lnx64/jre9.0.4 does not exist.
+[17:26:37] Run vpl: Step create_project: Started
+Creating Vivado project.
+[17:26:39] Run vpl: Step create_project: Completed
+[17:26:39] Run vpl: Step create_bd: Started
+[17:27:24] Run vpl: Step create_bd: Completed
+[17:27:24] Run vpl: Step update_bd: Started
+[17:27:24] Run vpl: Step update_bd: Completed
+[17:27:24] Run vpl: Step generate_target: Started
+[17:28:40] Run vpl: Step generate_target: RUNNING...
+[17:29:55] Run vpl: Step generate_target: RUNNING...
+[17:30:31] Run vpl: Step generate_target: Completed
+[17:30:31] Run vpl: Step config_hw_runs: Started
+[17:30:34] Run vpl: Step config_hw_runs: Completed
+[17:30:34] Run vpl: Step synth: Started

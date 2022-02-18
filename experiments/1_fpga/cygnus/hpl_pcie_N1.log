@@ -1,0 +1,88 @@
+-------------------------------------------------------------
+General setup:
+C++ high resolution clock is used.
+The clock precision seems to be 1.00000e+01ns
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[16337,1],0] (PID 2463)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+-------------------------------------------------------------
+Selected Platform: Intel(R) FPGA SDK for OpenCL(TM)
+-------------------------------------------------------------
+Selection summary:
+Platform Name: Intel(R) FPGA SDK for OpenCL(TM)
+Device Name:   p520_max_sg280h : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+-------------------------------------------------------------
+-------------------------------------------------------------
+FPGA Setup:../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/hpl_torus_PCIE.aocx
+Prepared FPGA successfully for global Execution!
+-------------------------------------------------------------
+Implementation of the LINPACK benchmark proposed in the HPCC benchmark suite for FPGA.
+Version: 2.4
+MPI Version:  3.1
+Config. Time: Mon Jan 17 11:25:52 UTC 2022
+Git Commit:   f764c6d
+
+Summary:
+Block Size                    512
+Communication Type            PCIE
+Data Type                     cl_float
+Emulate                       No
+Kernel File                   ../../../synthesis_artifacts/LINPACK_SP/520n-h-19.4.0-19.4.0-pcie/hpl_torus_PCIE.aocx
+Kernel Replications           5
+MPI Ranks                     1
+Matrix Size                   24576
+Repetitions                   2
+Test Mode                     No
+Device                        p520_max_sg280h : BittWare Stratix 10 OpenCL platform (aclbitt_s10_pcie0)
+
+-------------------------------------------------------------
+Start benchmark using the given configuration. Generating data...
+-------------------------------------------------------------
+Generation Time: 1.34677e+01 s
+-------------------------------------------------------------
+Execute benchmark kernel...
+-------------------------------------------------------------
+Torus 0,0Start! 
+Torus 0,0End! 
+Torus 0,0Start! 
+Torus 0,0End! 
+Execution Time: 9.26971e+01 s
+-------------------------------------------------------------
+Validate output...
+-------------------------------------------------------------
+  norm. resid        resid       machep   
+    5.25221e-07    3.82066e-05    1.19209e-07
+Validation Time: 6.74920e-05 s
+         Method           best           mean         GFLOPS
+          total    3.52111e+01    3.54042e+01    2.81071e+02
+           GEFA    3.52111e+01    3.54042e+01    2.81037e+02
+           GESL    2.93000e-07    2.96000e-07    4.12273e+06
+Validation: SUCCESS!
+
+============================================================
+Request ID:             536993.nqsv
+Request Name:           HPL_SP_PCIE_EXE
+Queue:                  fpga@nqsv
+Number of Jobs:         1
+User Name:              mellich
+Group Name:             CCUSC
+Created Request Time:   Mon Jan 17 20:30:34 2022
+Started Request Time:   Mon Jan 17 20:30:35 2022
+Ended Request Time:     Mon Jan 17 20:32:27 2022
+Resources Information:
+  Elapse:               112S
+  Remaining Elapse:     86288S
+============================================================

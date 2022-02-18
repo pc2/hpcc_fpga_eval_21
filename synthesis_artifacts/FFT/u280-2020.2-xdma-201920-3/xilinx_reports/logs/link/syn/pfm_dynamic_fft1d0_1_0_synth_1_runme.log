@@ -1,0 +1,1227 @@
+
+*** Running vivado
+    with args -log pfm_dynamic_fft1d0_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pfm_dynamic_fft1d0_1_0.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source pfm_dynamic_fft1d0_1_0.tcl -notrace
+INFO: Dispatch client connection id - 44355
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_fft1d0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_store0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_fetch0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top pfm_dynamic_fft1d0_1_0 -part xcu280-fsvh2892-2L-e -directive sdx_optimization_effort_high -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27080
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 3353.172 ; gain = 198.969 ; free physical = 29036 ; free virtual = 299417
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_fft1d0_1_0' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_fft1d0_1_0/synth/pfm_dynamic_fft1d0_1_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000010 
+	Parameter ap_ST_fsm_pp0_stage1 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000100 
+	Parameter ap_ST_fsm_pp0_stage2 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000000000001000 
+	Parameter ap_ST_fsm_pp0_stage3 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000000000010000 
+	Parameter ap_ST_fsm_pp0_stage4 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000000000100000 
+	Parameter ap_ST_fsm_pp0_stage5 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000000001000000 
+	Parameter ap_ST_fsm_pp0_stage6 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000000010000000 
+	Parameter ap_ST_fsm_pp0_stage7 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000000100000000 
+	Parameter ap_ST_fsm_pp0_stage8 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000001000000000 
+	Parameter ap_ST_fsm_pp0_stage9 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000010000000000 
+	Parameter ap_ST_fsm_pp0_stage10 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000000100000000000 
+	Parameter ap_ST_fsm_pp0_stage11 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000001000000000000 
+	Parameter ap_ST_fsm_pp0_stage12 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000010000000000000 
+	Parameter ap_ST_fsm_pp0_stage13 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000000100000000000000 
+	Parameter ap_ST_fsm_pp0_stage14 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000001000000000000000 
+	Parameter ap_ST_fsm_pp0_stage15 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000010000000000000000 
+	Parameter ap_ST_fsm_pp0_stage16 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000000100000000000000000 
+	Parameter ap_ST_fsm_pp0_stage17 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000001000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage18 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000010000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage19 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000000100000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage20 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000001000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage21 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000010000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage22 bound to: 85'b0000000000000000000000000000000000000000000000000000000000000100000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage23 bound to: 85'b0000000000000000000000000000000000000000000000000000000000001000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage24 bound to: 85'b0000000000000000000000000000000000000000000000000000000000010000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage25 bound to: 85'b0000000000000000000000000000000000000000000000000000000000100000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage26 bound to: 85'b0000000000000000000000000000000000000000000000000000000001000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage27 bound to: 85'b0000000000000000000000000000000000000000000000000000000010000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage28 bound to: 85'b0000000000000000000000000000000000000000000000000000000100000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage29 bound to: 85'b0000000000000000000000000000000000000000000000000000001000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage30 bound to: 85'b0000000000000000000000000000000000000000000000000000010000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage31 bound to: 85'b0000000000000000000000000000000000000000000000000000100000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage32 bound to: 85'b0000000000000000000000000000000000000000000000000001000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage33 bound to: 85'b0000000000000000000000000000000000000000000000000010000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage34 bound to: 85'b0000000000000000000000000000000000000000000000000100000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage35 bound to: 85'b0000000000000000000000000000000000000000000000001000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage36 bound to: 85'b0000000000000000000000000000000000000000000000010000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage37 bound to: 85'b0000000000000000000000000000000000000000000000100000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage38 bound to: 85'b0000000000000000000000000000000000000000000001000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage39 bound to: 85'b0000000000000000000000000000000000000000000010000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage40 bound to: 85'b0000000000000000000000000000000000000000000100000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage41 bound to: 85'b0000000000000000000000000000000000000000001000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage42 bound to: 85'b0000000000000000000000000000000000000000010000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage43 bound to: 85'b0000000000000000000000000000000000000000100000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage44 bound to: 85'b0000000000000000000000000000000000000001000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage45 bound to: 85'b0000000000000000000000000000000000000010000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage46 bound to: 85'b0000000000000000000000000000000000000100000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage47 bound to: 85'b0000000000000000000000000000000000001000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage48 bound to: 85'b0000000000000000000000000000000000010000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage49 bound to: 85'b0000000000000000000000000000000000100000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage50 bound to: 85'b0000000000000000000000000000000001000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage51 bound to: 85'b0000000000000000000000000000000010000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage52 bound to: 85'b0000000000000000000000000000000100000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage53 bound to: 85'b0000000000000000000000000000001000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage54 bound to: 85'b0000000000000000000000000000010000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage55 bound to: 85'b0000000000000000000000000000100000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage56 bound to: 85'b0000000000000000000000000001000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage57 bound to: 85'b0000000000000000000000000010000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage58 bound to: 85'b0000000000000000000000000100000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage59 bound to: 85'b0000000000000000000000001000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage60 bound to: 85'b0000000000000000000000010000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage61 bound to: 85'b0000000000000000000000100000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage62 bound to: 85'b0000000000000000000001000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage63 bound to: 85'b0000000000000000000010000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage64 bound to: 85'b0000000000000000000100000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage65 bound to: 85'b0000000000000000001000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage66 bound to: 85'b0000000000000000010000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage67 bound to: 85'b0000000000000000100000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage68 bound to: 85'b0000000000000001000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage69 bound to: 85'b0000000000000010000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage70 bound to: 85'b0000000000000100000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage71 bound to: 85'b0000000000001000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage72 bound to: 85'b0000000000010000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage73 bound to: 85'b0000000000100000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage74 bound to: 85'b0000000001000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage75 bound to: 85'b0000000010000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage76 bound to: 85'b0000000100000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage77 bound to: 85'b0000001000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage78 bound to: 85'b0000010000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage79 bound to: 85'b0000100000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage80 bound to: 85'b0001000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage81 bound to: 85'b0010000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_pp0_stage82 bound to: 85'b0100000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state88 bound to: 85'b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_S_AXI_CONTROL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CONTROL_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CONTROL_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_control_s_axi' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_control_s_axi.v:6]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 6'b000000 
+	Parameter ADDR_GIE bound to: 6'b000100 
+	Parameter ADDR_IER bound to: 6'b001000 
+	Parameter ADDR_ISR bound to: 6'b001100 
+	Parameter ADDR_COUNT_DATA_0 bound to: 6'b010000 
+	Parameter ADDR_COUNT_CTRL bound to: 6'b010100 
+	Parameter ADDR_INVERSE_DATA_0 bound to: 6'b011000 
+	Parameter ADDR_INVERSE_CTRL bound to: 6'b011100 
+	Parameter ADDR_CHANOUT0_DATA_0 bound to: 6'b100000 
+	Parameter ADDR_CHANOUT0_DATA_1 bound to: 6'b100100 
+	Parameter ADDR_CHANOUT0_CTRL bound to: 6'b101000 
+	Parameter ADDR_CHANIN0_DATA_0 bound to: 6'b101100 
+	Parameter ADDR_CHANIN0_DATA_1 bound to: 6'b110000 
+	Parameter ADDR_CHANIN0_CTRL bound to: 6'b110100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 6 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_control_s_axi.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_control_s_axi' (1#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_control_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1.v:10]
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_0' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_0.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_0_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_0.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_0_0_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_0.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_0_rom' (2#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_0.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_0' (3#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_0.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_0' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_0.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_0_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_0.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_0_0_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_0.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_0_rom' (4#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_0.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_0' (5#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_0.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_1.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_1_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_1.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_0_1_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_1.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_1_rom' (6#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_1' (7#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_1.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_1_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_1.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_0_1_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_1.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_1_rom' (8#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_1' (9#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_2' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_2.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_2_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_2.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_0_2_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_2.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_2_rom' (10#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_2.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_2' (11#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_2.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_2' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_2.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_2_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_2.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_0_2_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_2.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_2_rom' (12#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_2.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_2' (13#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_2.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_3' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_3.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_3_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_3.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_0_3_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_3.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_3_rom' (14#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_3.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_3' (15#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_3.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_3' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_3.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_3_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_3.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_0_3_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_3.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_3_rom' (16#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_3.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_3' (17#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_3.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_4' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_4.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_4_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_4.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_0_4_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_4.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_4_rom' (18#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_4.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_4' (19#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_4.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_4' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_4.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_4_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_4.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_0_4_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_4.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_4_rom' (20#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_4.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_4' (21#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_4.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_5' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_5.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_5_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_5.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_0_5_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_5.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_5_rom' (22#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_5.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_0_5' (23#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_0_5.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_5' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_5.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_5_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_5.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_0_5_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_5.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_5_rom' (24#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_5.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_0_5' (25#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_0_5.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_0' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_0.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_0_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_0.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_1_0_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_0.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_0_rom' (26#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_0.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_0' (27#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_0.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_0' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_0.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_0_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_0.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_1_0_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_0.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_0_rom' (28#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_0.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_0' (29#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_0.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_1.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_1_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_1.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_1_1_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_1.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_1_rom' (30#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_1' (31#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_1.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_1_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_1.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_1_1_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_1.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_1_rom' (32#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_1' (33#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_2' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_2.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_2_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_2.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_1_2_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_2.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_2_rom' (34#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_2.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_1_2' (35#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_1_2.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_2' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_2.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_2_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_2.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_1_2_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_2.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_2_rom' (36#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_2.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_1_2' (37#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_1_2.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_0' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_0.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_0_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_0.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_2_0_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_0.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_0_rom' (38#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_0.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_0' (39#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_0.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_0' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_0.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_0_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_0.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_2_0_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_0.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_0_rom' (40#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_0.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_0' (41#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_0.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_1.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_1_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_1.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_2_1_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_1.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_1_rom' (42#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_1' (43#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_1.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_1_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_1.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_2_1_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_1.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_1_rom' (44#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_1' (45#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_2' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_2.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_2_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_2.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_2_2_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_2.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_2_rom' (46#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_2.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_2_2' (47#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_2_2.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_2' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_2.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_2_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_2.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_2_2_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_2.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_2_rom' (48#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_2.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_2_2' (49#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_2_2.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_0' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_0.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_0_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_0.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_3_0_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_0.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_0_rom' (50#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_0.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_0' (51#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_0.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_0' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_0.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_0_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_0.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_3_0_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_0.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_0_rom' (52#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_0.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_0' (53#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_0.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_1.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_1_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_1.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_3_1_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_1.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_1_rom' (54#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_1' (55#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_1.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_1_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_1.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_3_1_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_1.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_1_rom' (56#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_1' (57#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_2' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_2.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_2_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_2.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_cos_3_2_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_2.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_2_rom' (58#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_2.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_cos_3_2' (59#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_cos_3_2.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_2' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_2.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_2_rom' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_2.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './fft1d0_fft_step_1_twiddles_sin_3_2_rom.dat' is read successfully [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_2.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_2_rom' (60#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_2.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1_twiddles_sin_3_2' (61#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1_twiddles_sin_3_2.v:39]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fadd_32ns_32ns_32_7_full_dsp_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fadd_32ns_32ns_32_7_full_dsp_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_ap_fadd_5_full_dsp_32' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/ip/fft1d0_ap_fadd_5_full_dsp_32.v:60]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39137]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (62#1) [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39137]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_ap_fadd_5_full_dsp_32' (81#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/ip/fft1d0_ap_fadd_5_full_dsp_32.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fadd_32ns_32ns_32_7_full_dsp_1' (82#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fadd_32ns_32ns_32_7_full_dsp_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fsub_32ns_32ns_32_7_full_dsp_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fsub_32ns_32ns_32_7_full_dsp_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_ap_fsub_5_full_dsp_32' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/ip/fft1d0_ap_fsub_5_full_dsp_32.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_ap_fsub_5_full_dsp_32' (83#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/ip/fft1d0_ap_fsub_5_full_dsp_32.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fsub_32ns_32ns_32_7_full_dsp_1' (84#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fsub_32ns_32ns_32_7_full_dsp_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_fmul_32ns_32ns_32_4_max_dsp_1' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fmul_32ns_32ns_32_4_max_dsp_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_ap_fmul_2_max_dsp_32' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/ip/fft1d0_ap_fmul_2_max_dsp_32.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_ap_fmul_2_max_dsp_32' (92#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/ip/fft1d0_ap_fmul_2_max_dsp_32.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fmul_32ns_32ns_32_4_max_dsp_1' (93#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fmul_32ns_32ns_32_4_max_dsp_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_fft_step_1' (94#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_fft_step_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'fft1d0_regslice_both' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_regslice_both.v:8]
+	Parameter DataWidth bound to: 512 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0_regslice_both' (95#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fft1d0' (96#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_fft1d0_1_0' (97#1) [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_fft1d0_1_0/synth/pfm_dynamic_fft1d0_1_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:05:04 ; elapsed = 00:05:19 . Memory (MB): peak = 5349.867 ; gain = 2195.664 ; free physical = 139913 ; free virtual = 408952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:25 ; elapsed = 00:05:41 . Memory (MB): peak = 5349.867 ; gain = 2195.664 ; free physical = 128974 ; free virtual = 397667
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:05:25 ; elapsed = 00:05:41 . Memory (MB): peak = 5349.867 ; gain = 2195.664 ; free physical = 128974 ; free virtual = 397666
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 8397.219 ; gain = 20.703 ; free physical = 71961 ; free virtual = 340931
+INFO: [Netlist 29-17] Analyzing 18528 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 17 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_fft1d0_1_0/constraints/fft1d0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 10892.836 ; gain = 0.000 ; free physical = 26259 ; free virtual = 266815
+Finished Parsing XDC File [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_fft1d0_1_0/constraints/fft1d0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_fft1d0_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_fft1d0_1_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.56 . Memory (MB): peak = 10918.234 ; gain = 21.398 ; free physical = 27164 ; free virtual = 267728
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1248 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 672 instances
+  FDE => FDRE: 576 instances
+
+write_xdc: Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 11856.234 ; gain = 938.000 ; free physical = 27503 ; free virtual = 268286
+Constraint Validation Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 11856.234 ; gain = 938.000 ; free physical = 28329 ; free virtual = 269194
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:12:09 ; elapsed = 00:12:51 . Memory (MB): peak = 11856.234 ; gain = 8702.031 ; free physical = 48495 ; free virtual = 289386
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'fft1d0_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'fft1d0_control_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'fft1d0_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'fft1d0_control_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:39:54 ; elapsed = 00:40:54 . Memory (MB): peak = 11872.242 ; gain = 8718.039 ; free physical = 157804 ; free virtual = 398406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'fft1d0_fadd_32ns_32ns_32_7_full_dsp_1:/fft1d0_ap_fadd_5_full_dsp_32_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'fft1d0_fadd_32ns_32ns_32_7_full_dsp_1:/fft1d0_ap_fadd_5_full_dsp_32_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'fft1d0_fadd_32ns_32ns_32_7_full_dsp_1:/fft1d0_ap_fadd_5_full_dsp_32_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'fft1d0_fadd_32ns_32ns_32_7_full_dsp_1:/fft1d0_ap_fadd_5_full_dsp_32_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'fft1d0_fsub_32ns_32ns_32_7_full_dsp_1:/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'fft1d0_fsub_32ns_32ns_32_7_full_dsp_1:/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'fft1d0_fsub_32ns_32ns_32_7_full_dsp_1:/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'fft1d0_fsub_32ns_32ns_32_7_full_dsp_1:/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'fft1d0_fmul_32ns_32ns_32_4_max_dsp_1:/fft1d0_ap_fmul_2_max_dsp_32_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'fft1d0_fmul_32ns_32ns_32_4_max_dsp_1:/fft1d0_ap_fmul_2_max_dsp_32_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'fft1d0_fmul_32ns_32ns_32_4_max_dsp_1:/fft1d0_ap_fmul_2_max_dsp_32_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'fft1d0_fmul_32ns_32ns_32_4_max_dsp_1:/fft1d0_ap_fmul_2_max_dsp_32_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port aresetn in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_a_tuser[0] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_a_tlast in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tuser[0] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tlast in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tvalid in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[31] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[30] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[29] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[28] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[27] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[26] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[25] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[24] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[23] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[22] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[21] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[20] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[19] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[18] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[17] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[16] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[15] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[14] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[13] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[12] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[11] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[10] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[9] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[8] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[7] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[6] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[5] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[4] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[3] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[2] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[1] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[0] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tuser[0] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tlast in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tvalid in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[7] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[6] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[5] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[4] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[3] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[2] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[1] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[0] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tuser[0] in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tlast in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_result_tready in module floating_point_v7_1_11_viv__parameterized3__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module fft1d0_fmul_32ns_32ns_32_4_max_dsp_1__72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_a_tuser[0] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_a_tlast in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tuser[0] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tlast in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tvalid in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[31] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[30] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[29] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[28] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[27] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[26] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[25] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[24] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[23] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[22] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[21] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[20] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[19] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[18] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[17] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[16] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[15] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[14] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[13] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[12] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[11] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[10] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[9] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[8] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[7] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[6] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[5] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[4] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[3] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[2] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[1] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[0] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tuser[0] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tlast in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tvalid in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[7] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[6] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[5] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[4] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[3] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[2] in module floating_point_v7_1_11_viv__parameterized3__71 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_reg[0]' (FDE) to 'step_read_reg_11779_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter1_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter1_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter2_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter2_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter3_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter3_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter4_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter4_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter5_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter5_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter6_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter6_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter7_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter7_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_reg[0]' (FDE) to 'step_read_reg_11779_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter8_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter8_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_reg[0]' (FDE) to 'step_read_reg_11779_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter1_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter1_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter9_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter9_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter1_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter1_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter2_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter2_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter10_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter10_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter2_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter2_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter3_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter3_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter11_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter11_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter3_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter3_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter4_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter4_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter12_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter12_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'fsub_32ns_32ns_32_7_full_dsp_1_U60/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fsub_32ns_32ns_32_7_full_dsp_1_U60/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'fsub_32ns_32ns_32_7_full_dsp_1_U59/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fsub_32ns_32ns_32_7_full_dsp_1_U59/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter4_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter4_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter5_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter5_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter13_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter13_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter5_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter5_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter6_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter6_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_reg[0]' (FDE) to 'step_read_reg_11779_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter14_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter14_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter6_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter6_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter7_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter7_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter1_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter1_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter15_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter15_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter7_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter7_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter8_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter8_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter2_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter2_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter16_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter16_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter8_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter8_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter9_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter9_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter3_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter3_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter17_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter17_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'twiddles_cos_1_4_load_reg_16029_reg[31]' (FDE) to 'twiddles_cos_1_4_load_reg_16029_reg[30]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter9_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter9_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter10_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter10_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter4_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter4_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter18_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter18_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter10_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter10_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter11_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter11_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'fsub_32ns_32ns_32_7_full_dsp_1_U71/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fsub_32ns_32ns_32_7_full_dsp_1_U71/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'fadd_32ns_32ns_32_7_full_dsp_1_U72/fft1d0_ap_fadd_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fadd_32ns_32ns_32_7_full_dsp_1_U72/fft1d0_ap_fadd_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter5_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter5_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter19_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter19_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'fadd_32ns_32ns_32_7_full_dsp_1_U69/fft1d0_ap_fadd_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fadd_32ns_32ns_32_7_full_dsp_1_U69/fft1d0_ap_fadd_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'fsub_32ns_32ns_32_7_full_dsp_1_U70/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fsub_32ns_32ns_32_7_full_dsp_1_U70/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_1_reg_15498_pp0_iter38_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_1_reg_15498_pp0_iter38_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_1_reg_15498_pp0_iter38_reg_reg[2] )
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter11_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter11_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter12_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter12_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter6_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter6_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter20_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter20_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter12_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter12_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter13_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter13_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'twiddles_sin_1_5_load_reg_16047_reg[27]' (FDE) to 'twiddles_sin_1_5_load_reg_16047_reg[28]'
+INFO: [Synth 8-3886] merging instance 'twiddles_sin_1_5_load_reg_16047_reg[28]' (FDE) to 'twiddles_sin_1_5_load_reg_16047_reg[29]'
+INFO: [Synth 8-3886] merging instance 'twiddles_cos_1_5_load_reg_16041_reg[27]' (FDE) to 'twiddles_cos_1_5_load_reg_16041_reg[28]'
+INFO: [Synth 8-3886] merging instance 'twiddles_cos_1_5_load_reg_16041_reg[28]' (FDE) to 'twiddles_cos_1_5_load_reg_16041_reg[29]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter7_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter7_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter21_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter21_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'twiddles_sin_1_4_load_reg_16035_reg[27]' (FDE) to 'twiddles_sin_1_4_load_reg_16035_reg[28]'
+INFO: [Synth 8-3886] merging instance 'twiddles_sin_1_4_load_reg_16035_reg[28]' (FDE) to 'twiddles_sin_1_4_load_reg_16035_reg[29]'
+INFO: [Synth 8-3886] merging instance 'twiddles_cos_1_4_load_reg_16029_reg[27]' (FDE) to 'twiddles_cos_1_4_load_reg_16029_reg[28]'
+INFO: [Synth 8-3886] merging instance 'twiddles_cos_1_4_load_reg_16029_reg[28]' (FDE) to 'twiddles_cos_1_4_load_reg_16029_reg[29]'
+INFO: [Synth 8-3886] merging instance 'twiddles_sin_1_3_load_reg_16023_reg[26]' (FDE) to 'twiddles_sin_1_3_load_reg_16023_reg[27]'
+INFO: [Synth 8-3886] merging instance 'twiddles_sin_1_3_load_reg_16023_reg[27]' (FDE) to 'twiddles_sin_1_3_load_reg_16023_reg[28]'
+INFO: [Synth 8-3886] merging instance 'twiddles_sin_1_3_load_reg_16023_reg[28]' (FDE) to 'twiddles_sin_1_3_load_reg_16023_reg[29]'
+INFO: [Synth 8-3886] merging instance 'twiddles_cos_1_3_load_reg_16017_reg[26]' (FDE) to 'twiddles_cos_1_3_load_reg_16017_reg[29]'
+INFO: [Synth 8-3886] merging instance 'twiddles_cos_1_3_load_reg_16017_reg[27]' (FDE) to 'twiddles_cos_1_3_load_reg_16017_reg[28]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter13_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter13_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter14_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter14_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter8_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter8_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter22_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter22_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_1_reg_14279_reg[0]' (FDE) to 'step_read_reg_11779_reg[4]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter14_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter14_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter15_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter15_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter9_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter9_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter23_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter23_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_1_reg_14279_pp0_iter1_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter1_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter15_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter15_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter16_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter16_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter10_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter10_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter24_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter24_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_1_reg_14279_pp0_iter2_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter2_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter16_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter16_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'toggle_4_reg_14579_pp0_iter17_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter17_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'toggle_2_reg_14379_pp0_iter11_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter11_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsub_32ns_32ns_32_7_full_dsp_1_U85/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fsub_32ns_32ns_32_7_full_dsp_1_U85/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'fsub_32ns_32ns_32_7_full_dsp_1_U86/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fsub_32ns_32ns_32_7_full_dsp_1_U86/fft1d0_ap_fsub_5_full_dsp_32_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'toggle_5_reg_14644_pp0_iter25_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter25_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'toggle_1_reg_14279_pp0_iter3_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter3_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'toggle_3_reg_14479_pp0_iter17_reg_reg[0]' (FDE) to 'step_read_reg_11779_pp0_iter17_reg_reg[2]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_3_reg_16926_pp0_iter70_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_3_reg_16926_pp0_iter70_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_3_reg_16926_pp0_iter70_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__6.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__6.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__7.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__7.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__6.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__6.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__7.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__7.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__8.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__8.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__9.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__9.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__8.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__8.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__9.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__9.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__10.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__10.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__11.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__11.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__10.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__10.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__11.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__11.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__12.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__12.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__13.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__13.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__12.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__12.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__13.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__13.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__14.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__14.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__14.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__14.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__15.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__15.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__15.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__15.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__16.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__16.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__16.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__16.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__17.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__17.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__17.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__17.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__18.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__18.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__18.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__18.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__19.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__19.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__20.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__20.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__19.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__19.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__20.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__20.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__21.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__21.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__22.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__22.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__21.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__21.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__22.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__22.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__23.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__23.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__24.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__24.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__23.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__23.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__24.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__24.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__25.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__parameterized1__25.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_11_viv__25.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_11_viv__25.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_reg_14969_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_reg_14969_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_reg_14969_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_2_reg_16191_pp0_iter54_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_2_reg_16191_pp0_iter54_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\zext_ln208_2_reg_16191_pp0_iter54_reg_reg[2] )
+INFO: [Synth 8-4471] merging register 'empty_reg_12602_reg[31:6]' into 'sub_reg_12607_reg[31:6]' [/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/1552/hdl/verilog/fft1d0.v:3469]
+INFO: [Synth 8-5544] ROM "data11" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sub_reg_12607_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sub_reg_12607_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sub_reg_12607_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\empty_reg_12602_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\empty_reg_12602_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\empty_reg_12602_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\empty_reg_12602_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\empty_reg_12602_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\empty_reg_12602_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sub_reg_12607_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sub_reg_12607_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sub_reg_12607_reg[5] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:58:02 ; elapsed = 01:01:20 . Memory (MB): peak = 11884.168 ; gain = 8729.965 ; free physical = 144340 ; free virtual = 388806
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 01:02:11 ; elapsed = 01:05:39 . Memory (MB): peak = 11884.168 ; gain = 8729.965 ; free physical = 54810 ; free virtual = 301912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 01:20:05 ; elapsed = 01:24:34 . Memory (MB): peak = 11884.168 ; gain = 8729.965 ; free physical = 125481 ; free virtual = 372386
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 01:48:30 ; elapsed = 01:53:06 . Memory (MB): peak = 11892.172 ; gain = 8737.969 ; free physical = 83622 ; free virtual = 335032
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 01:54:50 ; elapsed = 01:59:44 . Memory (MB): peak = 13235.180 ; gain = 10080.977 ; free physical = 95526 ; free virtual = 347978
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 01:54:50 ; elapsed = 01:59:44 . Memory (MB): peak = 13235.180 ; gain = 10080.977 ; free physical = 95496 ; free virtual = 347948
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 01:55:43 ; elapsed = 02:00:37 . Memory (MB): peak = 13235.180 ; gain = 10080.977 ; free physical = 95866 ; free virtual = 348721
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 01:55:44 ; elapsed = 02:00:38 . Memory (MB): peak = 13235.180 ; gain = 10080.977 ; free physical = 95560 ; free virtual = 348425
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 01:55:58 ; elapsed = 02:00:53 . Memory (MB): peak = 13235.180 ; gain = 10080.977 ; free physical = 97533 ; free virtual = 350814
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 01:56:00 ; elapsed = 02:00:55 . Memory (MB): peak = 13235.180 ; gain = 10080.977 ; free physical = 97327 ; free virtual = 350717
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+-------+
+|      |Cell     |Count  |
++------+---------+-------+
+|1     |CARRY8   |      8|
+|2     |DSP48E1  |    672|
+|3     |LUT1     |    292|
+|4     |LUT2     |   5801|
+|5     |LUT3     |  27705|
+|6     |LUT4     |  41844|
+|7     |LUT5     |  13434|
+|8     |LUT6     |  14342|
+|9     |MUXCY    |  12672|
+|10    |MUXF7    |      2|
+|11    |MUXF8    |      1|
+|12    |RAMB18E2 |     48|
+|42    |SRL16E   |    979|
+|43    |SRLC32E  |  97445|
+|44    |XORCY    |   4032|
+|45    |FDE      |    576|
+|46    |FDRE     | 144001|
+|47    |FDSE     |      1|
++------+---------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 01:56:00 ; elapsed = 02:00:55 . Memory (MB): peak = 13235.180 ; gain = 10080.977 ; free physical = 97319 ; free virtual = 350717
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 100 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 01:49:34 ; elapsed = 01:54:02 . Memory (MB): peak = 13239.090 ; gain = 3578.520 ; free physical = 100953 ; free virtual = 354370
+Synthesis Optimization Complete : Time (s): cpu = 01:56:06 ; elapsed = 02:00:57 . Memory (MB): peak = 13239.090 ; gain = 10084.887 ; free physical = 101269 ; free virtual = 354370
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 13239.090 ; gain = 0.000 ; free physical = 101875 ; free virtual = 354027
+INFO: [Netlist 29-17] Analyzing 17963 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 7 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_0_1_U/fft1d0_fft_step_1_twiddles_cos_0_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_0_2_U/fft1d0_fft_step_1_twiddles_cos_0_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_0_4_U/fft1d0_fft_step_1_twiddles_cos_0_4_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_0_5_U/fft1d0_fft_step_1_twiddles_cos_0_5_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_1_0_U/fft1d0_fft_step_1_twiddles_cos_1_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_1_1_U/fft1d0_fft_step_1_twiddles_cos_1_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_1_2_U/fft1d0_fft_step_1_twiddles_cos_1_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_1_3_U/fft1d0_fft_step_1_twiddles_cos_1_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_1_4_U/fft1d0_fft_step_1_twiddles_cos_1_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_1_5_U/fft1d0_fft_step_1_twiddles_cos_1_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_2_0_U/fft1d0_fft_step_1_twiddles_cos_2_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_2_1_U/fft1d0_fft_step_1_twiddles_cos_2_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_2_2_U/fft1d0_fft_step_1_twiddles_cos_2_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_2_3_U/fft1d0_fft_step_1_twiddles_cos_2_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_2_4_U/fft1d0_fft_step_1_twiddles_cos_2_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_2_5_U/fft1d0_fft_step_1_twiddles_cos_2_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_3_0_U/fft1d0_fft_step_1_twiddles_cos_3_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_3_1_U/fft1d0_fft_step_1_twiddles_cos_3_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_3_2_U/fft1d0_fft_step_1_twiddles_cos_3_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_3_3_U/fft1d0_fft_step_1_twiddles_cos_3_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_3_4_U/fft1d0_fft_step_1_twiddles_cos_3_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_cos_3_5_U/fft1d0_fft_step_1_twiddles_cos_3_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_0_1_U/fft1d0_fft_step_1_twiddles_sin_0_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_0_2_U/fft1d0_fft_step_1_twiddles_sin_0_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_0_4_U/fft1d0_fft_step_1_twiddles_sin_0_4_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_0_5_U/fft1d0_fft_step_1_twiddles_sin_0_5_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_1_0_U/fft1d0_fft_step_1_twiddles_sin_1_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_1_1_U/fft1d0_fft_step_1_twiddles_sin_1_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_1_2_U/fft1d0_fft_step_1_twiddles_sin_1_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_1_3_U/fft1d0_fft_step_1_twiddles_sin_1_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_1_4_U/fft1d0_fft_step_1_twiddles_sin_1_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_1_5_U/fft1d0_fft_step_1_twiddles_sin_1_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_2_0_U/fft1d0_fft_step_1_twiddles_sin_2_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_2_1_U/fft1d0_fft_step_1_twiddles_sin_2_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_2_2_U/fft1d0_fft_step_1_twiddles_sin_2_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_2_3_U/fft1d0_fft_step_1_twiddles_sin_2_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_2_4_U/fft1d0_fft_step_1_twiddles_sin_2_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_2_5_U/fft1d0_fft_step_1_twiddles_sin_2_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_3_0_U/fft1d0_fft_step_1_twiddles_sin_3_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_3_1_U/fft1d0_fft_step_1_twiddles_sin_3_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_3_2_U/fft1d0_fft_step_1_twiddles_sin_3_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_3_3_U/fft1d0_fft_step_1_twiddles_sin_3_0_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_3_4_U/fft1d0_fft_step_1_twiddles_sin_3_1_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/grp_fft_step_1_fu_2247/twiddles_sin_3_5_U/fft1d0_fft_step_1_twiddles_sin_3_2_rom_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/twiddles_cos_0_0_load_reg_15049_reg[30]_i_1 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/twiddles_cos_0_3_load_reg_15081_reg[30]_i_1 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/twiddles_sin_0_0_load_reg_15055_reg[31]_i_1 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/twiddles_sin_0_3_load_reg_15087_reg[30]_i_1 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 13239.090 ; gain = 0.000 ; free physical = 98482 ; free virtual = 350644
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3456 instances were transformed.
+  (CARRY4) => CARRY8: 2208 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 672 instances
+  FDE => FDRE: 576 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+595 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 01:57:42 ; elapsed = 02:02:41 . Memory (MB): peak = 13239.090 ; gain = 10820.246 ; free physical = 100397 ; free virtual = 352753
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_fft1d0_1_0_synth_1/pfm_dynamic_fft1d0_1_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 13239.090 ; gain = 0.000 ; free physical = 101360 ; free virtual = 354253
+write_verilog: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 13239.090 ; gain = 0.000 ; free physical = 102076 ; free virtual = 355123
+write_vhdl: Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 13239.090 ; gain = 0.000 ; free physical = 99255 ; free virtual = 352417
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pfm_dynamic_fft1d0_1_0, cache-ID = ebebf2dcaa2799a9
+INFO: [Coretcl 2-1174] Renamed 19677 cell refs.
+INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/fft/build/u280/Xilinx_Alveo_U280.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_fft1d0_1_0_synth_1/pfm_dynamic_fft1d0_1_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 13239.090 ; gain = 0.000 ; free physical = 101243 ; free virtual = 354353
+INFO: [runtcl-4] Executing : report_utilization -file pfm_dynamic_fft1d0_1_0_utilization_synth.rpt -pb pfm_dynamic_fft1d0_1_0_utilization_synth.pb
+write_verilog: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 13239.090 ; gain = 0.000 ; free physical = 100627 ; free virtual = 353950
+write_vhdl: Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 13239.090 ; gain = 0.000 ; free physical = 99299 ; free virtual = 352747
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 29 12:45:08 2021...

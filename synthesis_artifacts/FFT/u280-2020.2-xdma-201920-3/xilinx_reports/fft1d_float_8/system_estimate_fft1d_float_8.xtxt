@@ -1,0 +1,50 @@
+===============================================================================
+Version:    v++ v2020.2 (64-bit)
+Build:      SW Build (by xbuild) on 2020-11-18-05:13:29
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Oct 29 10:30:20 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             fft1d_float_8
+Target Device:           xilinx:u280:xdma:201920.3
+Target Clock:            300.000000MHz
+Total number of kernels: 3
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+fft1d0       clc   fpga0:OCL_REGION_0  fft1d_float_8   1
+store0       clc   fpga0:OCL_REGION_0  fft1d_float_8   1
+fetch0       clc   fpga0:OCL_REGION_0  fft1d_float_8   1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     fft1d_float_8
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name  Target Frequency  Estimated Frequency
+------------  -----------  -----------  ----------------  -------------------
+fetch0_1      fetch0       fetch0       300.300293        411.015198
+fft1d0_1      fft1d0       fft_step_1   300.300293        426.985474
+fft1d0_1      fft1d0       fft1d0       300.300293        426.985474
+store0_1      store0       store0       300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name  Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  -----------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+fetch0_1      fetch0       fetch0       undef           undef          undef         undef           undef            undef           undef
+fft1d0_1      fft1d0       fft_step_1   1               83             83            83              0.277 us         0.277 us        0.277 us
+fft1d0_1      fft1d0       fft1d0       undef           undef          undef         undef           undef            undef           undef
+store0_1      store0       store0       undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name  FF      LUT     DSP  BRAM  URAM
+------------  -----------  -----------  ------  ------  ---  ----  ----
+fetch0_1      fetch0       fetch0       70980   111972  0    30    0
+fft1d0_1      fft1d0       fft_step_1   163386  70847   0    48    0
+fft1d0_1      fft1d0       fft1d0       196497  76507   0    48    0
+store0_1      store0       store0       2336    2430    0    30    0
+-------------------------------------------------------------------------------

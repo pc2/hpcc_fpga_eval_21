@@ -1,0 +1,65 @@
+diff --git a/LINPACK/src/host/execution_types/execution_pcie.hpp b/LINPACK/src/host/execution_types/execution_pcie.hpp
+index 3a04b04..0e7d0e3 100644
+--- a/LINPACK/src/host/execution_types/execution_pcie.hpp
++++ b/LINPACK/src/host/execution_types/execution_pcie.hpp
+@@ -162,6 +162,8 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+         // For every row of blocks create kernels and enqueue them
+         for (int block_row=0; block_row < config.programSettings->matrixSize / config.programSettings->blockSize * config.programSettings->torus_width; block_row++) {
+ 
++            std::cout << "Torus " << config.programSettings->torus_row << "," << config.programSettings->torus_col <<   " Iteration Start: " << std::chrono::high_resolution_clock::now().time_since_epoch().count() << std::endl;
++
+             int local_block_row_remainder = (block_row % config.programSettings->torus_width);
+             int local_block_row= (block_row / config.programSettings->torus_width);
+             bool in_same_row_as_lu = local_block_row_remainder == config.programSettings->torus_row;
+@@ -229,10 +231,15 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+             // All tasks until now need to be executed so we can use the result of the LU factorization and communicate it via MPI with the other FPGAs
+             lu_queues.back().finish();
+ 
++            std::cout << "Torus " << config.programSettings->torus_row << "," << config.programSettings->torus_col <<  " MPI LU Start: " << std::chrono::high_resolution_clock::now().time_since_epoch().count() << std::endl;
++
+             // Broadcast LU block in column to update all left blocks
+             MPI_Bcast(lu_block, config.programSettings->blockSize*config.programSettings->blockSize, MPI_DATA_TYPE, local_block_row_remainder, col_communicator);
+             // Broadcast LU block in row to update all top blocks
+             MPI_Bcast(lu_trans_block, config.programSettings->blockSize*config.programSettings->blockSize, MPI_DATA_TYPE, local_block_row_remainder, row_communicator);
++
++            std::cout << "Torus " << config.programSettings->torus_row << "," << config.programSettings->torus_col <<   " MPI LU End: " << std::chrono::high_resolution_clock::now().time_since_epoch().count()  << std::endl;
++           
+            }
+ 
+             if (num_top_blocks > 0) {
+@@ -328,6 +335,8 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+             top_queues.back().finish();
+             left_queues.back().finish();
+ 
++            std::cout << "Torus " << config.programSettings->torus_row << "," << config.programSettings->torus_col <<   " MPI Start: " << std::chrono::high_resolution_clock::now().time_since_epoch().count() << std::endl;
++
+             // Send the left and top blocks to all other ranks so they can be used to update all inner blocks
+             for (int lbi=0; lbi < blocks_per_row - local_block_row; lbi++) {
+                 MPI_Bcast(left_blocks[lbi], config.programSettings->blockSize*config.programSettings->blockSize, MPI_DATA_TYPE, local_block_row_remainder, row_communicator);
+@@ -335,6 +344,7 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+             for (int tbi=0; tbi < blocks_per_row  - local_block_row; tbi++) {
+                 MPI_Bcast(top_blocks[tbi], config.programSettings->blockSize*config.programSettings->blockSize, MPI_DATA_TYPE, local_block_row_remainder, col_communicator);
+             }
++            std::cout << "Torus " << config.programSettings->torus_row << "," << config.programSettings->torus_col <<   " MPI End: " << std::chrono::high_resolution_clock::now().time_since_epoch().count() << std::endl;
+ 
+             // update all remaining inner blocks using only global memory
+ 
+@@ -368,6 +378,8 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+             }
+             current_update = 0;    
+ 
++            std::cout << "Torus " << config.programSettings->torus_row << "," << config.programSettings->torus_col <<   " MM Schedule Start: " << std::chrono::high_resolution_clock::now().time_since_epoch().count() << std::endl;
++
+             #pragma omp for
+             for (int lbi=1; lbi < num_inner_block_rows; lbi++) {
+ 
+@@ -559,6 +571,9 @@ calculate(const hpcc_base::ExecutionSettings<linpack::LinpackProgramSettings>&co
+                 }
+             }
+ 
++            std::cout << "Torus " << config.programSettings->torus_row << "," << config.programSettings->torus_col <<   " MM Schedule End: " << std::chrono::high_resolution_clock::now().time_since_epoch().count() << std::endl;
++            std::cout << "Torus " << config.programSettings->torus_row << "," << config.programSettings->torus_col <<   " Iteration End: " << std::chrono::high_resolution_clock::now().time_since_epoch().count() << std::endl;
++
+ #ifndef NDEBUG
+             MPI_Barrier(MPI_COMM_WORLD);
+             if (is_calulating_lu_block) std::cout << "---------------" << std::endl;

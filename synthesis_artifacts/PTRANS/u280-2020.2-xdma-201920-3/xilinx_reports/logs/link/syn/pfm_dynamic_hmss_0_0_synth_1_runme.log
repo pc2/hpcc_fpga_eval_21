@@ -1,0 +1,441 @@
+
+*** Running vivado
+    with args -log pfm_dynamic_hmss_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pfm_dynamic_hmss_0_0.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source pfm_dynamic_hmss_0_0.tcl -notrace
+INFO: Dispatch client connection id - 33183
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/int/xo/ip_repo/xilinx_com_hls_transpose0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top pfm_dynamic_hmss_0_0 -part xcu280-fsvh2892-2L-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5671
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3367.715 ; gain = 166.688 ; free physical = 219912 ; free virtual = 430843
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pfm_dynamic_hmss_0_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/synth/pfm_dynamic_hmss_0_0.v:85]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_axi_apb_bridge_inst_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_axi_apb_bridge_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_axi_apb_bridge_inst_0' (1#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_axi_apb_bridge_inst_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_inst_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_hbm_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_inst_0' (2#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_hbm_inst_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'AXI_12_RDATA_PARITY' of module 'bd_5dca_hbm_inst_0' is unconnected for instance 'hbm_inst' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:353]
+WARNING: [Synth 8-7071] port 'AXI_12_RID' of module 'bd_5dca_hbm_inst_0' is unconnected for instance 'hbm_inst' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:353]
+WARNING: [Synth 8-7071] port 'AXI_12_BID' of module 'bd_5dca_hbm_inst_0' is unconnected for instance 'hbm_inst' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:353]
+WARNING: [Synth 8-7023] instance 'hbm_inst' of module 'bd_5dca_hbm_inst_0' has 61 connections declared, but only 58 given [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:353]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_reset_sync_SLR0_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_hbm_reset_sync_SLR0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_reset_sync_SLR0_0' (3#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_hbm_reset_sync_SLR0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_5dca_hbm_reset_sync_SLR0_0' is unconnected for instance 'hbm_reset_sync_SLR0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:412]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_5dca_hbm_reset_sync_SLR0_0' is unconnected for instance 'hbm_reset_sync_SLR0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:412]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_5dca_hbm_reset_sync_SLR0_0' is unconnected for instance 'hbm_reset_sync_SLR0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:412]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_5dca_hbm_reset_sync_SLR0_0' is unconnected for instance 'hbm_reset_sync_SLR0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:412]
+WARNING: [Synth 8-7023] instance 'hbm_reset_sync_SLR0' of module 'bd_5dca_hbm_reset_sync_SLR0_0' has 10 connections declared, but only 6 given [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:412]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_hbm_reset_sync_SLR2_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_hbm_reset_sync_SLR2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_hbm_reset_sync_SLR2_0' (4#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_hbm_reset_sync_SLR2_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_5dca_hbm_reset_sync_SLR2_0' is unconnected for instance 'hbm_reset_sync_SLR2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:419]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_5dca_hbm_reset_sync_SLR2_0' is unconnected for instance 'hbm_reset_sync_SLR2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:419]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_5dca_hbm_reset_sync_SLR2_0' is unconnected for instance 'hbm_reset_sync_SLR2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:419]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_5dca_hbm_reset_sync_SLR2_0' is unconnected for instance 'hbm_reset_sync_SLR2' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:419]
+WARNING: [Synth 8-7023] instance 'hbm_reset_sync_SLR2' of module 'bd_5dca_hbm_reset_sync_SLR2_0' has 10 connections declared, but only 6 given [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:419]
+INFO: [Synth 8-6157] synthesizing module 'init_logic_imp_156LN22' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:562]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_init_concat_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_7/synth/bd_5dca_init_concat_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 1 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter IN32_WIDTH bound to: 1 - type: integer 
+	Parameter IN33_WIDTH bound to: 1 - type: integer 
+	Parameter IN34_WIDTH bound to: 1 - type: integer 
+	Parameter IN35_WIDTH bound to: 1 - type: integer 
+	Parameter IN36_WIDTH bound to: 1 - type: integer 
+	Parameter IN37_WIDTH bound to: 1 - type: integer 
+	Parameter IN38_WIDTH bound to: 1 - type: integer 
+	Parameter IN39_WIDTH bound to: 1 - type: integer 
+	Parameter IN40_WIDTH bound to: 1 - type: integer 
+	Parameter IN41_WIDTH bound to: 1 - type: integer 
+	Parameter IN42_WIDTH bound to: 1 - type: integer 
+	Parameter IN43_WIDTH bound to: 1 - type: integer 
+	Parameter IN44_WIDTH bound to: 1 - type: integer 
+	Parameter IN45_WIDTH bound to: 1 - type: integer 
+	Parameter IN46_WIDTH bound to: 1 - type: integer 
+	Parameter IN47_WIDTH bound to: 1 - type: integer 
+	Parameter IN48_WIDTH bound to: 1 - type: integer 
+	Parameter IN49_WIDTH bound to: 1 - type: integer 
+	Parameter IN50_WIDTH bound to: 1 - type: integer 
+	Parameter IN51_WIDTH bound to: 1 - type: integer 
+	Parameter IN52_WIDTH bound to: 1 - type: integer 
+	Parameter IN53_WIDTH bound to: 1 - type: integer 
+	Parameter IN54_WIDTH bound to: 1 - type: integer 
+	Parameter IN55_WIDTH bound to: 1 - type: integer 
+	Parameter IN56_WIDTH bound to: 1 - type: integer 
+	Parameter IN57_WIDTH bound to: 1 - type: integer 
+	Parameter IN58_WIDTH bound to: 1 - type: integer 
+	Parameter IN59_WIDTH bound to: 1 - type: integer 
+	Parameter IN60_WIDTH bound to: 1 - type: integer 
+	Parameter IN61_WIDTH bound to: 1 - type: integer 
+	Parameter IN62_WIDTH bound to: 1 - type: integer 
+	Parameter IN63_WIDTH bound to: 1 - type: integer 
+	Parameter IN64_WIDTH bound to: 1 - type: integer 
+	Parameter IN65_WIDTH bound to: 1 - type: integer 
+	Parameter IN66_WIDTH bound to: 1 - type: integer 
+	Parameter IN67_WIDTH bound to: 1 - type: integer 
+	Parameter IN68_WIDTH bound to: 1 - type: integer 
+	Parameter IN69_WIDTH bound to: 1 - type: integer 
+	Parameter IN70_WIDTH bound to: 1 - type: integer 
+	Parameter IN71_WIDTH bound to: 1 - type: integer 
+	Parameter IN72_WIDTH bound to: 1 - type: integer 
+	Parameter IN73_WIDTH bound to: 1 - type: integer 
+	Parameter IN74_WIDTH bound to: 1 - type: integer 
+	Parameter IN75_WIDTH bound to: 1 - type: integer 
+	Parameter IN76_WIDTH bound to: 1 - type: integer 
+	Parameter IN77_WIDTH bound to: 1 - type: integer 
+	Parameter IN78_WIDTH bound to: 1 - type: integer 
+	Parameter IN79_WIDTH bound to: 1 - type: integer 
+	Parameter IN80_WIDTH bound to: 1 - type: integer 
+	Parameter IN81_WIDTH bound to: 1 - type: integer 
+	Parameter IN82_WIDTH bound to: 1 - type: integer 
+	Parameter IN83_WIDTH bound to: 1 - type: integer 
+	Parameter IN84_WIDTH bound to: 1 - type: integer 
+	Parameter IN85_WIDTH bound to: 1 - type: integer 
+	Parameter IN86_WIDTH bound to: 1 - type: integer 
+	Parameter IN87_WIDTH bound to: 1 - type: integer 
+	Parameter IN88_WIDTH bound to: 1 - type: integer 
+	Parameter IN89_WIDTH bound to: 1 - type: integer 
+	Parameter IN90_WIDTH bound to: 1 - type: integer 
+	Parameter IN91_WIDTH bound to: 1 - type: integer 
+	Parameter IN92_WIDTH bound to: 1 - type: integer 
+	Parameter IN93_WIDTH bound to: 1 - type: integer 
+	Parameter IN94_WIDTH bound to: 1 - type: integer 
+	Parameter IN95_WIDTH bound to: 1 - type: integer 
+	Parameter IN96_WIDTH bound to: 1 - type: integer 
+	Parameter IN97_WIDTH bound to: 1 - type: integer 
+	Parameter IN98_WIDTH bound to: 1 - type: integer 
+	Parameter IN99_WIDTH bound to: 1 - type: integer 
+	Parameter IN100_WIDTH bound to: 1 - type: integer 
+	Parameter IN101_WIDTH bound to: 1 - type: integer 
+	Parameter IN102_WIDTH bound to: 1 - type: integer 
+	Parameter IN103_WIDTH bound to: 1 - type: integer 
+	Parameter IN104_WIDTH bound to: 1 - type: integer 
+	Parameter IN105_WIDTH bound to: 1 - type: integer 
+	Parameter IN106_WIDTH bound to: 1 - type: integer 
+	Parameter IN107_WIDTH bound to: 1 - type: integer 
+	Parameter IN108_WIDTH bound to: 1 - type: integer 
+	Parameter IN109_WIDTH bound to: 1 - type: integer 
+	Parameter IN110_WIDTH bound to: 1 - type: integer 
+	Parameter IN111_WIDTH bound to: 1 - type: integer 
+	Parameter IN112_WIDTH bound to: 1 - type: integer 
+	Parameter IN113_WIDTH bound to: 1 - type: integer 
+	Parameter IN114_WIDTH bound to: 1 - type: integer 
+	Parameter IN115_WIDTH bound to: 1 - type: integer 
+	Parameter IN116_WIDTH bound to: 1 - type: integer 
+	Parameter IN117_WIDTH bound to: 1 - type: integer 
+	Parameter IN118_WIDTH bound to: 1 - type: integer 
+	Parameter IN119_WIDTH bound to: 1 - type: integer 
+	Parameter IN120_WIDTH bound to: 1 - type: integer 
+	Parameter IN121_WIDTH bound to: 1 - type: integer 
+	Parameter IN122_WIDTH bound to: 1 - type: integer 
+	Parameter IN123_WIDTH bound to: 1 - type: integer 
+	Parameter IN124_WIDTH bound to: 1 - type: integer 
+	Parameter IN125_WIDTH bound to: 1 - type: integer 
+	Parameter IN126_WIDTH bound to: 1 - type: integer 
+	Parameter IN127_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 2 - type: integer 
+	Parameter NUM_PORTS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (5#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_init_concat_0' (6#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_7/synth/bd_5dca_init_concat_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_init_reduce_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_init_reduce_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_init_reduce_0' (7#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_init_reduce_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'init_logic_imp_156LN22' (8#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:562]
+INFO: [Synth 8-6157] synthesizing module 'path_12_imp_ZKKHAF' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:587]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_interconnect0_12_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_interconnect0_12_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_interconnect0_12_0' (9#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_interconnect0_12_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_slice0_12_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_slice0_12_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_slice0_12_0' (10#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_slice0_12_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_5dca_slice0_12_0' is unconnected for instance 'slice0_12' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:965]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_5dca_slice0_12_0' is unconnected for instance 'slice0_12' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:965]
+WARNING: [Synth 8-7023] instance 'slice0_12' of module 'bd_5dca_slice0_12_0' has 68 connections declared, but only 66 given [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:965]
+INFO: [Synth 8-6155] done synthesizing module 'path_12_imp_ZKKHAF' (11#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:587]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_util_vector_logic_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_util_vector_logic_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_util_vector_logic_0' (12#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_util_vector_logic_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_5dca_vip_S00_0' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_vip_S00_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca_vip_S00_0' (13#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/.Xil/Vivado-5370-alveo0/realtime/bd_5dca_vip_S00_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awlock' of module 'bd_5dca_vip_S00_0' is unconnected for instance 'vip_S00' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:503]
+WARNING: [Synth 8-7071] port 'm_axi_awcache' of module 'bd_5dca_vip_S00_0' is unconnected for instance 'vip_S00' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:503]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'bd_5dca_vip_S00_0' is unconnected for instance 'vip_S00' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:503]
+WARNING: [Synth 8-7071] port 'm_axi_awqos' of module 'bd_5dca_vip_S00_0' is unconnected for instance 'vip_S00' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:503]
+WARNING: [Synth 8-7071] port 'm_axi_arlock' of module 'bd_5dca_vip_S00_0' is unconnected for instance 'vip_S00' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:503]
+WARNING: [Synth 8-7071] port 'm_axi_arcache' of module 'bd_5dca_vip_S00_0' is unconnected for instance 'vip_S00' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:503]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'bd_5dca_vip_S00_0' is unconnected for instance 'vip_S00' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:503]
+WARNING: [Synth 8-7071] port 'm_axi_arqos' of module 'bd_5dca_vip_S00_0' is unconnected for instance 'vip_S00' [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:503]
+WARNING: [Synth 8-7023] instance 'vip_S00' of module 'bd_5dca_vip_S00_0' has 64 connections declared, but only 56 given [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:503]
+INFO: [Synth 8-6155] done synthesizing module 'bd_5dca' (14#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/synth/bd_5dca.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pfm_dynamic_hmss_0_0' (15#1) [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/synth/pfm_dynamic_hmss_0_0.v:85]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3417.621 ; gain = 216.594 ; free physical = 220649 ; free virtual = 431510
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3434.465 ; gain = 233.438 ; free physical = 220692 ; free virtual = 431560
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3434.465 ; gain = 233.438 ; free physical = 220692 ; free virtual = 431560
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3434.465 ; gain = 0.000 ; free physical = 220639 ; free virtual = 431517
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/bd_5dca_hbm_inst_0/bd_5dca_hbm_inst_0_in_context.xdc] for cell 'inst/hbm_inst'
+WARNING: [Constraints 18-619] A clock with name 'hbm_ref_clk' already exists, overwriting the previous clock with the same name. [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/bd_5dca_hbm_inst_0/bd_5dca_hbm_inst_0_in_context.xdc:2]
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_0/bd_5dca_hbm_inst_0/bd_5dca_hbm_inst_0_in_context.xdc] for cell 'inst/hbm_inst'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_1/bd_5dca_hbm_reset_sync_SLR0_0/bd_5dca_hbm_reset_sync_SLR0_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR0'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_1/bd_5dca_hbm_reset_sync_SLR0_0/bd_5dca_hbm_reset_sync_SLR0_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR0'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_2/bd_5dca_hbm_reset_sync_SLR2_0/bd_5dca_hbm_reset_sync_SLR0_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR2'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_2/bd_5dca_hbm_reset_sync_SLR2_0/bd_5dca_hbm_reset_sync_SLR0_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR2'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_5/bd_5dca_vip_S00_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S00'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_5/bd_5dca_vip_S00_0/bd_5dca_vip_S00_0_in_context.xdc] for cell 'inst/vip_S00'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_6/bd_5dca_axi_apb_bridge_inst_0/bd_5dca_axi_apb_bridge_inst_0_in_context.xdc] for cell 'inst/axi_apb_bridge_inst'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_6/bd_5dca_axi_apb_bridge_inst_0/bd_5dca_axi_apb_bridge_inst_0_in_context.xdc] for cell 'inst/axi_apb_bridge_inst'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_9/bd_5dca_util_vector_logic_0/bd_5dca_util_vector_logic_0_in_context.xdc] for cell 'inst/util_vector_logic'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_9/bd_5dca_util_vector_logic_0/bd_5dca_util_vector_logic_0_in_context.xdc] for cell 'inst/util_vector_logic'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_3/bd_5dca_interconnect0_12_0/bd_5dca_interconnect0_12_0_in_context.xdc] for cell 'inst/path_12/interconnect0_12'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_3/bd_5dca_interconnect0_12_0/bd_5dca_interconnect0_12_0_in_context.xdc] for cell 'inst/path_12/interconnect0_12'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_4/bd_5dca_slice0_12_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_12/slice0_12'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_4/bd_5dca_slice0_12_0/bd_5dca_slice0_12_0_in_context.xdc] for cell 'inst/path_12/slice0_12'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_8/bd_5dca_init_reduce_0/bd_5dca_init_reduce_0_in_context.xdc] for cell 'inst/init_logic/init_reduce'
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/pfm_dynamic_hmss_0_0/bd_0/ip/ip_8/bd_5dca_init_reduce_0/bd_5dca_init_reduce_0_in_context.xdc] for cell 'inst/init_logic/init_reduce'
+Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3483.027 ; gain = 0.000 ; free physical = 220169 ; free virtual = 431036
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3488.965 ; gain = 5.938 ; free physical = 220172 ; free virtual = 431039
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3488.965 ; gain = 287.938 ; free physical = 221151 ; free virtual = 432024
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3488.965 ; gain = 287.938 ; free physical = 221157 ; free virtual = 432030
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/hbm_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/hbm_reset_sync_SLR0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/hbm_reset_sync_SLR2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/vip_S00. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/axi_apb_bridge_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/util_vector_logic. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/path_12/interconnect0_12. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/path_12/slice0_12. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/init_logic/init_concat. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/init_logic/init_reduce. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3488.965 ; gain = 287.938 ; free physical = 221181 ; free virtual = 432053
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3488.965 ; gain = 287.938 ; free physical = 221184 ; free virtual = 432053
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 3488.965 ; gain = 287.938 ; free physical = 220904 ; free virtual = 431773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'hbm_ref_clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 3875.223 ; gain = 674.195 ; free physical = 216494 ; free virtual = 427492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 3875.223 ; gain = 674.195 ; free physical = 216482 ; free virtual = 427480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 3895.262 ; gain = 694.234 ; free physical = 216399 ; free virtual = 427397
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 3901.199 ; gain = 700.172 ; free physical = 215909 ; free virtual = 426956
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 3901.199 ; gain = 700.172 ; free physical = 215908 ; free virtual = 426955
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 3901.199 ; gain = 700.172 ; free physical = 215909 ; free virtual = 426959
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 3901.199 ; gain = 700.172 ; free physical = 215889 ; free virtual = 426940
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 3901.199 ; gain = 700.172 ; free physical = 215901 ; free virtual = 426952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 3901.199 ; gain = 700.172 ; free physical = 215901 ; free virtual = 426953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |bd_5dca_axi_apb_bridge_inst_0 |         1|
+|2     |bd_5dca_hbm_inst_0            |         1|
+|3     |bd_5dca_hbm_reset_sync_SLR0_0 |         1|
+|4     |bd_5dca_hbm_reset_sync_SLR2_0 |         1|
+|5     |bd_5dca_util_vector_logic_0   |         1|
+|6     |bd_5dca_vip_S00_0             |         1|
+|7     |bd_5dca_init_reduce_0         |         1|
+|8     |bd_5dca_interconnect0_12_0    |         1|
+|9     |bd_5dca_slice0_12_0           |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------+------+
+|      |Cell                        |Count |
++------+----------------------------+------+
+|1     |bd_5dca_axi_apb_bridge_inst |     1|
+|2     |bd_5dca_hbm_inst            |     1|
+|3     |bd_5dca_hbm_reset_sync_SLR0 |     1|
+|4     |bd_5dca_hbm_reset_sync_SLR2 |     1|
+|5     |bd_5dca_init_reduce         |     1|
+|6     |bd_5dca_interconnect0_12    |     1|
+|7     |bd_5dca_slice0_12           |     1|
+|8     |bd_5dca_util_vector_logic   |     1|
+|9     |bd_5dca_vip_S00             |     1|
++------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 3901.199 ; gain = 700.172 ; free physical = 215897 ; free virtual = 426950
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 3901.199 ; gain = 645.672 ; free physical = 215922 ; free virtual = 426981
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 3901.207 ; gain = 700.172 ; free physical = 215922 ; free virtual = 426981
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3901.207 ; gain = 0.000 ; free physical = 216002 ; free virtual = 427077
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3975.582 ; gain = 0.000 ; free physical = 215622 ; free virtual = 426705
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+50 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 3989.520 ; gain = 1554.852 ; free physical = 215868 ; free virtual = 426955
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pfm_dynamic_hmss_0_0, cache-ID = f41654a4c2122d93
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+INFO: [Common 17-1381] The checkpoint '/dev/shm/meyermar_synth/ptrans/build/u280/Xilinx_Alveo_U280_b256.cmake/src/device/_x/link/vivado/vpl/prj/prj.runs/pfm_dynamic_hmss_0_0_synth_1/pfm_dynamic_hmss_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pfm_dynamic_hmss_0_0_utilization_synth.rpt -pb pfm_dynamic_hmss_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  9 10:31:00 2021...
